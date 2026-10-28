@@ -20,6 +20,7 @@ PROMPT_PREFIX=('Implement the following Python function. Return the COMPLETE fun
 
 def ensure_run_manifest(run_dir,dataset_sha256):
     expected=dict(dataset_sha256=dataset_sha256,model_roles=MODEL_ROLES,
+                  judge_sha256=hashlib.sha256((BASE/'benchmarks/judge.py').read_bytes()).hexdigest(),
                   prompt_sha256=hashlib.sha256(PROMPT_PREFIX.encode()).hexdigest(),
                   schema_sha256=hashlib.sha256(json.dumps(SCHEMA,sort_keys=True).encode()).hexdigest())
     # JSON round-trip normalises tuples so repeated runs compare consistently.
@@ -36,7 +37,9 @@ def ensure_run_manifest(run_dir,dataset_sha256):
 
 
 def judge(code,case):
-    request=dict(code=code,test=case['test'],entry_point=case['entry_point'])
+    # Upstream prompts can define helper functions used by their tests. The
+    # candidate implementation follows the prompt and overrides its target stub.
+    request=dict(code=case.get('prompt','')+'\n'+code,test=case['test'],entry_point=case['entry_point'])
     try:
         proc=subprocess.run([sys.executable,'-I','-S',str(BASE/'benchmarks/judge.py')],input=json.dumps(request),
                             capture_output=True,text=True,encoding='utf-8',timeout=4)

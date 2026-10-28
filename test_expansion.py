@@ -101,7 +101,7 @@ class ExpansionTests(unittest.TestCase):
             self.assertFalse(report['passed'])
 
     def test_portable_default_uses_expanded_model_and_cannot_escape(self):
-        self.assertEqual(bundled_model(BASE),BASE/'models/tavi-v2')
+        self.assertEqual(bundled_model(BASE),BASE/'models/tavi-v4-clean')
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             (root/'models').mkdir()

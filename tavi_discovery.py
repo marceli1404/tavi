@@ -45,13 +45,18 @@ def validate_path(path):
     return parts
 
 
-def search(query, limit=5):
+def search(query, limit=5, provider='awesomeskill', installed_names=()):
+    if provider == 'awesomeskill':
+        from tavi_awesomeskill import search as awesome_search
+        return awesome_search(query, limit, installed_names)
+    if provider != 'github':
+        raise ValueError('Unknown skill discovery provider')
     query = query.strip()
     if not query or len(query) > 160:
         raise ValueError('Search query must contain 1–160 characters')
     query_string = urllib.parse.urlencode({'q': query+' skill in:name,description,readme', 'per_page': min(5, max(1, limit))})
     result = api('/search/repositories?'+query_string)
-    return dict(query=query, incomplete=result.get('incomplete_results', False),
+    return dict(query=query, provider='github', incomplete=result.get('incomplete_results', False),
                 repositories=[dict(repo=r['full_name'], url=r['html_url'], description=r.get('description'), archived=r.get('archived', False)) for r in result['items']])
 
 

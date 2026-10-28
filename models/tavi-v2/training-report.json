@@ -1,6 +1,6 @@
 {
   "strategy": "frozen-base-expansion",
-  "base_model": "models/tavi-v1",
+  "base_model": "~\\Documents\\ChatGPT\\REA\\decision-router\\models\\tavi-v1",
   "base_weights_sha256": "22e0f8b448bee5e0fbfbfb97f9ece31291d3406e11c025679d09a5ca65206482",
   "weights_sha256": "b4c6c1c55ff09899dafc38455fbf5accdaee3e079b05d0de0b76c153b5ae8bc7",
   "new_skills": [

@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/openai/human-eval",
+  "commit": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+  "source_sha256": "b796127e635a67f93fb35c04f4cb03cf06f38c8072ee7cee8833d7bee06979ef",
+  "task_ids": [
+    5,
+    17,
+    38,
+    62,
+    81,
+    105,
+    126,
+    150
+  ],
+  "outcome_ids": [
+    38,
+    105
+  ],
+  "hosted_requests_max": 6,
+  "scope": "Frozen new8 public coverage tasks and two outcome tasks before candidate fitting; never training data; public historical tasks may be memorized by hosted models"
+}

@@ -1,0 +1,100 @@
+{
+  "model_signature": "5bd17c5ee5cdd1320521f859ba75c4e472c6cb240790b3b9f9fb2f7aa611d1b1",
+  "weights_sha256": "38407cc1f25bbb1cdeefd73dcb5c72cb4d97545bae8efb2bbd18edfc4652592e",
+  "passed": true,
+  "metrics": {
+    "before": {
+      "covered": 8,
+      "cases": 8,
+      "results": [
+        {
+          "task_id": "HumanEval/7",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/26",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/47",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/73",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/98",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/117",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/139",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/163",
+          "tier": "balanced",
+          "covered": true
+        }
+      ]
+    },
+    "after": {
+      "covered": 8,
+      "cases": 8,
+      "results": [
+        {
+          "task_id": "HumanEval/7",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/26",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/47",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/73",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/98",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/117",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/139",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/163",
+          "tier": "balanced",
+          "covered": true
+        }
+      ]
+    }
+  },
+  "scope": "Additional eight fixed public tasks queried after final neutral-name weights froze; no model selection or fitting on these results."
+}

@@ -1,0 +1,100 @@
+{
+  "model_signature": "1625ce1a7484bb8d0b389b9572a4448dcdeadea43deec88f9f3bd79ac326e6f2",
+  "weights_sha256": "e799c63b9ba509f39d3d91dc2167362f418b41264e39d016de368c5db5dae371",
+  "passed": true,
+  "metrics": {
+    "before": {
+      "policy_accuracy": 0.6875,
+      "public_coverage": 0.5,
+      "public_results": [
+        {
+          "task_id": "HumanEval/3",
+          "covered": false,
+          "tier": "balanced"
+        },
+        {
+          "task_id": "HumanEval/24",
+          "covered": false,
+          "tier": "review"
+        },
+        {
+          "task_id": "HumanEval/49",
+          "covered": true,
+          "tier": "balanced"
+        },
+        {
+          "task_id": "HumanEval/75",
+          "covered": false,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/93",
+          "covered": true,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/118",
+          "covered": true,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/141",
+          "covered": false,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/161",
+          "covered": true,
+          "tier": "deep"
+        }
+      ]
+    },
+    "after": {
+      "policy_accuracy": 0.9375,
+      "public_coverage": 0.5,
+      "public_results": [
+        {
+          "task_id": "HumanEval/3",
+          "covered": false,
+          "tier": "balanced"
+        },
+        {
+          "task_id": "HumanEval/24",
+          "covered": false,
+          "tier": "review"
+        },
+        {
+          "task_id": "HumanEval/49",
+          "covered": true,
+          "tier": "balanced"
+        },
+        {
+          "task_id": "HumanEval/75",
+          "covered": false,
+          "tier": "review"
+        },
+        {
+          "task_id": "HumanEval/93",
+          "covered": true,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/118",
+          "covered": true,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/141",
+          "covered": false,
+          "tier": "fast"
+        },
+        {
+          "task_id": "HumanEval/161",
+          "covered": true,
+          "tier": "deep"
+        }
+      ]
+    }
+  },
+  "scope": "New32 same-author audit cases written after candidate weights frozen; not used to select training epoch or correction gate"
+}

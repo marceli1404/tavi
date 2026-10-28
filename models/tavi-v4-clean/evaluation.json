@@ -1,0 +1,1354 @@
+{
+  "scope": "50 synthetic policy cases authored before training, same author as training corpus; not real-world or independent evaluation",
+  "cases": 50,
+  "metrics": {
+    "tier_accuracy": 0.96,
+    "skill_recall_at_3": 1.0,
+    "external_accuracy": 0.98,
+    "no_skill_accuracy": 0.8421052631578947,
+    "majority_tier_baseline": 0.72,
+    "mean_inference_ms": 0.8554479997837916,
+    "skill_precision": 0.8823529411764706,
+    "skill_recall": 0.967741935483871
+  },
+  "gates": {
+    "tier_accuracy": 0.75,
+    "skill_recall_at_3": 0.75,
+    "external_accuracy": 0.85
+  },
+  "passed": true,
+  "weights_sha256": "38407cc1f25bbb1cdeefd73dcb5c72cb4d97545bae8efb2bbd18edfc4652592e",
+  "model_signature": "5bd17c5ee5cdd1320521f859ba75c4e472c6cb240790b3b9f9fb2f7aa611d1b1",
+  "acceptance_source_sha256": "20a452b45f49352aa6b0de9e847a407e2c2f616812bbf08d056ebd46544dda0a",
+  "results": [
+    {
+      "prompt": "Make the hamburger menu fit inside a 360 pixel phone viewport",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "responsive-design"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "responsive-design"
+        ],
+        "top3": [
+          "responsive-design",
+          "imagegen",
+          "webapp-testing"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.009621256031095982,
+        "balanced": 0.9744723439216614,
+        "deep": 0.0024164237547665834,
+        "review": 0.013490014709532261
+      }
+    },
+    {
+      "prompt": "Check whether keyboard-only visitors can operate all the controls",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "accessibility-audit"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "accessibility-audit"
+        ],
+        "top3": [
+          "accessibility-audit",
+          "openai-docs",
+          "loading-states"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.03425184637308121,
+        "balanced": 0.862511396408081,
+        "deep": 0.02360006980597973,
+        "review": 0.07963678985834122
+      }
+    },
+    {
+      "prompt": "Use Playwright to exercise the checkout in our local browser app",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "webapp-testing"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "webapp-testing"
+        ],
+        "top3": [
+          "webapp-testing",
+          "user-flow-diagram",
+          "form-design"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00892230961471796,
+        "balanced": 0.987878143787384,
+        "deep": 0.0015192934079095721,
+        "review": 0.0016803073231130838
+      }
+    },
+    {
+      "prompt": "Implement a distinctive frontend screen for the analytics product",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "ui-design"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "ui-design"
+        ],
+        "top3": [
+          "ui-design",
+          "user-flow-diagram",
+          "copywriting"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 6.373829819494858e-05,
+        "balanced": 0.9988817572593689,
+        "deep": 0.000594011158682406,
+        "review": 0.0004605089488904923
+      }
+    },
+    {
+      "prompt": "Write a convincing headline and benefits for the sales landing page",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "copywriting"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "copywriting"
+        ],
+        "top3": [
+          "copywriting",
+          "website-copy-humanizer",
+          "layout-grid"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0005200394080020487,
+        "balanced": 0.9983795881271362,
+        "deep": 0.0004346366331446916,
+        "review": 0.0006658199708908796
+      }
+    },
+    {
+      "prompt": "Suggest a concise tooltip for an unavailable action",
+      "expected": {
+        "tier": "fast",
+        "skills": [
+          "ux-writing"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "ux-writing",
+          "a-b-test-design",
+          "error-handling-ux"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.10190077871084213,
+        "balanced": 0.8873906135559082,
+        "deep": 0.00878238957375288,
+        "review": 0.0019262253772467375
+      }
+    },
+    {
+      "prompt": "Remove robotic phrasing from the updated website while preserving its claims",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "website-copy-humanizer"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "website-copy-humanizer"
+        ],
+        "top3": [
+          "website-copy-humanizer",
+          "imagegen",
+          "summarize-interview"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.008001730777323246,
+        "balanced": 0.9670587778091431,
+        "deep": 0.018850432708859444,
+        "review": 0.006089049857109785
+      }
+    },
+    {
+      "prompt": "Create semantic colour roles with enough text contrast",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "color-system"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "color-system"
+        ],
+        "top3": [
+          "color-system",
+          "copywriting",
+          "skill-creator"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00838650856167078,
+        "balanced": 0.98093581199646,
+        "deep": 0.007511024363338947,
+        "review": 0.0031665945425629616
+      }
+    },
+    {
+      "prompt": "Define body and heading font sizes with consistent line heights",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "typography-scale"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "typography-scale"
+        ],
+        "top3": [
+          "typography-scale",
+          "color-system",
+          "motion-system"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.004555754363536835,
+        "balanced": 0.9884636998176575,
+        "deep": 0.005101969465613365,
+        "review": 0.0018786449218168855
+      }
+    },
+    {
+      "prompt": "Specify the gutters and column widths at each breakpoint",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "layout-grid"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "layout-grid"
+        ],
+        "top3": [
+          "layout-grid",
+          "spacing-system",
+          "color-system"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.003496538382023573,
+        "balanced": 0.9820730686187744,
+        "deep": 0.008347122929990292,
+        "review": 0.006083222106099129
+      }
+    },
+    {
+      "prompt": "Reorder the signup inputs and define field validation",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "form-design"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "form-design"
+        ],
+        "top3": [
+          "form-design",
+          "information-architecture",
+          "user-flow-diagram"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00013767133350484073,
+        "balanced": 0.9996032118797302,
+        "deep": 0.0001660870766500011,
+        "review": 9.306205902248621e-05
+      }
+    },
+    {
+      "prompt": "Choose between a tab bar and a drawer for product navigation",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "navigation-patterns"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "navigation-patterns"
+        ],
+        "top3": [
+          "navigation-patterns",
+          "data-visualization",
+          "copywriting"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 3.298246156191453e-05,
+        "balanced": 0.9993522763252258,
+        "deep": 0.000459933711681515,
+        "review": 0.00015475611144211143
+      }
+    },
+    {
+      "prompt": "Group the knowledge base content into a clear site hierarchy",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "information-architecture"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "information-architecture"
+        ],
+        "top3": [
+          "information-architecture",
+          "form-design",
+          "website-copy-humanizer"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0004810448444914073,
+        "balanced": 0.9980156421661377,
+        "deep": 0.0007309399079531431,
+        "review": 0.0007723802700638771
+      }
+    },
+    {
+      "prompt": "Write the project goals audience and constraints before design work starts",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "design-brief"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "design-brief"
+        ],
+        "top3": [
+          "design-brief",
+          "copywriting",
+          "skill-creator"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.007443936541676521,
+        "balanced": 0.9419283866882324,
+        "deep": 0.03402957692742348,
+        "review": 0.016598060727119446
+      }
+    },
+    {
+      "prompt": "Plan a split experiment with a hypothesis and primary metric",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "a-b-test-design"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "a-b-test-design"
+        ],
+        "top3": [
+          "a-b-test-design",
+          "usability-test-plan",
+          "summarize-interview"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.008992915973067284,
+        "balanced": 0.9731658697128296,
+        "deep": 0.012581822462379932,
+        "review": 0.0052594346925616264
+      }
+    },
+    {
+      "prompt": "Pick a readable chart for quarterly retention trends",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "data-visualization"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "data-visualization"
+        ],
+        "top3": [
+          "data-visualization",
+          "openai-docs",
+          "imagegen"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.011890405789017677,
+        "balanced": 0.9781318306922913,
+        "deep": 0.007994272746145725,
+        "review": 0.0019834833219647408
+      }
+    },
+    {
+      "prompt": "Map screen branches from account creation to successful purchase",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "user-flow-diagram"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "user-flow-diagram"
+        ],
+        "top3": [
+          "user-flow-diagram",
+          "imagegen",
+          "loading-states"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0012785149738192558,
+        "balanced": 0.9958096742630005,
+        "deep": 0.0023522397968918085,
+        "review": 0.0005596398841589689
+      }
+    },
+    {
+      "prompt": "Define participants tasks and research questions for usability sessions",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "usability-test-plan"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "usability-test-plan"
+        ],
+        "top3": [
+          "usability-test-plan",
+          "test-scenario",
+          "summarize-interview"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0008140100981108844,
+        "balanced": 0.9949668049812317,
+        "deep": 0.002961578080430627,
+        "review": 0.001257613068446517
+      }
+    },
+    {
+      "prompt": "Generate a photorealistic image of a red boat on a quiet lake",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "imagegen"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "imagegen"
+        ],
+        "top3": [
+          "imagegen",
+          "loading-states",
+          "scenario-product-shots"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.01523879449814558,
+        "balanced": 0.9549795389175415,
+        "deep": 0.026637546718120575,
+        "review": 0.003144044429063797
+      }
+    },
+    {
+      "prompt": "Verify the current official OpenAI tool-calling documentation",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "openai-docs"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "openai-docs",
+          "webapp-testing"
+        ],
+        "top3": [
+          "openai-docs",
+          "webapp-testing",
+          "data-visualization"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0013595029013231397,
+        "balanced": 0.9913731217384338,
+        "deep": 0.004803930409252644,
+        "review": 0.0024633174762129784
+      }
+    },
+    {
+      "prompt": "Package our recurring workflow in a new SKILL.md",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "skill-creator"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "skill-creator"
+        ],
+        "top3": [
+          "skill-creator",
+          "skill-installer",
+          "copywriting"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0006858850829303265,
+        "balanced": 0.9982501864433289,
+        "deep": 0.0009379919501952827,
+        "review": 0.0001259098353330046
+      }
+    },
+    {
+      "prompt": "Install the requested Codex skill from this GitHub repository",
+      "expected": {
+        "tier": "fast",
+        "skills": [
+          "skill-installer"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [
+          "skill-installer"
+        ],
+        "top3": [
+          "skill-installer",
+          "skill-creator",
+          "ux-writing"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.9984760880470276,
+        "balanced": 0.0007620169781148434,
+        "deep": 0.0002532653452362865,
+        "review": 0.0005085583543404937
+      }
+    },
+    {
+      "prompt": "Reverse engineer the protocol implemented in this native executable",
+      "expected": {
+        "tier": "deep",
+        "skills": [
+          "reverse-engineer-anything"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "deep",
+        "skills": [
+          "reverse-engineer-anything"
+        ],
+        "top3": [
+          "reverse-engineer-anything",
+          "imagegen",
+          "error-handling-ux"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0012623996008187532,
+        "balanced": 0.00032242832821793854,
+        "deep": 0.9973973035812378,
+        "review": 0.0010179211385548115
+      }
+    },
+    {
+      "prompt": "Specify state transitions and events for our media player",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "state-machine"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "state-machine"
+        ],
+        "top3": [
+          "state-machine",
+          "color-system",
+          "motion-system"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0004405500367283821,
+        "balanced": 0.9981112480163574,
+        "deep": 0.0011744018411263824,
+        "review": 0.00027383569977246225
+      }
+    },
+    {
+      "prompt": "Define animation easing tokens and reduced motion rules",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "motion-system"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "motion-system"
+        ],
+        "top3": [
+          "motion-system",
+          "animation-principles",
+          "color-system"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0007152397884055972,
+        "balanced": 0.9893423318862915,
+        "deep": 0.007360438350588083,
+        "review": 0.002582010580226779
+      }
+    },
+    {
+      "prompt": "Improve search filters and the zero-result suggestions",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "search-ux"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "search-ux"
+        ],
+        "top3": [
+          "search-ux",
+          "copywriting",
+          "data-visualization"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.001960086403414607,
+        "balanced": 0.9865216016769409,
+        "deep": 0.007109260652214289,
+        "review": 0.0044090403243899345
+      }
+    },
+    {
+      "prompt": "Help users recover after a failed network request",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "error-handling-ux"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "error-handling-ux"
+        ],
+        "top3": [
+          "error-handling-ux",
+          "ux-writing",
+          "loading-states"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.12906792759895325,
+        "balanced": 0.5973146557807922,
+        "deep": 0.05218550190329552,
+        "review": 0.22143198549747467
+      }
+    },
+    {
+      "prompt": "Choose skeleton placeholders while the dashboard loads",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "loading-states"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "loading-states"
+        ],
+        "top3": [
+          "loading-states",
+          "layout-grid",
+          "ui-design"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.007081595715135336,
+        "balanced": 0.9879382252693176,
+        "deep": 0.0013254365185275674,
+        "review": 0.003654827829450369
+      }
+    },
+    {
+      "prompt": "Summarise this research transcript into themes and supporting quotes",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "summarize-interview"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "summarize-interview"
+        ],
+        "top3": [
+          "summarize-interview",
+          "affinity-diagram",
+          "information-architecture"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.004148539621382952,
+        "balanced": 0.9905339479446411,
+        "deep": 0.0024295730981975794,
+        "review": 0.0028879367746412754
+      }
+    },
+    {
+      "prompt": "Compare the strengths and UX gaps of three rival applications",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "competitive-analysis"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "competitive-analysis"
+        ],
+        "top3": [
+          "competitive-analysis",
+          "data-visualization",
+          "reverse-engineer-anything"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.004659778438508511,
+        "balanced": 0.9512959122657776,
+        "deep": 0.04270986095070839,
+        "review": 0.0013345186598598957
+      }
+    },
+    {
+      "prompt": "Give me six names for a robot",
+      "expected": {
+        "tier": "fast",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [],
+        "top3": [
+          "ux-writing",
+          "skill-installer",
+          "naming-convention"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.9981808662414551,
+        "balanced": 0.0011607629712671041,
+        "deep": 0.00038151603075675666,
+        "review": 0.00027685813256539404
+      }
+    },
+    {
+      "prompt": "Fix the spelling of this comment",
+      "expected": {
+        "tier": "fast",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [],
+        "top3": [
+          "ux-writing",
+          "skill-installer",
+          "responsive-design"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.6945895552635193,
+        "balanced": 0.0054956115782260895,
+        "deep": 0.006714748218655586,
+        "review": 0.2932000458240509
+      }
+    },
+    {
+      "prompt": "What is seven multiplied by nine",
+      "expected": {
+        "tier": "fast",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [],
+        "top3": [
+          "skill-installer",
+          "ux-writing",
+          "parallel-concepts"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.7659021019935608,
+        "balanced": 0.006737669464200735,
+        "deep": 0.1523958146572113,
+        "review": 0.07496444135904312
+      }
+    },
+    {
+      "prompt": "Make this short sentence more concise",
+      "expected": {
+        "tier": "fast",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [
+          "ux-writing"
+        ],
+        "top3": [
+          "ux-writing",
+          "skill-installer",
+          "responsive-design"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.9981603026390076,
+        "balanced": 5.6147368013625965e-05,
+        "deep": 0.0005320957861840725,
+        "review": 0.0012513849651440978
+      }
+    },
+    {
+      "prompt": "Explain what this single expression returns",
+      "expected": {
+        "tier": "fast",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [],
+        "top3": [
+          "summarize-interview",
+          "ux-writing",
+          "copywriting"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.701087474822998,
+        "balanced": 0.0026677509304136038,
+        "deep": 0.004428545944392681,
+        "review": 0.29181620478630066
+      }
+    },
+    {
+      "prompt": "Implement validation in a REST API route",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "form-design",
+          "openai-docs",
+          "ui-design"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0011890711029991508,
+        "balanced": 0.9983032941818237,
+        "deep": 0.0003745195863302797,
+        "review": 0.00013301553553901613
+      }
+    },
+    {
+      "prompt": "Add tests for the CSV parser and repair its bug",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "a-b-test-design",
+          "webapp-testing",
+          "navigation-patterns"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00018526990606915206,
+        "balanced": 0.9987446069717407,
+        "deep": 0.0009091118699871004,
+        "review": 0.0001609903119970113
+      }
+    },
+    {
+      "prompt": "Refactor these utility functions while preserving their interface",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "ui-design",
+          "accessibility-audit",
+          "summarize-interview"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00247793341986835,
+        "balanced": 0.9935697317123413,
+        "deep": 0.002037110971286893,
+        "review": 0.001915268017910421
+      }
+    },
+    {
+      "prompt": "Find a subtle race condition between concurrent database writers",
+      "expected": {
+        "tier": "deep",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "deep",
+        "skills": [],
+        "top3": [
+          "reverse-engineer-anything",
+          "navigation-patterns",
+          "openai-docs"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00042948388727381825,
+        "balanced": 0.004062502644956112,
+        "deep": 0.9951984286308289,
+        "review": 0.00030969499493949115
+      }
+    },
+    {
+      "prompt": "Prove correctness of a distributed consensus algorithm",
+      "expected": {
+        "tier": "deep",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "deep",
+        "skills": [],
+        "top3": [
+          "reverse-engineer-anything",
+          "imagegen",
+          "service-blueprint"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00043595972238108516,
+        "balanced": 9.785039583221078e-05,
+        "deep": 0.9993594288825989,
+        "review": 0.00010668480535969138
+      }
+    },
+    {
+      "prompt": "Investigate intermittent native memory corruption",
+      "expected": {
+        "tier": "deep",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "deep",
+        "skills": [
+          "reverse-engineer-anything"
+        ],
+        "top3": [
+          "reverse-engineer-anything",
+          "card-sort-analysis",
+          "navigation-patterns"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0004217981768306345,
+        "balanced": 9.954194683814421e-05,
+        "deep": 0.9993603825569153,
+        "review": 0.00011832391464849934
+      }
+    },
+    {
+      "prompt": "Plan a large backwards compatible migration across multiple services",
+      "expected": {
+        "tier": "deep",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "deep",
+        "skills": [],
+        "top3": [
+          "service-blueprint",
+          "error-handling-ux",
+          "reverse-engineer-anything"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.0006554943975061178,
+        "balanced": 0.0012931248638778925,
+        "deep": 0.9978196620941162,
+        "review": 0.0002317472390132025
+      }
+    },
+    {
+      "prompt": "Do it",
+      "expected": {
+        "tier": "review",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "review",
+        "skills": [],
+        "top3": [
+          "teslers-law",
+          "qual-quant-triangulation",
+          "parallel-concepts"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 5.167451945453649e-06,
+        "balanced": 1.58455986820627e-05,
+        "deep": 3.403653317946009e-05,
+        "review": 0.9999449253082275
+      }
+    },
+    {
+      "prompt": "Fix the thing we talked about",
+      "expected": {
+        "tier": "review",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "review",
+        "skills": [],
+        "top3": [
+          "responsive-design",
+          "skill-installer",
+          "tavi-decision"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.00945016648620367,
+        "balanced": 0.0013413449050858617,
+        "deep": 0.001093303202651441,
+        "review": 0.9881151914596558
+      }
+    },
+    {
+      "prompt": "Search online for a Blender animation agent skill missing from this computer",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": true
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "search-ux",
+          "skill-creator",
+          "imagegen"
+        ],
+        "external": true
+      },
+      "tier_scores": {
+        "fast": 0.001199247781187296,
+        "balanced": 0.9977953433990479,
+        "deep": 0.0004150143649894744,
+        "review": 0.0005904430872760713
+      }
+    },
+    {
+      "prompt": "Find a downloadable SKILL.md for a missing GIS integration",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": true
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "skill-creator"
+        ],
+        "top3": [
+          "skill-creator",
+          "skill-installer",
+          "accessibility-audit"
+        ],
+        "external": true
+      },
+      "tier_scores": {
+        "fast": 0.0006605179514735937,
+        "balanced": 0.9982535243034363,
+        "deep": 0.000511224614456296,
+        "review": 0.0005747118848375976
+      }
+    },
+    {
+      "prompt": "Discover a maintained internet skill for PCB routing because we lack one locally",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": true
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "skill-installer",
+          "skill-creator",
+          "tavi-decision"
+        ],
+        "external": true
+      },
+      "tier_scores": {
+        "fast": 0.015806429088115692,
+        "balanced": 0.9682266116142273,
+        "deep": 0.011527013964951038,
+        "review": 0.004439874552190304
+      }
+    },
+    {
+      "prompt": "Look for a new skill repository to handle unfamiliar robotics tools",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": true
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [],
+        "top3": [
+          "skill-installer",
+          "skill-creator",
+          "copywriting"
+        ],
+        "external": true
+      },
+      "tier_scores": {
+        "fast": 0.026083054021000862,
+        "balanced": 0.9682911038398743,
+        "deep": 0.0021473104134202003,
+        "review": 0.003478470491245389
+      }
+    },
+    {
+      "prompt": "Explain how to install an ordinary Python package",
+      "expected": {
+        "tier": "balanced",
+        "skills": [],
+        "external": false
+      },
+      "predicted": {
+        "tier": "fast",
+        "skills": [],
+        "top3": [
+          "skill-installer",
+          "reverse-engineer-anything",
+          "ux-writing"
+        ],
+        "external": false
+      },
+      "tier_scores": {
+        "fast": 0.9679790139198303,
+        "balanced": 0.015525366179645061,
+        "deep": 0.013925185427069664,
+        "review": 0.0025704498402774334
+      }
+    },
+    {
+      "prompt": "Find the installed skill for responsive web layouts",
+      "expected": {
+        "tier": "balanced",
+        "skills": [
+          "responsive-design"
+        ],
+        "external": false
+      },
+      "predicted": {
+        "tier": "balanced",
+        "skills": [
+          "responsive-design"
+        ],
+        "top3": [
+          "responsive-design",
+          "layout-grid",
+          "skill-creator"
+        ],
+        "external": true
+      },
+      "tier_scores": {
+        "fast": 0.0001545067352708429,
+        "balanced": 0.9997181296348572,
+        "deep": 8.155414980137721e-05,
+        "review": 4.5879809476900846e-05
+      }
+    }
+  ]
+}

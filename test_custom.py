@@ -52,6 +52,8 @@ class CustomModelTests(unittest.TestCase):
         result = route_custom('Find a new skill online for missing robotics integration', [], MODELS, self.model)
         self.assertEqual(result['discovery']['status'], 'search_recommended')
         self.assertFalse(result['discovery']['installation_authorized'])
+        self.assertEqual(result['discovery']['provider'], 'awesomeskill')
+        self.assertIn('sort=stars', result['discovery']['search_url'])
 
     def test_explicit_choice_and_unavailable_models(self):
         result = route_custom('Say hello', [], MODELS, self.model, 'gpt-6-astra')

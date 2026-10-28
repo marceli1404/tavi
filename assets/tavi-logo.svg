@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 130" role="img" aria-labelledby="title desc">
+<title id="title">Tavi</title><desc id="desc">A friendly bracket-eared face beside the Tavi wordmark.</desc>
+<g fill="none" stroke="#20231d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 44H18v48h12m100-48h12v48h-12"/><path d="M84 26l5-13m0-8v13m-6-6h12"/></g>
+<rect x="39" y="29" width="83" height="78" rx="27" fill="#20231d"/>
+<g fill="#f7f7f2"><rect x="56" y="50" width="11" height="22" rx="5.5"/><rect x="95" y="47" width="11" height="22" rx="5.5"/></g>
+<path d="M72 85q11 10 23-3" fill="none" stroke="#f7f7f2" stroke-width="4" stroke-linecap="round"/>
+<text x="167" y="101" fill="#20231d" font-family="Outfit,Arial,sans-serif" font-size="106" font-weight="600" letter-spacing="-6">tavi</text>
+<circle cx="425" cy="31" r="8" fill="#8c9879"/>
+</svg>

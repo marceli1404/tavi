@@ -1,0 +1,1850 @@
+[
+  {
+    "prompt": "Could you give a brief congratulatory message?",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please give a brief congratulatory message.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, give a brief congratulatory message.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to give a brief congratulatory message.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you return two names for a reading lamp?",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please return two names for a reading lamp.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, return two names for a reading lamp.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to return two names for a reading lamp.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you translate happy birthday into Dutch?",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please translate happy birthday into Dutch.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, translate happy birthday into Dutch.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to translate happy birthday into Dutch.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you convert two hours to minutes?",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please convert two hours to minutes.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, convert two hours to minutes.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to convert two hours to minutes.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you show a JSON boolean literal?",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please show a JSON boolean literal.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, show a JSON boolean literal.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to show a JSON boolean literal.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you name the first four months?",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please name the first four months.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, name the first four months.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to name the first four months.",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you write a brief get well wish?",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please write a brief get well wish.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, write a brief get well wish.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to write a brief get well wish.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you suggest two titles for a walking journal?",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please suggest two titles for a walking journal.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, suggest two titles for a walking journal.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to suggest two titles for a walking journal.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you translate welcome into Swedish?",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please translate welcome into Swedish.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, translate welcome into Swedish.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to translate welcome into Swedish.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you convert three minutes to seconds?",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please convert three minutes to seconds.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, convert three minutes to seconds.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to convert three minutes to seconds.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you show a Python empty set expression?",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please show a Python empty set expression.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, show a Python empty set expression.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to show a Python empty set expression.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you name four common vegetables?",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please name four common vegetables.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, name four common vegetables.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to name four common vegetables.",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you fix validation of a phone number input?",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please fix validation of a phone number input.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, fix validation of a phone number input.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to fix validation of a phone number input.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you implement a Python helper to total expense rows?",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please implement a Python helper to total expense rows.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, implement a Python helper to total expense rows.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to implement a Python helper to total expense rows.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you make a table usable on a compact screen?",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please make a table usable on a compact screen.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, make a table usable on a compact screen.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to make a table usable on a compact screen.",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you search online for a missing agent skill to automate SketchUp exports?",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please search online for a missing agent skill to automate SketchUp exports.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, search online for a missing agent skill to automate SketchUp exports.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to search online for a missing agent skill to automate SketchUp exports.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you find a downloadable skill for managing Mendeley references?",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please find a downloadable skill for managing Mendeley references.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, find a downloadable skill for managing Mendeley references.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to find a downloadable skill for managing Mendeley references.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you discover an external skill to query public weather stations?",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please discover an external skill to query public weather stations.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, discover an external skill to query public weather stations.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to discover an external skill to query public weather stations.",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you add error handling to an image upload form?",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please add error handling to an image upload form.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, add error handling to an image upload form.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to add error handling to an image upload form.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you implement a routine to aggregate sales by shop?",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please implement a routine to aggregate sales by shop.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, implement a routine to aggregate sales by shop.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to implement a routine to aggregate sales by shop.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you repair keyboard navigation in a settings dialog?",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please repair keyboard navigation in a settings dialog.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, repair keyboard navigation in a settings dialog.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to repair keyboard navigation in a settings dialog.",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you search online for a missing agent skill to automate Inkscape exports?",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please search online for a missing agent skill to automate Inkscape exports.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, search online for a missing agent skill to automate Inkscape exports.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to search online for a missing agent skill to automate Inkscape exports.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you find a downloadable skill for managing Paperpile citations?",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please find a downloadable skill for managing Paperpile citations.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, find a downloadable skill for managing Paperpile citations.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to find a downloadable skill for managing Paperpile citations.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you discover an external skill to query public transit timetables?",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please discover an external skill to query public transit timetables.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, discover an external skill to query public transit timetables.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to discover an external skill to query public transit timetables.",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you prove safety of a concurrent hazard pointer algorithm?",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please prove safety of a concurrent hazard pointer algorithm.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, prove safety of a concurrent hazard pointer algorithm.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to prove safety of a concurrent hazard pointer algorithm.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you design crash recovery for distributed account balances?",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please design crash recovery for distributed account balances.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, design crash recovery for distributed account balances.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to design crash recovery for distributed account balances.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you analyze non deterministic failures in a replicated job scheduler?",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please analyze non deterministic failures in a replicated job scheduler.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, analyze non deterministic failures in a replicated job scheduler.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to analyze non deterministic failures in a replicated job scheduler.",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you find a specialized external skill for formal verification of hardware cache coherence?",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please find a specialized external skill for formal verification of hardware cache coherence.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, find a specialized external skill for formal verification of hardware cache coherence.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to find a specialized external skill for formal verification of hardware cache coherence.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you search for missing agent tooling for complex distributed protocol model checking?",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please search for missing agent tooling for complex distributed protocol model checking.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, search for missing agent tooling for complex distributed protocol model checking.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to search for missing agent tooling for complex distributed protocol model checking.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you discover a specialized skill for proving multi processor memory consistency?",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please discover a specialized skill for proving multi processor memory consistency.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, discover a specialized skill for proving multi processor memory consistency.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to discover a specialized skill for proving multi processor memory consistency.",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you prove progress properties of a concurrent reclamation scheme?",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please prove progress properties of a concurrent reclamation scheme.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, prove progress properties of a concurrent reclamation scheme.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to prove progress properties of a concurrent reclamation scheme.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you design disaster recovery for globally sharded transaction logs?",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please design disaster recovery for globally sharded transaction logs.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, design disaster recovery for globally sharded transaction logs.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to design disaster recovery for globally sharded transaction logs.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you analyze intermittent corruption in a parallel database executor?",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please analyze intermittent corruption in a parallel database executor.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, analyze intermittent corruption in a parallel database executor.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to analyze intermittent corruption in a parallel database executor.",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you find a specialized external skill for formal verification of a secure boot protocol?",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please find a specialized external skill for formal verification of a secure boot protocol.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, find a specialized external skill for formal verification of a secure boot protocol.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to find a specialized external skill for formal verification of a secure boot protocol.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you search for missing agent tooling for complex concurrent runtime model checking?",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please search for missing agent tooling for complex concurrent runtime model checking.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, search for missing agent tooling for complex concurrent runtime model checking.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to search for missing agent tooling for complex concurrent runtime model checking.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you discover a specialized skill for proving cross region transaction consistency?",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please discover a specialized skill for proving cross region transaction consistency.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, discover a specialized skill for proving cross region transaction consistency.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to discover a specialized skill for proving cross region transaction consistency.",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you fix the thing without any description?",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please fix the thing without any description.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, fix the thing without any description.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to fix the thing without any description.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you continue an unspecified task from nowhere?",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please continue an unspecified task from nowhere.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, continue an unspecified task from nowhere.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to continue an unspecified task from nowhere.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you make whatever I am thinking about work?",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please make whatever I am thinking about work.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, make whatever I am thinking about work.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to make whatever I am thinking about work.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you choose a solution for an unnamed issue?",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please choose a solution for an unnamed issue.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, choose a solution for an unnamed issue.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to choose a solution for an unnamed issue.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you deal with the other stuff with no context?",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please deal with the other stuff with no context.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, deal with the other stuff with no context.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to deal with the other stuff with no context.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you do it although no goal was provided?",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please do it although no goal was provided.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, do it although no goal was provided.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to do it although no goal was provided.",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you repair my unknown thing without details?",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please repair my unknown thing without details.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, repair my unknown thing without details.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to repair my unknown thing without details.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you resume a task that has not been described?",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please resume a task that has not been described.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, resume a task that has not been described.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to resume a task that has not been described.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you sort out whatever I forgot to mention?",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please sort out whatever I forgot to mention.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, sort out whatever I forgot to mention.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to sort out whatever I forgot to mention.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you choose something for a problem I have not named?",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please choose something for a problem I have not named.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, choose something for a problem I have not named.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to choose something for a problem I have not named.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you handle the unspecified matter with no example?",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please handle the unspecified matter with no example.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, handle the unspecified matter with no example.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to handle the unspecified matter with no example.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Could you do the work although there is no request?",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Please do the work although there is no request.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "For this task, do the work although there is no request.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "I would like you to do the work although there is no request.",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-broader-synthetic-calibration-v4"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_bcacae1b24(records):\n    \"\"\"Return the integer seven.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_ec180287b0(records):\n    \"\"\"Return the string ready.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_4fdf324bb4(records):\n    \"\"\"Return an empty frozen set.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_2c1685e8c4(records):\n    \"\"\"Return the input label unchanged.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_1d1b92ccde(records):\n    \"\"\"Return the boolean True.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_e7dbd1a958(records):\n    \"\"\"Return the number nine.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_6dfdd9ead3(records):\n    \"\"\"Return an empty list object.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_c8ba21159f(records):\n    \"\"\"Return the string thanks.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_36d10ef759(records):\n    \"\"\"Compute the sum of squared readings, ignoring None.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_8f8f97f2e0(records):\n    \"\"\"Count labels grouped by their first character.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_5bfd2431af(records):\n    \"\"\"Return numeric readings in descending order without modifying the input.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_3d71ee41dc(records):\n    \"\"\"Return the longest label, breaking ties by first occurrence.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_8429944504(records):\n    \"\"\"Convert each duration from hours to rounded minutes.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_497881495a(records):\n    \"\"\"Return records grouped by a category string.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_fe03f495be(records):\n    \"\"\"Replace missing prices with the median of known prices.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_111236722b(records):\n    \"\"\"Return all adjacent pairs of labels.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_73af3f7da1(records):\n    \"\"\"Design a correct concurrent queue reclamation implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_70c531e751(records):\n    \"\"\"Design a correct concurrent replicated register implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_fce553a553(records):\n    \"\"\"Design a correct concurrent transaction scheduler implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_6a6daf1867(records):\n    \"\"\"Design a correct concurrent resource allocator implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_eed13ff4c8(records):\n    \"\"\"Design a correct concurrent state reconciliation implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_90e326d81e(records):\n    \"\"\"Design a correct concurrent shared cache implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_6a83914975(records):\n    \"\"\"Design a correct concurrent versioned map implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_b0defc0c3c(records):\n    \"\"\"Design a correct concurrent distributed log implementation with a formal safety and progress argument under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_7682f93ec2(records):\n    \"\"\"This placeholder has no specification for the data input; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_e2beeadbda(records):\n    \"\"\"This placeholder has no specification for the return format; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_a9b0e0a91f(records):\n    \"\"\"This placeholder has no specification for the calculation; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_8af0196a0e(records):\n    \"\"\"This placeholder has no specification for the record handling; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_527179c68d(records):\n    \"\"\"This placeholder has no specification for the error cases; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_a6bb532e0c(records):\n    \"\"\"This placeholder has no specification for the transformation; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_5a92e186a4(records):\n    \"\"\"This placeholder has no specification for the ordering; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_9949ee0d20(records):\n    \"\"\"This placeholder has no specification for the output fields; ask for the intended behavior.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for OpenSCAD integration before implementing this routine.\n\ndef integration_calibration_0(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for QGIS integration before implementing this routine.\n\ndef integration_calibration_1(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for Zotero integration before implementing this routine.\n\ndef integration_calibration_2(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for Inkscape integration before implementing this routine.\n\ndef integration_calibration_3(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_42040d6c42(records):\n    \"\"\"Return the integer eight.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_6a0e992e12(records):\n    \"\"\"Return the string done.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_fc1e686a00(records):\n    \"\"\"Return an empty dictionary object.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_af5ab59770(records):\n    \"\"\"Return the input reading unchanged.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_aea75d9d9a(records):\n    \"\"\"Return the boolean False.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_934137868f(records):\n    \"\"\"Return the number eleven.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_a17d84c3da(records):\n    \"\"\"Return an empty tuple object.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_c0b1322a57(records):\n    \"\"\"Return the string welcome.\"\"\"\n",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_e351e5ded6(records):\n    \"\"\"Compute the sum of cubed readings, ignoring None.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_2936cc5285(records):\n    \"\"\"Count labels grouped by their final character.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_c36bf6a968(records):\n    \"\"\"Return numeric readings in ascending order without modifying the input.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_c77a4726e2(records):\n    \"\"\"Return the shortest label, breaking ties by first occurrence.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_8fa5034583(records):\n    \"\"\"Convert each duration from minutes to rounded seconds.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_6409617209(records):\n    \"\"\"Return records grouped by a region string.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_effe3c2f39(records):\n    \"\"\"Replace missing readings with the mean of known readings.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_42fc28188b(records):\n    \"\"\"Return all adjacent triples of labels.\"\"\"\n",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_2f785c619b(records):\n    \"\"\"Design a correct concurrent stack reclamation implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_46fa6ac885(records):\n    \"\"\"Design a correct concurrent replicated counter implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_464aa3ceed(records):\n    \"\"\"Design a correct concurrent transaction coordinator implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_ace962502a(records):\n    \"\"\"Design a correct concurrent resource pool implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_702fe40007(records):\n    \"\"\"Design a correct concurrent replica reconciliation implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_18705ebfb7(records):\n    \"\"\"Design a correct concurrent shared index implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_f9e25fc119(records):\n    \"\"\"Design a correct concurrent versioned set implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_0e9ccd7aa9(records):\n    \"\"\"Design a correct concurrent distributed journal implementation with a formal invariant and recovery argument during partial failure.\"\"\"\n",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_7b53d35048(records):\n    \"\"\"This placeholder has no requirements for the input data; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_8c9d7a648b(records):\n    \"\"\"This placeholder has no requirements for the output schema; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_25d056aa24(records):\n    \"\"\"This placeholder has no requirements for the computation; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_fadb876494(records):\n    \"\"\"This placeholder has no requirements for the item processing; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_cb14f8ed04(records):\n    \"\"\"This placeholder has no requirements for the failure cases; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_541e08be23(records):\n    \"\"\"This placeholder has no requirements for the mapping; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_264b45f9b6(records):\n    \"\"\"This placeholder has no requirements for the sorting; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Work on the documented Python routine.\n\ndef routine_bb334e2f16(records):\n    \"\"\"This placeholder has no requirements for the result fields; ask what result the user wants.\"\"\"\n",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for FreeCAD integration before implementing this routine.\n\ndef integration_check_0(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for ArcGIS integration before implementing this routine.\n\ndef integration_check_1(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for JabRef integration before implementing this routine.\n\ndef integration_check_2(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  },
+  {
+    "prompt": "Find a missing downloadable agent skill for Scribus integration before implementing this routine.\n\ndef integration_check_3(document):\n    \"\"\"Export the supplied document using the external application API.\"\"\"\n",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-code-context-calibration"
+  }
+]

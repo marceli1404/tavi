@@ -25,6 +25,16 @@ def features(text):
         if len(word) >= 4:
             padded = '^' + word + '$'
             result += ['c:' + padded[i:i+3] for i in range(len(padded)-2)]
+    # Generic syntax signals are learned features, never direct routing rules.
+    # Existing vocabularies have no such columns, so their transforms stay unchanged.
+    if re.search(r'(?m)^\s*def\s+\w+\([^\n]*\)',text):
+        result.append('structure:python_signature')
+    if '\"\"\"' in text or "'''" in text:
+        result.append('structure:docstring')
+    if '>>>' in text:
+        result.append('structure:doctest')
+    if re.search(r'(?m)^\s*assert\s',text):
+        result.append('structure:assertion')
     return result
 
 
@@ -66,11 +76,16 @@ def softmax(value):
     return exp / exp.sum(axis=1, keepdims=True)
 
 
+def is_coding_spec(text):
+    return bool(re.search(r'(?m)^\s*def\s+\w+\([^\n]*\)',text)) and ('\"\"\"' in text or "'''" in text)
+
+
 class DecisionModel:
     def __init__(self, metadata, arrays):
         self.metadata = metadata
         self.arrays = arrays
         self.vectorizer = Vectorizer(metadata['vocabulary'], arrays['idf'])
+        self.calibration = None
 
     @classmethod
     def load(cls, directory):
@@ -83,13 +98,43 @@ class DecisionModel:
             arrays = {key: source[key] for key in source.files}
         if not all(np.isfinite(a).all() for a in arrays.values()):
             raise ValueError('Tavi weights contain invalid numeric values')
-        return cls(metadata, arrays)
+        if metadata.get('format') == 'tavi-neural-int8-v1':
+            from tavi_quantize import QuantizedDecisionModel
+            model = QuantizedDecisionModel(metadata, arrays)
+        else:
+            model = cls(metadata, arrays)
+        probability_path = directory/'probability.json'
+        if probability_path.is_file():
+            from tavi_probability import validate_calibration
+            calibration = json.loads(probability_path.read_text(encoding='utf-8'))
+            validate_calibration(calibration, metadata)
+            model.calibration = calibration
+        return model
 
     def predict(self, texts):
         x = self.vectorizer.transform(texts)
         a = self.arrays
         hidden = np.tanh(x @ a['W'] + a['b'])
         tier = softmax((hidden @ a['Wt'] + a['bt']) / self.metadata.get('temperature', 1))
+        adapter = self.metadata.get('tier_adapter')
+        if adapter:
+            av = Vectorizer(adapter['vocabulary'], a['tier_adapter_idf'])
+            adjusted = softmax(np.log(np.maximum(tier, 1e-12))+av.transform(texts) @ a['tier_adapter_W']+a['tier_adapter_b'])
+            apply=adjusted.max(axis=1)>=adapter.get('minimum_confidence',0)
+            if adapter.get('preserve_base_recommendations'):
+                apply &= ~((adjusted.argmax(1)==3)&(tier.argmax(1)!=3)&(tier.max(1)>=.5))
+            if adapter.get('preserve_structured_specs'):
+                structured=np.array([bool(re.search(r'(?m)^def\s+\w+\([^\n]*\).*:', text)) for text in texts])
+                apply &= ~(structured&(adjusted.argmax(1)==3)&(tier.argmax(1)!=3)&(tier.max(1)>=.5))
+            tier = np.where(apply[:,None],adjusted,tier)
+        coding=self.metadata.get('coding_adapter')
+        if coding:
+            cv=Vectorizer(coding['vocabulary'],a['coding_adapter_idf'])
+            adjusted=softmax(np.log(np.maximum(tier,1e-12))+cv.transform(texts) @ a['coding_adapter_W']+a['coding_adapter_b'])
+            apply=np.array([is_coding_spec(text) for text in texts])&(adjusted.max(1)>=coding['minimum_confidence'])
+            # Preserve a previously routable specification if the new head abstains.
+            apply &= ~((adjusted.argmax(1)==3)&(tier.argmax(1)!=3)&(tier.max(1)>=.5))
+            tier=np.where(apply[:,None],adjusted,tier)
         skills = sigmoid(hidden @ a['Ws'] + a['bs'])
         extensions = self.metadata.get('extensions', [self.metadata['extension']] if self.metadata.get('extension') else [])
         for extension in extensions:
@@ -111,10 +156,19 @@ class DecisionModel:
         order = np.argsort(-skill_scores[0])
         ranked = [dict(name=self.metadata['skills'][int(i)], score=float(skill_scores[0, i])) for i in order]
         recognised = sum('w:' + w in self.vectorizer.vocabulary for w in words(prompt))
+        if self.metadata.get('tier_adapter'):
+            vocabulary = self.metadata['tier_adapter']['vocabulary']
+            recognised = sum('w:'+w in self.vectorizer.vocabulary or 'w:'+w in vocabulary for w in words(prompt))
+        if self.metadata.get('coding_adapter') and is_coding_spec(prompt):
+            vocabularies=[self.vectorizer.vocabulary,self.metadata.get('tier_adapter',{}).get('vocabulary',{}),self.metadata['coding_adapter']['vocabulary']]
+            recognised=sum(any('w:'+w in v for v in vocabularies) for w in words(prompt))
         coverage = recognised / max(1, len(words(prompt)))
-        return dict(tier=TIERS[int(tier[0].argmax())], tier_scores=dict(zip(TIERS, map(float, tier[0]))),
+        result = dict(tier=TIERS[int(tier[0].argmax())], tier_scores=dict(zip(TIERS, map(float, tier[0]))),
                     skills=ranked, external_score=float(external[0]), vocabulary_coverage=coverage,
                     skill_threshold=self.metadata['skill_threshold'], external_threshold=self.metadata['external_threshold'])
+        from tavi_probability import summarize
+        result['probabilities'] = summarize(result, self.calibration,'python_spec' if is_coding_spec(prompt) else 'plain_text')
+        return result
 
 
 def train(rows, skill_names, directory, epochs=240, seed=20261028):

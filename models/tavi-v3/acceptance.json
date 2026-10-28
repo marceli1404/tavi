@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "weights_sha256": "e799c63b9ba509f39d3d91dc2167362f418b41264e39d016de368c5db5dae371",
+  "model_signature": "1625ce1a7484bb8d0b389b9572a4448dcdeadea43deec88f9f3bd79ac326e6f2",
+  "coverage_passed": true,
+  "fresh_audit_passed": true,
+  "selected_outcomes": [
+    {
+      "task_id": "HumanEval/31",
+      "tier": "fast",
+      "passed": true
+    },
+    {
+      "task_id": "HumanEval/112",
+      "tier": "balanced",
+      "passed": true
+    }
+  ],
+  "calibration": "rejected; uncalibrated report retained",
+  "scope": "Bounded policy improvement with original heads frozen; not proof of best commercial model"
+}

@@ -1,0 +1,1802 @@
+[
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef mean_readings(values: list[float]):\n    \"\"\"Return the arithmetic mean of the readings, ignoring None values. Return None if no readings remain.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef pack_labels(labels: list[str]):\n    \"\"\"Group adjacent identical labels and return pairs of label and repetition count.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef count_changes(signals: list[int]):\n    \"\"\"Count positions where a signal differs from the immediately preceding signal.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef clean_addresses(addresses: list[str]):\n    \"\"\"Strip surrounding whitespace from each address, lowercase it and preserve first occurrence order while removing duplicates.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef weighted_bill(items: list[tuple[float, int]]):\n    \"\"\"Return the sum of unit price multiplied by quantity for every item.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef pad_names(names: list[str], width: int):\n    \"\"\"Right pad each name with spaces to the requested width, without shortening longer names.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef weekly_totals(records: list[tuple[str, float]]):\n    \"\"\"Return totals grouped by the first field of each record, preserving group insertion order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef rotate_rows(rows: list[list[int]], steps: int):\n    \"\"\"Rotate every row to the right by steps modulo its own length, leaving empty rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef clip_values(values: list[float], low: float, high: float):\n    \"\"\"Replace values below low with low and above high with high.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef count_suffixes(names: list[str]):\n    \"\"\"Return a dictionary counting names grouped by the text following their final dot, or an empty string when no dot exists.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef select_recent(records: list[tuple[int, str]], cutoff: int):\n    \"\"\"Return labels whose numeric timestamp is at least cutoff, ordered by timestamp then label.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef chunk_labels(labels: list[str], size: int):\n    \"\"\"Split labels into consecutive nonempty groups of at most size elements; reject size less than one.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef find_gaps(times: list[int]):\n    \"\"\"Return differences between consecutive timestamps after sorting them, preserving duplicate timestamps.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef scale_rows(rows: list[list[float]]):\n    \"\"\"For each row divide all numbers by its largest absolute value, leaving all zero rows unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef invoice_totals(rows: list[tuple[str, int, float]]):\n    \"\"\"Sum quantity times price grouped by customer name.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef mask_contacts(contacts: list[str]):\n    \"\"\"Replace every character before the first at sign with an asterisk, keeping the rest of each contact unchanged.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef label_ranges(values: list[int]):\n    \"\"\"Assign every integer its floor division bucket of width ten and return bucket counts.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef interleave_rows(left: list[str], right: list[str]):\n    \"\"\"Alternate elements from the two inputs starting with left, then append any remaining elements.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef median_window(values: list[float], width: int):\n    \"\"\"Return the median of each full consecutive window. Reject nonpositive width.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef dedup_records(records: list[tuple[str, int]]):\n    \"\"\"Keep the highest numeric value for each name and return names in alphabetical order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef run_lengths(values: list[bool]):\n    \"\"\"Return the lengths of every consecutive run of True values, omitting False runs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef trim_outliers(values: list[float]):\n    \"\"\"Remove one smallest and one largest value and return the remaining values in original order, or an empty list for fewer than three inputs.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef match_prices(names: list[str], prices: dict[str, float]):\n    \"\"\"Return a list of prices for the supplied names, using None for names missing from the mapping.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement the complete Python function below.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete this function with a clear working implementation.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Write code that satisfies this specification, including empty input cases.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Return the function implementation using the Python standard library.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Please implement the following documented routine.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Implement and check the edge cases for this small utility.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "We need a working implementation of this Python helper.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Finish this function according to its documented behavior.\n\ndef group_extensions(paths: list[str]):\n    \"\"\"Group paths by their final file extension after lowercasing the extension, keeping paths in their original order.\"\"\"\n",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_6d87b60303(value):\n    \"\"\"Return the number zero.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_1a73cf588d(value):\n    \"\"\"Return the number zero.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_9680f441c2(value):\n    \"\"\"Return the number zero.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_7924635d3c(value):\n    \"\"\"Return the argument unchanged.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_c48ba3b14a(value):\n    \"\"\"Return the argument unchanged.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_ce8e33187f(value):\n    \"\"\"Return the argument unchanged.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_e66d0cd055(value):\n    \"\"\"Return True.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_13b449a920(value):\n    \"\"\"Return True.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_37270db0ea(value):\n    \"\"\"Return True.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_8acd8aed55(value):\n    \"\"\"Return an empty list.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_643b39be18(value):\n    \"\"\"Return an empty list.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_32f7b5d1b0(value):\n    \"\"\"Return an empty list.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_c81c358c9c(value):\n    \"\"\"Return the string hello.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_61015960d8(value):\n    \"\"\"Return the string hello.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_66e40473cc(value):\n    \"\"\"Return the string hello.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_38b654c8f8(value):\n    \"\"\"Return the number one.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_9ff88c3fa8(value):\n    \"\"\"Return the number one.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f236a1c136(value):\n    \"\"\"Return the number one.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a91ce99181(value):\n    \"\"\"Return False.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_240adc508c(value):\n    \"\"\"Return False.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_882f68de37(value):\n    \"\"\"Return False.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_492b8df41b(value):\n    \"\"\"Return an empty dictionary.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_3921a284ee(value):\n    \"\"\"Return an empty dictionary.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_43fdfbe15e(value):\n    \"\"\"Return an empty dictionary.\"\"\"\n",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_25b30ca2be(value):\n    \"\"\"Return the argument converted to a string.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_4b0448f1dd(value):\n    \"\"\"Return the argument converted to a string.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a81a65d601(value):\n    \"\"\"Return the argument converted to a string.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_d0d4d7e762(value):\n    \"\"\"Return the number two.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_ad4a32875f(value):\n    \"\"\"Return the number two.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_782ccb2141(value):\n    \"\"\"Return the number two.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_48a58d2510(value):\n    \"\"\"Return an empty tuple.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_5838b06651(value):\n    \"\"\"Return an empty tuple.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_5baa6acec1(value):\n    \"\"\"Return an empty tuple.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_0397f823ed(value):\n    \"\"\"Return the string goodbye.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_0207439652(value):\n    \"\"\"Return the string goodbye.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_06acc7ab85(value):\n    \"\"\"Return the string goodbye.\"\"\"\n",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f69acbe99e(value):\n    \"\"\"Design a linearizable concurrent map and prove that updates preserve its invariants.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_37fd620d5b(value):\n    \"\"\"Design a linearizable concurrent map and prove that updates preserve its invariants.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a7a16cf5d9(value):\n    \"\"\"Design a linearizable concurrent map and prove that updates preserve its invariants.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_d6684dafd4(value):\n    \"\"\"Implement a distributed transaction recovery state machine and justify behavior under network partitions.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_c8954c87b0(value):\n    \"\"\"Implement a distributed transaction recovery state machine and justify behavior under network partitions.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_204226bf37(value):\n    \"\"\"Implement a distributed transaction recovery state machine and justify behavior under network partitions.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_021054e1e1(value):\n    \"\"\"Develop a lock free reclamation protocol with a memory ordering proof.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_b28298b4e8(value):\n    \"\"\"Develop a lock free reclamation protocol with a memory ordering proof.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_0abe0df2e9(value):\n    \"\"\"Develop a lock free reclamation protocol with a memory ordering proof.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_d747c1e5f5(value):\n    \"\"\"Design a consensus transition and prove its safety during simultaneous failover.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_dc7f00b7e5(value):\n    \"\"\"Design a consensus transition and prove its safety during simultaneous failover.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_86f9246591(value):\n    \"\"\"Design a consensus transition and prove its safety during simultaneous failover.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_1ad27313d5(value):\n    \"\"\"Derive a correct concurrent scheduler across replicated queues.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a11fa75478(value):\n    \"\"\"Derive a correct concurrent scheduler across replicated queues.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_fb06b65152(value):\n    \"\"\"Derive a correct concurrent scheduler across replicated queues.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a494edbe21(value):\n    \"\"\"Implement fault tolerant replication semantics and prove preservation of committed writes.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_678dc14ba3(value):\n    \"\"\"Implement fault tolerant replication semantics and prove preservation of committed writes.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_e146d20ac4(value):\n    \"\"\"Implement fault tolerant replication semantics and prove preservation of committed writes.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_5dc22a6913(value):\n    \"\"\"Analyze lock free allocation under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_800fe052ae(value):\n    \"\"\"Analyze lock free allocation under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f1296389b7(value):\n    \"\"\"Analyze lock free allocation under weak memory ordering.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f1baf6921e(value):\n    \"\"\"Design a global ledger migration with proof of consistency.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_710370de83(value):\n    \"\"\"Design a global ledger migration with proof of consistency.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_7629f6f362(value):\n    \"\"\"Design a global ledger migration with proof of consistency.\"\"\"\n",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f423527a79(value):\n    \"\"\"Derive a safe recovery algorithm for arbitrarily reordered distributed writes.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_6a6d3df659(value):\n    \"\"\"Derive a safe recovery algorithm for arbitrarily reordered distributed writes.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_15bcdac1a1(value):\n    \"\"\"Derive a safe recovery algorithm for arbitrarily reordered distributed writes.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_4a31d4b229(value):\n    \"\"\"Prove memory safety for concurrent reference counting.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_89afae72bb(value):\n    \"\"\"Prove memory safety for concurrent reference counting.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_9495d19256(value):\n    \"\"\"Prove memory safety for concurrent reference counting.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_e54de77738(value):\n    \"\"\"Implement consensus membership changes with a safety proof.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_906b583343(value):\n    \"\"\"Implement consensus membership changes with a safety proof.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_16689bfe4d(value):\n    \"\"\"Implement consensus membership changes with a safety proof.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_e97af75b2d(value):\n    \"\"\"Design a correct multi region transaction reconciliation algorithm.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_947ec736ae(value):\n    \"\"\"Design a correct multi region transaction reconciliation algorithm.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_5d15c1d2f0(value):\n    \"\"\"Design a correct multi region transaction reconciliation algorithm.\"\"\"\n",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_da99b0392a(value):\n    \"\"\"The intended behavior has not been specified. Ask what this function should do.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_d3c20d76cf(value):\n    \"\"\"The intended behavior has not been specified. Ask what this function should do.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_1b4ff74eea(value):\n    \"\"\"The intended behavior has not been specified. Ask what this function should do.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_9fe655ef82(value):\n    \"\"\"There is no description of the inputs or desired output.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_8675318637(value):\n    \"\"\"There is no description of the inputs or desired output.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_41cdcfd8ee(value):\n    \"\"\"There is no description of the inputs or desired output.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_6f218857d0(value):\n    \"\"\"The requirements are missing, and the function name is only a placeholder.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f47e39552c(value):\n    \"\"\"The requirements are missing, and the function name is only a placeholder.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_8030b9f793(value):\n    \"\"\"The requirements are missing, and the function name is only a placeholder.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_b9d67d8622(value):\n    \"\"\"The expected behavior is unknown. Request the missing requirements.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_1013ecc77a(value):\n    \"\"\"The expected behavior is unknown. Request the missing requirements.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_6f37a3fb8d(value):\n    \"\"\"The expected behavior is unknown. Request the missing requirements.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a36b59ddc7(value):\n    \"\"\"The user has supplied no goal for this routine.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_0453c8d909(value):\n    \"\"\"The user has supplied no goal for this routine.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_9dd8bd9f62(value):\n    \"\"\"The user has supplied no goal for this routine.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_2b1335edd3(value):\n    \"\"\"This placeholder has no specification or examples.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_abc87d990d(value):\n    \"\"\"This placeholder has no specification or examples.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_cfabcf2f2c(value):\n    \"\"\"This placeholder has no specification or examples.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_afbb1ca162(value):\n    \"\"\"The desired calculation is not known.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_a2ea25d3cc(value):\n    \"\"\"The desired calculation is not known.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_0658b449a3(value):\n    \"\"\"The desired calculation is not known.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_7969837c97(value):\n    \"\"\"No behavior was provided for this function.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_9340fd1e46(value):\n    \"\"\"No behavior was provided for this function.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_79001f58be(value):\n    \"\"\"No behavior was provided for this function.\"\"\"\n",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_72dc463751(value):\n    \"\"\"The input and output requirements are absent.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_3d208cb8c3(value):\n    \"\"\"The input and output requirements are absent.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_f4caae066a(value):\n    \"\"\"The input and output requirements are absent.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_dfaa6481d9(value):\n    \"\"\"Ask the user to describe the intended result.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_b48ae3ecdc(value):\n    \"\"\"Ask the user to describe the intended result.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_e8ceb7a4e5(value):\n    \"\"\"Ask the user to describe the intended result.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_b91ec8ce65(value):\n    \"\"\"The placeholder name does not define any behavior.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_3a20dc7605(value):\n    \"\"\"The placeholder name does not define any behavior.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_b33cf5f692(value):\n    \"\"\"The placeholder name does not define any behavior.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_7ad8daf0f2(value):\n    \"\"\"No useful task description was supplied.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_fa071be188(value):\n    \"\"\"No useful task description was supplied.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  },
+  {
+    "prompt": "Complete the Python task specification.\n\ndef routine_73d7c0ccf0(value):\n    \"\"\"No useful task description was supplied.\"\"\"\n",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-authored-structured-code"
+  }
+]

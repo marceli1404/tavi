@@ -92,6 +92,9 @@ def train_expansion(base_dir, skills, output):
     (output/'model.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     payload = json.dumps(rows,indent=2,ensure_ascii=False).encode('utf-8')
     (output/'dataset.json').write_bytes(payload)
+    for name in ('tier-dataset.json','coding-dataset.json','coding-training-report.json','coding-evaluation.json','coverage-evaluation.json','fresh-audit.json'):
+        if (base_dir/name).is_file():
+            (output/name).write_bytes((base_dir/name).read_bytes())
     report = dict(strategy='frozen-base-expansion', base_model=str(base_dir.resolve()),
                   base_weights_sha256=base.metadata['weights_sha256'], weights_sha256=metadata['weights_sha256'],
                   new_skills=new_names, parameters=metadata['parameters'], losses=losses,

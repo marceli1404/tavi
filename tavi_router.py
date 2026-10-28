@@ -104,7 +104,12 @@ def route_custom(prompt, skills, models, model, requested_model=None, requested_
                                score=prediction['external_score'], missing_skills=[s['name'] for s in missing],
                                installation_authorized=False)
     if external or missing:
-        result['discovery']['suggested_query'] = prompt[:200]
+        from tavi_awesomeskill import search_url
+        query = prompt[:160]
+        result['discovery'].update(suggested_query=query, provider='awesomeskill',
+                                   source_selection='user-preference-policy',
+                                   search_url=search_url(query),
+                                   next_step='Run discover, then review the pinned upstream source before downloading a skill.')
     result['policy_skills'] = sorted(pinned_names)
     result['explanation'] = dict(learned_tier=prediction['tier'], preference=preference,
                                model_selection=result['model']['selection'] if result['model'] else 'withheld',

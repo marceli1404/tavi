@@ -41,6 +41,10 @@ def activate_candidate(config_path, expected_bytes, candidate, accepted_report):
     loaded = DecisionModel.load(candidate)
     if accepted_report.get('weights_sha256') != loaded.metadata['weights_sha256']:
         raise ValueError('Evaluation is not for these candidate weights')
+    if loaded.metadata.get('tier_adapter'):
+        from tavi_probability import signature
+        if accepted_report.get('model_signature') != signature(loaded.metadata):
+            raise ValueError('Tier adapter evaluation is not for this exact model metadata')
     if config_path.read_bytes() != expected_bytes:
         raise RuntimeError('Config changed during refresh; candidate retained, activation refused')
     previous = json.loads(expected_bytes.decode('utf-8-sig'))
@@ -105,6 +109,8 @@ def refresh(base, config_path, activate=False, strategy='auto'):
     if strategy == 'expand' and not can_expand:
         raise ValueError('Expansion requires new names and unchanged existing skill metadata; use full refresh for other changes')
     chosen_strategy = 'expand' if strategy == 'expand' or (strategy == 'auto' and can_expand) else 'full'
+    if current.metadata.get('tier_adapter') and chosen_strategy == 'full':
+        raise ValueError('Full refresh would discard the accepted tier adapter; use a separately evaluated coverage candidate')
     candidate = base/'models'/('tavi-refresh-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')+'-'+uuid.uuid4().hex[:6])
     # Pass an immutable config snapshot to training; do not race a changing live config.
     snapshots = base/'output/refresh-inputs'
@@ -138,6 +144,13 @@ def refresh(base, config_path, activate=False, strategy='auto'):
         result['extension_acceptance'] = {k:v for k,v in extra_report.items() if k != 'results'}
         if not extra_report['passed']:
             report['passed'] = False
+        if current.metadata.get('tier_adapter'):
+            inherited = DecisionModel.load(candidate).metadata.get('tier_adapter')
+            if (inherited != current.metadata['tier_adapter'] or not extra_report['arrays_preserved']
+                    or not extra_report['outputs_preserved']):
+                report['passed'] = False
+            if DecisionModel.load(candidate).metadata.get('coding_adapter')!=current.metadata.get('coding_adapter'):
+                report['passed']=False
     baseline_path = current_model/'evaluation.json'
     if baseline_path.is_file():
         baseline = json.loads(baseline_path.read_text(encoding='utf-8'))

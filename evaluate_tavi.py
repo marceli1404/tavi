@@ -6,6 +6,7 @@ from pathlib import Path
 import time
 from training.heldout import CASES, GATES
 from tavi_model import DecisionModel, TIERS
+from tavi_probability import signature
 
 BASE = Path(__file__).resolve().parent
 
@@ -46,6 +47,7 @@ def main():
                   cases=n, metrics=metrics, gates=GATES,
                   passed=all(metrics[k] >= v for k, v in GATES.items()),
                   weights_sha256=model.metadata['weights_sha256'],
+                  model_signature=signature(model.metadata),
                   acceptance_source_sha256=hashlib.sha256((BASE/'training/heldout.py').read_bytes()).hexdigest(),
                   results=results)
     (args.model/'evaluation.json').write_text(json.dumps(report, indent=2), encoding='utf-8')

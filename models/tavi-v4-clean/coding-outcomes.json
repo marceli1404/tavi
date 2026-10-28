@@ -1,0 +1,75 @@
+{
+  "requests": 2,
+  "results": [
+    {
+      "task_id": "HumanEval/38",
+      "role": "balanced",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 7.223246599984122,
+      "usage": {
+        "input_tokens": 24299,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 119,
+        "reasoning_output_tokens": 21
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/105",
+      "role": "fast",
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "elapsed_seconds": 4.142054500000086,
+      "usage": {
+        "input_tokens": 19998,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 104,
+        "reasoning_output_tokens": 0
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    }
+  ],
+  "routes": {
+    "before": [
+      {
+        "task_id": "HumanEval/38",
+        "tier": "balanced",
+        "passed": true
+      },
+      {
+        "task_id": "HumanEval/105",
+        "tier": "fast",
+        "passed": true
+      }
+    ],
+    "after": [
+      {
+        "task_id": "HumanEval/38",
+        "tier": "balanced",
+        "passed": true
+      },
+      {
+        "task_id": "HumanEval/105",
+        "tier": "fast",
+        "passed": true
+      }
+    ]
+  },
+  "model_signatures": {
+    "before": "1625ce1a7484bb8d0b389b9572a4448dcdeadea43deec88f9f3bd79ac326e6f2",
+    "after": "5bd17c5ee5cdd1320521f859ba75c4e472c6cb240790b3b9f9fb2f7aa611d1b1"
+  },
+  "scope": "Two pre-fixed public tasks, one completion per unique selected route. Same before/after routes reuse the same completion; no superiority or independent real-world claim.",
+  "provenance": "Selected routes unchanged after neutral-name correction; reuse same task/model/effort completions rather than generate duplicates."
+}

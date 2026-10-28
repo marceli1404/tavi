@@ -1,0 +1,192 @@
+{
+  "cases": [
+    "HumanEval/31",
+    "HumanEval/112"
+  ],
+  "requests_max": 6,
+  "models": {
+    "fast": {
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "tasks": 2,
+      "passed": 2,
+      "generation_timeouts": 0,
+      "code_test_failures": 0,
+      "median_seconds": 7.7811847999983,
+      "input_tokens": 39697,
+      "output_tokens": 194,
+      "cached_input_tokens": 0,
+      "usage_observed": 2,
+      "usd_cost": null
+    },
+    "balanced": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "tasks": 2,
+      "passed": 2,
+      "generation_timeouts": 0,
+      "code_test_failures": 0,
+      "median_seconds": 10.836159600017709,
+      "input_tokens": 50651,
+      "output_tokens": 234,
+      "cached_input_tokens": 0,
+      "usage_observed": 2,
+      "usd_cost": null
+    },
+    "deep": {
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "tasks": 2,
+      "passed": 2,
+      "generation_timeouts": 0,
+      "code_test_failures": 0,
+      "median_seconds": 9.987371000010171,
+      "input_tokens": 40957,
+      "output_tokens": 205,
+      "cached_input_tokens": 0,
+      "usage_observed": 2,
+      "usd_cost": null
+    }
+  },
+  "results": [
+    {
+      "task_id": "HumanEval/31",
+      "role": "fast",
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "elapsed_seconds": 8.380543999985093,
+      "usage": {
+        "input_tokens": 19816,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 109,
+        "reasoning_output_tokens": 0
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/31",
+      "role": "balanced",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 8.979583400010597,
+      "usage": {
+        "input_tokens": 25293,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 151,
+        "reasoning_output_tokens": 33
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/31",
+      "role": "deep",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "elapsed_seconds": 11.627474700013408,
+      "usage": {
+        "input_tokens": 20446,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 147,
+        "reasoning_output_tokens": 37
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/112",
+      "role": "fast",
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "elapsed_seconds": 7.181825600011507,
+      "usage": {
+        "input_tokens": 19881,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 85,
+        "reasoning_output_tokens": 0
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/112",
+      "role": "balanced",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 12.69273580002482,
+      "usage": {
+        "input_tokens": 25358,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_output_tokens": 23
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/112",
+      "role": "deep",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "elapsed_seconds": 8.347267300006934,
+      "usage": {
+        "input_tokens": 20511,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 58,
+        "reasoning_output_tokens": 0
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    }
+  ],
+  "scope": "Two fixed new public tasks; single completion per role/task. Historical source may be in foundation training. No cost or best-model claim.",
+  "before": [
+    {
+      "task_id": "HumanEval/31",
+      "tier": "fast",
+      "passed": true
+    },
+    {
+      "task_id": "HumanEval/112",
+      "tier": "balanced",
+      "passed": true
+    }
+  ],
+  "after": [
+    {
+      "task_id": "HumanEval/31",
+      "tier": "fast",
+      "passed": true
+    },
+    {
+      "task_id": "HumanEval/112",
+      "tier": "balanced",
+      "passed": true
+    }
+  ]
+}

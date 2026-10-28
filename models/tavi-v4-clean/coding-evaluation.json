@@ -1,0 +1,236 @@
+{
+  "passed": true,
+  "weights_sha256": "38407cc1f25bbb1cdeefd73dcb5c72cb4d97545bae8efb2bbd18edfc4652592e",
+  "model_signature": "5bd17c5ee5cdd1320521f859ba75c4e472c6cb240790b3b9f9fb2f7aa611d1b1",
+  "metrics": {
+    "original": {
+      "before": 0.96,
+      "after": 0.96,
+      "cases": 50
+    },
+    "development_fresh": {
+      "before": 0.95,
+      "after": 0.95,
+      "cases": 40
+    },
+    "prior_audit": {
+      "before": 0.9375,
+      "after": 0.9375,
+      "cases": 32
+    },
+    "historical_check": {
+      "before": 0.78125,
+      "after": 0.78125,
+      "cases": 32
+    }
+  },
+  "public": {
+    "historical": {
+      "before": 7,
+      "after": 8,
+      "cases": 8,
+      "lost": [],
+      "results": [
+        {
+          "task_id": "HumanEval/0",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/20",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/56",
+          "tier": "deep",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/70",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/100",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/132",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/146",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/154",
+          "tier": "fast",
+          "covered": true
+        }
+      ]
+    },
+    "development": {
+      "before": 8,
+      "after": 8,
+      "cases": 8,
+      "lost": [],
+      "results": [
+        {
+          "task_id": "HumanEval/1",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/14",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/31",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/43",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/67",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/89",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/112",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/160",
+          "tier": "fast",
+          "covered": true
+        }
+      ]
+    },
+    "prior_audit": {
+      "before": 4,
+      "after": 6,
+      "cases": 8,
+      "lost": [],
+      "results": [
+        {
+          "task_id": "HumanEval/3",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/24",
+          "tier": "review",
+          "covered": false
+        },
+        {
+          "task_id": "HumanEval/49",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/75",
+          "tier": "review",
+          "covered": false
+        },
+        {
+          "task_id": "HumanEval/93",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/118",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/141",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/161",
+          "tier": "deep",
+          "covered": true
+        }
+      ]
+    },
+    "new_audit": {
+      "before": 8,
+      "after": 8,
+      "cases": 8,
+      "lost": [],
+      "results": [
+        {
+          "task_id": "HumanEval/5",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/17",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/38",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/62",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/81",
+          "tier": "balanced",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/105",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/126",
+          "tier": "fast",
+          "covered": true
+        },
+        {
+          "task_id": "HumanEval/150",
+          "tier": "balanced",
+          "covered": true
+        }
+      ]
+    }
+  },
+  "original_arrays_skills_external_exact": true,
+  "noncode_tier_scores_exact": true,
+  "preservation_cases": 1917,
+  "noncode_cases": 1585,
+  "gates": {
+    "original_tier_min": 0.96,
+    "development_fresh_min": 0.95,
+    "prior_audit_min": 0.9375,
+    "historical_check_min": 0.78125,
+    "known_public_audit_coverage_min": 0.75,
+    "new_public_coverage_min": 0.75,
+    "old_covered_routes_preserved": true,
+    "frozen_heads": true
+  },
+  "limits": "Same-author policy checks and public historical coding coverage; coverage is not task success or optimal-model accuracy."
+}

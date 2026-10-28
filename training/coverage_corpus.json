@@ -1,0 +1,2306 @@
+[
+  {
+    "prompt": "Give me a hello greeting.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a hello greeting.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a hello greeting.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a hello greeting without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a farewell message.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a farewell message.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a farewell message.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a farewell message without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a brief thank you.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a brief thank you.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a brief thank you.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a brief thank you without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me five fruit names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with five fruit names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need five fruit names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return five fruit names without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me three project names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with three project names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need three project names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return three project names without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a one line apology.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a one line apology.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a one line apology.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a one line apology without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a cheerful welcome.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a cheerful welcome.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a cheerful welcome.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a cheerful welcome without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a short reminder.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a short reminder.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a short reminder.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a short reminder without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me two title ideas.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with two title ideas.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need two title ideas.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return two title ideas without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a simple JSON list.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a simple JSON list.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a simple JSON list.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a simple JSON list without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a Python tuple literal.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a Python tuple literal.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a Python tuple literal.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a Python tuple literal without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a list of weekday names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a list of weekday names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a list of weekday names.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a list of weekday names without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a quick arithmetic answer.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a quick arithmetic answer.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a quick arithmetic answer.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a quick arithmetic answer without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a word translated to Spanish.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a word translated to Spanish.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a word translated to Spanish.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a word translated to Spanish without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a sentence in fewer words.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a sentence in fewer words.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a sentence in fewer words.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a sentence in fewer words without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me an alphabetical list.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with an alphabetical list.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need an alphabetical list.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return an alphabetical list without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a lowercase word.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a lowercase word.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a lowercase word.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a lowercase word without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a short birthday greeting.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a short birthday greeting.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a short birthday greeting.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a short birthday greeting without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a single email subject.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a single email subject.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a single email subject.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a single email subject without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a basic boolean value.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a basic boolean value.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a basic boolean value.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a basic boolean value without explanation.",
+    "tier": "fast",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a list of common animals.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a list of common animals.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a list of common animals.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a list of common animals without explanation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a short congratulation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a short congratulation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a short congratulation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a short congratulation without explanation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a plain dictionary example.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a plain dictionary example.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a plain dictionary example.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a plain dictionary example without explanation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Give me a comma separated list.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Reply briefly with a comma separated list.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "I only need a comma separated list.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Return a comma separated list without explanation.",
+    "tier": "fast",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a responsive navigation component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a responsive navigation component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a responsive navigation component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a responsive navigation component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a phone layout with overflow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a phone layout with overflow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a phone layout with overflow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a phone layout with overflow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a malformed JSON parsing function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a malformed JSON parsing function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a malformed JSON parsing function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a malformed JSON parsing function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a unit test for date formatting.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a unit test for date formatting.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a unit test for date formatting.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a unit test for date formatting.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a small Python sorting function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a small Python sorting function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a small Python sorting function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a small Python sorting function.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement an email input validation rule.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix an email input validation rule.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve an email input validation rule.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for an email input validation rule.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement an accessible accordion interaction.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix an accessible accordion interaction.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve an accessible accordion interaction.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for an accessible accordion interaction.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a bug in a file path parser.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a bug in a file path parser.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a bug in a file path parser.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a bug in a file path parser.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a CSV import helper.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a CSV import helper.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a CSV import helper.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a CSV import helper.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement the labels in a signup form.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix the labels in a signup form.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve the labels in a signup form.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for the labels in a signup form.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a short page of website copy.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a short page of website copy.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a short page of website copy.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a short page of website copy.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a results table with pagination.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a results table with pagination.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a results table with pagination.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a results table with pagination.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a retry wrapper for HTTP requests.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a retry wrapper for HTTP requests.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a retry wrapper for HTTP requests.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a retry wrapper for HTTP requests.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a form error message flow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a form error message flow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a form error message flow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a form error message flow.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a contact form component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a contact form component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a contact form component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a contact form component.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a simple REST endpoint.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a simple REST endpoint.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a simple REST endpoint.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a simple REST endpoint.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a data filtering utility.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a data filtering utility.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a data filtering utility.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a data filtering utility.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a password strength indicator.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a password strength indicator.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a password strength indicator.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a password strength indicator.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a search results empty state.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a search results empty state.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a search results empty state.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a search results empty state.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a React state handling bug.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a React state handling bug.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a React state handling bug.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a React state handling bug.",
+    "tier": "balanced",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a Python algorithm with edge cases.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a Python algorithm with edge cases.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a Python algorithm with edge cases.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a Python algorithm with edge cases.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a function that counts list items.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a function that counts list items.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a function that counts list items.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a function that counts list items.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a database query for a monthly report.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a database query for a monthly report.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a database query for a monthly report.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a database query for a monthly report.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please implement a reusable loading state.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me fix a reusable loading state.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Review and improve a reusable loading state.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Create a working solution for a reusable loading state.",
+    "tier": "balanced",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a distributed consensus proof in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a distributed consensus proof with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a distributed consensus proof.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a distributed consensus proof across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a concurrent memory safety invariant in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a concurrent memory safety invariant with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a concurrent memory safety invariant.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a concurrent memory safety invariant across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a zero downtime database migration in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a zero downtime database migration with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a zero downtime database migration.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a zero downtime database migration across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a cross region recovery architecture in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a cross region recovery architecture with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a cross region recovery architecture.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a cross region recovery architecture across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a rare storage engine deadlock in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a rare storage engine deadlock with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a rare storage engine deadlock.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a rare storage engine deadlock across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a lock free queue correctness proof in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a lock free queue correctness proof with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a lock free queue correctness proof.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a lock free queue correctness proof across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a replicated transaction protocol in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a replicated transaction protocol with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a replicated transaction protocol.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a replicated transaction protocol across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a formal compiler optimization proof in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a formal compiler optimization proof with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a formal compiler optimization proof.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a formal compiler optimization proof across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a distributed split brain failure in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a distributed split brain failure with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a distributed split brain failure.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a distributed split brain failure across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a subtle multiprocessor ordering race in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a subtle multiprocessor ordering race with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a subtle multiprocessor ordering race.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a subtle multiprocessor ordering race across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a global ledger consistency design in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a global ledger consistency design with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a global ledger consistency design.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a global ledger consistency design across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a complex fault tolerant scheduler in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a complex fault tolerant scheduler with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a complex fault tolerant scheduler.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a complex fault tolerant scheduler across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a cryptographic protocol security proof in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a cryptographic protocol security proof with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a cryptographic protocol security proof.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a cryptographic protocol security proof across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a sharded storage recovery design in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a sharded storage recovery design with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a sharded storage recovery design.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a sharded storage recovery design across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a multi service transaction deadlock in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a multi service transaction deadlock with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a multi service transaction deadlock.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a multi service transaction deadlock across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a difficult concurrent garbage collector in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a difficult concurrent garbage collector with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a difficult concurrent garbage collector.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a difficult concurrent garbage collector across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a consistency model under network partitions in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a consistency model under network partitions with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a consistency model under network partitions.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a consistency model under network partitions across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a formally verified resource allocator in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a formally verified resource allocator with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a formally verified resource allocator.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a formally verified resource allocator across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a large event streaming migration in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a large event streaming migration with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a large event streaming migration.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a large event streaming migration across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a distributed cache divergence investigation in depth.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a distributed cache divergence investigation with rigorous reasoning.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a distributed cache divergence investigation.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a distributed cache divergence investigation across failure scenarios.",
+    "tier": "deep",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a critical multi region failover policy in depth.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a critical multi region failover policy with rigorous reasoning.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a critical multi region failover policy.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a critical multi region failover policy across failure scenarios.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a correctness proof for a concurrent map in depth.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a correctness proof for a concurrent map with rigorous reasoning.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a correctness proof for a concurrent map.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a correctness proof for a concurrent map across failure scenarios.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze a system wide race condition analysis in depth.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out a system wide race condition analysis with rigorous reasoning.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify a system wide race condition analysis.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate a system wide race condition analysis across failure scenarios.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Analyze an advanced transactional replication architecture in depth.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Work out an advanced transactional replication architecture with rigorous reasoning.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Design and justify an advanced transactional replication architecture.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Investigate an advanced transactional replication architecture across failure scenarios.",
+    "tier": "deep",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the unnamed thing.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the unnamed thing.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the unnamed thing.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the unnamed thing better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the other one from before.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the other one from before.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the other one from before.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the other one from before better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix whatever it was.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with whatever it was.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do whatever it was.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make whatever it was better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix something I forgot to describe.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with something I forgot to describe.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do something I forgot to describe.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make something I forgot to describe better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix that issue with no details.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with that issue with no details.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do that issue with no details.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make that issue with no details better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the unspecified project.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the unspecified project.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the unspecified project.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the unspecified project better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the thing in my head.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the thing in my head.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the thing in my head.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the thing in my head better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix a problem without an example.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with a problem without an example.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do a problem without an example.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make a problem without an example better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix it without further explanation.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with it without further explanation.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do it without further explanation.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make it without further explanation better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the thing I have not sent.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the thing I have not sent.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the thing I have not sent.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the thing I have not sent better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix whatever needs to happen.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with whatever needs to happen.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do whatever needs to happen.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make whatever needs to happen better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the same stuff as last time.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the same stuff as last time.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the same stuff as last time.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the same stuff as last time better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix something with no stated goal.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with something with no stated goal.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do something with no stated goal.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make something with no stated goal better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the unknown task.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the unknown task.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the unknown task.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the unknown task better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix that unmentioned work.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with that unmentioned work.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do that unmentioned work.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make that unmentioned work better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the problem I cannot explain.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the problem I cannot explain.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the problem I cannot explain.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the problem I cannot explain better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the thing with no context.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the thing with no context.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the thing with no context.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the thing with no context better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the missing request.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the missing request.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the missing request.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the missing request better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix some stuff somehow.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with some stuff somehow.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do some stuff somehow.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make some stuff somehow better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix an issue with no symptoms.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with an issue with no symptoms.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do an issue with no symptoms.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make an issue with no symptoms better.",
+    "tier": "review",
+    "split": "train",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix that idea without any description.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with that idea without any description.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do that idea without any description.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make that idea without any description better.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the unspecified change.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the unspecified change.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the unspecified change.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the unspecified change better.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix the task I cannot name.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with the task I cannot name.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do the task I cannot name.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make the task I cannot name better.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Please fix whatever you think I mean.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Go ahead with whatever you think I mean.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Help me do whatever you think I mean.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  },
+  {
+    "prompt": "Make whatever you think I mean better.",
+    "tier": "review",
+    "split": "validation",
+    "origin": "new-tier-only-synthetic"
+  }
+]

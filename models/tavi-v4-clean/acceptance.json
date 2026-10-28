@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "weights_sha256": "38407cc1f25bbb1cdeefd73dcb5c72cb4d97545bae8efb2bbd18edfc4652592e",
+  "model_signature": "5bd17c5ee5cdd1320521f859ba75c4e472c6cb240790b3b9f9fb2f7aa611d1b1",
+  "coding_gates": true,
+  "post_freeze_passed": true,
+  "selected_outcomes": [
+    {
+      "task_id": "HumanEval/38",
+      "tier": "balanced",
+      "passed": true
+    },
+    {
+      "task_id": "HumanEval/105",
+      "tier": "fast",
+      "passed": true
+    }
+  ],
+  "calibration_contexts": {
+    "plain_text": {
+      "tier": false,
+      "external": true
+    },
+    "python_spec": {
+      "tier": true,
+      "external": false
+    }
+  }
+}

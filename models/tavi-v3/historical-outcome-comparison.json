@@ -1,0 +1,115 @@
+{
+  "scope": "Routing against already saved historical8-task outputs; not new generation or independent post-development outcome evidence.",
+  "models": {
+    "tavi-v2": {
+      "covered": 6,
+      "selected_successes": 6,
+      "tasks": 8,
+      "results": [
+        {
+          "task_id": "HumanEval/0",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/20",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/56",
+          "tier": "balanced",
+          "covered": false,
+          "selected_saved_outcome_passed": null
+        },
+        {
+          "task_id": "HumanEval/70",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/100",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/132",
+          "tier": "balanced",
+          "covered": false,
+          "selected_saved_outcome_passed": null
+        },
+        {
+          "task_id": "HumanEval/146",
+          "tier": "balanced",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/154",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        }
+      ]
+    },
+    "tavi-v3": {
+      "covered": 7,
+      "selected_successes": 7,
+      "tasks": 8,
+      "results": [
+        {
+          "task_id": "HumanEval/0",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/20",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/56",
+          "tier": "deep",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/70",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/100",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/132",
+          "tier": "balanced",
+          "covered": false,
+          "selected_saved_outcome_passed": null
+        },
+        {
+          "task_id": "HumanEval/146",
+          "tier": "balanced",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        },
+        {
+          "task_id": "HumanEval/154",
+          "tier": "fast",
+          "covered": true,
+          "selected_saved_outcome_passed": true
+        }
+      ]
+    }
+  }
+}

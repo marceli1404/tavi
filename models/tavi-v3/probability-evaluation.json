@@ -1,0 +1,81 @@
+{
+  "format": "tavi-probability-v1",
+  "model_signature": "1625ce1a7484bb8d0b389b9572a4448dcdeadea43deec88f9f3bd79ac326e6f2",
+  "accepted": false,
+  "tier_temperature": 1.8945631016150044,
+  "external_temperature": 1.8278043046695025,
+  "fit_cases": 32,
+  "check_cases": 40,
+  "dataset_sha256": "e9b8c6a026d9387f63f9e7e9c15460ca092dea22e551746ab7356ddf092df60f",
+  "scope": "Authored synthetic policy calibration; small same-author check set, not real outcomes.",
+  "metrics": {
+    "calibration": {
+      "tier": {
+        "before": {
+          "nll": 0.6120430840533941,
+          "brier": 0.2208891302577978,
+          "ece": 0.11629342287778849,
+          "accuracy": 0.875,
+          "cases": 32
+        },
+        "after": {
+          "nll": 0.45642611081666945,
+          "brier": 0.2160761201881422,
+          "ece": 0.11900501231485598,
+          "accuracy": 0.875,
+          "cases": 32
+        }
+      },
+      "external": {
+        "before": {
+          "nll": 0.18704923303349394,
+          "brier": 0.0962344130312152,
+          "ece": 0.0658233817666769,
+          "accuracy": 0.90625,
+          "cases": 32
+        },
+        "after": {
+          "nll": 0.14827385772017615,
+          "brier": 0.09048859777497248,
+          "ece": 0.05863295391570824,
+          "accuracy": 0.90625,
+          "cases": 32
+        }
+      }
+    },
+    "check": {
+      "tier": {
+        "before": {
+          "nll": 0.6709730349168105,
+          "brier": 0.2975648100558031,
+          "ece": 0.1558429844677448,
+          "accuracy": 0.85,
+          "cases": 40
+        },
+        "after": {
+          "nll": 0.553451122301738,
+          "brier": 0.28255103639880474,
+          "ece": 0.10166772947683898,
+          "accuracy": 0.85,
+          "cases": 40
+        }
+      },
+      "external": {
+        "before": {
+          "nll": 0.09317006289598424,
+          "brier": 0.06845865058818972,
+          "ece": 0.04836823940277098,
+          "accuracy": 0.925,
+          "cases": 40
+        },
+        "after": {
+          "nll": 0.10676826607882033,
+          "brier": 0.0631412151506108,
+          "ece": 0.06370905012430692,
+          "accuracy": 0.925,
+          "cases": 40
+        }
+      }
+    }
+  }
+}

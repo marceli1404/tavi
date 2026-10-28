@@ -1,0 +1,148 @@
+{
+  "weights_sha256": "e799c63b9ba509f39d3d91dc2167362f418b41264e39d016de368c5db5dae371",
+  "passed": true,
+  "metrics": {
+    "original": {
+      "cases": 50,
+      "before": 0.96,
+      "after": 0.96
+    },
+    "fresh": {
+      "cases": 40,
+      "before": 0.75,
+      "after": 0.95
+    },
+    "historical_probability_check": {
+      "cases": 32,
+      "before": 0.5625,
+      "after": 0.78125
+    },
+    "public": {
+      "before": {
+        "coverage": 1.0,
+        "results": [
+          {
+            "task_id": "HumanEval/1",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.5373134328358209
+          },
+          {
+            "task_id": "HumanEval/14",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.3793103448275862
+          },
+          {
+            "task_id": "HumanEval/31",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.35294117647058826
+          },
+          {
+            "task_id": "HumanEval/43",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.5333333333333333
+          },
+          {
+            "task_id": "HumanEval/67",
+            "covered": true,
+            "tier": "balanced",
+            "vocabulary_coverage": 0.4782608695652174
+          },
+          {
+            "task_id": "HumanEval/89",
+            "covered": true,
+            "tier": "balanced",
+            "vocabulary_coverage": 0.47368421052631576
+          },
+          {
+            "task_id": "HumanEval/112",
+            "covered": true,
+            "tier": "balanced",
+            "vocabulary_coverage": 0.5813953488372093
+          },
+          {
+            "task_id": "HumanEval/160",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.5876288659793815
+          }
+        ]
+      },
+      "after": {
+        "coverage": 1.0,
+        "results": [
+          {
+            "task_id": "HumanEval/1",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.6417910447761194
+          },
+          {
+            "task_id": "HumanEval/14",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.4827586206896552
+          },
+          {
+            "task_id": "HumanEval/31",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.38235294117647056
+          },
+          {
+            "task_id": "HumanEval/43",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.6833333333333333
+          },
+          {
+            "task_id": "HumanEval/67",
+            "covered": true,
+            "tier": "balanced",
+            "vocabulary_coverage": 0.6413043478260869
+          },
+          {
+            "task_id": "HumanEval/89",
+            "covered": true,
+            "tier": "balanced",
+            "vocabulary_coverage": 0.5263157894736842
+          },
+          {
+            "task_id": "HumanEval/112",
+            "covered": true,
+            "tier": "balanced",
+            "vocabulary_coverage": 0.6627906976744186
+          },
+          {
+            "task_id": "HumanEval/160",
+            "covered": true,
+            "tier": "fast",
+            "vocabulary_coverage": 0.6907216494845361
+          }
+        ]
+      }
+    }
+  },
+  "model_signature": "1625ce1a7484bb8d0b389b9572a4448dcdeadea43deec88f9f3bd79ac326e6f2",
+  "frozen_heads_and_original_arrays_preserved": true,
+  "preservation_cases": 1388,
+  "gates": {
+    "original_tier_accuracy_min": 0.96,
+    "fresh_tier_accuracy_min": 0.8,
+    "historical_probability_check_min": 0.75,
+    "public_coverage_min": 1.0,
+    "skill_external_exact": true,
+    "training_forbidden": [
+      "original8 outcome cases",
+      "fresh8 public cases",
+      "fresh40 check labels",
+      "previous64 probability labels"
+    ],
+    "scope": "Same-author policy checks plus fresh external coverage and two fixed outcome cases; no broad best-model claim"
+  },
+  "fresh_source_sha256": "4dd09ad25d354db8e4ab6fc30a2af10bdc73160716f8907475c7a493e307d1aa",
+  "limitation": "Policy accuracy and coverage, not task-outcome accuracy or empirical optimal-model labels."
+}

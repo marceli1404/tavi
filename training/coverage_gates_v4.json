@@ -1,0 +1,10 @@
+{
+  "original_tier_min": 0.96,
+  "development_fresh_min": 0.95,
+  "prior_audit_min": 0.9375,
+  "historical_check_min": 0.78125,
+  "known_public_audit_coverage_min": 0.75,
+  "new_public_coverage_min": 0.75,
+  "old_covered_routes_preserved": true,
+  "frozen_heads": true
+}

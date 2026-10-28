@@ -1,0 +1,119 @@
+{
+  "format": "tavi-quantization-experiment-v1",
+  "source_weights_sha256": "b4c6c1c55ff09899dafc38455fbf5accdaee3e079b05d0de0b76c153b5ae8bc7",
+  "candidate_weights_sha256": "5b5ea0d0d79224d247f02e26fc48f107f009fad5a81827434c6a8c5b2a8e4131",
+  "comparison": {
+    "cases": 597,
+    "tier_agreement": 1.0,
+    "selected_skill_agreement": 0.9899497487437185,
+    "external_decision_agreement": 1.0,
+    "max_tier_score_drift": 0.008593916893005371,
+    "max_skill_score_drift": 0.007841110229492188,
+    "max_external_score_drift": 0.006686985492706299,
+    "decision_gate_passed": false,
+    "changed_skill_decisions": [
+      {
+        "prompt": "Download and install the requested agent skill",
+        "fp32": [
+          "skill-installer"
+        ],
+        "int8": [
+          "skill-creator",
+          "skill-installer"
+        ]
+      },
+      {
+        "prompt": "design impact reporting Communicate design's contribution to business and user outcomes in stakeholder language. Use when reporting results upward. For choosing the metrics in the first place, use `metrics-definition` (ux-strategy).",
+        "fp32": [
+          "behavioural-analytics",
+          "design-impact-reporting",
+          "metrics-definition"
+        ],
+        "int8": [
+          "design-impact-reporting",
+          "metrics-definition"
+        ]
+      },
+      {
+        "prompt": "fitts law Apply Fitts's Law \u2014 target acquisition time depends on size and distance. Use when sizing and positioning controls, especially for touch. For how many controls to show at once, use `hicks-law`.",
+        "fp32": [
+          "critique-affordance",
+          "fitts-law",
+          "hicks-law"
+        ],
+        "int8": [
+          "fitts-law",
+          "hicks-law"
+        ]
+      },
+      {
+        "prompt": "platform conventions Design to iOS and Android conventions \u2014 what each OS mandates, where they diverge, and when to unify. Use when shipping native apps. For breakpoint adaptation use `responsive-design`; for matching competitor patterns use `jakobs-law` (interaction-design).",
+        "fp32": [
+          "gesture-patterns",
+          "jakobs-law",
+          "platform-conventions"
+        ],
+        "int8": [
+          "competitive-analysis",
+          "gesture-patterns",
+          "platform-conventions"
+        ]
+      },
+      {
+        "prompt": "review agent Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+        "fp32": [
+          "review-agent",
+          "website-copy-humanizer"
+        ],
+        "int8": [
+          "review-agent"
+        ]
+      },
+      {
+        "prompt": "Download a skill for something unspecified",
+        "fp32": [],
+        "int8": [
+          "skill-installer"
+        ]
+      }
+    ]
+  },
+  "frozen_acceptance_comparison": {
+    "cases": 50,
+    "tier_agreement": 1.0,
+    "selected_skill_agreement": 1.0,
+    "external_decision_agreement": 1.0,
+    "max_tier_score_drift": 0.002297043800354004,
+    "max_skill_score_drift": 0.005581974983215332,
+    "max_external_score_drift": 0.005401432514190674,
+    "decision_gate_passed": true,
+    "changed_skill_decisions": []
+  },
+  "bytes": {
+    "fp32_weights": 1534358,
+    "int8_weights": 280317,
+    "fp32_arrays": 1681380,
+    "int8_arrays": 446664
+  },
+  "latency": {
+    "fp32": {
+      "median_ms": 1.6921,
+      "p95_ms": 9.684004999999997,
+      "rounds": 80,
+      "scope": "Warm batch-one infer including text features, ranking and probability summary; no process startup."
+    },
+    "int8": {
+      "median_ms": 9.43395,
+      "p95_ms": 51.07468499999999,
+      "rounds": 80,
+      "scope": "Warm batch-one infer including text features, ranking and probability summary; no process startup."
+    }
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.5.4"
+  },
+  "activated": false,
+  "limits": "One local CPU run; agreement with the original is not correctness or broad speed evidence. Feature vocabulary and Python overhead are not quantized.",
+  "recommended_default": "fp32"
+}

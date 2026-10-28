@@ -1,0 +1,14 @@
+{
+  "original_tier_accuracy_min": 0.96,
+  "fresh_tier_accuracy_min": 0.8,
+  "historical_probability_check_min": 0.75,
+  "public_coverage_min": 1.0,
+  "skill_external_exact": true,
+  "training_forbidden": [
+    "original8 outcome cases",
+    "fresh8 public cases",
+    "fresh40 check labels",
+    "previous64 probability labels"
+  ],
+  "scope": "Same-author policy checks plus fresh external coverage and two fixed outcome cases; no broad best-model claim"
+}

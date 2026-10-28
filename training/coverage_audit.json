@@ -1,0 +1,136 @@
+{
+  "frozen_candidate_sha256": "e799c63b9ba509f39d3d91dc2167362f418b41264e39d016de368c5db5dae371",
+  "gate_tier_accuracy_min": 0.8,
+  "scope": "New32 same-author audit cases written after candidate weights frozen; not used to select training epoch or correction gate",
+  "cases": [
+    {
+      "prompt": "Say good morning in a friendly sentence",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Convert ninety seconds to minutes",
+      "tier": "fast"
+    },
+    {
+      "prompt": "List three household pets",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Translate water into Portuguese",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Give a tiny Python integer example",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Return a JSON list containing two numbers",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Suggest one title for a garden diary",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Write a brief message wishing someone luck",
+      "tier": "fast"
+    },
+    {
+      "prompt": "Implement filtering in an existing product table",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Repair a Python dictionary lookup that mishandles missing keys",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Add keyboard focus management to a modal dialog",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Write tests for a currency formatting helper",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Make an email signup panel fit a compact screen",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Review the error handling in a small HTTP wrapper",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Write clearer guidance for an upload failure",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Build a simple endpoint that returns a paginated collection",
+      "tier": "balanced"
+    },
+    {
+      "prompt": "Analyze whether a lock free stack is linearizable",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Design regional disaster recovery for a replicated payment ledger",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Investigate data loss under concurrent distributed writes",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Prove safety of a consensus protocol during leader failover",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Architect a migration of a global multi tenant event database",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Diagnose a rare cache coherence bug under heavy concurrency",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Compare formal consistency models during extended network partitions",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Derive memory reclamation invariants for concurrent readers",
+      "tier": "deep"
+    },
+    {
+      "prompt": "Fix my unnamed problem please",
+      "tier": "review"
+    },
+    {
+      "prompt": "Do something with the unspecified thing",
+      "tier": "review"
+    },
+    {
+      "prompt": "Make whatever I mean better",
+      "tier": "review"
+    },
+    {
+      "prompt": "Handle it although I have not explained it",
+      "tier": "review"
+    },
+    {
+      "prompt": "Choose a plan for an unknown goal",
+      "tier": "review"
+    },
+    {
+      "prompt": "Work on the thing without any description",
+      "tier": "review"
+    },
+    {
+      "prompt": "Sort it out but I forgot all the details",
+      "tier": "review"
+    },
+    {
+      "prompt": "Please continue an unspecified activity",
+      "tier": "review"
+    }
+  ],
+  "frozen_model_signature": "1625ce1a7484bb8d0b389b9572a4448dcdeadea43deec88f9f3bd79ac326e6f2"
+}

@@ -1,0 +1,4909 @@
+[
+  {
+    "id": "responsive-design-train-0",
+    "prompt": "Fix the mobile menu overflowing a narrow screen",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "responsive-design-train-1",
+    "prompt": "Adapt the layout for phones tablets and desktop",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "responsive-design-train-2",
+    "prompt": "Make this page responsive across viewport sizes",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "responsive-design-train-3",
+    "prompt": "Cards should stack on small mobile screens",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "responsive-design-train-4",
+    "prompt": "Repair horizontal scrolling on a phone",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "responsive-design-train-5",
+    "prompt": "Adjust the responsive layout when the browser shrinks",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "responsive-design-validation-0",
+    "prompt": "Make the navigation fit on a tiny smartphone display",
+    "tier": "balanced",
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-train-0",
+    "prompt": "Audit this interface for accessibility and WCAG issues",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-train-1",
+    "prompt": "Check keyboard access and screen reader labels",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-train-2",
+    "prompt": "Find inaccessible controls and insufficient contrast",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-train-3",
+    "prompt": "Review focus indicators for accessibility problems",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-train-4",
+    "prompt": "Assess WCAG compliance of the existing app",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-train-5",
+    "prompt": "Identify accessibility defects in forms and buttons",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "accessibility-audit-validation-0",
+    "prompt": "Check this screen for barriers affecting people using assistive technology",
+    "tier": "balanced",
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-train-0",
+    "prompt": "Test the local application using Playwright",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-train-1",
+    "prompt": "Verify the login flow in a browser",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-train-2",
+    "prompt": "Run browser tests for the checkout form",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-train-3",
+    "prompt": "Check console errors in the local web app",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-train-4",
+    "prompt": "Use browser automation to test interactions",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-train-5",
+    "prompt": "Capture screenshots and verify the web app behaviour",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "webapp-testing-validation-0",
+    "prompt": "Exercise the local signup flow with an automated browser",
+    "tier": "balanced",
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-train-0",
+    "prompt": "Build a polished frontend interface in code",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-train-1",
+    "prompt": "Create the dashboard UI with a strong visual style",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-train-2",
+    "prompt": "Implement a production quality web interface",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-train-3",
+    "prompt": "Build the settings screen frontend",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-train-4",
+    "prompt": "Design and code an attractive application UI",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-train-5",
+    "prompt": "Create a distinctive user interface for the app",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ui-design-validation-0",
+    "prompt": "Implement the visual interface for our account settings",
+    "tier": "balanced",
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-train-0",
+    "prompt": "Write persuasive marketing copy for the homepage",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-train-1",
+    "prompt": "Improve the landing page headline and benefits",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-train-2",
+    "prompt": "Rewrite the sales page to explain our product",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-train-3",
+    "prompt": "Draft compelling product positioning copy",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-train-4",
+    "prompt": "Create marketing text for a new service",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-train-5",
+    "prompt": "Write the hero headline and call to action",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "copywriting-validation-0",
+    "prompt": "Draft the sales messaging for our product launch page",
+    "tier": "balanced",
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-train-0",
+    "prompt": "Write a short validation error message",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-train-1",
+    "prompt": "Improve the empty state text",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-train-2",
+    "prompt": "Suggest clearer button labels",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-train-3",
+    "prompt": "Rewrite the password reset confirmation message",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-train-4",
+    "prompt": "Make this tooltip concise and helpful",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-train-5",
+    "prompt": "Create interface microcopy for a failed upload",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "ux-writing-validation-0",
+    "prompt": "Give me a clear message when a payment form field is empty",
+    "tier": "fast",
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-train-0",
+    "prompt": "Review website copy for robotic language after editing the site",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-train-1",
+    "prompt": "Humanize the text on the modified website",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-train-2",
+    "prompt": "Run the six copy review passes on this updated site",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-train-3",
+    "prompt": "Remove AI sounding phrases from the website copy",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-train-4",
+    "prompt": "Review the changed landing page for natural human wording",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-train-5",
+    "prompt": "Improve the website language while preserving facts",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "website-copy-humanizer-validation-0",
+    "prompt": "Make the wording on our updated site sound less machine generated",
+    "tier": "balanced",
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-train-0",
+    "prompt": "Build an accessible product color palette",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-train-1",
+    "prompt": "Define semantic colors and tonal scales",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-train-2",
+    "prompt": "Create a colour system with contrast compliant roles",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-train-3",
+    "prompt": "Choose brand colours and semantic surface tokens",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-train-4",
+    "prompt": "Specify a consistent product palette",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-train-5",
+    "prompt": "Design accessible colour roles for text and surfaces",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "color-system-validation-0",
+    "prompt": "Define the app palette with accessible foreground and background colours",
+    "tier": "balanced",
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-train-0",
+    "prompt": "Create a modular typography scale",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-train-1",
+    "prompt": "Define font sizes weights and line heights",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-train-2",
+    "prompt": "Set a consistent type hierarchy for headings and body",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-train-3",
+    "prompt": "Build a product font scale",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-train-4",
+    "prompt": "Specify heading sizes and paragraph line height",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-train-5",
+    "prompt": "Establish a typography system for the interface",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "typography-scale-validation-0",
+    "prompt": "Choose a consistent progression of font sizes for our product",
+    "tier": "balanced",
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-train-0",
+    "prompt": "Define columns gutters and margins for a responsive grid",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-train-1",
+    "prompt": "Create a twelve column page grid",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-train-2",
+    "prompt": "Specify desktop and mobile grid breakpoints",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-train-3",
+    "prompt": "Set page columns and gutter widths",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-train-4",
+    "prompt": "Design the underlying layout grid",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-train-5",
+    "prompt": "Establish a column structure for the dashboard",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "layout-grid-validation-0",
+    "prompt": "Specify the page column count and spacing between columns",
+    "tier": "balanced",
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-train-0",
+    "prompt": "Design a signup form with grouped fields and validation",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-train-1",
+    "prompt": "Improve the field order in the checkout form",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-train-2",
+    "prompt": "Create a form with clear labels and errors",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-train-3",
+    "prompt": "Plan the application form from start to completion",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-train-4",
+    "prompt": "Group related inputs in the registration form",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-train-5",
+    "prompt": "Design validation and completion for a multi step form",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "form-design-validation-0",
+    "prompt": "Organise the fields and validation behaviour of a registration form",
+    "tier": "balanced",
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-train-0",
+    "prompt": "Choose tabs or sidebar navigation for the app",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-train-1",
+    "prompt": "Design a navigation pattern matched to product structure",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-train-2",
+    "prompt": "Decide between a drawer and tab bar",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-train-3",
+    "prompt": "Improve how users navigate between product sections",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-train-4",
+    "prompt": "Specify navigation behaviour for the application",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-train-5",
+    "prompt": "Choose an app navigation model",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "navigation-patterns-validation-0",
+    "prompt": "Should the product use a sidebar or a tab bar for navigation",
+    "tier": "balanced",
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-train-0",
+    "prompt": "Organise the content structure and site hierarchy",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-train-1",
+    "prompt": "Define clear labels and a sitemap",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-train-2",
+    "prompt": "Group product information into findable categories",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-train-3",
+    "prompt": "Design the information architecture of our knowledge base",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-train-4",
+    "prompt": "Restructure the site hierarchy",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-train-5",
+    "prompt": "Decide how content should be organised and labelled",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "information-architecture-validation-0",
+    "prompt": "Arrange our help centre articles into understandable categories",
+    "tier": "balanced",
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-train-0",
+    "prompt": "Write a project brief with audience constraints and goals",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-train-1",
+    "prompt": "Define the problem and success criteria before design",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-train-2",
+    "prompt": "Create a brief for a new product design project",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-train-3",
+    "prompt": "Record stakeholders scope and deliverables in a design brief",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-train-4",
+    "prompt": "Document the audience and constraints for this project",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-train-5",
+    "prompt": "Clarify the design project goals in a short brief",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "design-brief-validation-0",
+    "prompt": "Capture the project audience objectives constraints and expected deliverables",
+    "tier": "balanced",
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-train-0",
+    "prompt": "Design an A/B experiment with a primary metric",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-train-1",
+    "prompt": "Plan a split test for two signup variants",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-train-2",
+    "prompt": "Define the hypothesis and sample size for an experiment",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-train-3",
+    "prompt": "Compare two checkout designs through an A/B test",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-train-4",
+    "prompt": "Choose experiment metrics and guardrails",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-train-5",
+    "prompt": "Plan an A/B test with variants and success criteria",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "a-b-test-design-validation-0",
+    "prompt": "Set up a controlled comparison between two onboarding variants",
+    "tier": "balanced",
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-train-0",
+    "prompt": "Choose a chart type for these quantitative results",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-train-1",
+    "prompt": "Design an accessible data chart",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-train-2",
+    "prompt": "Select visual encodings and axes for a graph",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-train-3",
+    "prompt": "Show retention trends with an appropriate chart",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-train-4",
+    "prompt": "Choose marks labels and scales for a data visualisation",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-train-5",
+    "prompt": "Compare categories in a readable chart",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "data-visualization-validation-0",
+    "prompt": "Choose a clear chart and axis encoding for monthly sales figures",
+    "tier": "balanced",
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-train-0",
+    "prompt": "Draw the screen flow for a checkout journey",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-train-1",
+    "prompt": "Map screens decisions and branches for password reset",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-train-2",
+    "prompt": "Create a user flow diagram for account signup",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-train-3",
+    "prompt": "Diagram the paths between app screens",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-train-4",
+    "prompt": "Show the decision branches in the onboarding flow",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-train-5",
+    "prompt": "Map the screen level journey from login to purchase",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "user-flow-diagram-validation-0",
+    "prompt": "Diagram how the visitor moves between signup screens and error branches",
+    "tier": "balanced",
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-train-0",
+    "prompt": "Plan a usability study with participants and tasks",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-train-1",
+    "prompt": "Write a usability testing plan and success metrics",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-train-2",
+    "prompt": "Define research questions for a usability test",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-train-3",
+    "prompt": "Choose participants and sessions for interface testing",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-train-4",
+    "prompt": "Create the plan for a moderated usability study",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-train-5",
+    "prompt": "Plan realistic tasks and metrics for user testing",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "usability-test-plan-validation-0",
+    "prompt": "Plan sessions to observe users completing tasks in our prototype",
+    "tier": "balanced",
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-train-0",
+    "prompt": "Generate a product illustration image",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-train-1",
+    "prompt": "Create a photorealistic picture of a mountain cabin",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-train-2",
+    "prompt": "Edit this photo to remove the background",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-train-3",
+    "prompt": "Make a raster image of a futuristic city",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-train-4",
+    "prompt": "Create a cartoon portrait from this image",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-train-5",
+    "prompt": "Generate a visual concept for a poster",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "imagegen-validation-0",
+    "prompt": "Create a realistic picture of a bicycle beside a lake",
+    "tier": "balanced",
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-train-0",
+    "prompt": "Look up the official OpenAI API documentation",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-train-1",
+    "prompt": "Explain Codex model configuration using official docs",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-train-2",
+    "prompt": "Find the current Responses API schema",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-train-3",
+    "prompt": "Check official Codex CLI command options",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-train-4",
+    "prompt": "Verify OpenAI model settings and pricing documentation",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-train-5",
+    "prompt": "Read the OpenAI docs for tool calling",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "openai-docs-validation-0",
+    "prompt": "Check the documented configuration options for the Codex terminal client",
+    "tier": "balanced",
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-train-0",
+    "prompt": "Create a reusable Codex skill for our workflow",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-train-1",
+    "prompt": "Write a SKILL.md for reviewing pull requests",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-train-2",
+    "prompt": "Build a new local skill with scoped instructions",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-train-3",
+    "prompt": "Update our custom skill to add references",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-train-4",
+    "prompt": "Design a reusable agent skill and its scripts",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-train-5",
+    "prompt": "Package our recurring process as a Codex skill",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-creator-validation-0",
+    "prompt": "Turn our repeated review process into a reusable agent skill",
+    "tier": "balanced",
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-train-0",
+    "prompt": "Install this Codex skill from its GitHub repository",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-train-1",
+    "prompt": "List the curated skills available to install",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-train-2",
+    "prompt": "Download and install the requested agent skill",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-train-3",
+    "prompt": "Install a skill from the supplied repository path",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-train-4",
+    "prompt": "Add this approved skill to the local skill folder",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-train-5",
+    "prompt": "Fetch the curated skill installer list",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "skill-installer-validation-0",
+    "prompt": "Install the selected skill from the repository I provided",
+    "tier": "fast",
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-train-0",
+    "prompt": "Reverse engineer an unknown binary executable",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-train-1",
+    "prompt": "Analyse the internals of a packaged Electron application",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-train-2",
+    "prompt": "Inspect a firmware image to recover its structure",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-train-3",
+    "prompt": "Decompile a managed assembly and map its behaviour",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-train-4",
+    "prompt": "Investigate a native application binary format",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-train-5",
+    "prompt": "Reverse engineer a program to understand its protocol",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "reverse-engineer-anything-validation-0",
+    "prompt": "Recover the structure and behaviour of an unfamiliar compiled application",
+    "tier": "deep",
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-train-0",
+    "prompt": "Model component behaviour as a state machine",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-train-1",
+    "prompt": "Define states events and transitions for the uploader",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-train-2",
+    "prompt": "Describe the valid state transitions of a payment flow",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-train-3",
+    "prompt": "Create an explicit state model for this widget",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-train-4",
+    "prompt": "Map interaction states for a complex component",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-train-5",
+    "prompt": "Specify a state transition table for the player",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "state-machine-validation-0",
+    "prompt": "Define the possible states and events of the file upload component",
+    "tier": "balanced",
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-train-0",
+    "prompt": "Define shared motion durations and easing tokens",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-train-1",
+    "prompt": "Create animation rules including reduced motion handling",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-train-2",
+    "prompt": "Specify a consistent motion system",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-train-3",
+    "prompt": "Set motion tokens for transitions across the product",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-train-4",
+    "prompt": "Define duration and easing vocabulary for UI animations",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-train-5",
+    "prompt": "Build accessible product motion guidelines",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "motion-system-validation-0",
+    "prompt": "Set consistent animation timings and reduced motion behaviour",
+    "tier": "balanced",
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-train-0",
+    "prompt": "Design search results and zero result states",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-train-1",
+    "prompt": "Improve search query input and filters",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-train-2",
+    "prompt": "Create a findable product search experience",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-train-3",
+    "prompt": "Design search refinement and results presentation",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-train-4",
+    "prompt": "Plan zero results suggestions for our search box",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-train-5",
+    "prompt": "Improve how people search within the application",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "search-ux-validation-0",
+    "prompt": "Design query refinement and empty results for the catalogue search",
+    "tier": "balanced",
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-train-0",
+    "prompt": "Design recovery when a user action fails",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-train-1",
+    "prompt": "Plan error prevention and recovery messages",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-train-2",
+    "prompt": "Improve how users recover from a failed payment",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-train-3",
+    "prompt": "Design retry and recovery for network errors",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-train-4",
+    "prompt": "Specify error handling across the user flow",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-train-5",
+    "prompt": "Help users understand and recover from application failures",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "error-handling-ux-validation-0",
+    "prompt": "Plan how a person can retry and recover after an unsuccessful upload",
+    "tier": "balanced",
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-train-0",
+    "prompt": "Design skeleton screens while content loads",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-train-1",
+    "prompt": "Improve the waiting experience for a slow operation",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-train-2",
+    "prompt": "Choose a progress indicator or spinner",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-train-3",
+    "prompt": "Design loading and progressive reveal states",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-train-4",
+    "prompt": "Show useful feedback during a long running request",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-train-5",
+    "prompt": "Create loading placeholders for a dashboard",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "loading-states-validation-0",
+    "prompt": "Choose a waiting indicator while the app fetches its content",
+    "tier": "balanced",
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-train-0",
+    "prompt": "Summarise this interview into themes and quotes",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-train-1",
+    "prompt": "Extract insights from a user interview transcript",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-train-2",
+    "prompt": "Turn one research interview into action items",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-train-3",
+    "prompt": "Find themes and supporting quotes in this transcript",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-train-4",
+    "prompt": "Summarize what the participant said during the interview",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-train-5",
+    "prompt": "Analyse a single interview for key findings",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "summarize-interview-validation-0",
+    "prompt": "Extract the main findings and representative quotes from this user interview",
+    "tier": "balanced",
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-train-0",
+    "prompt": "Compare UX patterns across rival products",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-train-1",
+    "prompt": "Analyse competitor features and design gaps",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-train-2",
+    "prompt": "Review the strengths and weaknesses of competing apps",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-train-3",
+    "prompt": "Compare our onboarding against three competitors",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-train-4",
+    "prompt": "Study rival products to identify design opportunities",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-train-5",
+    "prompt": "Create a competitive UX analysis",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "competitive-analysis-validation-0",
+    "prompt": "Compare the navigation and strengths of the competing products",
+    "tier": "balanced",
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-0",
+    "prompt": "Say hello",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-1",
+    "prompt": "What is two plus two",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-2",
+    "prompt": "Convert ten centimetres to millimetres",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-3",
+    "prompt": "Give me five name ideas",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-4",
+    "prompt": "Explain this single line of Python",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-5",
+    "prompt": "Fix a typo in a comment",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-6",
+    "prompt": "Rename this local variable",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-7",
+    "prompt": "Format this JSON object",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-8",
+    "prompt": "Write a short thank you message",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-9",
+    "prompt": "Summarise this short paragraph",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-10",
+    "prompt": "Sort this list of names",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-11",
+    "prompt": "Translate a simple greeting",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-12",
+    "prompt": "Answer a quick factual question",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-13",
+    "prompt": "Change the label from Save to Done",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-14",
+    "prompt": "List three synonyms for quick",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-15",
+    "prompt": "Explain what a boolean is",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-16",
+    "prompt": "Calculate twelve times seven",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-17",
+    "prompt": "Give me a one sentence definition",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-18",
+    "prompt": "Make this sentence shorter",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-fast-19",
+    "prompt": "Suggest a filename",
+    "tier": "fast",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-0",
+    "prompt": "Implement a normal REST endpoint with validation",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-1",
+    "prompt": "Fix a reproducible bug in this module",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-2",
+    "prompt": "Add unit tests for the parser",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-3",
+    "prompt": "Refactor the helper function without changing its public API",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-4",
+    "prompt": "Build a small CLI utility",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-5",
+    "prompt": "Implement pagination for a database query",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-6",
+    "prompt": "Review this pull request for correctness",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-7",
+    "prompt": "Write a Python script to merge CSV files",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-8",
+    "prompt": "Add an accessible settings form",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-9",
+    "prompt": "Debug why this application fails to start",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-10",
+    "prompt": "Create a deployment configuration for our app",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-11",
+    "prompt": "Implement a feature across two modules",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-12",
+    "prompt": "Write documentation for a library",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-13",
+    "prompt": "Add validation to the checkout endpoint",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-14",
+    "prompt": "Inspect a failing test and repair the underlying bug",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-balanced-15",
+    "prompt": "Create a report from this dataset",
+    "tier": "balanced",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-0",
+    "prompt": "Investigate a nondeterministic distributed systems race condition",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-1",
+    "prompt": "Prove that this concurrent lock free algorithm is correct",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-2",
+    "prompt": "Design a multi region architecture with strict consistency guarantees",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-3",
+    "prompt": "Find the root cause of a rare deadlock across several services",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-4",
+    "prompt": "Plan a complex migration while preserving backward compatibility",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-5",
+    "prompt": "Audit the cryptographic protocol for subtle security flaws",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-6",
+    "prompt": "Analyse an intermittent memory corruption in native code",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-7",
+    "prompt": "Resolve a difficult performance regression spanning database and services",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-8",
+    "prompt": "Design a fault tolerant distributed consensus system",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-9",
+    "prompt": "Reason through a complex compiler optimisation correctness proof",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-10",
+    "prompt": "Diagnose an elusive production crash with conflicting evidence",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-11",
+    "prompt": "Compare architectural tradeoffs for a large system redesign",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-12",
+    "prompt": "Investigate a subtle security vulnerability across trust boundaries",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-13",
+    "prompt": "Solve this difficult mathematical proof step by step",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-14",
+    "prompt": "Design a complex database migration without service interruption",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-deep-15",
+    "prompt": "Debug a hard to reproduce data corruption across concurrent writers",
+    "tier": "deep",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-0",
+    "prompt": "Do the thing",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-1",
+    "prompt": "Continue with that",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-2",
+    "prompt": "Fix it",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-3",
+    "prompt": "Something is wrong",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-4",
+    "prompt": "You know what I mean",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-5",
+    "prompt": "Handle the stuff",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-6",
+    "prompt": "Make it better somehow",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-7",
+    "prompt": "Help",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-8",
+    "prompt": "That one",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-9",
+    "prompt": "Proceed as before",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-10",
+    "prompt": "Do what we discussed",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "tier-review-11",
+    "prompt": "Finish this",
+    "tier": "review",
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-0",
+    "prompt": "Find a new agent skill online for Blender rigging because none is installed",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-1",
+    "prompt": "Search GitHub for a missing Kubernetes operator skill",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-2",
+    "prompt": "Discover an agent skill for CAD modelling from the internet",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-3",
+    "prompt": "Find a downloadable skill for a capability absent from our library",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-4",
+    "prompt": "Look online for a new skill to manage robotics simulation",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-5",
+    "prompt": "Search the internet for an agent skill that can process satellite imagery",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-6",
+    "prompt": "Find an installable SKILL.md for GIS workflows not covered locally",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-7",
+    "prompt": "Discover a new skill for a missing audio mastering workflow",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-8",
+    "prompt": "Search for a third party skill that supports our unfamiliar tool",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-9",
+    "prompt": "Look for an external skill to handle a missing integration",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-10",
+    "prompt": "Find a suitable skill repository for PCB design",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-11",
+    "prompt": "Discover a downloadable skill for 3D printing workflows",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-12",
+    "prompt": "Find new skills online for tasks that our installed skills cannot perform",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-13",
+    "prompt": "Search public repositories for an agent skill for chemistry simulation",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-14",
+    "prompt": "Find an internet skill for a missing tax reporting integration",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "validation",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "external-15",
+    "prompt": "Look for a maintained skill for an unavailable CAD tool",
+    "tier": "balanced",
+    "skills": [],
+    "external": true,
+    "split": "train",
+    "origin": "agent-authored-synthetic"
+  },
+  {
+    "id": "metadata-806a04bfec10",
+    "prompt": "a b test design Design an A/B experiment — hypothesis, variants, primary metric, and sample size. Use when a change can be measured quantitatively at scale. For observing behaviour qualitatively, use `test-scenario`.",
+    "tier": null,
+    "skills": [
+      "a-b-test-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-cea3963ce8f7",
+    "prompt": "accessibility audit Audit an existing interface against WCAG, producing findings with severity ratings and remediation steps. Use when you have a design or build to assess now. Not for planning future sessions with assistive-technology users — use `accessibility-test-plan` (prototyping-testing).",
+    "tier": null,
+    "skills": [
+      "accessibility-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-fa7c39c787bf",
+    "prompt": "accessibility test plan Plan accessibility testing — assistive technologies, participant criteria, WCAG coverage, and session protocol. Use when scheduling testing with real AT users. Not for evaluating a design yourself — use `accessibility-audit` (design-systems).",
+    "tier": null,
+    "skills": [
+      "accessibility-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-00a50ea9f04c",
+    "prompt": "aesthetic usability Apply the Aesthetic-Usability Effect — polished, consistent interfaces are perceived as more usable and forgive minor friction. Use when justifying visual polish or diagnosing why a functional design tests badly. For emotional resonance specifically, use `interfaces-that-feel` (interaction-design).",
+    "tier": null,
+    "skills": [
+      "aesthetic-usability"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3137d98a098d",
+    "prompt": "affinity diagram Cluster many qualitative data points into themes and insight statements. Use when synthesising across multiple sessions or sources. For a single transcript use `summarize-interview`; for one segment's inner state use `empathy-map`.",
+    "tier": null,
+    "skills": [
+      "affinity-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-ea47e318cfc7",
+    "prompt": "animation principles Apply animation principles — easing, staging, follow-through — to one specific UI motion. Use when tuning how an animation feels. For product-wide duration and easing tokens use `motion-system` (design-systems); for a full interaction spec use `micro-interaction-spec`.",
+    "tier": null,
+    "skills": [
+      "animation-principles"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d1eb256300c2",
+    "prompt": "behavioural analytics Read funnels, retention curves, and event data as a designer — separating a design problem from a tracking artefact. Use when handed product data you did not design and asked why people drop off. For choosing what to measure, use `metrics-definition` (ux-strategy); for running a controlled test, use `a-b-test-design` (prototyping-testing).",
+    "tier": null,
+    "skills": [
+      "behavioural-analytics"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-97adf05f1ce7",
+    "prompt": "brief to tasks Break a design brief into an ordered checklist of independently buildable tasks using vertical slices. Saves as a markdown checklist. Use when user wants to break down work, create tasks from a brief, plan implementation order, or mentions \"tasks\" or \"breakdown\".",
+    "tier": null,
+    "skills": [
+      "brief-to-tasks"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-6a1d44402aab",
+    "prompt": "business design Read financials, map competitive landscapes, and argue design decisions in the language of value. Use when defending design to commercial stakeholders. For the live negotiation itself, use `design-negotiation` (designer-toolkit).",
+    "tier": null,
+    "skills": [
+      "business-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-e60b32283484",
+    "prompt": "card sort analysis Analyse open or closed card sort results into a proposed grouping and label set. Use after running a sort study. For turning that evidence into a full structure, use `information-architecture` (ux-strategy).",
+    "tier": null,
+    "skills": [
+      "card-sort-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-b56a79636d11",
+    "prompt": "case study Craft a portfolio case study with narrative arc, process evidence, and outcomes. Use when telling a project's story to an external audience. For an internal stakeholder deck, use `presentation-deck`.",
+    "tier": null,
+    "skills": [
+      "case-study"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-27cec50aa454",
+    "prompt": "click test plan Design first-click and click tests for findability and navigation. Use when testing whether people can locate something. For full task-based observation, use `test-scenario`.",
+    "tier": null,
+    "skills": [
+      "click-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-5a5d478de99d",
+    "prompt": "color system Build a product colour system — tonal scales, semantic roles, and contrast compliance. Use when defining or rebuilding colour from scratch. For dark-mode adaptation use `dark-mode-design`; for chart palettes use `data-visualization`; for multi-brand token architecture use `theming-system` (design-systems).",
+    "tier": null,
+    "skills": [
+      "color-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d5f31ad017d5",
+    "prompt": "competitive analysis Compare UX patterns, features, strengths, and gaps across rival products. Use when you need to know what others actually do. For deliberately adopting their conventions, use `jakobs-law` (interaction-design).",
+    "tier": null,
+    "skills": [
+      "competitive-analysis"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-60a8c4250316",
+    "prompt": "component spec Specify one component — props, states, variants, accessibility, and usage rules. Use when defining a library component. For the reusable doc scaffold use `documentation-template`; for a problem-solution pattern use `pattern-library`.",
+    "tier": null,
+    "skills": [
+      "component-spec"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-0ca511a254ca",
+    "prompt": "concept selection Choose between competing concepts against criteria fixed in advance, and record what each rejected concept was testing. Use when several directions are alive and one has to win. For picking which problem to work on, use `opportunity-framework` (ux-strategy); for deciding by production traffic, use `a-b-test-design`.",
+    "tier": null,
+    "skills": [
+      "concept-selection"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-5d9f77630cf9",
+    "prompt": "content strategy Define what content a product needs, how it is structured, and who owns it. Use when content itself is the problem. For the words in the interface use `ux-writing` (designer-toolkit); for structural hierarchy use `information-architecture`.",
+    "tier": null,
+    "skills": [
+      "content-strategy"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-6b67b8e2b2ce",
+    "prompt": "conversational ux Design voice and conversational interfaces — dialog flows, error recovery, and persona. Use when the interface speaks and listens rather than being tapped. For graphical input collection, use `form-design`.",
+    "tier": null,
+    "skills": [
+      "conversational-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-9d004df34652",
+    "prompt": "critique affordance Critique a rendered screen's affordances — what looks clickable, state visibility, CTA clarity, and action discoverability. Use when reviewing an existing screen. For sizing and positioning targets in new work, use `fitts-law` (interaction-design).",
+    "tier": null,
+    "skills": [
+      "critique-affordance"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-35af7c184e9f",
+    "prompt": "critique brand consistency Critique a rendered screen against mood.md, voice.md, and tokens.md. Use when those brand files exist and you are checking compliance. For defining the visual language itself, use `illustration-style` (ui-design).",
+    "tier": null,
+    "skills": [
+      "critique-brand-consistency"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-1adc7c59f387",
+    "prompt": "critique color Critique a rendered screen's colour — contrast ratios, palette coherence, and semantic meaning. Use when reviewing one screen. For a product-wide WCAG audit use `accessibility-audit` (design-systems); for building the palette use `color-system` (ui-design).",
+    "tier": null,
+    "skills": [
+      "critique-color"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d42e22c034d9",
+    "prompt": "critique composition Critique a rendered screen's composition — balance, whitespace, rhythm, and gestalt grouping. Use when a layout feels off but hierarchy is fine. For emphasis and eye flow specifically, use `critique-visual-hierarchy`.",
+    "tier": null,
+    "skills": [
+      "critique-composition"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a60f069bb224",
+    "prompt": "critique information density Critique a rendered screen's density — cognitive load, content prioritisation, scanning patterns, and progressive disclosure. Use when a screen feels overwhelming. For the underlying choice-count principle, use `hicks-law` (interaction-design).",
+    "tier": null,
+    "skills": [
+      "critique-information-density"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d784bf1a288a",
+    "prompt": "critique typography Critique a rendered screen's typography — scale usage, readability, consistency, and token compliance. Use when reviewing type on a screen. For defining the scale itself, use `typography-scale` (ui-design).",
+    "tier": null,
+    "skills": [
+      "critique-typography"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-f53a1e9cf35a",
+    "prompt": "critique visual hierarchy Critique a rendered screen's hierarchy — entry point, eye flow, weight distribution, and emphasis. Use when attention lands in the wrong place. For establishing hierarchy in new work, use `visual-hierarchy` (ui-design).",
+    "tier": null,
+    "skills": [
+      "critique-visual-hierarchy"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-347cd5cc3209",
+    "prompt": "dark mode design Adapt an existing palette to dark mode — surface elevation, contrast rebalancing, and desaturation rules. Use when you already have a light palette to translate. For building the base palette first, use `color-system`.",
+    "tier": null,
+    "skills": [
+      "dark-mode-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-4ce3bf6e38fe",
+    "prompt": "data visualization Select chart types and design data encodings — marks, axes, labels, and accessible chart styling. Use when presenting data graphically. Owns chart selection and encoding only; the categorical colour ramp itself belongs to `color-system`.",
+    "tier": null,
+    "skills": [
+      "data-visualization"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-5c9aed8276cc",
+    "prompt": "design brief Write a project brief — problem space, constraints, audience, and success criteria. Use at kickoff for one specific project. For long-horizon aspiration use `north-star-vision`; for reusable decision rules use `design-principles`.",
+    "tier": null,
+    "skills": [
+      "design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-c88103f7a53f",
+    "prompt": "design critique Facilitate a structured team critique — framing, feedback rules, and actionable outcomes. Use when running a session with people in the room. For a solo expert review, use `heuristic-evaluation` (prototyping-testing).",
+    "tier": null,
+    "skills": [
+      "design-critique"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-76734e485c78",
+    "prompt": "design debt audit Inventory and prioritise accumulated design inconsistencies across a product. Use when drift has built up over time. For token coverage specifically use `design-token-audit` (designer-toolkit); for WCAG gaps use `accessibility-audit` (design-systems).",
+    "tier": null,
+    "skills": [
+      "design-debt-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-1d5fd718085d",
+    "prompt": "design flow Run the full design-to-build workflow as a guided sequence. Orchestrates all designer skills in order, from grilling through review. Use when user wants to go through the complete design process, start a project from scratch, run the full flow, or mentions \"design flow\" or \"full workflow\".",
+    "tier": null,
+    "skills": [
+      "design-flow"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a9d341a2b459",
+    "prompt": "design impact reporting Communicate design's contribution to business and user outcomes in stakeholder language. Use when reporting results upward. For choosing the metrics in the first place, use `metrics-definition` (ux-strategy).",
+    "tier": null,
+    "skills": [
+      "design-impact-reporting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-ba5f73cfd415",
+    "prompt": "design negotiation Advocate for design quality, scope, and timeline with partners and leadership using evidence and shared goals. Use in the conversation itself. For the commercial vocabulary behind it, use `business-design` (ux-strategy).",
+    "tier": null,
+    "skills": [
+      "design-negotiation"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-fa6ceed9969c",
+    "prompt": "design principles Define actionable principles that resolve trade-offs when the team disagrees. Use when the same decisions keep getting relitigated. For a single project's framing, use `design-brief`.",
+    "tier": null,
+    "skills": [
+      "design-principles"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-491d5297c26c",
+    "prompt": "design qa checklist Build a QA checklist for verifying that a build matches the design. Use at implementation review. For the spec engineers build from, use `handoff-spec`.",
+    "tier": null,
+    "skills": [
+      "design-qa-checklist"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-ccdf8730ee82",
+    "prompt": "design rationale Write rationale connecting decisions to user needs, business goals, and principles. Use when a decision needs defending in writing. For a live conversation, use `design-negotiation`.",
+    "tier": null,
+    "skills": [
+      "design-rationale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-9bc3523fba22",
+    "prompt": "design review Run a structured design critique against the brief and codebase. Checks visual hierarchy, consistency, responsiveness, accessibility, and aesthetic fidelity. Use when user wants a design review, critique, QA pass, polish pass, or mentions \"review\" after building.",
+    "tier": null,
+    "skills": [
+      "design-review"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-adb300745d5a",
+    "prompt": "design review process Establish review gates — criteria, checkpoints, and approval flow. Use when work ships without consistent review. For running one individual session, use `design-critique`.",
+    "tier": null,
+    "skills": [
+      "design-review-process"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-8df56173b613",
+    "prompt": "design sprint plan Plan and facilitate a design sprint from challenge framing through prototype testing. Use when compressing discovery into days. For ongoing team cadence, use `team-workflow`.",
+    "tier": null,
+    "skills": [
+      "design-sprint-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-56106d548b24",
+    "prompt": "design system adoption Create adoption strategy and enablement materials to drive design system usage. Use when the system exists but teams ignore it. For contribution and versioning rules, use `design-system-governance` (design-systems).",
+    "tier": null,
+    "skills": [
+      "design-system-adoption"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-ff04d53f0b7a",
+    "prompt": "design system governance Define how the system evolves — contribution model, versioning, deprecation, and change management. Use when multiple teams contribute. For driving uptake use `design-system-adoption` (designer-toolkit); for design file history use `version-control-strategy` (design-ops).",
+    "tier": null,
+    "skills": [
+      "design-system-governance"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-651da65b0cb9",
+    "prompt": "design token Define and organise tokens for colour, spacing, type, and elevation with naming and usage rules. Use when establishing the token layer. For auditing existing usage use `design-token-audit` (designer-toolkit); for multi-brand mapping use `theming-system`.",
+    "tier": null,
+    "skills": [
+      "design-token"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3898ecc2226b",
+    "prompt": "design token audit Audit token usage across a product for coverage, drift, and hard-coded values. Use when tokens exist and you suspect they are being bypassed. For defining tokens in the first place, use `design-token` (design-systems).",
+    "tier": null,
+    "skills": [
+      "design-token-audit"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-16eaa36c7c73",
+    "prompt": "design tokens Generate a design tokens file (CSS variables or Tailwind config) based on a chosen aesthetic philosophy, with light and dark mode palettes, spacing scale, type ramp, and component-level tokens. Use when starting a new project, establishing a visual system, setting up tokens, or mentions \"tokens\" or \"design system\".",
+    "tier": null,
+    "skills": [
+      "design-tokens"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-00ee5486608e",
+    "prompt": "diary study plan Design a diary study — prompts, cadence, duration, participant criteria, and analysis frame. Use when behaviour unfolds over days or weeks. For a single-session study, use `usability-test-plan`.",
+    "tier": null,
+    "skills": [
+      "diary-study-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-499e0714b46e",
+    "prompt": "documentation template Generate a reusable documentation scaffold for components, patterns, or guidelines. Use when standardising how the system is documented. For the content of one component's spec, use `component-spec`.",
+    "tier": null,
+    "skills": [
+      "documentation-template"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-2bf466c593ef",
+    "prompt": "doherty threshold Apply the Doherty Threshold — keep system response under 400ms to preserve user flow. Use when diagnosing perceived slowness or setting a performance budget. For what to show during unavoidable waits, use `loading-states`.",
+    "tier": null,
+    "skills": [
+      "doherty-threshold"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-1ea37f151eb6",
+    "prompt": "empathy map Build a Says, Thinks, Does, Feels map for one user or segment. Use when sharing user understanding quickly. For a composite archetype with goals and behaviours use `user-persona`; for cross-session themes use `affinity-diagram`.",
+    "tier": null,
+    "skills": [
+      "empathy-map"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-912838861e86",
+    "prompt": "error handling ux Design error prevention, detection, and recovery across a product — message content, placement, and escape routes. Use when errors span multiple flows. For validation inside a single form, use `form-design`.",
+    "tier": null,
+    "skills": [
+      "error-handling-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-9a8c7bb28d23",
+    "prompt": "experience map Map the full ecosystem of touchpoints, channels, and relationships across a service. Use when the experience spans more than one product. For one persona's linear journey use `journey-map` (design-research); for backstage operations use `service-blueprint`.",
+    "tier": null,
+    "skills": [
+      "experience-map"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-4dc85945e121",
+    "prompt": "feedback patterns Design confirmations, status updates, and notifications that tell users an action registered. Use when the system must acknowledge success or change. For waiting states use `loading-states`; for failures use `error-handling-ux`.",
+    "tier": null,
+    "skills": [
+      "feedback-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a89d86ba5314",
+    "prompt": "figma implement design Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions \"implement design\", \"generate code\", \"implement component\", provides Figma URLs, or asks to build components matching Figma specs. For Figma canvas writes via `use_figma`, use `figma-use`.",
+    "tier": null,
+    "skills": [
+      "figma-implement-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a332dc5de4c6",
+    "prompt": "fitts law Apply Fitts's Law — target acquisition time depends on size and distance. Use when sizing and positioning controls, especially for touch. For how many controls to show at once, use `hicks-law`.",
+    "tier": null,
+    "skills": [
+      "fitts-law"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a974de9b0c41",
+    "prompt": "form design Design a form end to end — field order, grouping, validation, and completion. Use when the artifact is a form. For product-wide error strategy use `error-handling-ux`; for first-run signup use `onboarding-design`.",
+    "tier": null,
+    "skills": [
+      "form-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-0e0d527099f0",
+    "prompt": "gesture patterns Design gesture interactions for touch and pointer — swipe, drag, long-press, and their discoverability. Use when input is gestural. For OS-standard gestures on iOS and Android, use `platform-conventions` (ui-design).",
+    "tier": null,
+    "skills": [
+      "gesture-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-5a313b1f9509",
+    "prompt": "grill me Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, challenge an approach, or mentions \"grill me\".",
+    "tier": null,
+    "skills": [
+      "grill-me"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-84a75a5eefec",
+    "prompt": "handoff spec Write the implementation handoff — measurements, behaviours, assets, states, and edge cases. Use when engineering picks up the work. For verifying the result afterwards use `design-qa-checklist`; for reusable library components use `component-spec` (design-systems).",
+    "tier": null,
+    "skills": [
+      "handoff-spec"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3106c1973930",
+    "prompt": "heuristic evaluation Run an expert review against Nielsen's heuristics and domain criteria, with severity ratings. Use when you need findings without recruiting participants. For a facilitated team feedback session, use `design-critique` (design-ops).",
+    "tier": null,
+    "skills": [
+      "heuristic-evaluation"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3598236252b3",
+    "prompt": "hicks law Apply Hick's Law — decision time grows with the number of simultaneous choices. Use when a screen offers too many options at once. For how many items survive in memory afterwards, use `millers-law`.",
+    "tier": null,
+    "skills": [
+      "hicks-law"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-5292a39fd240",
+    "prompt": "hyperframes Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps, vertical clips, title cards, captions and overlays. Holds the render contract, the work loop and what each kind of video needs.",
+    "tier": null,
+    "skills": [
+      "hyperframes"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-7fdd26468403",
+    "prompt": "hyperframes cli The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in the cloud, publish, project history - plus reading its JSON and recovering from build or render failures.",
+    "tier": null,
+    "skills": [
+      "hyperframes-cli"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-21829ca586fc",
+    "prompt": "hyperframes registry About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, titles, kinetic type, captions, charts, map overlays, 3D, camera moves. Use it before hand-building any named visual (CRT scanlines, glitch, film grain, a chart); also for hyperframes add and catalog.",
+    "tier": null,
+    "skills": [
+      "hyperframes-registry"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-66f4be2c3892",
+    "prompt": "icon system Specify an icon system — grid, sizing, stroke weight, naming, categories, and implementation. Use when standardising iconography. For broader illustration, use `illustration-style` (ui-design).",
+    "tier": null,
+    "skills": [
+      "icon-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-5a720cd6415e",
+    "prompt": "illustration style Define an illustration style guide — visual language, colour usage, and application rules. Use when commissioning or standardising illustration. For icons, use `icon-system` (design-systems).",
+    "tier": null,
+    "skills": [
+      "illustration-style"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-84ec8125efe9",
+    "prompt": "information architecture Design content structure, hierarchy, labelling, and the navigation model. Use when organising what exists. For the UI that exposes it use `navigation-patterns` (interaction-design); for user-generated grouping evidence use `card-sort-analysis` (design-research).",
+    "tier": null,
+    "skills": [
+      "information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-0c70767ebcda",
+    "prompt": "interfaces that feel Apply an emotional resonance lens to a UI that is technically correct but flat, prescribing changes at the copy, motion, and interaction layer. Use when a design tests fine but lands cold. For the polish-perception argument, use `aesthetic-usability` (ui-design).",
+    "tier": null,
+    "skills": [
+      "interfaces-that-feel"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-55979c4d740a",
+    "prompt": "interview script Write a structured interview guide — warm-up, core exploration, and wrap-up. Use before running interviews. For analysing what comes back, use `summarize-interview`.",
+    "tier": null,
+    "skills": [
+      "interview-script"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-7a35283047b6",
+    "prompt": "jakobs law Apply Jakob's Law — users expect your product to work like the others they already use. Use when deciding whether to innovate on a familiar pattern. For OS-mandated conventions specifically, use `platform-conventions` (ui-design).",
+    "tier": null,
+    "skills": [
+      "jakobs-law"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-38fa11ba2124",
+    "prompt": "jobs to be done Map functional, emotional, and social jobs with outcome expectations. Use when reframing decisions around motivation rather than features. For who the user is, use `user-persona`.",
+    "tier": null,
+    "skills": [
+      "jobs-to-be-done"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-82541b797f1f",
+    "prompt": "journey map Map one persona's end-to-end experience with stages, touchpoints, emotions, and pain points. Use when improving an existing experience. For the multi-channel ecosystem use `experience-map` (ux-strategy); for screen-level paths use `user-flow-diagram` (prototyping-testing).",
+    "tier": null,
+    "skills": [
+      "journey-map"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-cc4a434a09ed",
+    "prompt": "julian design brief Create a design brief through an interactive interview, codebase exploration, and experience design decisions. Saved as a markdown file in the project. Use when user wants to write a design brief, plan a new feature or page, define a UI direction, or mentions \"brief\".",
+    "tier": null,
+    "skills": [
+      "julian-design-brief"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-56fd65b7e0d1",
+    "prompt": "julian frontend design Build distinctive, production-grade frontend interfaces with high design quality, guided by named aesthetic philosophies. Use when building components, pages, or applications. Generates working code with exceptional attention to aesthetic details and creative choices that avoid generic AI output.",
+    "tier": null,
+    "skills": [
+      "julian-frontend-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-b8c33b71ab37",
+    "prompt": "julian information architecture Define the structural layer of a product or site before visual design begins. Covers navigation, content hierarchy, page structure, URL patterns, and user flows. Use when user wants to plan site structure, define navigation, map user flows, organize content, or mentions \"IA\" or \"information architecture\".",
+    "tier": null,
+    "skills": [
+      "julian-information-architecture"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a1692c9fe6ac",
+    "prompt": "law of closure Apply the Law of Closure — the eye completes implied shapes from partial forms. Use when reducing visual weight by dropping borders or letting negative space suggest structure. For explicit containers, use `law-of-common-region`.",
+    "tier": null,
+    "skills": [
+      "law-of-closure"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-28ea5955d448",
+    "prompt": "law of common region Apply the Law of Common Region — a shared container, background, or border groups elements regardless of spacing. Use when grouping must survive a tight layout. For grouping by spacing alone, use `law-of-proximity`.",
+    "tier": null,
+    "skills": [
+      "law-of-common-region"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a04d7cc4ea15",
+    "prompt": "law of continuity Apply the Law of Continuity — the eye follows alignment and unbroken paths. Use when sequencing steps, aligning content, or designing carousels and timelines. For grouping rather than sequencing, use `law-of-proximity`.",
+    "tier": null,
+    "skills": [
+      "law-of-continuity"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-39e39737b88e",
+    "prompt": "law of figure ground Apply the Law of Figure-Ground — establish which layer is foreground and actionable versus background. Use when designing modals, overlays, and depth. For emphasising one element among peers, use `von-restorff-effect`.",
+    "tier": null,
+    "skills": [
+      "law-of-figure-ground"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-c092a9ccc737",
+    "prompt": "law of proximity Apply the Law of Proximity — spatial closeness groups elements more strongly than any other cue. Use when spacing alone must carry grouping. For grouping via containers use `law-of-common-region`; via shared appearance use `law-of-similarity`.",
+    "tier": null,
+    "skills": [
+      "law-of-proximity"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-552948a42fe2",
+    "prompt": "law of similarity Apply the Law of Similarity — shared colour, shape, or size signals that elements belong to one category. Use when signalling relationships across distance. For grouping by position, use `law-of-proximity`.",
+    "tier": null,
+    "skills": [
+      "law-of-similarity"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-450252f3324e",
+    "prompt": "laya decision Run local Laya on every user prompt to help select relevant skills and announce the selected skills; also rank alternative implementation paths and next actions.",
+    "tier": null,
+    "skills": [
+      "laya-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-c2fa44f9832c",
+    "prompt": "layout grid Define a responsive grid — columns, gutters, margins, and breakpoint behaviour. Use when establishing page structure. For the spacing scale inside components use `spacing-system`; for cross-device behaviour use `responsive-design`.",
+    "tier": null,
+    "skills": [
+      "layout-grid"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-7275870bb43f",
+    "prompt": "loading states Design waiting experiences — spinners, skeletons, optimistic updates, and progressive reveal. Use when content takes time to arrive. For the latency budget itself use `doherty-threshold`; for success confirmation use `feedback-patterns`.",
+    "tier": null,
+    "skills": [
+      "loading-states"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-dba348c8b70c",
+    "prompt": "localization design Design for multiple languages, writing directions, and cultural contexts — text expansion, RTL mirroring, and locale formats. Use when shipping beyond one locale. For the words themselves, use `ux-writing` (designer-toolkit).",
+    "tier": null,
+    "skills": [
+      "localization-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-78c73ea7b7b0",
+    "prompt": "media use Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar and generated video, transcripts, cutouts, colour grades and looks - with HeyGen or free local tools, and mix placed audio. Also for footage that looks dark, flat or dull, or should be stylized or hidden.",
+    "tier": null,
+    "skills": [
+      "media-use"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-793a9c3ed6be",
+    "prompt": "metrics definition Define UX metrics and KPIs that connect design decisions to measurable outcomes. Use when choosing what to measure. For presenting the results afterwards, use `design-impact-reporting` (design-ops).",
+    "tier": null,
+    "skills": [
+      "metrics-definition"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-9c8f9afe461a",
+    "prompt": "micro interaction spec Specify one micro-interaction completely — trigger, rules, feedback, loops, and modes. Use when handing a single interaction to engineering. For motion craft alone use `animation-principles`; for multi-state components use `state-machine`.",
+    "tier": null,
+    "skills": [
+      "micro-interaction-spec"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-52cd64660b88",
+    "prompt": "millers law Apply Miller's Law — chunk information into groups of about four to fit working memory. Use when grouping fields, menu items, or steps. For reducing the number of choices offered, use `hicks-law`.",
+    "tier": null,
+    "skills": [
+      "millers-law"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-c1357dd63011",
+    "prompt": "motion system Define motion tokens — durations, easing vocabulary, and reduced-motion handling — for consistency product-wide. Use when standardising motion across a system. For crafting one specific animation, use `animation-principles` (interaction-design).",
+    "tier": null,
+    "skills": [
+      "motion-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-51d832986067",
+    "prompt": "naming convention Establish naming rules for components, tokens, and layers with patterns and worked examples. Use when names are inconsistent or being set. For what the tokens actually contain, use `design-token`.",
+    "tier": null,
+    "skills": [
+      "naming-convention"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-bed3d512c005",
+    "prompt": "navigation patterns Select and design a navigation pattern — tabs, drawer, hierarchy, or hub — matched to product structure and user tasks. Use when choosing how users move between sections. For the underlying content structure, use `information-architecture` (ux-strategy).",
+    "tier": null,
+    "skills": [
+      "navigation-patterns"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-6b617a766cb8",
+    "prompt": "north star vision Articulate a long-horizon product vision that aligns teams and anchors strategy. Use when direction is contested or absent. For near-term project scope, use `design-brief`.",
+    "tier": null,
+    "skills": [
+      "north-star-vision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-b23fca9dc11d",
+    "prompt": "onboarding design Design the first-run experience — activation path, progressive disclosure, and time to first value. Use for a user's very first session. For the mechanics of the signup form itself, use `form-design`.",
+    "tier": null,
+    "skills": [
+      "onboarding-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-694f176a525b",
+    "prompt": "opportunity framework Identify, score, and prioritise design opportunities against impact and effort. Use when there are more ideas than capacity. For framing the one you choose, use `design-brief`.",
+    "tier": null,
+    "skills": [
+      "opportunity-framework"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d6ccb9651336",
+    "prompt": "parallel concepts Build several genuinely different solutions to the same problem at once, spread across what the user does rather than how it looks. Use when one direction is on the table and the team is about to refine it by default. For choosing between the concepts afterwards, use `concept-selection`.",
+    "tier": null,
+    "skills": [
+      "parallel-concepts"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-b57513a53743",
+    "prompt": "pattern library Structure a pattern entry — problem context, solution, usage examples, and related patterns. Use when documenting a recurring solution rather than a component. For a single component's API, use `component-spec`.",
+    "tier": null,
+    "skills": [
+      "pattern-library"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-e6fdc0d5dbda",
+    "prompt": "peak end rule Apply the Peak-End Rule — a flow is remembered by its most intense moment and its last. Use when designing completion, celebration, or cancellation moments. For sustaining engagement mid-flow, use `zeigarnik-effect`.",
+    "tier": null,
+    "skills": [
+      "peak-end-rule"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-1c5b6a955ac1",
+    "prompt": "platform conventions Design to iOS and Android conventions — what each OS mandates, where they diverge, and when to unify. Use when shipping native apps. For breakpoint adaptation use `responsive-design`; for matching competitor patterns use `jakobs-law` (interaction-design).",
+    "tier": null,
+    "skills": [
+      "platform-conventions"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d25dfd55a0aa",
+    "prompt": "ponytail Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. Use on any coding task (writing, fixing, refactoring, reviewing, choosing dependencies) and when the user says \"ponytail\", \"be lazy\", \"simplest solution\", \"yagni\", or complains about over-engineering or bloat. Levels: lite, full (default), ultra.",
+    "tier": null,
+    "skills": [
+      "ponytail"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3f5c3a1e7307",
+    "prompt": "presentation deck Structure a design presentation for a specific audience and decision. Use when presenting internally. For a portfolio narrative use `case-study`; for the written argument use `design-rationale`.",
+    "tier": null,
+    "skills": [
+      "presentation-deck"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-e1889212a5c3",
+    "prompt": "prototype strategy Choose prototype fidelity and method to match the design question and the decision at stake. Use before building a prototype. For what to test once it exists, use `test-scenario`.",
+    "tier": null,
+    "skills": [
+      "prototype-strategy"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-ba4f931691d6",
+    "prompt": "qual quant triangulation Reconcile what the numbers say with what users say, and design the study that settles it rather than restates it. Use when behavioural data and research findings point different ways. For reading the data on its own, use `behavioural-analytics`; for synthesising interviews on their own, use `affinity-diagram`.",
+    "tier": null,
+    "skills": [
+      "qual-quant-triangulation"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d958d16e3bdc",
+    "prompt": "readable measure Set line length and measure for comfortable reading across type sizes and breakpoints. Use when tuning body text. Covers measure only — for the full size and weight scale, use `typography-scale`.",
+    "tier": null,
+    "skills": [
+      "readable-measure"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-9c1b236aabea",
+    "prompt": "research repository Build a repository that makes findings findable, reusable, and cumulative across teams. Use when the same research keeps getting redone. For synthesising one study, use `affinity-diagram`.",
+    "tier": null,
+    "skills": [
+      "research-repository"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d76de101445a",
+    "prompt": "responsive design Design layouts and interactions that adapt across screen sizes and input methods. Use when one design must serve many viewports. For the underlying column grid use `layout-grid`; for OS-specific patterns use `platform-conventions`.",
+    "tier": null,
+    "skills": [
+      "responsive-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-fbcb17d8e814",
+    "prompt": "search ux Design search — query input, zero results, refinement, and result presentation. Use when users retrieve rather than browse. For browse structure, use `navigation-patterns`.",
+    "tier": null,
+    "skills": [
+      "search-ux"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-4e8184ae74bf",
+    "prompt": "serial position effect Apply the Serial Position Effect — first and last items in a sequence are recalled best. Use when ordering menus, lists, and steps. For emphasising one item regardless of its position, use `von-restorff-effect` (ui-design).",
+    "tier": null,
+    "skills": [
+      "serial-position-effect"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a63b481345f7",
+    "prompt": "service blueprint Map service delivery across frontstage actions, backstage processes, and supporting systems. Use when staff and operations are part of the experience. For the customer-visible layer only, use `experience-map`.",
+    "tier": null,
+    "skills": [
+      "service-blueprint"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-398a00b1e4f5",
+    "prompt": "spacing system Create a spacing scale from a base unit with rules for when each step applies. Use when standardising padding and margins. For page-level columns and gutters, use `layout-grid`.",
+    "tier": null,
+    "skills": [
+      "spacing-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-57162f34498b",
+    "prompt": "stakeholder alignment Build alignment artifacts — responsibility matrices, decision rights, and communication plans. Use when unclear ownership stalls decisions. For persuading in the moment, use `design-negotiation` (designer-toolkit).",
+    "tier": null,
+    "skills": [
+      "stakeholder-alignment"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-8e95c5eeb2d1",
+    "prompt": "state machine Model component behaviour as explicit states, events, and transitions. Use when a component has many interacting states that must be exhaustive. For the feel and feedback of a single interaction, use `micro-interaction-spec`.",
+    "tier": null,
+    "skills": [
+      "state-machine"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-c47687a3d339",
+    "prompt": "summarize interview Turn one interview transcript into themes, supporting quotes, and action items. Use immediately after a session. For synthesising many sessions at once, use `affinity-diagram`.",
+    "tier": null,
+    "skills": [
+      "summarize-interview"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-47d340079593",
+    "prompt": "survey design Design unbiased survey instruments — question wording, scales, and sampling — to measure attitudes at scale. Use when you need quantitative breadth. For behavioural experiments, use `a-b-test-design` (prototyping-testing).",
+    "tier": null,
+    "skills": [
+      "survey-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-922d125dd1a2",
+    "prompt": "team workflow Design the team's operating rhythm — task management, collaboration rituals, and tooling. Use when the day-to-day cadence needs structure. For a time-boxed sprint, use `design-sprint-plan`.",
+    "tier": null,
+    "skills": [
+      "team-workflow"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-0b033c029244",
+    "prompt": "teslers law Apply Tesler's Law — every process has irreducible complexity that someone must absorb. Use when deciding whether the product or the user carries it. For reducing apparent choice, use `hicks-law`.",
+    "tier": null,
+    "skills": [
+      "teslers-law"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-b02751aa4e80",
+    "prompt": "test scenario Write realistic usability task scenarios with success criteria and facilitation notes. Use when you have a study and need the tasks. For the surrounding study design, use `usability-test-plan` (design-research).",
+    "tier": null,
+    "skills": [
+      "test-scenario"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-65b399a305fc",
+    "prompt": "theme factory Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+    "tier": null,
+    "skills": [
+      "theme-factory"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-a63ccbc638da",
+    "prompt": "theming system Design theming architecture — brand variants, dark mode, and high-contrast — mapped through token layers. Use when one system must serve multiple themes. For a single palette use `color-system` (ui-design); for dark mode craft use `dark-mode-design` (ui-design).",
+    "tier": null,
+    "skills": [
+      "theming-system"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-73131f11c8bc",
+    "prompt": "typography scale Create a modular type scale with size, weight, and line-height relationships. Use when establishing typographic structure. For line length only use `readable-measure`; for judging type on an existing screen use `critique-typography` (visual-critique).",
+    "tier": null,
+    "skills": [
+      "typography-scale"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-fc6dd8840af7",
+    "prompt": "ui design Create distinctive, production-grade frontend interfaces directly in code with a strong visual point of view. Use when Codex is asked to design or redesign a page, screen, flow, or component; improve UI quality; or ship polished frontend experiences that must feel intentional and non-generic. Default to Next.js unless the user specifies another framework, and use targeted 21st.dev inspiration with screenshot capture only for specific components that need references.",
+    "tier": null,
+    "skills": [
+      "ui-design"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-2ae2801637b9",
+    "prompt": "usability test plan Design a usability study — research questions, methodology, participant criteria, metrics, and facilitation guide. Use when planning the study as a whole. For writing the task scenarios inside it, use `test-scenario` (prototyping-testing).",
+    "tier": null,
+    "skills": [
+      "usability-test-plan"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-4ccc6cc3b0cd",
+    "prompt": "user flow diagram Diagram screen-level paths, decision points, and branch logic. Use when specifying how a feature is traversed. For the emotional end-to-end arc, use `journey-map` (design-research).",
+    "tier": null,
+    "skills": [
+      "user-flow-diagram"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-06703656746d",
+    "prompt": "user persona Build research-grounded personas with goals, frustrations, and behavioural patterns. Use when decisions need a consistent user reference. For one session's emotional snapshot use `empathy-map`; for motivation framing use `jobs-to-be-done`.",
+    "tier": null,
+    "skills": [
+      "user-persona"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-731ba7e56fb4",
+    "prompt": "ux writing Write interface copy — microcopy, error messages, empty states, and CTAs. Use when the words are the deliverable. For content structure and ownership, use `content-strategy` (ux-strategy).",
+    "tier": null,
+    "skills": [
+      "ux-writing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-69bdcad2caaa",
+    "prompt": "version control strategy Define version control for design files, components, and libraries — branching, naming, and release. Use when file history is chaotic. For design system contribution rules, use `design-system-governance` (design-systems).",
+    "tier": null,
+    "skills": [
+      "version-control-strategy"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-2bebc4238379",
+    "prompt": "visual hierarchy Establish hierarchy through size, weight, colour, spacing, and position so the eye lands in the intended order. Use when composing new work. For judging an existing screen, use `critique-visual-hierarchy` (visual-critique).",
+    "tier": null,
+    "skills": [
+      "visual-hierarchy"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-826ed53eefab",
+    "prompt": "von restorff effect Apply the Von Restorff Effect — the element that differs from its neighbours is the one remembered. Use when a single action must dominate. For overall ordering rather than single-element emphasis, use `visual-hierarchy`.",
+    "tier": null,
+    "skills": [
+      "von-restorff-effect"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3ecbe0ec4aa4",
+    "prompt": "webapp testing Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+    "tier": null,
+    "skills": [
+      "webapp-testing"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-6f93146d4db9",
+    "prompt": "website copy humanizer Automatically review and improve website copy after any website modification, including code or design changes, and when asked to humanize, audit, or edit site content. Preserve the site's meaning, facts, and voice. Treat patterns as editorial signals, never proof of authorship or a way to evade AI detectors.",
+    "tier": null,
+    "skills": [
+      "website-copy-humanizer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-26dff8007d16",
+    "prompt": "wireframe spec Specify wireframe layout — content priority, component placement, and annotation. Use when defining structure before visual design. For grid mechanics, use `layout-grid` (ui-design).",
+    "tier": null,
+    "skills": [
+      "wireframe-spec"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-bdb950d843b9",
+    "prompt": "zeigarnik effect Apply the Zeigarnik Effect — incomplete tasks stay mentally active. Use when designing progress indicators, saved drafts, and return hooks. For the emotional shape of the ending, use `peak-end-rule`.",
+    "tier": null,
+    "skills": [
+      "zeigarnik-effect"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-db9d8dd884d9",
+    "prompt": "imagegen Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+    "tier": null,
+    "skills": [
+      "imagegen"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-246ea35719eb",
+    "prompt": "openai docs Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge—including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex—and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
+    "tier": null,
+    "skills": [
+      "openai-docs"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-e096cb5db3f8",
+    "prompt": "review agent Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+    "tier": null,
+    "skills": [
+      "review-agent"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d4ec97cba7de",
+    "prompt": "skill creator Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
+    "tier": null,
+    "skills": [
+      "skill-creator"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-66627809e4a1",
+    "prompt": "skill installer Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+    "tier": null,
+    "skills": [
+      "skill-installer"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-e1aac310a31d",
+    "prompt": "ad creative When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'creative testing,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' 'static ads,' 'ad templates,' 'iMessage ad,' 'ChatGPT ad,' 'creative strategy,' 'creative roadmap,' 'creative retro,' 'hook writing,' 'creative review page,' 'motion video ad,' 'faceless video ad,' 'UGC ad,' 'greenscreen ad,' 'TikTok/Reels ad format,' 'Meta ad format tier list,' or 'creative format taxonomy.",
+    "tier": null,
+    "skills": [
+      "ad-creative"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-d35a73356965",
+    "prompt": "ad creative video This skill should be used when the user asks to \"make a video ad\", \"create an animated ad\", \"build a performance/UGC-style ad\", \"batch-produce ad creative variations\", \"generate ad variants for A/B testing\", \"swap headline/offer/CTA across many ad versions\", or \"export one ad in multiple aspect ratios for Meta/TikTok/Reels\". Covers ad hook structures, hook→CTA message-match, data-driven variant generation (1 template × CSV = N ads), multi-aspect export, and platform specs.",
+    "tier": null,
+    "skills": [
+      "ad-creative-video"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-07721455f9a5",
+    "prompt": "brag Turn the current project website into a short, polished, shareable launch video using Hyperframes. Use when someone says \"/brag\", \"let's brag about this\", \"make a launch video\", \"turn this into a video\", or wants to share what they built. Reads the project code directly — no live URL or screenshots needed.",
+    "tier": null,
+    "skills": [
+      "brag"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-1b8188866787",
+    "prompt": "copywriting When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"hero section copy,\" \"this copy is weak,\" \"this sounds like AI,\" \"AI slop,\" \"make it sound human,\" or \"help me describe my product.\" Drafts never use AI tells like \"it's not X, it's Y\" reveals, \"no X, no Y, no Z\" lists, or sentences that trail into extra comma clauses. For email copy, see emails. For popup copy, see popups. For editing existing copy, see c",
+    "tier": null,
+    "skills": [
+      "copywriting"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-17c78b83a583",
+    "prompt": "launch video This skill should be used when the user asks to \"make a launch video\", \"create a product hype/sizzle film\", \"build a teaser/trailer for a drop\", \"do a reveal montage with an end-card CTA\", \"cut a hero video to the beat\", or \"export a launch film in 16:9/9:16/1:1\". Covers the hook→tease→reveal→feature-montage→end-card arc and multi-aspect export.",
+    "tier": null,
+    "skills": [
+      "launch-video"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-52b22ea3c5d1",
+    "prompt": "marketing psychology When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting.",
+    "tier": null,
+    "skills": [
+      "marketing-psychology"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-88b8cbae9ae5",
+    "prompt": "reverse engineer anything Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. Use shipped-artifact or requested runtime evidence to explain features, compare versions, decompile code, or guide a reconstruction. Skip REA for ordinary source-repository architecture analysis.",
+    "tier": null,
+    "skills": [
+      "reverse-engineer-anything"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-c29aa3c7406d",
+    "prompt": "scenario minimax music Use when generating music with MiniMax models on Scenario via MCP: full songs with vocals from a lyric sheet, structure tags like [Verse] and [Chorus], auto-written lyrics from a plain-language brief, instrumental tracks from a style prompt, or covering an uploaded MP3 or WAV in a new genre while keeping the melody. Keywords: MiniMax Music 3.0, Music Cover, Hailuo, text-to-music, audio-to-audio, song generation, lyrics, vocals, instrumental, BPM, genre swap.",
+    "tier": null,
+    "skills": [
+      "scenario-minimax-music"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-3f206fa5a5f4",
+    "prompt": "scenario product shots Use when producing product photography with Scenario from a real product photo: e-commerce packshots on white, transparent, or brand backgrounds, lifestyle scenes placing the product in an environment, hero shots for a landing page or marketplace listing, angle and colorway sets, relighting or shadow fixes, or any shot where the label, logo, and shape must stay exact. Keywords: product photo, packshot, e-commerce, lifestyle shot, compositing, relight, label fidelity, catalog.",
+    "tier": null,
+    "skills": [
+      "scenario-product-shots"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-68f6305aee04",
+    "prompt": "scenario video ads Use when producing a video ad with Scenario from a product shot or brand assets: a mobile 9:16 or landscape 16:9 commercial, a TikTok, Reels, Shorts, YouTube, or CTV spot, or campaign creative needing a creative brief, storyboard, cinematic camera work, brand-faithful product footage, music and voiceover, captions, ad variants, budget planning, or platform delivery specs. Keywords: video ad, commercial, product video, advert, hook, CTA, end card, campaign, ad creative.",
+    "tier": null,
+    "skills": [
+      "scenario-video-ads"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-e0b5483c7746",
+    "prompt": "testimonial video This skill should be used when the user asks to \"make an animated testimonial\", \"create a quote video\", \"build a review video\", \"turn a customer testimonial into a graphic\", \"animate a customer review\", \"make a social proof video\", \"add an animated star rating\", or \"turn a list of reviews into videos\". Covers quote typography, staggered line reveals, kinetic emphasis on key phrases, animated star ratings, the author block (name/role/avatar/company), and templating one card across many quotes.",
+    "tier": null,
+    "skills": [
+      "testimonial-video"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "metadata-1b5aec2365d7",
+    "prompt": "ugc ad creative Make a UGC-style ad for your product from a TikTok that already won. Give one source (a TikTok link, an uploaded video, or an analyzed template), pick your product and optionally a locked character, and the backend riffs the source's emotion formula into a post-ready ad creative in 9 languages. You riff the formula, not the video. Triggers: 'make an ad', 'make an ad creative', 'a UGC ad for my product', 'TikTok ad for my product', 'make a video ad for my store', 'ad creative from this viral video'.",
+    "tier": null,
+    "skills": [
+      "ugc-ad-creative"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  },
+  {
+    "id": "extension-tavi-decision-train-0",
+    "prompt": "Use Tavi to choose a model and installed skills for this task",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-1",
+    "prompt": "Ask Tavi which Codex model should handle this coding request",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-2",
+    "prompt": "Get a Tavi recommendation for reasoning level and relevant skills",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-3",
+    "prompt": "Route this task through the locally trained Tavi decision model",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-4",
+    "prompt": "Have Tavi decide whether we need an external agent skill",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-5",
+    "prompt": "Tavi should select the model and skills for my workflow",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-6",
+    "prompt": "Choose the best available model and skill set with Tavi",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-7",
+    "prompt": "Use our custom decision AI Tavi to route this coding task",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-8",
+    "prompt": "Which model and skills does Tavi recommend for this job",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-train-9",
+    "prompt": "Run Tavi locally to assess the task and recommend tooling",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-0",
+    "prompt": "Train a new neural network using gradient descent",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-1",
+    "prompt": "Create a reusable skill from our review process",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-2",
+    "prompt": "Install the requested skill from this repository",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-3",
+    "prompt": "Check the official Codex documentation for model prices",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-4",
+    "prompt": "Find a new skill online for an unfamiliar CAD tool",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-5",
+    "prompt": "Explain how to build a model selection classifier",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-6",
+    "prompt": "Improve the Tavi source code and fix a bug in its CLI",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-7",
+    "prompt": "Write a Python unit test for this routing function",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-train-8",
+    "prompt": "Compare the structure of two machine learning models",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "train",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-validation-0",
+    "prompt": "Ask Tavi for a routing recommendation for the next task",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-validation-1",
+    "prompt": "Use Tavi to recommend the Codex reasoning effort and skills",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "validation",
+    "origin": "synthetic-new-skill"
+  },
+  {
+    "id": "extension-tavi-decision-negative-validation-0",
+    "prompt": "Fix an implementation bug in the Tavi training code",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-validation-1",
+    "prompt": "Write documentation for a skill selection application",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-validation-2",
+    "prompt": "Explain the supported model choices in the OpenAI API",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "extension-tavi-decision-negative-validation-3",
+    "prompt": "Install a new skill for a missing plugin integration",
+    "tier": null,
+    "skills": [],
+    "external": false,
+    "split": "validation",
+    "origin": "synthetic-new-skill-negative"
+  },
+  {
+    "id": "metadata-4ad69596e684",
+    "prompt": "tavi decision Use the locally trained Tavi model to recommend a Codex model, reasoning level, installed skills, or whether to search for a missing agent skill. Use for Tavi requests and workflow routing decisions.",
+    "tier": null,
+    "skills": [
+      "tavi-decision"
+    ],
+    "external": false,
+    "split": "train",
+    "origin": "weak-skill-metadata"
+  }
+]

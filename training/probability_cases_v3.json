@@ -1,0 +1,506 @@
+[
+  {
+    "prompt": "Reply with a brief welcome message",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Calculate eleven plus seventeen",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Suggest four names for a desk lamp",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Restate this sentence in fewer words",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Translate good evening into German",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "List the months in calendar order",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Give a tiny example of a Python tuple",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Return the letters A B C as a JSON array",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Adjust a website grid for a narrow handset",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Implement validation for a newsletter signup form",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Inspect a Python CSV reader for malformed rows",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Draft useful labels for a password reset form",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Write tests around a date formatting utility",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Locate a downloadable skill for Blender rig inspection",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Search for an agent skill to automate FreeCAD drawings",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find a missing skill for managing Zotero citations",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Prove linearizability of a distributed queue algorithm",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Design consensus recovery after a network partition",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Analyze a race between concurrent database transactions",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Derive memory safety invariants for a lock free allocator",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Plan migration of a large sharded billing service",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find an external skill for specialized formal protocol verification",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Search for missing skills for a complex FPGA compiler workflow",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Investigate a rare distributed cache corruption across replicas",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Do the usual thing with whatever I sent",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Pick something for it without any more details",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Fix it somehow I cannot say what broke",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Work on that one from before please",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Sort out my thing and make it better",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find some skill I have no specific task yet",
+    "tier": "review",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Download a skill for something unspecified",
+    "tier": "review",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Which approach should handle the unnamed issue",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Say good morning in a friendly sentence",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Convert ninety seconds to minutes",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "List three household pets",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Translate water into Portuguese",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Give a tiny Python integer example",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Return a JSON list containing two numbers",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Suggest one title for a garden diary",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Write a brief message wishing someone luck",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Implement filtering in an existing product table",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Repair a Python dictionary lookup that mishandles missing keys",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Add keyboard focus management to a modal dialog",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Write tests for a currency formatting helper",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Make an email signup panel fit a compact screen",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Review the error handling in a small HTTP wrapper",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Write clearer guidance for an upload failure",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Build a simple endpoint that returns a paginated collection",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Analyze whether a lock free stack is linearizable",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Design regional disaster recovery for a replicated payment ledger",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Investigate data loss under concurrent distributed writes",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Prove safety of a consensus protocol during leader failover",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Architect a migration of a global multi tenant event database",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Diagnose a rare cache coherence bug under heavy concurrency",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Compare formal consistency models during extended network partitions",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Derive memory reclamation invariants for concurrent readers",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Fix my unnamed problem please",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Do something with the unspecified thing",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Make whatever I mean better",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Handle it although I have not explained it",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Choose a plan for an unknown goal",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Work on the thing without any description",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Sort it out but I forgot all the details",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Please continue an unspecified activity",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Search online for a new agent skill to manage QGIS map layers",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Find a missing downloadable skill for generating CAD drawings in FreeCAD",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Look for an external skill to import citations into JabRef",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Discover an agent skill for editing a Blender armature",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Find a specialized external skill for formally verifying a cryptographic protocol",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Search for missing agent tooling to analyze concurrent FPGA bus transactions",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Find an online skill for an unspecified thing I cannot describe",
+    "tier": "review",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  },
+  {
+    "prompt": "Download some agent skill although I have no particular task",
+    "tier": "review",
+    "external": true,
+    "split": "check",
+    "origin": "fresh-after-tier-freeze"
+  }
+]

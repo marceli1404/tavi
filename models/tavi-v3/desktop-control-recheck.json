@@ -1,0 +1,26 @@
+{
+  "documentation": "https://learn.chatgpt.com/docs/app-server",
+  "cli_version": "0.162.1",
+  "desktop_version": "0.165.0-alpha.1.2",
+  "checks": [
+    {
+      "client": "desktop-bundled",
+      "status": "unavailable",
+      "error": "App-server transport closed; no desktop control connection established",
+      "desktop_changed": false
+    }
+  ],
+  "changed_desktop": false,
+  "owned_protocol_recheck": {
+    "status": "verified",
+    "transport": "owned-stdio-server",
+    "initial_model": "gpt-6-luna",
+    "requested_model": "gpt-6.1-sol",
+    "returned_model": "gpt-6.1-sol",
+    "requested_effort": "medium",
+    "returned_effort": "medium",
+    "started_generation": false,
+    "desktop_thread_changed": false,
+    "meaning": "Protocol supports subsequent-turn settings in an owned thread; this does not establish access to desktop-owned threads"
+  }
+}

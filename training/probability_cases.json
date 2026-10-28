@@ -1,0 +1,450 @@
+[
+  {
+    "prompt": "Reply with a brief welcome message",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Calculate eleven plus seventeen",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Suggest four names for a desk lamp",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Restate this sentence in fewer words",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Translate good evening into German",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "List the months in calendar order",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Give a tiny example of a Python tuple",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Return the letters A B C as a JSON array",
+    "tier": "fast",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Adjust a website grid for a narrow handset",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Implement validation for a newsletter signup form",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Inspect a Python CSV reader for malformed rows",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Draft useful labels for a password reset form",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Write tests around a date formatting utility",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Locate a downloadable skill for Blender rig inspection",
+    "tier": "balanced",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Search for an agent skill to automate FreeCAD drawings",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find a missing skill for managing Zotero citations",
+    "tier": "balanced",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Prove linearizability of a distributed queue algorithm",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Design consensus recovery after a network partition",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Analyze a race between concurrent database transactions",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Derive memory safety invariants for a lock free allocator",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Plan migration of a large sharded billing service",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find an external skill for specialized formal protocol verification",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Search for missing skills for a complex FPGA compiler workflow",
+    "tier": "deep",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Investigate a rare distributed cache corruption across replicas",
+    "tier": "deep",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Do the usual thing with whatever I sent",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Pick something for it without any more details",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Fix it somehow I cannot say what broke",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Work on that one from before please",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Sort out my thing and make it better",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find some skill I have no specific task yet",
+    "tier": "review",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Download a skill for something unspecified",
+    "tier": "review",
+    "external": true,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Which approach should handle the unnamed issue",
+    "tier": "review",
+    "external": false,
+    "split": "calibration",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Write a short friendly farewell",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "What is the sum of twenty and nine",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Propose three titles for a recipe notebook",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Shorten the wording of this one line",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Translate see you tomorrow into French",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Name the seven days in their normal order",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Show a basic Python set literal",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Format red green blue as a JSON list",
+    "tier": "fast",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Repair a sidebar that spills outside a phone viewport",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Add client side validation to a contact form",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Review a JSON loader when input is incomplete",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Improve the instructions beside a checkout field",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Create unit coverage for URL normalization",
+    "tier": "balanced",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find a downloadable Blender material creation skill",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Look online for an agent skill for KiCad board routing",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Discover a skill for importing records into Obsidian",
+    "tier": "balanced",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Establish correctness of leader election during failures",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Design a recovery strategy for cross region transactions",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Analyze deadlocks in a multithreaded storage engine",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Explain a formal proof for concurrent reference counting",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Architect zero downtime migration of distributed event storage",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find specialized external instructions for model checking hardware protocols",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Look for missing agent tooling for an advanced ASIC synthesis process",
+    "tier": "deep",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Diagnose intermittent data divergence in a replicated cluster",
+    "tier": "deep",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Please deal with that thing I mentioned",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Make the other one work as expected",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Do whatever needs doing to the unspecified project",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Help with the problem but I have no details",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Choose a solution for the thing without context",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Find a skill for my unknown future task",
+    "tier": "review",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Get an unspecified tool for whatever comes next",
+    "tier": "review",
+    "external": true,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  },
+  {
+    "prompt": "Can you do that thing better somehow",
+    "tier": "review",
+    "external": false,
+    "split": "check",
+    "origin": "new-authored-synthetic-policy"
+  }
+]

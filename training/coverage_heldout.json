@@ -1,0 +1,242 @@
+[
+  {
+    "prompt": "Give a one sentence thank you note",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "What is six times seven",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Name four common colors",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Translate thank you into Italian",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Make a plain JSON object with name and age",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Show the Python syntax for a list",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Write a concise birthday wish",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Sort these five words alphabetically",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Convert the word HELLO to lowercase",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Answer yes or no whether ten is even",
+    "tier": "fast",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Build pagination for an existing results table",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Debug a failing decimal conversion routine",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Add tests for a string splitting helper",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Implement an accessible dropdown with keyboard support",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Write a validator for a shipping postcode field",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Fix an image overflowing its card on phones",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Review a Python function that merges sorted sequences",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Add retry handling to a small HTTP client",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Improve the wording of an empty notifications screen",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Parse a small CSV file and total the amount column",
+    "tier": "balanced",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Prove that a concurrent queue maintains its safety properties",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Design failover semantics for a geo replicated storage system",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Investigate a deadlock spanning several microservices",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Formally verify a consensus algorithm under arbitrary message delay",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Architect a safe migration of a distributed financial ledger",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Analyze a subtle memory ordering race on multiprocessor hardware",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Develop invariants for a lock free reclamation protocol",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Design transactional recovery after partial regional failure",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Find the root cause of rare cross shard data corruption",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Compare consistency guarantees for a globally distributed database",
+    "tier": "deep",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Can you fix that without telling you what it is",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Do the stuff I was thinking of",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Make the thing work somehow",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Handle the other problem from earlier",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Improve it but I have not provided any files or goal",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Choose whatever for an unnamed task",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Go ahead with the thing I forgot to describe",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Help me with this unspecified issue",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "What should I do about it with no context",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  },
+  {
+    "prompt": "Continue something although no previous task was given",
+    "tier": "review",
+    "split": "check",
+    "origin": "fresh-authored-policy"
+  }
+]
