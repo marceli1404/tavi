@@ -1,0 +1,21 @@
+{
+  "desktop": {
+    "status": "unavailable",
+    "transport": "desktop-control-proxy",
+    "error": "App-server transport closed; no desktop control connection established",
+    "changed_desktop": false,
+    "limitation": "No supported desktop control socket is reachable. Do not replace this with direct edits to thread databases or private desktop IPC."
+  },
+  "protocol": {
+    "status": "verified",
+    "transport": "owned-stdio-server",
+    "initial_model": "gpt-6-luna",
+    "requested_model": "gpt-6.1-sol",
+    "returned_model": "gpt-6.1-sol",
+    "requested_effort": "medium",
+    "returned_effort": "medium",
+    "started_generation": false,
+    "desktop_thread_changed": false,
+    "meaning": "Protocol supports subsequent-turn settings in an owned thread; this does not establish access to desktop-owned threads"
+  }
+}

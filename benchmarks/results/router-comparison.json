@@ -1,0 +1,531 @@
+{
+  "scope": "Observed results for8 pinned public coding tasks; one generation per role/task. Local router confidence is not cross-model calibrated; abstentions reported separately.",
+  "model_weights_sha256": "b4c6c1c55ff09899dafc38455fbf5accdaee3e079b05d0de0b76c153b5ae8bc7",
+  "laya_startup_seconds": 4.21526540000923,
+  "summary": {
+    "tavi": {
+      "tasks": 8,
+      "covered": 6,
+      "abstained": 2,
+      "passed": 6,
+      "median_local_inference_ms": 1.0907500109169632,
+      "selected_generation_seconds": 35.597170600056415,
+      "selected_input_tokens": 124832,
+      "selected_output_tokens": 579
+    },
+    "laya": {
+      "tasks": 8,
+      "covered": 8,
+      "abstained": 0,
+      "passed": 7,
+      "median_local_inference_ms": 765.0100499999999,
+      "selected_generation_seconds": 42.03568970001652,
+      "selected_input_tokens": 160062,
+      "selected_output_tokens": 744
+    }
+  },
+  "results": [
+    {
+      "task_id": "HumanEval/0",
+      "tavi": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.9139350056648254,
+          "balanced": 0.0606265515089035,
+          "deep": 0.019003288820385933,
+          "review": 0.006435255520045757
+        },
+        "inference_ms": 0.8073999779298902,
+        "observed_outcome": {
+          "task_id": "HumanEval/0",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.558611999993445,
+          "usage": {
+            "input_tokens": 19835,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 100,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.5764,
+          "balanced": 0.2607,
+          "deep": 0.0958,
+          "review": 0.0671
+        },
+        "inference_ms": 687.5803999999998,
+        "observed_outcome": {
+          "task_id": "HumanEval/0",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.558611999993445,
+          "usage": {
+            "input_tokens": 19835,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 100,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/20",
+      "tavi": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.7820582389831543,
+          "balanced": 0.1839931309223175,
+          "deep": 0.02388382889330387,
+          "review": 0.010064789094030857
+        },
+        "inference_ms": 1.1753000144381076,
+        "observed_outcome": {
+          "task_id": "HumanEval/20",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.505674900021404,
+          "usage": {
+            "input_tokens": 19878,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 113,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.6352,
+          "balanced": 0.2361,
+          "deep": 0.0599,
+          "review": 0.0688
+        },
+        "inference_ms": 858.0424999999996,
+        "observed_outcome": {
+          "task_id": "HumanEval/20",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.505674900021404,
+          "usage": {
+            "input_tokens": 19878,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 113,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/56",
+      "tavi": {
+        "raw_tier": "balanced",
+        "tier": "review",
+        "tier_scores": {
+          "fast": 0.02053777500987053,
+          "balanced": 0.4904443323612213,
+          "deep": 0.4803178012371063,
+          "review": 0.008700178936123848
+        },
+        "inference_ms": 0.7719999994151294,
+        "observed_outcome": null
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.6373,
+          "balanced": 0.229,
+          "deep": 0.0555,
+          "review": 0.0783
+        },
+        "inference_ms": 635.0704999999998,
+        "observed_outcome": {
+          "task_id": "HumanEval/56",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.71460449998267,
+          "usage": {
+            "input_tokens": 19805,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 82,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/70",
+      "tavi": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.9668662548065186,
+          "balanced": 0.0200235266238451,
+          "deep": 0.008669477887451649,
+          "review": 0.004440707620233297
+        },
+        "inference_ms": 0.8461000106763095,
+        "observed_outcome": {
+          "task_id": "HumanEval/70",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 5.126966700016055,
+          "usage": {
+            "input_tokens": 19835,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 120,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.6011,
+          "balanced": 0.2801,
+          "deep": 0.0411,
+          "review": 0.0777
+        },
+        "inference_ms": 687.4443000000001,
+        "observed_outcome": {
+          "task_id": "HumanEval/70",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 5.126966700016055,
+          "usage": {
+            "input_tokens": 19835,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 120,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/100",
+      "tavi": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.8670140504837036,
+          "balanced": 0.07378917932510376,
+          "deep": 0.03657078370451927,
+          "review": 0.022626031190156937
+        },
+        "inference_ms": 1.22819998068735,
+        "observed_outcome": {
+          "task_id": "HumanEval/100",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 9.415258300025016,
+          "usage": {
+            "input_tokens": 21197,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 59,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.576,
+          "balanced": 0.3047,
+          "deep": 0.0573,
+          "review": 0.062
+        },
+        "inference_ms": 842.4396999999999,
+        "observed_outcome": {
+          "task_id": "HumanEval/100",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 9.415258300025016,
+          "usage": {
+            "input_tokens": 21197,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 59,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/132",
+      "tavi": {
+        "raw_tier": "balanced",
+        "tier": "review",
+        "tier_scores": {
+          "fast": 0.3713410198688507,
+          "balanced": 0.4485454857349396,
+          "deep": 0.0756954625248909,
+          "review": 0.10441799461841583
+        },
+        "inference_ms": 1.3884000072721392,
+        "observed_outcome": null
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.7014,
+          "balanced": 0.1852,
+          "deep": 0.0462,
+          "review": 0.0671
+        },
+        "inference_ms": 899.7019000000009,
+        "observed_outcome": {
+          "task_id": "HumanEval/132",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.755954499996733,
+          "usage": {
+            "input_tokens": 19844,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 83,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": false,
+            "result": "AssertionError",
+            "detail": ""
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/146",
+      "tavi": {
+        "raw_tier": "balanced",
+        "tier": "balanced",
+        "tier_scores": {
+          "fast": 0.14285464584827423,
+          "balanced": 0.7019608020782471,
+          "deep": 0.07379565387964249,
+          "review": 0.08138885349035263
+        },
+        "inference_ms": 1.0062000073958188,
+        "observed_outcome": {
+          "task_id": "HumanEval/146",
+          "role": "balanced",
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "elapsed_seconds": 8.01171570000588,
+          "usage": {
+            "input_tokens": 24249,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 104,
+            "reasoning_output_tokens": 21
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.6235,
+          "balanced": 0.2602,
+          "deep": 0.0419,
+          "review": 0.0745
+        },
+        "inference_ms": 656.634,
+        "observed_outcome": {
+          "task_id": "HumanEval/146",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 4.97967579998658,
+          "usage": {
+            "input_tokens": 19830,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 104,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    },
+    {
+      "task_id": "HumanEval/154",
+      "tavi": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.6960110664367676,
+          "balanced": 0.13150423765182495,
+          "deep": 0.148751899600029,
+          "review": 0.023732831701636314
+        },
+        "inference_ms": 1.2709000147879124,
+        "observed_outcome": {
+          "task_id": "HumanEval/154",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 3.978942999994615,
+          "usage": {
+            "input_tokens": 19838,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 83,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      },
+      "laya": {
+        "raw_tier": "fast",
+        "tier": "fast",
+        "tier_scores": {
+          "fast": 0.632,
+          "balanced": 0.2048,
+          "deep": 0.0739,
+          "review": 0.0892
+        },
+        "inference_ms": 872.0374000000011,
+        "observed_outcome": {
+          "task_id": "HumanEval/154",
+          "role": "fast",
+          "model": "gpt-6-luna",
+          "effort": "low",
+          "elapsed_seconds": 3.978942999994615,
+          "usage": {
+            "input_tokens": 19838,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 83,
+            "reasoning_output_tokens": 0
+          },
+          "exit_code": 0,
+          "verdict": {
+            "passed": true,
+            "result": "passed"
+          }
+        }
+      }
+    }
+  ],
+  "usd_cost": null,
+  "limits": [
+    "Small historical dataset; possible foundation-model memorisation",
+    "Not a real-world coding-project benchmark",
+    "No task-level model oracle labels used for training",
+    "No dollar-price or statistically significant superiority claim"
+  ],
+  "common_coverage": {
+    "tasks": 6,
+    "task_ids": [
+      "HumanEval/0",
+      "HumanEval/20",
+      "HumanEval/70",
+      "HumanEval/100",
+      "HumanEval/146",
+      "HumanEval/154"
+    ],
+    "tavi": {
+      "passed": 6,
+      "generation_seconds": 35.597170600056415,
+      "local_router_ms": 6.3341000059153885,
+      "input_tokens": 124832,
+      "output_tokens": 579
+    },
+    "laya": {
+      "passed": 6,
+      "generation_seconds": 32.565130700037116,
+      "local_router_ms": 4604.1783000000005,
+      "input_tokens": 120413,
+      "output_tokens": 579
+    }
+  },
+  "method": "Router decisions replayed against one measured outcome matrix; no duplicate hosted requests. Laya uses a four-choice workload-tier question. Both use0.5 score cutoff, which is not cross-model calibrated confidence."
+}

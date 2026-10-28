@@ -1,0 +1,179 @@
+{
+  "scope": "Same-author synthetic new-skill cases fixed before expansion training; not independent field evaluation",
+  "weights_sha256": "b4c6c1c55ff09899dafc38455fbf5accdaee3e079b05d0de0b76c153b5ae8bc7",
+  "base_weights_sha256": "22e0f8b448bee5e0fbfbfb97f9ece31291d3406e11c025679d09a5ca65206482",
+  "arrays_preserved": true,
+  "outputs_preserved": true,
+  "uncovered_new_skills": [],
+  "preservation_prompts": 483,
+  "metrics": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "specificity": 1.0
+  },
+  "gates": {
+    "recall": 0.875,
+    "precision": 0.875,
+    "specificity": 0.9
+  },
+  "passed": true,
+  "acceptance_source_sha256": "51df8e66ed6c496b56bc6dc1dc857b1efa68099a21c1b613df6b9b3d1d0679a5",
+  "results": [
+    {
+      "prompt": "Ask Tavi to select the right model and skills for my coding task",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Get Tavi to recommend a model and reasoning level for the next job",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Use the local Tavi router to decide which installed skills apply",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "skill-installer",
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Let Tavi assess whether our task needs a downloadable agent skill",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision",
+        "skill-creator"
+      ]
+    },
+    {
+      "prompt": "Run our Tavi decision AI and show its workflow recommendations",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Use Tavi for model and skill selection before starting this task",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Have the locally trained Tavi model route this request",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Tell me which model and tools Tavi would use for this work",
+      "expected": true,
+      "selected": true,
+      "selected_skills": [
+        "tavi-decision"
+      ]
+    },
+    {
+      "prompt": "Write a new Codex skill for reviewing documents",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "skill-creator"
+      ]
+    },
+    {
+      "prompt": "Read official OpenAI documentation about model availability",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "openai-docs"
+      ]
+    },
+    {
+      "prompt": "Find a missing Blender skill on GitHub",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "skill-installer"
+      ]
+    },
+    {
+      "prompt": "Repair a bug in the Tavi neural training implementation",
+      "expected": false,
+      "selected": false,
+      "selected_skills": []
+    },
+    {
+      "prompt": "Explain how to train a text classifier in NumPy",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "copywriting"
+      ]
+    },
+    {
+      "prompt": "Install the skill that I selected from the repository",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "skill-installer"
+      ]
+    },
+    {
+      "prompt": "Summarise this short paragraph about language models",
+      "expected": false,
+      "selected": false,
+      "selected_skills": []
+    },
+    {
+      "prompt": "Give me five names for a robot",
+      "expected": false,
+      "selected": false,
+      "selected_skills": []
+    },
+    {
+      "prompt": "Test the local checkout using a browser",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "webapp-testing"
+      ]
+    },
+    {
+      "prompt": "Make the navigation menu fit a phone screen",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "responsive-design",
+        "navigation-patterns",
+        "user-flow-diagram"
+      ]
+    },
+    {
+      "prompt": "Compare the latency of two hosted AI services",
+      "expected": false,
+      "selected": false,
+      "selected_skills": []
+    },
+    {
+      "prompt": "Define the architecture of a new skill marketplace",
+      "expected": false,
+      "selected": false,
+      "selected_skills": [
+        "information-architecture"
+      ]
+    }
+  ]
+}

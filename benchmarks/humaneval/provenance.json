@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/openai/human-eval",
+  "commit": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+  "source_sha256": "b796127e635a67f93fb35c04f4cb03cf06f38c8072ee7cee8833d7bee06979ef",
+  "task_ids": [
+    "HumanEval/0",
+    "HumanEval/20",
+    "HumanEval/56",
+    "HumanEval/70",
+    "HumanEval/100",
+    "HumanEval/132",
+    "HumanEval/146",
+    "HumanEval/154"
+  ],
+  "license": "MIT",
+  "scope": "Eight fixed public tasks; historical dataset, possible foundation-model pretraining contamination; no Tavi training on these cases"
+}

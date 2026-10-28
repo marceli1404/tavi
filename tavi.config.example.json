@@ -1,0 +1,13 @@
+{
+  "laya_runner": "~/AppData/Local/Laya/decide.mjs",
+  "skill_roots": [
+    "~/.agents/skills",
+    "~/.codex/skills"
+  ],
+  "model_roles": {
+    "fast": ["gpt-6-luna", "gpt-6.1-sol"],
+    "balanced": ["gpt-6.1-sol", "gpt-6-sol"],
+    "deep": ["gpt-6-astra", "gpt-6.1-sol"]
+  },
+  "policy": {"always_skills": [], "rules": []}
+}

@@ -1,0 +1,44 @@
+{
+  "dataset_sha256": "ba6356f939e8895d5f41c2098986fc7a49824ff7a0b05b10fe593c592969d420",
+  "losses": [
+    {
+      "epoch": 1,
+      "tier_loss": 1.3960202932357788,
+      "skill_loss": 0.4872558116912842
+    },
+    {
+      "epoch": 40,
+      "tier_loss": 0.0015780109679326415,
+      "skill_loss": 0.036505524069070816
+    },
+    {
+      "epoch": 80,
+      "tier_loss": 0.005299505311995745,
+      "skill_loss": 0.029313165694475174
+    },
+    {
+      "epoch": 120,
+      "tier_loss": 0.004122365731745958,
+      "skill_loss": 0.026225872337818146
+    },
+    {
+      "epoch": 160,
+      "tier_loss": 0.003424627473577857,
+      "skill_loss": 0.024768486618995667
+    },
+    {
+      "epoch": 200,
+      "tier_loss": 0.002960587153211236,
+      "skill_loss": 0.023987658321857452
+    },
+    {
+      "epoch": 240,
+      "tier_loss": 0.002631037263199687,
+      "skill_loss": 0.02348926104605198
+    }
+  ],
+  "training_rows": 392,
+  "validation_rows": 45,
+  "parameters": 408056,
+  "weights_sha256": "22e0f8b448bee5e0fbfbfb97f9ece31291d3406e11c025679d09a5ca65206482"
+}

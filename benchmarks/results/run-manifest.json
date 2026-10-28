@@ -1,0 +1,22 @@
+{
+  "dataset_sha256": "86756ae8bcd9deb17517650124c2a1fbb6344171eec955eafdcbf2cd834e426d",
+  "model_roles": [
+    [
+      "fast",
+      "gpt-6-luna",
+      "low"
+    ],
+    [
+      "balanced",
+      "gpt-6.1-sol",
+      "medium"
+    ],
+    [
+      "deep",
+      "gpt-6-astra",
+      "high"
+    ]
+  ],
+  "prompt_sha256": "d8ffdf2c2183ce9d0cee2f0cc79d46c133d3a84e3929cf53c77a78ebf5e127e7",
+  "schema_sha256": "d56a922d35cc4c325d2aabde90cac5df5c8a034cfa799b390ad9b20580d7617a"
+}
