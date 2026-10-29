@@ -1,0 +1,17 @@
+{
+  "packet_id": "a01102cc93283d39f7c3531e58920c72180dc3f6f143aa71665864b711617e26",
+  "coverage": [
+    {
+      "requirement_id": "r0",
+      "skill_ids": [
+        "report-writer"
+      ]
+    },
+    {
+      "requirement_id": "r1",
+      "skill_ids": [
+        "totals-checker"
+      ]
+    }
+  ]
+}

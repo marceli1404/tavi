@@ -88,3 +88,19 @@ real terminal and uses Claude's native default permissions and approvals.
 `--execute` launches a hosted session using the user's account/allowance;
 `--plan` alone never does. A review-needed route withholds its plan. Tavi does
 not bypass permissions or switch this desktop conversation's provider.
+
+
+## Multi-operation skill coverage
+
+When a topic match may hide partial coverage, `python tavi.py coverage-review -`
+accepts JSON on stdin with the full `task`, explicit `requirements`, and candidate
+`skills` (`id`, `description`). It returns an offline hash-bound review packet;
+no model call, network request or task-history write occurs. Review it in this
+current chat, retaining task context and explicit exclusions, and identify the
+skills supporting each requirement. Different skills may cover different work.
+Use `--answer FILE` to validate a response against the same request snapshot.
+This validates structure and binding, not semantic truth or executable capability.
+It grants no install/action authority or calibrated probability. If coverage is
+missing, follow the existing AwesomeSkill discovery/source-review workflow.
+See `Features-coverage-review.md` in the configured Tavi checkout for the schema
+and measured limits. The packet command needs no research NLI model assets.

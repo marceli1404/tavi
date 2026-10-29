@@ -1,0 +1,1328 @@
+{
+  "scope": "Authored capability-policy observations, not verified execution, calibrated success or broad superiority. Negative-only subset precision/recall are undefined, represented as zero.",
+  "method": "Frozen local needs_discovery mask; labels withheld from a single native balanced Codex completion per set. No tools or retries; 77prospective/71regression cases reviewed. All148 exact missing-operation sets correct.",
+  "results": {
+    "prospective": {
+      "model": "gpt-6.1-sol",
+      "elapsed_seconds": 25.495182300015585,
+      "usage": {
+        "input_tokens": 30649,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1639,
+        "reasoning_output_tokens": 53
+      },
+      "reviewed_cases": 77,
+      "total_cases": 96,
+      "local": {
+        "cases": 96,
+        "accuracy": 0.8020833333333334,
+        "precision": 0.7662337662337663,
+        "recall": 0.9833333333333333
+      },
+      "hybrid": {
+        "cases": 96,
+        "accuracy": 0.9895833333333334,
+        "precision": 1.0,
+        "recall": 0.9833333333333333
+      },
+      "conditions": {
+        "empty": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "explicit_limitation": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "large_complete": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "partial_first": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "partial_second": {
+          "cases": 12,
+          "accuracy": 0.9166666666666666,
+          "precision": 1.0,
+          "recall": 0.9166666666666666
+        },
+        "single_complete": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "split_complete": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "topical_neighbor": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "predictions": [
+        {
+          "id": "coverage-prospective-v1-hdf5-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-partial_second",
+          "local": false,
+          "hybrid": false,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-hdf5-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-subtitle-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-woff-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-woff-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-woff-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-woff-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-woff-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-woff-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-woff-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-woff-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-helm-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-helm-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-helm-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-helm-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-helm-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-helm-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-helm-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-helm-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-parquet-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-rail-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-rail-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-rail-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-rail-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-rail-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-rail-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-rail-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-rail-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-bwf-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-mesh-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-sbom-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-pdfprivacy-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-release-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-release-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-release-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-release-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-release-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-release-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-release-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-release-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-prospective-v1-webarchive-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        }
+      ],
+      "answer_sha256": "bf3b05a72b31d07536088b98562d5c4d372b8dc2ab87f66ad896c27a47c64a77",
+      "protocol_sha256": "ae73cb3dac107e05bab2021243344a56adedede120f986f084d38644e22fcc51",
+      "dataset_sha256": "cd6e53ee9885208e98138d27e2278134b9c77562a2179a8ead7404e44214f27d",
+      "exact_reviewed_requirements": {
+        "correct": 77,
+        "cases": 77
+      },
+      "tool_free": true
+    },
+    "regression": {
+      "model": "gpt-6.1-sol",
+      "elapsed_seconds": 24.591111900022952,
+      "usage": {
+        "input_tokens": 29459,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1532,
+        "reasoning_output_tokens": 55
+      },
+      "reviewed_cases": 71,
+      "total_cases": 96,
+      "local": {
+        "cases": 96,
+        "accuracy": 0.8645833333333334,
+        "precision": 0.8309859154929577,
+        "recall": 0.9833333333333333
+      },
+      "hybrid": {
+        "cases": 96,
+        "accuracy": 0.9895833333333334,
+        "precision": 1.0,
+        "recall": 0.9833333333333333
+      },
+      "conditions": {
+        "empty": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "explicit_limitation": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "large_complete": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "partial_first": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "partial_second": {
+          "cases": 12,
+          "accuracy": 0.9166666666666666,
+          "precision": 1.0,
+          "recall": 0.9166666666666666
+        },
+        "single_complete": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "split_complete": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "topical_neighbor": {
+          "cases": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "predictions": [
+        {
+          "id": "coverage-contract-v1-epub-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-epub-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-epub-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-epub-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-epub-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-epub-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-epub-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-epub-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spice-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-spice-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-spice-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-spice-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spice-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spice-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spice-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spice-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-lidar-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-lidar-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-lidar-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-lidar-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-lidar-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-lidar-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-lidar-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-lidar-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-sql-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-sql-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-sql-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-sql-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-sql-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-sql-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-sql-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-sql-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-icc-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-icc-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-icc-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-icc-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-icc-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-icc-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-icc-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-icc-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-openapi-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-openapi-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-openapi-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-openapi-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-openapi-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-openapi-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-openapi-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-openapi-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-latex-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-latex-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-latex-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-latex-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-latex-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-latex-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-latex-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-latex-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-a11y-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-a11y-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-a11y-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-a11y-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-a11y-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-a11y-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-a11y-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-a11y-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-thermal-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-thermal-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-thermal-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-thermal-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-thermal-partial_second",
+          "local": false,
+          "hybrid": false,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-thermal-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-thermal-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-thermal-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-drone-single_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-drone-split_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-drone-large_complete",
+          "local": false,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-drone-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-drone-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-drone-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-drone-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-drone-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-spreadsheet-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-osm-single_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-osm-split_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-osm-large_complete",
+          "local": true,
+          "hybrid": false,
+          "expected": false
+        },
+        {
+          "id": "coverage-contract-v1-osm-partial_first",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-osm-partial_second",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-osm-topical_neighbor",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-osm-empty",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        },
+        {
+          "id": "coverage-contract-v1-osm-explicit_limitation",
+          "local": true,
+          "hybrid": true,
+          "expected": true
+        }
+      ],
+      "answer_sha256": "3f4dccbe656ddf245d480a86e6578842328b3edfe859eae894c1ab56fdd2dc2f",
+      "protocol_sha256": "790613d75ace794491685b2ef8b7fddff16cdb4342eaaf462e751d50e43b5801",
+      "dataset_sha256": "ab85f0b938be69d509bee1c5a8c7170aa20a8a40e18bc2c59f15fcb1114ba8b9",
+      "exact_reviewed_requirements": {
+        "correct": 71,
+        "cases": 71
+      },
+      "tool_free": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "task": "Prepare a report from the supplied records and validate its totals.",
+  "requirements": [
+    "Prepare the report",
+    "Validate the report totals"
+  ],
+  "skills": [
+    {
+      "id": "report-writer",
+      "description": "Create a report from supplied records."
+    },
+    {
+      "id": "totals-checker",
+      "description": "Independently check totals against the supplied records."
+    }
+  ]
+}

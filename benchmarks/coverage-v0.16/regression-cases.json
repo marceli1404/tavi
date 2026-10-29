@@ -1,0 +1,2342 @@
+[
+  {
+    "id": "coverage-contract-v1-epub-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-full",
+        "description": "Convert manuscript chapters into reflowable EPUB version 3 publications. Check EPUB navigation landmarks, reading order and accessibility metadata."
+      }
+    ],
+    "external": false,
+    "subject_id": "epub",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-a",
+        "description": "Convert manuscript chapters into reflowable EPUB version 3 publications."
+      },
+      {
+        "id": "epub-b",
+        "description": "Check EPUB navigation landmarks, reading order and accessibility metadata."
+      }
+    ],
+    "external": false,
+    "subject_id": "epub",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "epub-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "epub-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "epub-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "epub-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "epub-full",
+        "description": "Convert manuscript chapters into reflowable EPUB version 3 publications. Check EPUB navigation landmarks, reading order and accessibility metadata."
+      },
+      {
+        "id": "epub-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "epub-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "epub-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "epub-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "epub-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "epub-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "epub",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-a",
+        "description": "Convert manuscript chapters into reflowable EPUB version 3 publications."
+      }
+    ],
+    "external": true,
+    "subject_id": "epub",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-b",
+        "description": "Check EPUB navigation landmarks, reading order and accessibility metadata."
+      }
+    ],
+    "external": true,
+    "subject_id": "epub",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-neighbor",
+        "description": "Create print-ready book covers and spine artwork."
+      }
+    ],
+    "external": true,
+    "subject_id": "epub",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "epub",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-epub-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) produce a reflowable EPUB3 book; (2) validate its navigation and accessibility metadata.",
+    "requirements": [
+      "produce a reflowable EPUB3 book",
+      "validate its navigation and accessibility metadata"
+    ],
+    "skills": [
+      {
+        "id": "epub-limited",
+        "description": "Convert manuscript chapters into reflowable EPUB version 3 publications. This skill does not support the operation: validate its navigation and accessibility metadata."
+      }
+    ],
+    "external": true,
+    "subject_id": "epub",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-full",
+        "description": "Execute time-domain SPICE simulations of electronic circuits. Perform Monte Carlo component-tolerance sweeps for circuit simulation."
+      }
+    ],
+    "external": false,
+    "subject_id": "spice",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-a",
+        "description": "Execute time-domain SPICE simulations of electronic circuits."
+      },
+      {
+        "id": "spice-b",
+        "description": "Perform Monte Carlo component-tolerance sweeps for circuit simulation."
+      }
+    ],
+    "external": false,
+    "subject_id": "spice",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "spice-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "spice-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "spice-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "spice-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "spice-full",
+        "description": "Execute time-domain SPICE simulations of electronic circuits. Perform Monte Carlo component-tolerance sweeps for circuit simulation."
+      },
+      {
+        "id": "spice-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "spice-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "spice-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "spice-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "spice-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "spice-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "spice",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-a",
+        "description": "Execute time-domain SPICE simulations of electronic circuits."
+      }
+    ],
+    "external": true,
+    "subject_id": "spice",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-b",
+        "description": "Perform Monte Carlo component-tolerance sweeps for circuit simulation."
+      }
+    ],
+    "external": true,
+    "subject_id": "spice",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-neighbor",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      }
+    ],
+    "external": true,
+    "subject_id": "spice",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "spice",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spice-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) run a transient SPICE circuit simulation; (2) sweep component tolerances with Monte Carlo trials.",
+    "requirements": [
+      "run a transient SPICE circuit simulation",
+      "sweep component tolerances with Monte Carlo trials"
+    ],
+    "skills": [
+      {
+        "id": "spice-limited",
+        "description": "Execute time-domain SPICE simulations of electronic circuits. This skill does not support the operation: sweep component tolerances with Monte Carlo trials."
+      }
+    ],
+    "external": true,
+    "subject_id": "spice",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-full",
+        "description": "Separate terrain returns from vegetation and buildings in laser-scanned point clouds. Interpolate ground-classified laser points into bare-earth digital elevation grids."
+      }
+    ],
+    "external": false,
+    "subject_id": "lidar",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-a",
+        "description": "Separate terrain returns from vegetation and buildings in laser-scanned point clouds."
+      },
+      {
+        "id": "lidar-b",
+        "description": "Interpolate ground-classified laser points into bare-earth digital elevation grids."
+      }
+    ],
+    "external": false,
+    "subject_id": "lidar",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "lidar-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "lidar-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "lidar-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "lidar-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "lidar-full",
+        "description": "Separate terrain returns from vegetation and buildings in laser-scanned point clouds. Interpolate ground-classified laser points into bare-earth digital elevation grids."
+      },
+      {
+        "id": "lidar-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "lidar-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "lidar-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "lidar-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "lidar-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "lidar-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "lidar",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-a",
+        "description": "Separate terrain returns from vegetation and buildings in laser-scanned point clouds."
+      }
+    ],
+    "external": true,
+    "subject_id": "lidar",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-b",
+        "description": "Interpolate ground-classified laser points into bare-earth digital elevation grids."
+      }
+    ],
+    "external": true,
+    "subject_id": "lidar",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-neighbor",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      }
+    ],
+    "external": true,
+    "subject_id": "lidar",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "lidar",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-lidar-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) classify ground points in a LiDAR cloud; (2) generate a bare-earth elevation raster.",
+    "requirements": [
+      "classify ground points in a LiDAR cloud",
+      "generate a bare-earth elevation raster"
+    ],
+    "skills": [
+      {
+        "id": "lidar-limited",
+        "description": "Separate terrain returns from vegetation and buildings in laser-scanned point clouds. This skill does not support the operation: generate a bare-earth elevation raster."
+      }
+    ],
+    "external": true,
+    "subject_id": "lidar",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-full",
+        "description": "Create forward and backward SQL schema migration scripts. Run migration rollback checks in an isolated temporary database."
+      }
+    ],
+    "external": false,
+    "subject_id": "sql",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-a",
+        "description": "Create forward and backward SQL schema migration scripts."
+      },
+      {
+        "id": "sql-b",
+        "description": "Run migration rollback checks in an isolated temporary database."
+      }
+    ],
+    "external": false,
+    "subject_id": "sql",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "sql-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "sql-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "sql-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "sql-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "sql-full",
+        "description": "Create forward and backward SQL schema migration scripts. Run migration rollback checks in an isolated temporary database."
+      },
+      {
+        "id": "sql-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "sql-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "sql-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "sql-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "sql-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "sql-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "sql",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-a",
+        "description": "Create forward and backward SQL schema migration scripts."
+      }
+    ],
+    "external": true,
+    "subject_id": "sql",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-b",
+        "description": "Run migration rollback checks in an isolated temporary database."
+      }
+    ],
+    "external": true,
+    "subject_id": "sql",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-neighbor",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      }
+    ],
+    "external": true,
+    "subject_id": "sql",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "sql",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-sql-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a reversible SQL schema migration; (2) verify rollback against a disposable database.",
+    "requirements": [
+      "generate a reversible SQL schema migration",
+      "verify rollback against a disposable database"
+    ],
+    "skills": [
+      {
+        "id": "sql-limited",
+        "description": "Create forward and backward SQL schema migration scripts. This skill does not support the operation: verify rollback against a disposable database."
+      }
+    ],
+    "external": true,
+    "subject_id": "sql",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-full",
+        "description": "Apply embedded ICC profiles when transforming photographic colors. Simulate printer gamut and paper color using output ICC soft proofing."
+      }
+    ],
+    "external": false,
+    "subject_id": "icc",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-a",
+        "description": "Apply embedded ICC profiles when transforming photographic colors."
+      },
+      {
+        "id": "icc-b",
+        "description": "Simulate printer gamut and paper color using output ICC soft proofing."
+      }
+    ],
+    "external": false,
+    "subject_id": "icc",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "icc-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "icc-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "icc-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "icc-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "icc-full",
+        "description": "Apply embedded ICC profiles when transforming photographic colors. Simulate printer gamut and paper color using output ICC soft proofing."
+      },
+      {
+        "id": "icc-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "icc-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "icc-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "icc-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "icc-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "icc-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "icc",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-a",
+        "description": "Apply embedded ICC profiles when transforming photographic colors."
+      }
+    ],
+    "external": true,
+    "subject_id": "icc",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-b",
+        "description": "Simulate printer gamut and paper color using output ICC soft proofing."
+      }
+    ],
+    "external": true,
+    "subject_id": "icc",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-neighbor",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      }
+    ],
+    "external": true,
+    "subject_id": "icc",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "icc",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-icc-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) convert a photograph using its embedded ICC color profile; (2) soft-proof the result for a specified printer profile.",
+    "requirements": [
+      "convert a photograph using its embedded ICC color profile",
+      "soft-proof the result for a specified printer profile"
+    ],
+    "skills": [
+      {
+        "id": "icc-limited",
+        "description": "Apply embedded ICC profiles when transforming photographic colors. This skill does not support the operation: soft-proof the result for a specified printer profile."
+      }
+    ],
+    "external": true,
+    "subject_id": "icc",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-full",
+        "description": "Build OpenAPI endpoint and schema specifications from application routes. Compare API specifications and flag backward-incompatible contract changes."
+      }
+    ],
+    "external": false,
+    "subject_id": "openapi",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-a",
+        "description": "Build OpenAPI endpoint and schema specifications from application routes."
+      },
+      {
+        "id": "openapi-b",
+        "description": "Compare API specifications and flag backward-incompatible contract changes."
+      }
+    ],
+    "external": false,
+    "subject_id": "openapi",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "openapi-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "openapi-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "openapi-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "openapi-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "openapi-full",
+        "description": "Build OpenAPI endpoint and schema specifications from application routes. Compare API specifications and flag backward-incompatible contract changes."
+      },
+      {
+        "id": "openapi-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "openapi-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "openapi-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "openapi-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "openapi-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "openapi-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "openapi",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-a",
+        "description": "Build OpenAPI endpoint and schema specifications from application routes."
+      }
+    ],
+    "external": true,
+    "subject_id": "openapi",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-b",
+        "description": "Compare API specifications and flag backward-incompatible contract changes."
+      }
+    ],
+    "external": true,
+    "subject_id": "openapi",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-neighbor",
+        "description": "Render API documentation pages from an existing specification."
+      }
+    ],
+    "external": true,
+    "subject_id": "openapi",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "openapi",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-openapi-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate an OpenAPI contract from supplied routes; (2) detect breaking changes against the previous contract.",
+    "requirements": [
+      "generate an OpenAPI contract from supplied routes",
+      "detect breaking changes against the previous contract"
+    ],
+    "skills": [
+      {
+        "id": "openapi-limited",
+        "description": "Build OpenAPI endpoint and schema specifications from application routes. This skill does not support the operation: detect breaking changes against the previous contract."
+      }
+    ],
+    "external": true,
+    "subject_id": "openapi",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-full",
+        "description": "Correct BibLaTeX citation keys and bibliography cross references. Run Biber and LaTeX compilation passes to produce the final document."
+      }
+    ],
+    "external": false,
+    "subject_id": "latex",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-a",
+        "description": "Correct BibLaTeX citation keys and bibliography cross references."
+      },
+      {
+        "id": "latex-b",
+        "description": "Run Biber and LaTeX compilation passes to produce the final document."
+      }
+    ],
+    "external": false,
+    "subject_id": "latex",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "latex-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "latex-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "latex-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "latex-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "latex-full",
+        "description": "Correct BibLaTeX citation keys and bibliography cross references. Run Biber and LaTeX compilation passes to produce the final document."
+      },
+      {
+        "id": "latex-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "latex-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "latex-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "latex-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "latex-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "latex-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "latex",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-a",
+        "description": "Correct BibLaTeX citation keys and bibliography cross references."
+      }
+    ],
+    "external": true,
+    "subject_id": "latex",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-b",
+        "description": "Run Biber and LaTeX compilation passes to produce the final document."
+      }
+    ],
+    "external": true,
+    "subject_id": "latex",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-neighbor",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      }
+    ],
+    "external": true,
+    "subject_id": "latex",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "latex",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-latex-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) resolve BibLaTeX bibliography references; (2) compile the document with the Biber backend.",
+    "requirements": [
+      "resolve BibLaTeX bibliography references",
+      "compile the document with the Biber backend"
+    ],
+    "skills": [
+      {
+        "id": "latex-limited",
+        "description": "Correct BibLaTeX citation keys and bibliography cross references. This skill does not support the operation: compile the document with the Biber backend."
+      }
+    ],
+    "external": true,
+    "subject_id": "latex",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-full",
+        "description": "Implement modal focus trapping, initial focus and focus restoration. Test dialog accessible names and announcements with assistive reading software."
+      }
+    ],
+    "external": false,
+    "subject_id": "a11y",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-a",
+        "description": "Implement modal focus trapping, initial focus and focus restoration."
+      },
+      {
+        "id": "a11y-b",
+        "description": "Test dialog accessible names and announcements with assistive reading software."
+      }
+    ],
+    "external": false,
+    "subject_id": "a11y",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "a11y-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "a11y-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "a11y-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "a11y-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "a11y-full",
+        "description": "Implement modal focus trapping, initial focus and focus restoration. Test dialog accessible names and announcements with assistive reading software."
+      },
+      {
+        "id": "a11y-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "a11y-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "a11y-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "a11y-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "a11y-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "a11y-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "a11y",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-a",
+        "description": "Implement modal focus trapping, initial focus and focus restoration."
+      }
+    ],
+    "external": true,
+    "subject_id": "a11y",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-b",
+        "description": "Test dialog accessible names and announcements with assistive reading software."
+      }
+    ],
+    "external": true,
+    "subject_id": "a11y",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-neighbor",
+        "description": "Check text color contrast and suggest alternative palettes."
+      }
+    ],
+    "external": true,
+    "subject_id": "a11y",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "a11y",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-a11y-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair keyboard focus management in a modal dialog; (2) verify its accessible name with a screen-reader test.",
+    "requirements": [
+      "repair keyboard focus management in a modal dialog",
+      "verify its accessible name with a screen-reader test"
+    ],
+    "skills": [
+      {
+        "id": "a11y-limited",
+        "description": "Implement modal focus trapping, initial focus and focus restoration. This skill does not support the operation: verify its accessible name with a screen-reader test."
+      }
+    ],
+    "external": true,
+    "subject_id": "a11y",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-full",
+        "description": "Convert radiometric camera readings into calibrated thermal measurements. Measure regional temperatures and export numeric results from thermal imagery."
+      }
+    ],
+    "external": false,
+    "subject_id": "thermal",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-a",
+        "description": "Convert radiometric camera readings into calibrated thermal measurements."
+      },
+      {
+        "id": "thermal-b",
+        "description": "Measure regional temperatures and export numeric results from thermal imagery."
+      }
+    ],
+    "external": false,
+    "subject_id": "thermal",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "thermal-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "thermal-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "thermal-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "thermal-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "thermal-full",
+        "description": "Convert radiometric camera readings into calibrated thermal measurements. Measure regional temperatures and export numeric results from thermal imagery."
+      },
+      {
+        "id": "thermal-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "thermal-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "thermal-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "thermal-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "thermal-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "thermal-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "thermal",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-a",
+        "description": "Convert radiometric camera readings into calibrated thermal measurements."
+      }
+    ],
+    "external": true,
+    "subject_id": "thermal",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-b",
+        "description": "Measure regional temperatures and export numeric results from thermal imagery."
+      }
+    ],
+    "external": true,
+    "subject_id": "thermal",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-neighbor",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      }
+    ],
+    "external": true,
+    "subject_id": "thermal",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "thermal",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-thermal-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) calibrate radiometric thermal images; (2) export temperature measurements for selected regions.",
+    "requirements": [
+      "calibrate radiometric thermal images",
+      "export temperature measurements for selected regions"
+    ],
+    "skills": [
+      {
+        "id": "thermal-limited",
+        "description": "Convert radiometric camera readings into calibrated thermal measurements. This skill does not support the operation: export temperature measurements for selected regions."
+      }
+    ],
+    "external": true,
+    "subject_id": "thermal",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-full",
+        "description": "Create aerial survey flight lines that maintain clearance over changing terrain. Check planned flight paths for intersections with forbidden geographic polygons."
+      }
+    ],
+    "external": false,
+    "subject_id": "drone",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-a",
+        "description": "Create aerial survey flight lines that maintain clearance over changing terrain."
+      },
+      {
+        "id": "drone-b",
+        "description": "Check planned flight paths for intersections with forbidden geographic polygons."
+      }
+    ],
+    "external": false,
+    "subject_id": "drone",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "drone-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "drone-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "drone-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "drone-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "drone-full",
+        "description": "Create aerial survey flight lines that maintain clearance over changing terrain. Check planned flight paths for intersections with forbidden geographic polygons."
+      },
+      {
+        "id": "drone-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "drone-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "drone-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "drone-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "drone-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      },
+      {
+        "id": "drone-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "drone",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-a",
+        "description": "Create aerial survey flight lines that maintain clearance over changing terrain."
+      }
+    ],
+    "external": true,
+    "subject_id": "drone",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-b",
+        "description": "Check planned flight paths for intersections with forbidden geographic polygons."
+      }
+    ],
+    "external": true,
+    "subject_id": "drone",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-neighbor",
+        "description": "Organize aerial photographs into dated project folders."
+      }
+    ],
+    "external": true,
+    "subject_id": "drone",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "drone",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-drone-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) plan a drone survey with terrain following; (2) check the route against supplied exclusion polygons.",
+    "requirements": [
+      "plan a drone survey with terrain following",
+      "check the route against supplied exclusion polygons"
+    ],
+    "skills": [
+      {
+        "id": "drone-limited",
+        "description": "Create aerial survey flight lines that maintain clearance over changing terrain. This skill does not support the operation: check the route against supplied exclusion polygons."
+      }
+    ],
+    "external": true,
+    "subject_id": "drone",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-full",
+        "description": "Create spreadsheet pivot tables with grouped fields and aggregations. Update spreadsheet pivot data ranges and refresh cached pivot results."
+      }
+    ],
+    "external": false,
+    "subject_id": "spreadsheet",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-a",
+        "description": "Create spreadsheet pivot tables with grouped fields and aggregations."
+      },
+      {
+        "id": "spreadsheet-b",
+        "description": "Update spreadsheet pivot data ranges and refresh cached pivot results."
+      }
+    ],
+    "external": false,
+    "subject_id": "spreadsheet",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "spreadsheet-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "spreadsheet-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "spreadsheet-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "spreadsheet-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "spreadsheet-full",
+        "description": "Create spreadsheet pivot tables with grouped fields and aggregations. Update spreadsheet pivot data ranges and refresh cached pivot results."
+      },
+      {
+        "id": "spreadsheet-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "spreadsheet-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "spreadsheet-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "spreadsheet-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "spreadsheet-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "spreadsheet-noise-11",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": false,
+    "subject_id": "spreadsheet",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-a",
+        "description": "Create spreadsheet pivot tables with grouped fields and aggregations."
+      }
+    ],
+    "external": true,
+    "subject_id": "spreadsheet",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-b",
+        "description": "Update spreadsheet pivot data ranges and refresh cached pivot results."
+      }
+    ],
+    "external": true,
+    "subject_id": "spreadsheet",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-neighbor",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      }
+    ],
+    "external": true,
+    "subject_id": "spreadsheet",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "spreadsheet",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-spreadsheet-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) build a pivot table from the supplied workbook; (2) refresh it after new rows are appended.",
+    "requirements": [
+      "build a pivot table from the supplied workbook",
+      "refresh it after new rows are appended"
+    ],
+    "skills": [
+      {
+        "id": "spreadsheet-limited",
+        "description": "Create spreadsheet pivot tables with grouped fields and aggregations. This skill does not support the operation: refresh it after new rows are appended."
+      }
+    ],
+    "external": true,
+    "subject_id": "spreadsheet",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-full",
+        "description": "Find bicycle paths through road networks while respecting access restrictions. Serialize geographic routes into GPS Exchange Format track files."
+      }
+    ],
+    "external": false,
+    "subject_id": "osm",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-a",
+        "description": "Find bicycle paths through road networks while respecting access restrictions."
+      },
+      {
+        "id": "osm-b",
+        "description": "Serialize geographic routes into GPS Exchange Format track files."
+      }
+    ],
+    "external": false,
+    "subject_id": "osm",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-noise-0",
+        "description": "Create print-ready book covers and spine artwork."
+      },
+      {
+        "id": "osm-noise-1",
+        "description": "Draw electronic schematics and export circuit connection diagrams."
+      },
+      {
+        "id": "osm-noise-2",
+        "description": "Display colored three-dimensional point clouds in a viewer."
+      },
+      {
+        "id": "osm-noise-3",
+        "description": "Format SQL queries and suggest indexes for slow SELECT statements."
+      },
+      {
+        "id": "osm-noise-4",
+        "description": "Crop photographs and remove camera sensor dust spots."
+      },
+      {
+        "id": "osm-full",
+        "description": "Find bicycle paths through road networks while respecting access restrictions. Serialize geographic routes into GPS Exchange Format track files."
+      },
+      {
+        "id": "osm-noise-5",
+        "description": "Render API documentation pages from an existing specification."
+      },
+      {
+        "id": "osm-noise-6",
+        "description": "Convert Markdown headings into LaTeX section commands."
+      },
+      {
+        "id": "osm-noise-7",
+        "description": "Check text color contrast and suggest alternative palettes."
+      },
+      {
+        "id": "osm-noise-8",
+        "description": "Apply false-color palettes to ordinary RGB photographs."
+      },
+      {
+        "id": "osm-noise-9",
+        "description": "Organize aerial photographs into dated project folders."
+      },
+      {
+        "id": "osm-noise-10",
+        "description": "Style spreadsheet cells and export static sheets as PDF pages."
+      }
+    ],
+    "external": false,
+    "subject_id": "osm",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-a",
+        "description": "Find bicycle paths through road networks while respecting access restrictions."
+      }
+    ],
+    "external": true,
+    "subject_id": "osm",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-b",
+        "description": "Serialize geographic routes into GPS Exchange Format track files."
+      }
+    ],
+    "external": true,
+    "subject_id": "osm",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-neighbor",
+        "description": "Display a static street map with labeled landmarks."
+      }
+    ],
+    "external": true,
+    "subject_id": "osm",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "osm",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  },
+  {
+    "id": "coverage-contract-v1-osm-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) compute a cycle route using OpenStreetMap road restrictions; (2) export the resulting route as a GPX track.",
+    "requirements": [
+      "compute a cycle route using OpenStreetMap road restrictions",
+      "export the resulting route as a GPX track"
+    ],
+    "skills": [
+      {
+        "id": "osm-limited",
+        "description": "Find bicycle paths through road networks while respecting access restrictions. This skill does not support the operation: export the resulting route as a GPX track."
+      }
+    ],
+    "external": true,
+    "subject_id": "osm",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-authored-two-operation-policy"
+  }
+]

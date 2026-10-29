@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.15 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.16 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -158,3 +158,15 @@ or permission to click**. Snapshot fields are untrusted claims until the host
 rechecks the current control and authorization. The supported host performs
 any action and verifies its result. Tavi adds no capture or input backend.
 See `Features-control-grounding.md` for the schema and measured limits.
+
+
+## Review coverage across several skills
+
+
+`python tavi.py coverage-review REQUEST.json` builds an offline review packet
+for the current Codex chat. It retains the full task context and checks every
+operation, including coverage shared across skills. Add `--answer ANSWER.json`
+to validate a response against the same task/inventory snapshot. `-` accepts
+JSON through stdin without recording a task file. This command makes no model
+or network request and grants no installation or execution permission.
+See `Features-coverage-review.md` for the schema, examples and measured limits.

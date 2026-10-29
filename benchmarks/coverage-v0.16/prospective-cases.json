@@ -1,0 +1,2342 @@
+[
+  {
+    "id": "coverage-prospective-v1-hdf5-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-full",
+        "description": "Change the chunk layout of arrays stored in Hierarchical Data Format version 5. Preserve the original compression filter configuration while rewriting HDF5 arrays."
+      }
+    ],
+    "external": false,
+    "subject_id": "hdf5",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-a",
+        "description": "Change the chunk layout of arrays stored in Hierarchical Data Format version 5."
+      },
+      {
+        "id": "hdf5-b",
+        "description": "Preserve the original compression filter configuration while rewriting HDF5 arrays."
+      }
+    ],
+    "external": false,
+    "subject_id": "hdf5",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "hdf5-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "hdf5-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "hdf5-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "hdf5-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "hdf5-full",
+        "description": "Change the chunk layout of arrays stored in Hierarchical Data Format version 5. Preserve the original compression filter configuration while rewriting HDF5 arrays."
+      },
+      {
+        "id": "hdf5-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "hdf5-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "hdf5-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "hdf5-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "hdf5-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "hdf5-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "hdf5",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-a",
+        "description": "Change the chunk layout of arrays stored in Hierarchical Data Format version 5."
+      }
+    ],
+    "external": true,
+    "subject_id": "hdf5",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-b",
+        "description": "Preserve the original compression filter configuration while rewriting HDF5 arrays."
+      }
+    ],
+    "external": true,
+    "subject_id": "hdf5",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-neighbor",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      }
+    ],
+    "external": true,
+    "subject_id": "hdf5",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "hdf5",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-hdf5-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) rechunk an HDF5 dataset; (2) retain its existing compression filters.",
+    "requirements": [
+      "rechunk an HDF5 dataset",
+      "retain its existing compression filters"
+    ],
+    "skills": [
+      {
+        "id": "hdf5-limited",
+        "description": "Change the chunk layout of arrays stored in Hierarchical Data Format version 5. This skill does not support the operation: retain its existing compression filters."
+      }
+    ],
+    "external": true,
+    "subject_id": "hdf5",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-full",
+        "description": "Synchronize caption cue boundaries with spoken words in an audio reference. Translate subtitle dialogue into Spanish while retaining its timing structure."
+      }
+    ],
+    "external": false,
+    "subject_id": "subtitle",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-a",
+        "description": "Synchronize caption cue boundaries with spoken words in an audio reference."
+      },
+      {
+        "id": "subtitle-b",
+        "description": "Translate subtitle dialogue into Spanish while retaining its timing structure."
+      }
+    ],
+    "external": false,
+    "subject_id": "subtitle",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "subtitle-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "subtitle-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "subtitle-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "subtitle-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "subtitle-full",
+        "description": "Synchronize caption cue boundaries with spoken words in an audio reference. Translate subtitle dialogue into Spanish while retaining its timing structure."
+      },
+      {
+        "id": "subtitle-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "subtitle-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "subtitle-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "subtitle-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "subtitle-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "subtitle-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "subtitle",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-a",
+        "description": "Synchronize caption cue boundaries with spoken words in an audio reference."
+      }
+    ],
+    "external": true,
+    "subject_id": "subtitle",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-b",
+        "description": "Translate subtitle dialogue into Spanish while retaining its timing structure."
+      }
+    ],
+    "external": true,
+    "subject_id": "subtitle",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-neighbor",
+        "description": "Change the font and outline color used to display captions."
+      }
+    ],
+    "external": true,
+    "subject_id": "subtitle",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "subtitle",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-subtitle-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) align subtitle timing to a supplied speech recording; (2) translate the timed text into Spanish.",
+    "requirements": [
+      "align subtitle timing to a supplied speech recording",
+      "translate the timed text into Spanish"
+    ],
+    "skills": [
+      {
+        "id": "subtitle-limited",
+        "description": "Synchronize caption cue boundaries with spoken words in an audio reference. This skill does not support the operation: translate the timed text into Spanish."
+      }
+    ],
+    "external": true,
+    "subject_id": "subtitle",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-full",
+        "description": "Remove unused characters from a web Open Font Format version 2 font. Check that a reduced web font retains glyph coverage for a specified character list."
+      }
+    ],
+    "external": false,
+    "subject_id": "woff",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-a",
+        "description": "Remove unused characters from a web Open Font Format version 2 font."
+      },
+      {
+        "id": "woff-b",
+        "description": "Check that a reduced web font retains glyph coverage for a specified character list."
+      }
+    ],
+    "external": false,
+    "subject_id": "woff",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "woff-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "woff-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "woff-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "woff-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "woff-full",
+        "description": "Remove unused characters from a web Open Font Format version 2 font. Check that a reduced web font retains glyph coverage for a specified character list."
+      },
+      {
+        "id": "woff-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "woff-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "woff-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "woff-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "woff-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "woff-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "woff",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-a",
+        "description": "Remove unused characters from a web Open Font Format version 2 font."
+      }
+    ],
+    "external": true,
+    "subject_id": "woff",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-b",
+        "description": "Check that a reduced web font retains glyph coverage for a specified character list."
+      }
+    ],
+    "external": true,
+    "subject_id": "woff",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-neighbor",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      }
+    ],
+    "external": true,
+    "subject_id": "woff",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "woff",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-woff-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) subset a WOFF2 web font; (2) verify that every required character still has a glyph.",
+    "requirements": [
+      "subset a WOFF2 web font",
+      "verify that every required character still has a glyph"
+    ],
+    "skills": [
+      {
+        "id": "woff-limited",
+        "description": "Remove unused characters from a web Open Font Format version 2 font. This skill does not support the operation: verify that every required character still has a glyph."
+      }
+    ],
+    "external": true,
+    "subject_id": "woff",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-full",
+        "description": "Expand Helm templates into resource manifests using a values configuration. Check generated Kubernetes resource documents for schema compliance."
+      }
+    ],
+    "external": false,
+    "subject_id": "helm",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-a",
+        "description": "Expand Helm templates into resource manifests using a values configuration."
+      },
+      {
+        "id": "helm-b",
+        "description": "Check generated Kubernetes resource documents for schema compliance."
+      }
+    ],
+    "external": false,
+    "subject_id": "helm",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "helm-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "helm-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "helm-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "helm-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "helm-full",
+        "description": "Expand Helm templates into resource manifests using a values configuration. Check generated Kubernetes resource documents for schema compliance."
+      },
+      {
+        "id": "helm-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "helm-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "helm-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "helm-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "helm-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "helm-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "helm",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-a",
+        "description": "Expand Helm templates into resource manifests using a values configuration."
+      }
+    ],
+    "external": true,
+    "subject_id": "helm",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-b",
+        "description": "Check generated Kubernetes resource documents for schema compliance."
+      }
+    ],
+    "external": true,
+    "subject_id": "helm",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-neighbor",
+        "description": "Display a dashboard of running cluster pods."
+      }
+    ],
+    "external": true,
+    "subject_id": "helm",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "helm",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-helm-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) render a Helm chart using supplied values; (2) validate the rendered manifests against a Kubernetes schema.",
+    "requirements": [
+      "render a Helm chart using supplied values",
+      "validate the rendered manifests against a Kubernetes schema"
+    ],
+    "skills": [
+      {
+        "id": "helm-limited",
+        "description": "Expand Helm templates into resource manifests using a values configuration. This skill does not support the operation: validate the rendered manifests against a Kubernetes schema."
+      }
+    ],
+    "external": true,
+    "subject_id": "helm",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-full",
+        "description": "Write columnar Parquet data into separate daily partition directories. Keep timezone metadata attached to timestamp fields during columnar data conversion."
+      }
+    ],
+    "external": false,
+    "subject_id": "parquet",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-a",
+        "description": "Write columnar Parquet data into separate daily partition directories."
+      },
+      {
+        "id": "parquet-b",
+        "description": "Keep timezone metadata attached to timestamp fields during columnar data conversion."
+      }
+    ],
+    "external": false,
+    "subject_id": "parquet",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "parquet-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "parquet-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "parquet-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "parquet-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "parquet-full",
+        "description": "Write columnar Parquet data into separate daily partition directories. Keep timezone metadata attached to timestamp fields during columnar data conversion."
+      },
+      {
+        "id": "parquet-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "parquet-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "parquet-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "parquet-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "parquet-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "parquet-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "parquet",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-a",
+        "description": "Write columnar Parquet data into separate daily partition directories."
+      }
+    ],
+    "external": true,
+    "subject_id": "parquet",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-b",
+        "description": "Keep timezone metadata attached to timestamp fields during columnar data conversion."
+      }
+    ],
+    "external": true,
+    "subject_id": "parquet",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-neighbor",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      }
+    ],
+    "external": true,
+    "subject_id": "parquet",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "parquet",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-parquet-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) partition Parquet records by date; (2) preserve timestamp timezone annotations.",
+    "requirements": [
+      "partition Parquet records by date",
+      "preserve timestamp timezone annotations"
+    ],
+    "skills": [
+      {
+        "id": "parquet-limited",
+        "description": "Write columnar Parquet data into separate daily partition directories. This skill does not support the operation: preserve timestamp timezone annotations."
+      }
+    ],
+    "external": true,
+    "subject_id": "parquet",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-full",
+        "description": "Search train timetables while allowing the specified minimum transfer duration. Write journey legs to a portable scheduling file as calendar appointments."
+      }
+    ],
+    "external": false,
+    "subject_id": "rail",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-a",
+        "description": "Search train timetables while allowing the specified minimum transfer duration."
+      },
+      {
+        "id": "rail-b",
+        "description": "Write journey legs to a portable scheduling file as calendar appointments."
+      }
+    ],
+    "external": false,
+    "subject_id": "rail",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "rail-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "rail-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "rail-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "rail-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "rail-full",
+        "description": "Search train timetables while allowing the specified minimum transfer duration. Write journey legs to a portable scheduling file as calendar appointments."
+      },
+      {
+        "id": "rail-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "rail-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "rail-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "rail-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "rail-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "rail-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "rail",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-a",
+        "description": "Search train timetables while allowing the specified minimum transfer duration."
+      }
+    ],
+    "external": true,
+    "subject_id": "rail",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-b",
+        "description": "Write journey legs to a portable scheduling file as calendar appointments."
+      }
+    ],
+    "external": true,
+    "subject_id": "rail",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-neighbor",
+        "description": "Draw railway station locations on a static map."
+      }
+    ],
+    "external": true,
+    "subject_id": "rail",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "rail",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-rail-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) find a rail journey that respects connection times; (2) export its itinerary as calendar events.",
+    "requirements": [
+      "find a rail journey that respects connection times",
+      "export its itinerary as calendar events"
+    ],
+    "skills": [
+      {
+        "id": "rail-limited",
+        "description": "Search train timetables while allowing the specified minimum transfer duration. This skill does not support the operation: export its itinerary as calendar events."
+      }
+    ],
+    "external": true,
+    "subject_id": "rail",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-full",
+        "description": "Remove leading silence from an uncompressed waveform audio recording. Retain Broadcast Wave time-reference and originator metadata when rewriting audio."
+      }
+    ],
+    "external": false,
+    "subject_id": "bwf",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-a",
+        "description": "Remove leading silence from an uncompressed waveform audio recording."
+      },
+      {
+        "id": "bwf-b",
+        "description": "Retain Broadcast Wave time-reference and originator metadata when rewriting audio."
+      }
+    ],
+    "external": false,
+    "subject_id": "bwf",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "bwf-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "bwf-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "bwf-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "bwf-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "bwf-full",
+        "description": "Remove leading silence from an uncompressed waveform audio recording. Retain Broadcast Wave time-reference and originator metadata when rewriting audio."
+      },
+      {
+        "id": "bwf-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "bwf-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "bwf-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "bwf-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "bwf-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "bwf-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "bwf",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-a",
+        "description": "Remove leading silence from an uncompressed waveform audio recording."
+      }
+    ],
+    "external": true,
+    "subject_id": "bwf",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-b",
+        "description": "Retain Broadcast Wave time-reference and originator metadata when rewriting audio."
+      }
+    ],
+    "external": true,
+    "subject_id": "bwf",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-neighbor",
+        "description": "Create a waveform thumbnail image from a sound file."
+      }
+    ],
+    "external": true,
+    "subject_id": "bwf",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "bwf",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-bwf-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) trim silent audio from the start of a WAV file; (2) preserve Broadcast Wave origin metadata.",
+    "requirements": [
+      "trim silent audio from the start of a WAV file",
+      "preserve Broadcast Wave origin metadata"
+    ],
+    "skills": [
+      {
+        "id": "bwf-limited",
+        "description": "Remove leading silence from an uncompressed waveform audio recording. This skill does not support the operation: preserve Broadcast Wave origin metadata."
+      }
+    ],
+    "external": true,
+    "subject_id": "bwf",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-full",
+        "description": "Fix invalid edge connections in a stereolithography triangle mesh. Measure the volume enclosed by a repaired watertight triangle surface."
+      }
+    ],
+    "external": false,
+    "subject_id": "mesh",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-a",
+        "description": "Fix invalid edge connections in a stereolithography triangle mesh."
+      },
+      {
+        "id": "mesh-b",
+        "description": "Measure the volume enclosed by a repaired watertight triangle surface."
+      }
+    ],
+    "external": false,
+    "subject_id": "mesh",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "mesh-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "mesh-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "mesh-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "mesh-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "mesh-full",
+        "description": "Fix invalid edge connections in a stereolithography triangle mesh. Measure the volume enclosed by a repaired watertight triangle surface."
+      },
+      {
+        "id": "mesh-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "mesh-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "mesh-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "mesh-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "mesh-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "mesh-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "mesh",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-a",
+        "description": "Fix invalid edge connections in a stereolithography triangle mesh."
+      }
+    ],
+    "external": true,
+    "subject_id": "mesh",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-b",
+        "description": "Measure the volume enclosed by a repaired watertight triangle surface."
+      }
+    ],
+    "external": true,
+    "subject_id": "mesh",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-neighbor",
+        "description": "Assign display colors to three-dimensional object previews."
+      }
+    ],
+    "external": true,
+    "subject_id": "mesh",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "mesh",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-mesh-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) repair non-manifold edges in an STL mesh; (2) calculate the enclosed volume after repair.",
+    "requirements": [
+      "repair non-manifold edges in an STL mesh",
+      "calculate the enclosed volume after repair"
+    ],
+    "skills": [
+      {
+        "id": "mesh-limited",
+        "description": "Fix invalid edge connections in a stereolithography triangle mesh. This skill does not support the operation: calculate the enclosed volume after repair."
+      }
+    ],
+    "external": true,
+    "subject_id": "mesh",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-full",
+        "description": "Inventory software components embedded in a container image and produce an SBOM. Compare component license declarations against an allowed-license policy."
+      }
+    ],
+    "external": false,
+    "subject_id": "sbom",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-a",
+        "description": "Inventory software components embedded in a container image and produce an SBOM."
+      },
+      {
+        "id": "sbom-b",
+        "description": "Compare component license declarations against an allowed-license policy."
+      }
+    ],
+    "external": false,
+    "subject_id": "sbom",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "sbom-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "sbom-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "sbom-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "sbom-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "sbom-full",
+        "description": "Inventory software components embedded in a container image and produce an SBOM. Compare component license declarations against an allowed-license policy."
+      },
+      {
+        "id": "sbom-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "sbom-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "sbom-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "sbom-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "sbom-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "sbom-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "sbom",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-a",
+        "description": "Inventory software components embedded in a container image and produce an SBOM."
+      }
+    ],
+    "external": true,
+    "subject_id": "sbom",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-b",
+        "description": "Compare component license declarations against an allowed-license policy."
+      }
+    ],
+    "external": true,
+    "subject_id": "sbom",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-neighbor",
+        "description": "Report container image download size and layer count."
+      }
+    ],
+    "external": true,
+    "subject_id": "sbom",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "sbom",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-sbom-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a software bill of materials for a container; (2) check its packages against a supplied license policy.",
+    "requirements": [
+      "generate a software bill of materials for a container",
+      "check its packages against a supplied license policy"
+    ],
+    "skills": [
+      {
+        "id": "sbom-limited",
+        "description": "Inventory software components embedded in a container image and produce an SBOM. This skill does not support the operation: check its packages against a supplied license policy."
+      }
+    ],
+    "external": true,
+    "subject_id": "sbom",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-full",
+        "description": "Delete selected text content from PDF documents so it cannot be recovered by selection or extraction. Strip hidden properties and identifying metadata from portable document files."
+      }
+    ],
+    "external": false,
+    "subject_id": "pdfprivacy",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-a",
+        "description": "Delete selected text content from PDF documents so it cannot be recovered by selection or extraction."
+      },
+      {
+        "id": "pdfprivacy-b",
+        "description": "Strip hidden properties and identifying metadata from portable document files."
+      }
+    ],
+    "external": false,
+    "subject_id": "pdfprivacy",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "pdfprivacy-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "pdfprivacy-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "pdfprivacy-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "pdfprivacy-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "pdfprivacy-full",
+        "description": "Delete selected text content from PDF documents so it cannot be recovered by selection or extraction. Strip hidden properties and identifying metadata from portable document files."
+      },
+      {
+        "id": "pdfprivacy-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "pdfprivacy-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "pdfprivacy-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "pdfprivacy-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "pdfprivacy-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      },
+      {
+        "id": "pdfprivacy-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "pdfprivacy",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-a",
+        "description": "Delete selected text content from PDF documents so it cannot be recovered by selection or extraction."
+      }
+    ],
+    "external": true,
+    "subject_id": "pdfprivacy",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-b",
+        "description": "Strip hidden properties and identifying metadata from portable document files."
+      }
+    ],
+    "external": true,
+    "subject_id": "pdfprivacy",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-neighbor",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      }
+    ],
+    "external": true,
+    "subject_id": "pdfprivacy",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "pdfprivacy",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-pdfprivacy-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) permanently redact selected PDF text; (2) remove hidden document metadata.",
+    "requirements": [
+      "permanently redact selected PDF text",
+      "remove hidden document metadata"
+    ],
+    "skills": [
+      {
+        "id": "pdfprivacy-limited",
+        "description": "Delete selected text content from PDF documents so it cannot be recovered by selection or extraction. This skill does not support the operation: remove hidden document metadata."
+      }
+    ],
+    "external": true,
+    "subject_id": "pdfprivacy",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-full",
+        "description": "Summarize merged repository changes into versioned release notes. Create a version-control tag carrying a verifiable digital signature."
+      }
+    ],
+    "external": false,
+    "subject_id": "release",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-a",
+        "description": "Summarize merged repository changes into versioned release notes."
+      },
+      {
+        "id": "release-b",
+        "description": "Create a version-control tag carrying a verifiable digital signature."
+      }
+    ],
+    "external": false,
+    "subject_id": "release",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "release-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "release-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "release-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "release-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "release-full",
+        "description": "Summarize merged repository changes into versioned release notes. Create a version-control tag carrying a verifiable digital signature."
+      },
+      {
+        "id": "release-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "release-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "release-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "release-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "release-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "release-noise-11",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": false,
+    "subject_id": "release",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-a",
+        "description": "Summarize merged repository changes into versioned release notes."
+      }
+    ],
+    "external": true,
+    "subject_id": "release",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-b",
+        "description": "Create a version-control tag carrying a verifiable digital signature."
+      }
+    ],
+    "external": true,
+    "subject_id": "release",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-neighbor",
+        "description": "Rename local branches according to a naming convention."
+      }
+    ],
+    "external": true,
+    "subject_id": "release",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "release",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-release-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) generate a changelog from merged changes; (2) create a cryptographically signed release tag.",
+    "requirements": [
+      "generate a changelog from merged changes",
+      "create a cryptographically signed release tag"
+    ],
+    "skills": [
+      {
+        "id": "release-limited",
+        "description": "Summarize merged repository changes into versioned release notes. This skill does not support the operation: create a cryptographically signed release tag."
+      }
+    ],
+    "external": true,
+    "subject_id": "release",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-single_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-full",
+        "description": "Save HTTP responses and associated web resources in Web ARChive format. Validate integrity digests for resources stored in a web preservation archive."
+      }
+    ],
+    "external": false,
+    "subject_id": "webarchive",
+    "condition": "single_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-split_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-a",
+        "description": "Save HTTP responses and associated web resources in Web ARChive format."
+      },
+      {
+        "id": "webarchive-b",
+        "description": "Validate integrity digests for resources stored in a web preservation archive."
+      }
+    ],
+    "external": false,
+    "subject_id": "webarchive",
+    "condition": "split_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-large_complete",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-noise-0",
+        "description": "List the names and dimensions of arrays in an HDF5 file."
+      },
+      {
+        "id": "webarchive-noise-1",
+        "description": "Change the font and outline color used to display captions."
+      },
+      {
+        "id": "webarchive-noise-2",
+        "description": "Generate a webpage showing samples of installed typefaces."
+      },
+      {
+        "id": "webarchive-noise-3",
+        "description": "Display a dashboard of running cluster pods."
+      },
+      {
+        "id": "webarchive-noise-4",
+        "description": "Calculate row counts and numeric column averages in a data file."
+      },
+      {
+        "id": "webarchive-full",
+        "description": "Save HTTP responses and associated web resources in Web ARChive format. Validate integrity digests for resources stored in a web preservation archive."
+      },
+      {
+        "id": "webarchive-noise-5",
+        "description": "Draw railway station locations on a static map."
+      },
+      {
+        "id": "webarchive-noise-6",
+        "description": "Create a waveform thumbnail image from a sound file."
+      },
+      {
+        "id": "webarchive-noise-7",
+        "description": "Assign display colors to three-dimensional object previews."
+      },
+      {
+        "id": "webarchive-noise-8",
+        "description": "Report container image download size and layer count."
+      },
+      {
+        "id": "webarchive-noise-9",
+        "description": "Place a colored rectangle annotation over visible text in a PDF viewer."
+      },
+      {
+        "id": "webarchive-noise-10",
+        "description": "Rename local branches according to a naming convention."
+      }
+    ],
+    "external": false,
+    "subject_id": "webarchive",
+    "condition": "large_complete",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-partial_first",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-a",
+        "description": "Save HTTP responses and associated web resources in Web ARChive format."
+      }
+    ],
+    "external": true,
+    "subject_id": "webarchive",
+    "condition": "partial_first",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-partial_second",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-b",
+        "description": "Validate integrity digests for resources stored in a web preservation archive."
+      }
+    ],
+    "external": true,
+    "subject_id": "webarchive",
+    "condition": "partial_second",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-topical_neighbor",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-neighbor",
+        "description": "Save a screenshot of the visible browser viewport."
+      }
+    ],
+    "external": true,
+    "subject_id": "webarchive",
+    "condition": "topical_neighbor",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-empty",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [],
+    "external": true,
+    "subject_id": "webarchive",
+    "condition": "empty",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  },
+  {
+    "id": "coverage-prospective-v1-webarchive-explicit_limitation",
+    "task": "Use reviewed agent skills to complete both operations: (1) capture a webpage as a WARC archive; (2) verify checksums of the captured resources.",
+    "requirements": [
+      "capture a webpage as a WARC archive",
+      "verify checksums of the captured resources"
+    ],
+    "skills": [
+      {
+        "id": "webarchive-limited",
+        "description": "Save HTTP responses and associated web resources in Web ARChive format. This skill does not support the operation: verify checksums of the captured resources."
+      }
+    ],
+    "external": true,
+    "subject_id": "webarchive",
+    "condition": "explicit_limitation",
+    "split": "check",
+    "origin": "new-prospective-authored-policy"
+  }
+]

@@ -230,6 +230,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=BASE / 'tavi.config.json')
     sub = parser.add_subparsers(dest='command', required=True)
+    coverage_review = sub.add_parser('coverage-review', help='Build an offline task/inventory review packet or validate a bound answer; never install or call a model')
+    coverage_review.add_argument('request', type=Path)
+    coverage_review.add_argument('--answer', type=Path, help='Validate a provided semantic review against the same request')
     controls = sub.add_parser('target-controls', help='Resolve exact supported-host control facts; no capture, probability or clicks')
     controls.add_argument('snapshot', type=Path)
     controls.add_argument('--task', required=True)
@@ -317,6 +320,14 @@ def main():
     cmd.add_argument('--record', action='store_true', help='Save prompt and decision locally for future evaluation')
     args = parser.parse_args()
     try:
+        if args.command == 'coverage-review':
+            from tavi_coverage_review import packet, validate_review, read_json
+            if str(args.request) == '-' and args.answer is not None and str(args.answer) == '-':
+                raise ValueError('Only one coverage input can use stdin')
+            review_packet = packet(read_json(args.request))
+            result = validate_review(review_packet, read_json(args.answer)) if args.answer else review_packet
+            print(json.dumps(result, indent=2, ensure_ascii=False))
+            return 0
         if args.command == 'target-controls':
             from tavi_controls import resolve_file
             result = resolve_file(args.snapshot, args.task, args.target, role=args.role, context=args.context, offline=args.offline)
