@@ -1,0 +1,148 @@
+{
+  "protocol": {
+    "tasks": [
+      "HumanEval/24",
+      "HumanEval/75"
+    ],
+    "roles": [
+      [
+        "fast",
+        "gpt-6-luna",
+        "low"
+      ],
+      [
+        "balanced",
+        "gpt-6.1-sol",
+        "medium"
+      ],
+      [
+        "deep",
+        "gpt-6-astra",
+        "high"
+      ]
+    ],
+    "requests_max": 6,
+    "weights_sha256": "38407cc1f25bbb1cdeefd73dcb5c72cb4d97545bae8efb2bbd18edfc4652592e",
+    "routes": {
+      "HumanEval/24": "review",
+      "HumanEval/75": "review"
+    },
+    "scope": "Known abstentions; external upstream unit-test outcomes. No training, optimal-model or independent human tier labels. Historical public tasks may be memorized."
+  },
+  "results": [
+    {
+      "task_id": "HumanEval/24",
+      "role": "fast",
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "elapsed_seconds": 4.818282699998235,
+      "usage": {
+        "input_tokens": 19786,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 111,
+        "reasoning_output_tokens": 0
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/24",
+      "role": "balanced",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 7.187039800017374,
+      "usage": {
+        "input_tokens": 24192,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 140,
+        "reasoning_output_tokens": 45
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/24",
+      "role": "deep",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "elapsed_seconds": 9.281328599987319,
+      "usage": {
+        "input_tokens": 20416,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 130,
+        "reasoning_output_tokens": 36
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/75",
+      "role": "fast",
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "elapsed_seconds": 4.304120699991472,
+      "usage": {
+        "input_tokens": 19815,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 148,
+        "reasoning_output_tokens": 0
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/75",
+      "role": "balanced",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 6.438427699991735,
+      "usage": {
+        "input_tokens": 24221,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 140,
+        "reasoning_output_tokens": 21
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    },
+    {
+      "task_id": "HumanEval/75",
+      "role": "deep",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "elapsed_seconds": 9.324960300000384,
+      "usage": {
+        "input_tokens": 20445,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 175,
+        "reasoning_output_tokens": 54
+      },
+      "exit_code": 0,
+      "verdict": {
+        "passed": true,
+        "result": "passed"
+      }
+    }
+  ]
+}

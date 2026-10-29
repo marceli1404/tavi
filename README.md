@@ -2,9 +2,11 @@
 
 # A small model. A clearer start.
 
-Tavi v0.10 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.14 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
+
+Current target model: failed real-screen confidence validation. The95% policy remains configurable, but this model requires review and cannot qualify probability-based automatic actions. See [Features-v0.14.md](Features-v0.14.md) for measured local speed, recognition failures, coding outcomes and remaining gaps.
 
 ## Install
 
@@ -93,3 +95,15 @@ Tests and saved-report inspection do not launch hosted generation. Install optio
 ## Licence
 
 Original source, synthetic examples, trained weights and Tavi artwork use the [MIT licence](LICENSE). Third-party benchmarks retain their notices; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Tavi is independent and is not affiliated with OpenAI or Laya. Optional dependencies and hosted services have their own terms.
+
+## Compact target review in v0.11
+
+Use `python tavi.py propose screenshot.png --task "Press Go" --target Go` for a local target-match percentage and a compact packet for the current Codex agent. This avoids sending an image or starting a second hosted call by default. The agent reviews, verifies the current UI, performs the authorized action and checks its result. `--execute` requests an optional headless text-only review; it was slower than direct image interpretation in the small comparison. Percentages are synthetic-layout estimates, not action-safety or field-success probabilities. See [Features-v0.11.md](Features-v0.11.md) and [the target model card](models/screen-target-v1/Model-Card.md).
+
+## Warm local computer-use sessions
+
+Use `python tavi.py propose-stream` for repeated local screenshot-to-target proposals without restarting Windows OCR. Each JSON-line image/task/target request gets a fresh proposal; no hosted calls or actions occur in the stream. Close stdin when work ends. The12-image local comparison measured468ms one-shot versus61ms warm. Startup and full-agent timing limits are in [Features-v0.12.md](Features-v0.12.md).
+
+## 95% automatic routine buttons
+
+The optional automatic-button policy uses raw target confidence >=95%, existing proposal checks and trusted live host verification. The supported host driver performs the click and checks its result. The OCR process only returns eligibility; it cannot click. Portable configuration is disabled until its owner opts in. See [Features-v0.13.md](Features-v0.13.md) for the callback contract, no-retry behavior and synthetic-confidence limits.

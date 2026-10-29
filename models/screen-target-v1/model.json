@@ -1,0 +1,37 @@
+{
+  "version": "screen-target-v1",
+  "feature_version": "target-features-1",
+  "features": [
+    "match_count",
+    "width",
+    "height",
+    "background_difference",
+    "ring_variance",
+    "ink_contrast",
+    "context_overlap",
+    "context_negative",
+    "background_x_context",
+    "word_aspect",
+    "context_present"
+  ],
+  "weights_sha256": "cd2d4351de01f218fed1887694af9313df28054d49780bdbbbbbaf6f12e54435",
+  "accepted": true,
+  "temperature": 0.5,
+  "proposal_threshold": 0.9,
+  "scope": "synthetic_control_target_match",
+  "probability_status": "synthetic_policy_calibrated",
+  "check_evidence": {
+    "n": 35,
+    "positive": 18,
+    "accuracy": 1.0,
+    "nll": 0.0002519147614782765,
+    "brier": 1.285926345412639e-07
+  },
+  "high_confidence_count": 18,
+  "high_confidence_precision": 1.0,
+  "limits": [
+    "Same-author synthetic layouts, not field/task-success labels.",
+    "Not probability that clicking is safe or authorized.",
+    "Candidate-conditioned; OCR may miss a target completely."
+  ]
+}

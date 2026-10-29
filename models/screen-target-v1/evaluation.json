@@ -1,0 +1,56 @@
+{
+  "train": {
+    "n": 104,
+    "positive": 52,
+    "accuracy": 1.0,
+    "nll": 0.01356503926763316,
+    "brier": 0.0002260681019815556
+  },
+  "calibration_raw": {
+    "n": 35,
+    "positive": 17,
+    "accuracy": 1.0,
+    "nll": 0.014058876206941528,
+    "brier": 0.00022448449977504546
+  },
+  "calibration_candidate": {
+    "n": 35,
+    "positive": 17,
+    "accuracy": 1.0,
+    "nll": 0.00023291723844156832,
+    "brier": 9.10220698428785e-08
+  },
+  "check_raw": {
+    "n": 35,
+    "positive": 18,
+    "accuracy": 1.0,
+    "nll": 0.014038888051317524,
+    "brier": 0.00024161955627484793
+  },
+  "check_candidate": {
+    "n": 35,
+    "positive": 18,
+    "accuracy": 1.0,
+    "nll": 0.0002519147614782765,
+    "brier": 1.285926345412639e-07
+  },
+  "check_applied": {
+    "n": 35,
+    "positive": 18,
+    "accuracy": 1.0,
+    "nll": 0.0002519147614782765,
+    "brier": 1.285926345412639e-07
+  },
+  "temperature": 0.5,
+  "calibration_applied": true,
+  "high_confidence_count": 18,
+  "high_confidence_precision": 1.0,
+  "accepted": true,
+  "layout_counts": {
+    "train": 72,
+    "calibration": 24,
+    "check": 24
+  },
+  "dataset_sha256": "43548192c76eef052ccfe5f6810e6b0a62e284e80df6712f070637187a915ba8",
+  "missing_ocr_targets": 5
+}

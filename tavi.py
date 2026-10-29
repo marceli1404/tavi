@@ -222,6 +222,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=BASE / 'tavi.config.json')
     sub = parser.add_subparsers(dest='command', required=True)
+    sub.add_parser('propose-stream', help='Keep local OCR warm for JSON-lines screenshot requests; no hosted calls or clicks')
+    proposal = sub.add_parser('propose', help='Local target percentage and compact Codex review packet; never clicks')
+    proposal.add_argument('image', type=Path)
+    proposal.add_argument('--task', required=True)
+    proposal.add_argument('--target', required=True)
+    proposal.add_argument('--execute', action='store_true', help='Run a text-only Codex review when local evidence supports it')
+    proposal.add_argument('--allow-image-fallback', action='store_true', help='Explicitly allow an image request when compact review cannot decide')
+    proposal.add_argument('--model', default='gpt-6-luna')
+    proposal.add_argument('--effort', choices=['low','medium','high'], default='low')
+    proposal.add_argument('--target-model', type=Path)
+    proposal.add_argument('--max-edge', type=int, default=1600)
     vision = sub.add_parser('vision', help='Analyze a screenshot with local OCR and optional Codex vision; never click')
     vision.add_argument('image', type=Path)
     vision.add_argument('--task', required=True)
@@ -284,6 +295,19 @@ def main():
     cmd.add_argument('--record', action='store_true', help='Save prompt and decision locally for future evaluation')
     args = parser.parse_args()
     try:
+        if args.command == 'propose-stream':
+            from tavi_stream import run
+            from tavi_actions import configured
+            try: return run(auto_click=configured(args.config))
+            except KeyboardInterrupt: return 130
+        if args.command == 'propose':
+            from tavi_compact import propose
+            from tavi_actions import configured
+            options=dict(execute=args.execute,allow_image_fallback=args.allow_image_fallback,
+                model=args.model,effort=args.effort,max_edge=args.max_edge,auto_click=configured(args.config))
+            if args.target_model: options['target_model']=args.target_model
+            print(json.dumps(propose(args.image,args.task,args.target,**options),indent=2))
+            return 0
         if args.command == 'vision':
             from tavi_vision import analyze
             print(json.dumps(analyze(args.image,args.task,mode=args.mode,target=args.target,

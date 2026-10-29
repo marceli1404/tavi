@@ -1,0 +1,23 @@
+{
+  "one_shot": {
+    "n": 30,
+    "median_ms": 549.5238000003155
+  },
+  "session_warm": {
+    "n": 30,
+    "median_ms": 139.7008000058122
+  },
+  "speedup": 3.93357661500473,
+  "time_saved_percent": 74.57784357916218,
+  "worker_startup_ms": 298.60810001264326,
+  "first_session_total_ms": 594.11760000512,
+  "first_one_shot_ms": 685.0351000030059,
+  "positive_cases": 12,
+  "top_target_hits": 5,
+  "eligible_correct": 0,
+  "automatic_candidates": 0,
+  "hosted_calls": 0,
+  "worker_closed": true,
+  "matching_targets_confidence_and_review_reasons": true,
+  "scope": "Local screenshot preparation, fresh OCR and proposal only. Excludes agent review, physical input, UI response, interpreter startup and hosted image inference."
+}

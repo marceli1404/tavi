@@ -5,9 +5,26 @@
     "~/.codex/skills"
   ],
   "model_roles": {
-    "fast": ["gpt-6-luna", "gpt-6.1-sol"],
-    "balanced": ["gpt-6.1-sol", "gpt-6-sol"],
-    "deep": ["gpt-6-astra", "gpt-6.1-sol"]
+    "fast": [
+      "gpt-6-luna",
+      "gpt-6.1-sol"
+    ],
+    "balanced": [
+      "gpt-6.1-sol",
+      "gpt-6-sol"
+    ],
+    "deep": [
+      "gpt-6-astra",
+      "gpt-6.1-sol"
+    ]
   },
-  "policy": {"always_skills": [], "rules": []}
+  "policy": {
+    "always_skills": [],
+    "rules": []
+  },
+  "auto_click": {
+    "enabled": false,
+    "threshold_percent": 95,
+    "routine_buttons_only": true
+  }
 }

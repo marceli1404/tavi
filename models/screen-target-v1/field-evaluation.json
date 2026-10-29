@@ -1,0 +1,36 @@
+{
+  "format": "tavi-target-field-audit-v1",
+  "weights_sha256": "cd2d4351de01f218fed1887694af9313df28054d49780bdbbbbbaf6f12e54435",
+  "dataset_sha256": "63897712f0a91d3733c984d609b6c47655ff05fbac1cdaedfaeb6e8b7ddbd70f",
+  "status": "failed",
+  "automatic_probability_qualified": false,
+  "scope": "Real rendered browser target identity; site-disjoint splits; no action outcome/safety labels.",
+  "check": {
+    "candidates": 309,
+    "n": 309,
+    "positive": 10,
+    "accuracy": 0.9158576051779935,
+    "nll": 0.421948215559994,
+    "brier": 0.08286220190266509,
+    "high95_count": 16,
+    "high95_correct": 0,
+    "high95_precision": 0.0
+  },
+  "audit": {
+    "candidates": 67,
+    "n": 67,
+    "positive": 27,
+    "accuracy": 0.5970149253731343,
+    "nll": 1.1225658416130981,
+    "brier": 0.33758809091295844,
+    "high95_count": 0,
+    "high95_correct": 0,
+    "high95_precision": null
+  },
+  "limits": [
+    "One capture per site/width; repeated candidates are clustered within sites.",
+    "DOM-derived target identity, not action outcomes or authorization.",
+    "OCR may miss controls; no high-confidence field reliability demonstrated.",
+    "Case-insensitive candidate identities deduplicated; raw repeated requests retained separately."
+  ]
+}
