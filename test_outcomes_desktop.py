@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 from benchmarks.judge import judge,validate
-from benchmarks.outcomes import summarise,ensure_run_manifest
+from benchmarks.outcomes import summarise,ensure_run_manifest,used_tools
 from benchmarks.compare_routers import common_coverage
 from tavi_appserver import switch_loaded_thread,desktop_status,RpcError
 
@@ -12,6 +12,12 @@ BASE=Path(__file__).resolve().parent
 
 
 class OutcomeTests(unittest.TestCase):
+    def test_benchmark_tool_use_is_not_a_valid_completion(self):
+        self.assertFalse(used_tools([{'type':'item.completed','item':{'type':'agent_message','text':'code'}}]))
+        for kind in ('command_execution','mcp_tool_call','file_change','web_search','tool_call'):
+            self.assertTrue(used_tools([{'type':'item.started','item':{'type':kind}}]))
+            self.assertTrue(used_tools([{'type':kind}]))
+
     def test_upstream_reference_solutions_pass_the_judge(self):
         cases=json.loads((BASE/'benchmarks/humaneval/cases.json').read_text(encoding='utf-8'))
         for case in cases:
@@ -21,6 +27,16 @@ class OutcomeTests(unittest.TestCase):
     def test_wrong_solution_fails_real_assertions(self):
         with self.assertRaises(AssertionError):
             judge('def solution(n): return 0','def check(candidate): assert candidate(3)==7','solution')
+
+    def test_character_functions_and_upstream_copy_checks(self):
+        result=judge('def solution(s): return chr(ord(s)+1)',
+                     'import copy\ndef check(candidate): assert candidate(copy.copy("a"))=="b"','solution')
+        self.assertTrue(result['passed'])
+        with self.assertRaises(ValueError):validate('import copy')
+
+    def test_pure_standard_divmod_is_available(self):
+        self.assertTrue(judge('def solution(n): return divmod(n,3)',
+                              'def check(candidate): assert candidate(8)==(2,2)','solution')['passed'])
 
     def test_file_access_and_dynamic_execution_are_rejected(self):
         for source in ['open("secret")','import os','eval("1")','x.__class__','x.gi_frame']:

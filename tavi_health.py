@@ -39,6 +39,13 @@ def activate_candidate(config_path, expected_bytes, candidate, accepted_report):
         raise ValueError('Candidate did not pass evaluation; activation refused')
     from tavi_model import DecisionModel
     loaded = DecisionModel.load(candidate)
+    gate_path=Path(candidate)/'activation-gate.json'
+    if gate_path.is_file():
+        from tavi_probability import signature
+        gate=json.loads(gate_path.read_text(encoding='utf-8'))
+        if (gate.get('format')!='tavi-acceptance-v1' or gate.get('weights_sha256')!=loaded.metadata['weights_sha256'] or
+            gate.get('model_signature')!=signature(loaded.metadata) or gate.get('approved') is not True):
+            raise ValueError('Candidate acceptance gate is unapproved or mismatched; activation refused')
     if accepted_report.get('weights_sha256') != loaded.metadata['weights_sha256']:
         raise ValueError('Evaluation is not for these candidate weights')
     if loaded.metadata.get('tier_adapter'):

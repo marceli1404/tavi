@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.14 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.15 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -25,7 +25,7 @@ python -m pip install -r requirements.txt
 python tavi.py predict "Fix a mobile navigation menu"
 ```
 
-For one-line installers, visit [marceli.tech](https://marceli.tech/#install). They create a new folder and preserve existing skills.
+For one-line installers, visit [tavi.marceli.tech](https://tavi.marceli.tech/#install). They create a new folder and preserve existing skills.
 
 ## Connect Codex
 
@@ -107,3 +107,54 @@ Use `python tavi.py propose-stream` for repeated local screenshot-to-target prop
 ## 95% automatic routine buttons
 
 The optional automatic-button policy uses raw target confidence >=95%, existing proposal checks and trusted live host verification. The supported host driver performs the click and checks its result. The OCR process only returns eligibility; it cannot click. Portable configuration is disabled until its owner opts in. See [Features-v0.13.md](Features-v0.13.md) for the callback contract, no-retry behavior and synthetic-confidence limits.
+
+
+## Claude Code provider
+
+Install and sign in to the official Claude Code CLI separately. Tavi never
+asks for your credentials. Run `python tavi.py provider-status claude --auth`
+for availability, version and redacted sign-in status. The integration requires
+Claude Code 2.1.259 or newer; 2.1.312 was checked locally. If the CLI is not on
+PATH, set `claude_cli` to its executable or Node entrypoint in your private
+configuration. A null value uses normal CLI discovery.
+
+```bash
+python tavi.py inventory --provider claude
+python tavi.py route "Review this parser" --provider claude --plan --workspace .
+python tavi.py route "Fix this parser" --provider claude --interactive --plan --workspace .
+```
+
+Fast/balanced/deep map to the official haiku/sonnet/opus aliases by default.
+These are configurable policy choices, not measured model rankings or proof
+of account access. Codex model settings stay separate. A review-needed route
+withholds its launch plan. `--plan` never starts a hosted task.
+
+Add `--execute` only when ready to launch. Default Claude execution uses print
+planning mode with Read/Glob/Grep, MCP tools disallowed and permission prompts
+disabled. This limits CLI tools; it is not an operating-system sandbox.
+`--interactive --execute` opens a full native Claude session in a real terminal,
+with its normal permissions and approval flow. It can edit code within the
+request; Tavi supplies no permission bypass. Claude uses your own account and
+allowance. Local tests verified argument parsing and unauthenticated refusal;
+an authenticated hosted request has not yet been verified.
+
+## Exact control facts before image inference
+
+When your supported browser or native driver already exposes the intended
+control, use that evidence before OCR. `target-controls` accepts a local
+`tavi-control-snapshot-v1` JSON inventory supplied by that host:
+
+```bash
+python tavi.py target-controls controls.json --task "Inspect Skills" --target Skills
+```
+
+Use `--context` to require an exact group label for duplicate controls. Matching
+normalizes case and whitespace, and checks role, visibility, enabled state,
+viewport geometry and five-second freshness. Missing or ambiguous matches
+require review. `--offline` permits replay only and is never actionable.
+
+The result carries an identity and snapshot/task hashes, **not a probability
+or permission to click**. Snapshot fields are untrusted claims until the host
+rechecks the current control and authorization. The supported host performs
+any action and verifies its result. Tavi adds no capture or input backend.
+See `Features-control-grounding.md` for the schema and measured limits.

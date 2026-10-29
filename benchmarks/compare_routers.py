@@ -118,7 +118,6 @@ def main():
     print(json.dumps(summary,indent=2))
 
 
-if __name__=='__main__':main()
 def common_coverage(results):
     shared=[r for r in results if all(r[name].get('observed_outcome') for name in ('tavi','laya'))]
     comparison={'tasks':len(shared),'task_ids':[r['task_id'] for r in shared]}
@@ -130,5 +129,8 @@ def common_coverage(results):
                               input_tokens=sum((r.get('usage') or {}).get('input_tokens',0) for r in selected),
                               output_tokens=sum((r.get('usage') or {}).get('output_tokens',0) for r in selected))
     return comparison
+
+
+if __name__=='__main__':main()
 
 

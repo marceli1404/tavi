@@ -18,6 +18,11 @@ PROMPT_PREFIX=('Implement the following Python function. Return the COMPLETE fun
                'Do not use tools, access files or include prose/markdown. Use only standard Python and typing/math/collections/itertools/functools/re if needed.\n\n')
 
 
+def used_tools(events):
+    kinds={'command_execution','mcp_tool_call','file_change','web_search','tool_call'}
+    return any(e.get('type') in kinds or e.get('item',{}).get('type') in kinds for e in events)
+
+
 def ensure_run_manifest(run_dir,dataset_sha256):
     expected=dict(dataset_sha256=dataset_sha256,model_roles=MODEL_ROLES,
                   judge_sha256=hashlib.sha256((BASE/'benchmarks/judge.py').read_bytes()).hexdigest(),
@@ -72,7 +77,9 @@ def generate(case,role,model,effort,run_dir):
             try: events.append(json.loads(line))
             except ValueError: pass
         usage=next((e.get('usage') for e in reversed(events) if e.get('type')=='turn.completed'),None)
-        if proc.returncode==0 and answer.is_file():
+        if used_tools(events):
+            verdict=dict(passed=False,result='generation_used_tools')
+        elif proc.returncode==0 and answer.is_file():
             code=json.loads(answer.read_text(encoding='utf-8'))['code']
             verdict=judge(code,case)
         else:

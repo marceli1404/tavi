@@ -21,6 +21,9 @@ def main():
         dataset += json.loads((args.model/'tier-dataset.json').read_text(encoding='utf-8'))
     if (args.model/'coding-dataset.json').is_file():
         dataset += json.loads((args.model/'coding-dataset.json').read_text(encoding='utf-8'))
+    for filename in ('coding-doc-dataset.json','skill-presence-dataset.json'):
+        if (args.model/filename).is_file():
+            dataset += json.loads((args.model/filename).read_text(encoding='utf-8'))
     from training.heldout import CASES
     from training.extension_heldout import CASES as EXTENSION_CASES
     excluded = [r['prompt'] for r in dataset]+[r[0] for r in CASES]+[r[0] for r in EXTENSION_CASES]

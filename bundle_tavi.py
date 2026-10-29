@@ -15,7 +15,7 @@ def main():
         payload[name]=path.read_bytes()
     manifest={name:hashlib.sha256(data).hexdigest() for name,data in payload.items()}
     payload['manifest.json']=json.dumps(manifest,indent=2).encode()
-    destination=BASE/'dist/tavi-v0.14-source-and-model.zip'
+    destination=BASE/'dist/tavi-v0.15-source-and-model.zip'
     destination.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(destination,'w',zipfile.ZIP_DEFLATED) as archive:
         for name,data in payload.items(): archive.writestr(name,data)

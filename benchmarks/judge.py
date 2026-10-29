@@ -31,7 +31,7 @@ def validate(source,allowed_imports=None):
 
 
 def guarded_import(name,globals=None,locals=None,fromlist=(),level=0):
-    if name not in ALLOWED_IMPORTS|{'random','string'} or level:
+    if name not in ALLOWED_IMPORTS|{'random','string','copy'} or level:
         raise ImportError('Import not allowed')
     return builtins.__import__(name,globals,locals,fromlist,level)
 
@@ -39,10 +39,10 @@ def guarded_import(name,globals=None,locals=None,fromlist=(),level=0):
 def judge(code,test,entry_point):
     # Function candidates are statically restricted and execute only in this disposable worker.
     candidate=validate(code)
-    checks=validate(test,ALLOWED_IMPORTS|{'random','string'})
+    checks=validate(test,ALLOWED_IMPORTS|{'random','string','copy'})
     import random
     random.seed(0)
-    safe_names='abs all any bool dict enumerate filter float frozenset int isinstance issubclass iter len list map max min next pow range reversed round set slice sorted str sum tuple zip Exception ValueError TypeError AssertionError StopIteration'.split()
+    safe_names='abs all any bool chr dict divmod enumerate filter float frozenset int isinstance issubclass iter len list map max min next ord pow range reversed round set slice sorted str sum tuple zip Exception ValueError TypeError AssertionError StopIteration'.split()
     safe={name:getattr(builtins,name) for name in safe_names}
     safe['__import__']=guarded_import
     namespace={'__builtins__':safe}

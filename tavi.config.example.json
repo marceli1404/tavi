@@ -26,5 +26,17 @@
     "enabled": false,
     "threshold_percent": 95,
     "routine_buttons_only": true
-  }
+  },
+  "claude_model_roles": {
+    "fast": [
+      "haiku"
+    ],
+    "balanced": [
+      "sonnet"
+    ],
+    "deep": [
+      "opus"
+    ]
+  },
+  "claude_cli": null
 }

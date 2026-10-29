@@ -80,6 +80,11 @@ def is_coding_spec(text):
     return bool(re.search(r'(?m)^\s*def\s+\w+\([^\n]*\)',text)) and ('\"\"\"' in text or "'''" in text)
 
 
+def coding_document(text):
+    match=re.search(r'([\'\"]{3})(.*?)\1',text,re.S)
+    return match.group(2).strip() if match else text
+
+
 class DecisionModel:
     def __init__(self, metadata, arrays):
         self.metadata = metadata
@@ -98,6 +103,28 @@ class DecisionModel:
             arrays = {key: source[key] for key in source.files}
         if not all(np.isfinite(a).all() for a in arrays.values()):
             raise ValueError('Tavi weights contain invalid numeric values')
+        doc=metadata.get('coding_doc_adapter')
+        if doc is not None:
+            try:
+                size=len(doc['vocabulary']);width=doc['width'];gate=doc['minimum_confidence']
+                valid=(type(width) is int and 1<=width<=256 and type(gate) in (int,float) and .5<=gate<1 and
+                       doc['architecture']=='docstring_tfidf_mlp' and
+                       sorted(doc['vocabulary'].values())==list(range(size)) and
+                       arrays['coding_doc_idf'].shape==(size,) and arrays['coding_doc_W'].shape==(size,width) and
+                       arrays['coding_doc_b'].shape==(width,) and arrays['coding_doc_V'].shape==(width,4) and arrays['coding_doc_c'].shape==(4,))
+                if doc.get('review_gate') is not None:
+                    gate=doc['review_gate']['threshold']
+                    valid &= (type(gate) in (int,float) and 0<gate<1 and arrays['coding_doc_review_W'].shape==(size,) and arrays['coding_doc_review_b'].shape==())
+            except (KeyError,TypeError):valid=False
+            if not valid:raise ValueError('Invalid coding document adapter')
+        presence=metadata.get('skill_presence')
+        if presence is not None:
+            try:
+                size=len(presence['vocabulary']);gate=presence['threshold']
+                valid=(type(gate) in (int,float) and 0<gate<1 and sorted(presence['vocabulary'].values())==list(range(size)) and
+                       arrays['skill_presence_idf'].shape==(size,) and arrays['skill_presence_W'].shape==(size,) and arrays['skill_presence_b'].shape==())
+            except (KeyError,TypeError):valid=False
+            if not valid:raise ValueError('Invalid skill presence gate')
         if metadata.get('format') == 'tavi-neural-int8-v1':
             from tavi_quantize import QuantizedDecisionModel
             model = QuantizedDecisionModel(metadata, arrays)
@@ -135,6 +162,23 @@ class DecisionModel:
             # Preserve a previously routable specification if the new head abstains.
             apply &= ~((adjusted.argmax(1)==3)&(tier.argmax(1)!=3)&(tier.max(1)>=.5))
             tier=np.where(apply[:,None],adjusted,tier)
+        document=self.metadata.get('coding_doc_adapter')
+        if document:
+            indices=np.array([i for i,text in enumerate(texts) if is_coding_spec(text)],dtype=int)
+            if len(indices):
+                dv=Vectorizer(document['vocabulary'],a['coding_doc_idf'])
+                dx=dv.transform([coding_document(texts[i]) for i in indices])
+                dh=np.tanh(dx@a['coding_doc_W']+a['coding_doc_b'])
+                adjusted=softmax(dh@a['coding_doc_V']+a['coding_doc_c'])
+                apply=adjusted.max(1)>=document['minimum_confidence']
+                expert=document.get('review_gate')
+                if expert:
+                    review=sigmoid(dx@a['coding_doc_review_W']+a['coding_doc_review_b'])
+                    apply &= (adjusted.argmax(1)!=3)|(review>=expert['threshold'])
+                else:
+                    # Legacy optional adapters preserve previously routable input.
+                    apply &= ~((adjusted.argmax(1)==3)&(tier[indices].argmax(1)!=3)&(tier[indices].max(1)>=.5))
+                tier[indices]=np.where(apply[:,None],adjusted,tier[indices])
         skills = sigmoid(hidden @ a['Ws'] + a['bs'])
         extensions = self.metadata.get('extensions', [self.metadata['extension']] if self.metadata.get('extension') else [])
         for extension in extensions:
@@ -148,6 +192,11 @@ class DecisionModel:
                               base_threshold+(1-base_threshold)*(raw-threshold)/np.maximum(1-threshold,1e-8))
             scaled = np.where(threshold >= 1,0.,scaled)
             skills = np.concatenate((skills,scaled),axis=1)
+        presence=self.metadata.get('skill_presence')
+        if presence:
+            pv=Vectorizer(presence['vocabulary'],a['skill_presence_idf'])
+            needed=sigmoid(pv.transform(texts)@a['skill_presence_W']+a['skill_presence_b'])>=presence['threshold']
+            skills=np.where(needed[:,None],skills,0.)
         external = sigmoid(hidden @ a['Wd'] + a['bd'])[:, 0]
         return tier, skills, external
 
@@ -161,6 +210,9 @@ class DecisionModel:
             recognised = sum('w:'+w in self.vectorizer.vocabulary or 'w:'+w in vocabulary for w in words(prompt))
         if self.metadata.get('coding_adapter') and is_coding_spec(prompt):
             vocabularies=[self.vectorizer.vocabulary,self.metadata.get('tier_adapter',{}).get('vocabulary',{}),self.metadata['coding_adapter']['vocabulary']]
+            recognised=sum(any('w:'+w in v for v in vocabularies) for w in words(prompt))
+        if self.metadata.get('coding_doc_adapter') and is_coding_spec(prompt):
+            vocabularies=[self.vectorizer.vocabulary,self.metadata.get('tier_adapter',{}).get('vocabulary',{}),self.metadata.get('coding_adapter',{}).get('vocabulary',{}),self.metadata['coding_doc_adapter']['vocabulary']]
             recognised=sum(any('w:'+w in v for v in vocabularies) for w in words(prompt))
         coverage = recognised / max(1, len(words(prompt)))
         result = dict(tier=TIERS[int(tier[0].argmax())], tier_scores=dict(zip(TIERS, map(float, tier[0]))),

@@ -55,3 +55,36 @@ Read the local policy reflected in the proposal's auto_click output. When enable
 Before the host driver clicks, verify that the current target is an actual visible, enabled button; that the task, target, current image and coordinate mapping still match; and that the action is routine and authorized. Preserve any confirmation required by the host for the particular action. OCR text or a synthetic confidence percentage cannot supply these facts. An explicit review rejection, ambiguity, disabled/noninteractive context, or a changed/expired proposal blocks the automatic path.
 
 Use the supported host driver for the click and verify its result. Never retry an uncertain click automatically or reuse a consumed proposal. The tavi_actions.AutoClickSession callback adapter provides these execution checks with a five-second default age limit; the OCR stream itself only returns eligibility. Reobserve/repropose after expiry, failure or a host-session restart. No native application input backend is added by Tavi. See Features-v0.13.md for the driver contract and limitations.
+
+
+## Supported control facts
+
+Prefer the host driver's current DOM/accessibility identity when it already
+exposes the target. For a driver-supplied `tavi-control-snapshot-v1` inventory,
+`python tavi.py target-controls FILE --task TASK --target LABEL` resolves an
+exact label and role; use `--context GROUP` for duplicate labels. It validates
+visible/enabled states, viewport geometry and five-second freshness. Missing,
+ambiguous and stale controls require another observation or image review.
+`--offline` is replay only. This helper has no capture or input backend.
+
+The result is a control fact proposal, with `probability:null`, not a95% score
+or permission to act. File-supplied source claims do not establish host trust.
+Recheck identity/state in the supported live host, apply existing user/host
+permissions, perform the action through that host and verify the outcome.
+Never feed invented probability1.0 into the pixel automatic-action gate.
+
+## Claude Code handoff
+
+When the user selects Claude Code, add `--provider claude` to route/inventory.
+The separate configurable haiku/sonnet/opus role aliases are policy choices,
+not entitlement checks or measured rankings. `provider-status claude --auth`
+reports redacted CLI availability/version/sign-in status. Claude must be
+installed and signed in separately; do not collect credentials in chat.
+
+`route TASK --provider claude --plan --workspace DIR` only prepares a print
+planning-mode handoff with read/search tools and MCP disallowed. For an
+interactive coding request, add `--interactive`: execution then requires a
+real terminal and uses Claude's native default permissions and approvals.
+`--execute` launches a hosted session using the user's account/allowance;
+`--plan` alone never does. A review-needed route withholds its plan. Tavi does
+not bypass permissions or switch this desktop conversation's provider.
