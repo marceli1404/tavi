@@ -17,7 +17,9 @@ SCHEMA = {'type':'object','additionalProperties':False,'properties':{
     'required':['summary','visible_text','target_candidates','uncertainties']}
 
 
-def prepare(path, destination, max_edge=1600):
+def prepare(path, destination, max_edge=1600, *, compression='compact'):
+    if compression not in ('compact','fast'):
+        raise ValueError('Screenshot compression must be compact or fast')
     try:
         from PIL import Image, ImageOps
     except ImportError as error:
@@ -30,7 +32,11 @@ def prepare(path, destination, max_edge=1600):
         image = ImageOps.exif_transpose(image).convert('RGB')
         original = image.size
         image.thumbnail((max_edge,max_edge), Image.Resampling.LANCZOS)
-        image.save(destination, format='PNG', optimize=True)
+        if compression=='compact':
+            image.save(destination, format='PNG', optimize=True)
+        else:
+            # Local OCR needs identical decoded pixels, not maximum compression.
+            image.save(destination, format='PNG', optimize=False, compress_level=1)
         digest = hashlib.sha256(image.tobytes()).hexdigest()
         return {'original_size':list(original),'prepared_size':list(image.size),
                 'original_bytes':path.stat().st_size,'prepared_bytes':destination.stat().st_size,

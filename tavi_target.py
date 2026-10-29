@@ -17,10 +17,15 @@ def candidates(image,ocr,task,target):
     from PIL import Image
     if not target or not target.strip() or len(target)>80:
         raise ValueError('An explicit visible target word of1–80 characters is required')
+    with Image.open(image) as original, original.convert('RGB') as rgb:
+        return _candidates_rgb(rgb,ocr,task,target)
+
+
+def _candidates_rgb(rgb,ocr,task,target):
+    # Keep the decoded bitmap in byte form. Only sampled regions need float64;
+    # full-frame float conversion does not contribute any other target feature.
     words=ocr.get('words',[]) if ocr.get('status')=='available' else []
-    with Image.open(image) as im:
-        pixels=np.asarray(im.convert('RGB'),dtype=float)/255
-    height,width=pixels.shape[:2]
+    width,height=rgb.size
     valid=[]
     for word in words:
         try:
@@ -31,7 +36,7 @@ def candidates(image,ocr,task,target):
         except (ValueError,KeyError,TypeError): continue
     matches=[word for word in valid if word['text'].casefold()==target.strip().casefold()]
     desired=tokens(task)-tokens(target)
-    background=np.median(pixels[:min(20,height),:min(20,width)],axis=(0,1))
+    background=np.median(np.asarray(rgb.crop((0,0,min(20,width),min(20,height))),dtype=float)/255,axis=(0,1))
     result=[]
     for index,word in enumerate(matches):
         x,y,w,h=(word[k] for k in ('x','y','width','height'))
@@ -42,11 +47,19 @@ def candidates(image,ocr,task,target):
         overlap=len(desired&tokens(context))/len(desired) if desired else 1.
         x0,x1=max(0,int(x)-12),min(width,int(x+w)+12)
         y0,y1=max(0,int(y)-10),min(height,int(y+h)+10)
-        patch=pixels[y0:y1,x0:x1]
+        patch=np.asarray(rgb.crop((x0,y0,x1,y1)),dtype=float)/255
         yy,xx=np.mgrid[y0:y1,x0:x1]
         outside=(xx<x)|(xx>=x+w)|(yy<y)|(yy>=y+h)
         ring=patch[outside]
-        ink=pixels[int(y):max(int(y)+1,int(y+h)),int(x):max(int(x)+1,int(x+w))]
+        ink=np.asarray(rgb.crop((int(x),int(y),max(int(x)+1,int(x+w)),max(int(y)+1,int(y+h)))),dtype=float)/255
+        if ink.shape[0]>1 and ink.shape[1]<width:
+            # The old full-frame slice was row-strided. Preserve NumPy's
+            # reduction path (and exact float64 rounding) with one padding
+            # column, rather than allocating full-width floating-point rows.
+            padded=np.empty((ink.shape[0],ink.shape[1]+1,3),dtype=float)
+            strided=padded[:,:ink.shape[1]]
+            strided[:]=ink
+            ink=strided
         mean=ring.mean(axis=0) if len(ring) else background
         difference=float(np.sqrt(np.mean((mean-background)**2)))
         negative=bool(tokens(context)&{'disabled','unavailable','inactive'})

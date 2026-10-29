@@ -51,7 +51,7 @@ def propose(image,task,target,*,execute=False,allow_image_fallback=False,model='
     source_hash=hashlib.sha256(image.read_bytes()).hexdigest()
     with tempfile.TemporaryDirectory(prefix='tavi-local-target-') as folder:
         directory=Path(folder); prepared=directory/'screen.png'
-        info=prepare(image,prepared,max_edge)
+        info=prepare(image,prepared,max_edge,compression='compact' if allow_image_fallback else 'fast')
         ocr=(ocr_fn or local_ocr)(prepared)
         items,metadata=score(candidates(prepared,ocr,task,target),target_model)
         sx=info['original_size'][0]/info['prepared_size'][0]; sy=info['original_size'][1]/info['prepared_size'][1]

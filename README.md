@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.16 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.17 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -170,3 +170,8 @@ to validate a response against the same task/inventory snapshot. `-` accepts
 JSON through stdin without recording a task file. This command makes no model
 or network request and grants no installation or execution permission.
 See `Features-coverage-review.md` for the schema, examples and measured limits.
+
+
+## Faster local preparation
+
+Local-only screenshot proposals use sampled pixel processing and fast lossless PNG encoding. The original30-case workload measures36.8% less preparation time than v0.16warm sessions, with unchanged recognition limits. See [the method and exclusions](Features-local-preparation.md).
