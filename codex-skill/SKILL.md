@@ -104,3 +104,10 @@ It grants no install/action authority or calibrated probability. If coverage is
 missing, follow the existing AwesomeSkill discovery/source-review workflow.
 See `Features-coverage-review.md` in the configured Tavi checkout for the schema
 and measured limits. The packet command needs no research NLI model assets.
+
+
+### Several control lookups from one current observation
+
+Use `python tavi.py target-controls-batch SNAPSHOT QUERIES` when the supported host has supplied one genuinely fresh control inventory and several exact targets. Each query includes task/target and optional role/context/unique id. `--offline` is replay only. Every proposal still requires a live host check, has no learned probability and grants no action authorization. Reobserve/rebuild after a UI change or expiry; do not execute an action sequence from the old batch. The library `ControlIndex` copies one observation and checks its age on every lookup.
+
+Context-quality advice separately flags recorded tier/external check accuracy at or below 90%, or absent context evidence, even when a raw score is high. Review it as agent advice; it does not request user approval or change the learned route.

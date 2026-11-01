@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.17 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.18 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -41,6 +41,16 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Exact host controls
+
+When the supported computer-use driver supplies current control identities, Tavi can resolve exact labels and roles without interpreting an image. For several lookups from one observation:
+
+```sh
+python tavi.py target-controls-batch snapshot.json queries.json --offline
+```
+
+Offline mode is replay only. Fresh proposals still require the driver to verify the live control before acting. A lookup does not grant permission or predict success. In a preparation-only test of 12 queries across 1,000 supplied controls, batching reduced median lookup preparation from 42.19 ms to 5.07 ms. Capture, process startup, agent reasoning, clicks and app response are excluded. See [v0.18 results and examples](Features-v0.18.md).
+
 ## Screenshots: local and hosted
 
 ```sh
@@ -75,6 +85,7 @@ The accepted v4 clean model has 440817 parameters and 148 skill labels. It prese
 
 Calibration is partial and based on authored synthetic labels. Code-context tier check accuracy is 22/36 (61.11%); plain-text tier and code-context external scores remain raw. Skill scores are not calibrated probabilities. These outputs do not predict task success. INT8 experiments made saved weights smaller but were slower on the tested NumPy setup and changed six skill selections; FP32 remains the default.
 
+- [v0.18 indexed controls and context-quality advice](Features-v0.18.md)
 - [v0.10 hybrid screenshots](Features-v0.10.md)
 - [v0.9 code adapter and partial confidence](Features-v0.9.md)
 - [v0.8 tier coverage](Features-v0.8.md)

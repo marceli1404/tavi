@@ -240,6 +240,10 @@ def main():
     controls.add_argument('--role', default='button')
     controls.add_argument('--context', help='Exact host-supplied group context for duplicate labels')
     controls.add_argument('--offline', action='store_true', help='Replay an old snapshot; output is never actionable')
+    controls_batch = sub.add_parser('target-controls-batch', help='Resolve multiple exact targets from one host observation; no capture or clicks')
+    controls_batch.add_argument('snapshot', type=Path)
+    controls_batch.add_argument('queries', type=Path)
+    controls_batch.add_argument('--offline', action='store_true', help='Replay only; every proposal still requires a live host check')
     sub.add_parser('propose-stream', help='Keep local OCR warm for JSON-lines screenshot requests; no hosted calls or clicks')
     proposal = sub.add_parser('propose', help='Local target percentage and compact Codex review packet; never clicks')
     proposal.add_argument('image', type=Path)
@@ -332,6 +336,10 @@ def main():
             from tavi_controls import resolve_file
             result = resolve_file(args.snapshot, args.task, args.target, role=args.role, context=args.context, offline=args.offline)
             print(json.dumps(result, indent=2))
+            return 0
+        if args.command == 'target-controls-batch':
+            from tavi_controls import resolve_many_files
+            print(json.dumps(resolve_many_files(args.snapshot, args.queries, offline=args.offline), indent=2))
             return 0
         if args.command=='provider-status':
             from tavi_providers import claude_status

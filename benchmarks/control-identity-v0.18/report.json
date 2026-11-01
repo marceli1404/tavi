@@ -1,0 +1,85 @@
+{
+  "pixel_identical": true,
+  "dimensions": [
+    720,
+    1280,
+    3
+  ],
+  "different_pixel_components": 0,
+  "decoded_rgb_sha256": {
+    "button": "46e05141e692bd98ef3c9fba62b5b6945a111e5ee301d09866e0e8c330122b04",
+    "link": "46e05141e692bd98ef3c9fba62b5b6945a111e5ee301d09866e0e8c330122b04"
+  },
+  "png_sha256": {
+    "button": "df685557a7225d2002dfe4ffb18562f67bdb24478419df6ed6ac268f8f0e025f",
+    "link": "df685557a7225d2002dfe4ffb18562f67bdb24478419df6ed6ac268f8f0e025f"
+  },
+  "observed_tags": {
+    "button": "BUTTON",
+    "link": "A"
+  },
+  "feature_vectors_identical": true,
+  "scored_candidates": {
+    "button": {
+      "id": "candidate-0",
+      "label": "Go",
+      "x": 136.0,
+      "y": 191.0,
+      "box": [
+        125.0,
+        185.0,
+        147.0,
+        197.0
+      ],
+      "context": "Control identity fixture Read-only rendering test No control activation is needed. Go",
+      "features": [
+        0.2,
+        0.0171875,
+        0.016666666666666666,
+        0.9058498928163209,
+        0.017214658516810814,
+        0.4196100401495798,
+        1.0,
+        0.0,
+        0.9058498928163209,
+        0.18333333333333332,
+        1.0
+      ],
+      "context_overlap": 1.0,
+      "probability": 0.9999966173679894,
+      "confidence_percent": 99.9
+    },
+    "link": {
+      "id": "candidate-0",
+      "label": "Go",
+      "x": 136.0,
+      "y": 191.0,
+      "box": [
+        125.0,
+        185.0,
+        147.0,
+        197.0
+      ],
+      "context": "Control identity fixture Read-only rendering test No control activation is needed. Go",
+      "features": [
+        0.2,
+        0.0171875,
+        0.016666666666666666,
+        0.9058498928163209,
+        0.017214658516810814,
+        0.4196100401495798,
+        1.0,
+        0.0,
+        0.9058498928163209,
+        0.18333333333333332,
+        1.0
+      ],
+      "context_overlap": 1.0,
+      "probability": 0.9999966173679894,
+      "confidence_percent": 99.9
+    }
+  },
+  "scope": "Controlled balanced pair only: identical visual inputs with different native roles. Does not estimate field prevalence or button-action success.",
+  "automatic_probability_qualified": false,
+  "controls_activated": false
+}

@@ -6,6 +6,7 @@ import re
 import numpy as np
 
 TIERS = ['fast', 'balanced', 'deep', 'review']
+CONTEXT_ACCURACY_TARGET = .9
 
 
 def signature(metadata):
@@ -76,8 +77,20 @@ def summarize(prediction, calibration=None, context='plain_text'):
     if prediction['tier'] == 'review':
         reasons.append('model_requests_review')
     context_evidence=(calibration.get('context_metrics',{}).get(context) if calibration else None)
-    if context_evidence and context_evidence['tier']['after']['accuracy']<.8:
-        reasons.append('limited_context_validation_accuracy')
+    context_quality = {}
+    for head in ('tier', 'external'):
+        evidence = (context_evidence or {}).get(head, {}).get('after', {})
+        accuracy, cases = evidence.get('accuracy'), evidence.get('cases')
+        established = (type(accuracy) in (int, float) and math.isfinite(accuracy)
+                       and 0 <= accuracy <= 1 and type(cases) is int and cases > 0)
+        meets = accuracy > CONTEXT_ACCURACY_TARGET if established else None
+        context_quality[head] = dict(accuracy=accuracy if established else None,
+                                     cases=cases if established else None, meets_target=meets)
+        if meets is False:
+            reasons.append('limited_context_validation_accuracy' if head == 'tier'
+                           else 'limited_external_context_validation_accuracy')
+    if any(values['meets_target'] is None for values in context_quality.values()):
+        reasons.append('context_quality_not_established')
     status=('synthetic_policy_calibrated' if all(heads.values()) else 'partially_synthetic_policy_calibrated') if any(heads.values()) else 'uncalibrated'
     return dict(status=status,
                 calibration_context=context,
@@ -89,6 +102,10 @@ def summarize(prediction, calibration=None, context='plain_text'):
                             note='Skill scores, including rescaled extension outputs, are not calibrated probabilities.'),
                 vocabulary_coverage=prediction['vocabulary_coverage'], review_recommended=bool(reasons),
                 review_reasons=reasons, affects_routing=False,
+                context_quality=context_quality,
+                quality_requirement=dict(accuracy_strictly_above=CONTEXT_ACCURACY_TARGET,
+                    scope='Recorded authored-policy context checks only; not field or action qualification.',
+                    review='Advice for the agent; does not request user approval or alter the learned route.'),
                 evidence=(dict(check_cases=calibration['check_cases'],
                                tier_accuracy=calibration['metrics']['check']['tier']['after']['accuracy'],
                                tier_ece=calibration['metrics']['check']['tier']['after']['ece'],

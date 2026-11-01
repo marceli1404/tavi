@@ -1,0 +1,88 @@
+{
+  "protocol_sha256": "ad940601344ec9bea87e348f44f4c6e94c0df0e424695cdd51a3df7b61a69777",
+  "parity_cases": 200,
+  "all_outputs_equal": true,
+  "timings": {
+    "10": {
+      "batch_median_ms": {
+        "legacy": 0.5182500000000001,
+        "batch": 0.1149
+      },
+      "batch_speed_ratio": 4.5104438642297655,
+      "index_build_median_ms": 0.0528,
+      "prepared_query_median_ms": 0.00415,
+      "one_shot_median_ms": {
+        "legacy": 0.04535,
+        "current": 0.0436
+      },
+      "raw_batch_ms": {
+        "legacy": [
+          0.5162,
+          0.5032,
+          0.5187,
+          0.5303,
+          0.4934,
+          1.0124,
+          0.6379,
+          0.5178,
+          0.4994,
+          0.8046
+        ],
+        "batch": [
+          0.1148,
+          0.115,
+          0.1233,
+          0.116,
+          0.2094,
+          0.1721,
+          0.1132,
+          0.1072,
+          0.1146,
+          0.1103
+        ]
+      }
+    },
+    "1000": {
+      "batch_median_ms": {
+        "legacy": 42.191050000000004,
+        "batch": 5.071400000000001
+      },
+      "batch_speed_ratio": 8.319408841739953,
+      "index_build_median_ms": 4.7036,
+      "prepared_query_median_ms": 0.005,
+      "one_shot_median_ms": {
+        "legacy": 3.49795,
+        "current": 3.3613
+      },
+      "raw_batch_ms": {
+        "legacy": [
+          40.979,
+          47.0383,
+          41.4463,
+          42.9358,
+          39.7459,
+          40.0436,
+          39.9586,
+          48.4038,
+          43.2856,
+          43.3405
+        ],
+        "batch": [
+          5.612,
+          5.0681,
+          4.5372,
+          5.0396,
+          5.0747,
+          5.2235,
+          6.5778,
+          5.1965,
+          4.6391,
+          4.917
+        ]
+      }
+    }
+  },
+  "authorization_granted": false,
+  "executed_actions": false,
+  "scope": "In-memory preparation only; excludes capture, file parse/startup, agent, input and UI response."
+}

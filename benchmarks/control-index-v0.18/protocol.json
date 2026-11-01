@@ -1,0 +1,17 @@
+{
+  "format": "tavi-control-index-benchmark-v1",
+  "legacy_source_sha256": "598400c75cbd45fb373d3c16939dfc57d10365aeacdf003d6278ae5c78787562",
+  "source_sha256": "d5afbcf09f230c8b49ccea894225a6737be98ceacd9ff9979c388d30990b53ed",
+  "benchmark_source_sha256": "fee15795da896b8e545c5662beb7e462c337e81f3930451c400ae8270bd2865f",
+  "cases_sha256": "3408853db99dcbd5eb5a338c7d16fa92cfeabdd2ded9e827a17866eea118b1c8",
+  "seed": 20261101,
+  "inventories": [
+    10,
+    1000
+  ],
+  "queries_per_batch": 12,
+  "rounds": 10,
+  "order": "Alternating legacy/batch per round",
+  "clock": "Frozen logical time; no live action",
+  "scope": "In-memory preparation only; excludes capture, file parse/startup, agent, input and UI response."
+}

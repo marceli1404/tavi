@@ -42,7 +42,7 @@ the existing pixel auto-click gate. Current pixel qualification remains false.
 
 Thirteen resolver tests cover exact/fuzzy/ambiguous labels, context, roles,
 unavailable/offscreen controls, freshness, replay, provenance hashes, malformed
-inventories and bounded files. All 216 source software tests pass.
+inventories and bounded files. The initial resolver release passed 216 source tests at that time.
 
 A supported browser inspected Models, Skills and Discovery on the owned Tavi
 website. The resolver found the matching IDs in its saved inventory; the host
@@ -59,3 +59,10 @@ host round trips, physical input and app response are excluded. The snapshot
 and image were saved after different selected-tab states; the compared button
 geometry/labels are unchanged. This is not a full computer-use speed claim.
 Raw evidence stays local in output/native-controls-20261029.
+
+
+## Indexed repeated lookup in v0.18
+
+See [Features-v0.18.md](Features-v0.18.md) for the batch command, query format and measured preparation results. `ControlIndex(snapshot)` validates/copies/hashes one observation once. Every `.resolve(...)` call rechecks age; a new observation or changed UI requires a new index. Multiple lookups never authorize multiple actions from a stale screen.
+
+The snapshot and returned rectangles do not alias the prepared index. Unicode/exact role/context matching, unavailable/ambiguous controls, future captures and five-second freshness remain checked. The ordinary single-target path keeps its scan behavior, with a copied result rectangle. The fresh package has additional regression coverage for these cases and for the context-quality advice boundary.

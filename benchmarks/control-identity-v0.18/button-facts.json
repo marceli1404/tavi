@@ -1,0 +1,18 @@
+{
+  "bounds": [
+    64,
+    168,
+    144,
+    48
+  ],
+  "centerHit": true,
+  "enabled": true,
+  "href": null,
+  "label": "Go",
+  "role": null,
+  "tag": "BUTTON",
+  "viewport": [
+    1280,
+    720
+  ]
+}

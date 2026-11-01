@@ -14,6 +14,49 @@ BASE = Path(__file__).parent
 
 
 class ProbabilityTests(unittest.TestCase):
+    def context_fixture(self, tier_accuracy, external_accuracy):
+        prediction = dict(tier='fast', tier_scores=dict(fast=.999, balanced=.0004, deep=.0004, review=.0002),
+                          external_score=.9, vocabulary_coverage=1.)
+        def evidence(value):
+            return dict(after=dict(accuracy=value, cases=100, ece=.01))
+        calibration = dict(tier_temperature=1., external_temperature=1., check_cases=200,
+                           metrics=dict(check=dict(tier=evidence(.99), external=evidence(.99))),
+                           context_metrics=dict(plain_text=dict(tier=evidence(tier_accuracy), external=evidence(external_accuracy))))
+        return prediction, calibration
+
+    def test_context_accuracy_below_requested_target_requests_review_at_high_score(self):
+        prediction, calibration = self.context_fixture(.854, .99)
+        report = summarize(prediction, calibration)
+        self.assertTrue(report['review_recommended'])
+        self.assertIn('limited_context_validation_accuracy', report['review_reasons'])
+        self.assertFalse(report['context_quality']['tier']['meets_target'])
+        self.assertGreater(report['tier']['top_probability'], .99)
+        self.assertFalse(report['affects_routing'])
+
+    def test_exact90_does_not_pass_strict_target_and_external_quality_is_checked(self):
+        prediction, calibration = self.context_fixture(.99, .9)
+        report = summarize(prediction, calibration)
+        self.assertTrue(report['context_quality']['tier']['meets_target'])
+        self.assertFalse(report['context_quality']['external']['meets_target'])
+        self.assertIn('limited_external_context_validation_accuracy', report['review_reasons'])
+        calibration['context_metrics']['plain_text']['external']['after']['accuracy'] = .91
+        self.assertFalse(summarize(prediction, calibration)['review_recommended'])
+
+    def test_aggregate_evidence_does_not_establish_an_unmeasured_context(self):
+        prediction, calibration = self.context_fixture(.99, .99)
+        report = summarize(prediction, calibration, context='python_spec')
+        self.assertIsNone(report['context_quality']['tier']['meets_target'])
+        self.assertIn('context_quality_not_established', report['review_reasons'])
+        calibration['context_metrics']['plain_text']['tier']['after']['cases'] = 0
+        self.assertIsNone(summarize(prediction, calibration)['context_quality']['tier']['meets_target'])
+
+    def test_quality_advice_keeps_the_same_distributions(self):
+        prediction, low = self.context_fixture(.85, .85)
+        _, high = self.context_fixture(.99, .99)
+        a, b = summarize(prediction, low), summarize(prediction, high)
+        for key in ('tier', 'external_search', 'skills'):
+            self.assertEqual(a[key], b[key])
+
     def test_extreme_scores_are_finite_normalized(self):
         p = temperature_probabilities([[0,0,0,1],[0,0,0,0]],2)
         self.assertTrue(np.isfinite(p).all())

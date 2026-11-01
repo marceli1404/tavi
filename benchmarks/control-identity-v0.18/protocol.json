@@ -1,0 +1,13 @@
+{
+  "purpose": "Controlled visual role ambiguity test, not field accuracy or action outcome evidence.",
+  "variants": [
+    "native button",
+    "native anchor/link"
+  ],
+  "activation": false,
+  "fixed_layout": true,
+  "files": {
+    "button.html": "d7d98ebe55d6099c822e9d50492a18720a284217dcdc7a9efbc922f11c4ce76a",
+    "link.html": "bfb8f2c91f052e61bec2d9fe22214c8e77b2c67dccbe71331b64e6950f0bb360"
+  }
+}
