@@ -7,7 +7,7 @@
   <meta name="description" content="Tavi — a concept showcase for expressive web design, considered interaction and motion with meaning." />
   <meta property="og:title" content="Tavi — Make the web feel something" />
   <meta property="og:description" content="A living demonstration of the Tavi creative web design system." />
-  <meta name="robots" content="noindex,nofollow" /><title>TAVI® — Make the web feel something · Studio Edition</title>
+  <meta name="robots" content="noindex,nofollow" /><title>TAVI® — Make the web feel something · Attention Edition</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -108,6 +108,66 @@ html[data-motion="off"] .studio-preview *,html[data-motion="off"] .studio-previe
 @media(max-width:760px){.studio{padding:85px 0}.studio-title{font-size:clamp(60px,15vw,108px)}.studio-inner{grid-template-columns:1fr}.studio-rail{border-right:0;border-bottom:1px solid rgba(16,26,19,.2);gap:14px}.studio-modes{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-mode{padding:11px 13px}.studio-summary{margin-top:0}.preview-visual{min-height:430px}.preview-title{font-size:clamp(52px,13vw,90px)}.command-launch{padding:9px}.command-launch .command-label{display:none}}
 @media(max-width:400px){.studio-modes{grid-template-columns:1fr}.studio-mode{padding:9px 12px}.preview-visual{min-height:360px}.preview-orbit{right:-55%}.preview-head,.preview-bottom{letter-spacing:.07em}.studio-toolbar{align-items:stretch}.studio-toolbar button{width:100%}}
 
+
+/* ATTENTION EDITION: directional rhythm and scroll-linked editorial feedback */
+.journey-rail{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:85;display:flex;align-items:center;gap:10px}
+.journey-text{font:700 9px/1 'DM Sans',sans-serif;letter-spacing:.16em;color:#d9efc7;writing-mode:vertical-rl;transform:rotate(180deg)}
+.journey-nav{padding:17px 9px;display:grid;gap:12px;background:rgba(17,23,19,.91);border:1px solid #52604b;border-radius:30px;backdrop-filter:blur(12px);position:relative}
+.journey-line{position:absolute;left:50%;top:28px;bottom:28px;width:1px;transform:translateX(-50%);background:#52604b;pointer-events:none}
+.journey-line::after{content:"";display:block;height:var(--journey-pct,0%);background:var(--lime);width:1px;box-shadow:0 0 8px var(--lime);transition:height .2s}
+.journey-nav a{position:relative;display:grid;place-items:center;width:21px;height:21px}
+.journey-nav a::after{content:"";width:5px;height:5px;border-radius:50%;background:#a9b6a5;transition:background .2s,scale .2s,box-shadow .2s}
+.journey-nav a:is(:focus-visible,:hover,[aria-current])::after{background:var(--lime);scale:2;box-shadow:0 0 0 2px #172419}
+.journey-nav a span{position:absolute;right:calc(100% + 20px);padding:7px 12px;white-space:nowrap;color:#e6f1de;background:#233024;border:1px solid #4b5b42;opacity:0;pointer-events:none;transform:translateX(6px);transition:opacity .2s,transform .2s;font:700 10px/1.2 'DM Sans',sans-serif;letter-spacing:.12em}
+.journey-nav a:is(:focus-visible,:hover) span{opacity:1;transform:translateX(0)}
+.hero-bottom .round-arrow{position:relative;isolation:isolate}
+.hero-bottom .round-arrow::before{content:"";position:absolute;inset:-10px;border:1px solid var(--lime);border-radius:50%;z-index:-1;animation:attentionPulse 3.8s ease-out infinite}
+@keyframes attentionPulse{0%,68%,100%{opacity:0;transform:scale(.85)}16%{opacity:.8;transform:scale(1.08)}52%{opacity:0;transform:scale(1.32)}}
+.hero-bottom p::after{content:"";display:block;width:100px;height:2px;background:var(--lime);margin-top:19px;transform-origin:left;animation:attentionLine 1.4s .8s var(--ease) both}
+@keyframes attentionLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero-footer::before{content:"";position:absolute;left:0;top:0;width:var(--hero-read,0%);height:2px;background:var(--lime);box-shadow:0 0 12px rgba(218,255,101,.6)}
+:is(.statement,.approach,.motion-lab,.brief-section) .section-eyebrow{position:relative}
+:is(.statement,.approach,.motion-lab,.brief-section) .section-eyebrow::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:1px;background:currentColor;opacity:.4;transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease)}
+:is(.statement,.approach,.motion-lab,.brief-section).section-in-view .section-eyebrow::after{transform:scaleX(1)}
+:is(.statement,.approach,.motion-lab,.brief-section) h2 em{position:relative;isolation:isolate}
+:is(.statement,.approach,.motion-lab,.brief-section) h2 em::after{content:"";position:absolute;bottom:.08em;left:0;width:100%;height:.10em;z-index:-1;background:var(--lime);opacity:.5;transform-origin:left;transform:scaleX(0);transition:transform 1.2s .22s var(--ease)}
+:is(.statement,.approach,.motion-lab,.brief-section).section-in-view h2 em::after{transform:scaleX(1)}
+.approach h2 em::after,.brief-section h2 em::after{background:#a1b65d!important}
+.project .project-art{position:relative;isolation:isolate}
+.project .project-art::after{content:"";position:absolute;inset:0;border:2px solid var(--lime);opacity:0;clip-path:inset(0 100% 0 0);pointer-events:none;transition:clip-path .6s var(--ease),opacity .3s}
+.project:is(:hover,:focus-within) .project-art::after{opacity:1;clip-path:inset(0 0 0 0)}
+.project .project-meta h3{transition:transform .35s var(--ease)}
+.project:is(:hover,:focus-within) .project-meta h3{transform:translateX(5px)}
+.principle{position:relative}
+.principle::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(190,225,124,.16),transparent);pointer-events:none;opacity:0;transition:opacity .35s}
+.principle:hover::before{opacity:1}
+.studio-preview .preview-orbit{transition:translate .5s var(--ease)}
+.attention{background:#101813;color:#f3f2e9;padding:clamp(90px,11vw,170px) 0;overflow:hidden}
+.attention-intro{display:flex;justify-content:space-between;gap:50px;align-items:end;margin:60px 0}
+.attention-intro h2{font:600 clamp(60px,9.5vw,150px)/.86 'Space Grotesk',sans-serif;letter-spacing:-.09em}
+.attention-intro h2 em{font:italic 400 .95em/.9 'Instrument Serif',Georgia,serif;color:var(--lime)}
+.attention-intro p{max-width:365px;font-size:clamp(15px,1.4vw,20px);line-height:1.6;color:#b1c4b0}
+.attention-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #53614b;position:relative;min-height:360px}
+.attention-step{padding:clamp(24px,3vw,45px);border:0;border-right:1px solid #53614b;color:#edf4e8;background:transparent;text-align:left;display:flex;flex-direction:column;align-items:start;justify-content:space-between;position:relative;isolation:isolate;transition:color .4s}
+.attention-step:last-child{border-right:0}
+.attention-step::before{content:"";position:absolute;inset:0;background:var(--lime);z-index:-1;transform-origin:left;transform:scaleX(0);transition:transform .6s var(--ease)}
+.attention-step[aria-pressed=true]::before{transform:scaleX(1)}
+.attention-step[aria-pressed=true]{color:#19231a}
+.attention-step small{font-size:10px;letter-spacing:.14em;font-weight:700}
+.attention-step strong{font:600 clamp(35px,4.4vw,70px)/.96 'Space Grotesk',sans-serif;letter-spacing:-.07em;display:block;margin:42px 0 22px}
+.attention-step strong em{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+.attention-step p{font-size:13px;line-height:1.5;max-width:235px;opacity:.8}
+.attention-controls{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding-top:26px}
+.attention-controls p{font-size:12px;color:#b9c8b8}
+.attention-next{padding:16px 24px;color:#152016;background:var(--lime);border:0;font:700 11px/1.2 'DM Sans',sans-serif;letter-spacing:.1em;transition:translate .25s}
+.attention-next:hover{translate:5px}
+.attention-foot{display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid #49574c;margin-top:80px;color:#b4c2b2;font:700 10px/1.4 'DM Sans',sans-serif;letter-spacing:.13em}
+@media(max-width:900px){.journey-text{display:none}.journey-rail{right:6px}.attention-intro{display:block}.attention-intro p{margin-top:32px}.attention-steps{min-height:310px}.attention-step{padding:24px}}
+@media(max-width:760px){.journey-rail{display:none}.attention-intro h2{font-size:clamp(65px,13vw,110px)}.attention-steps{display:block;min-height:0}.attention-step{width:100%;min-height:160px;border-right:0;border-bottom:1px solid #53614b}.attention-step:last-child{border-bottom:0}.attention-step strong{margin:18px 0;font-size:44px}.attention-foot span:last-child{display:none}}
+@media(max-width:430px){.attention-intro h2{font-size:65px}.attention-next{width:100%}.attention-controls{display:block}.attention-controls p{margin-bottom:17px}}
+html[data-motion="off"] .hero-bottom .round-arrow::before,html[data-motion="off"] .hero-bottom p::after{animation:none}
+@media(prefers-reduced-motion:reduce){.hero-bottom .round-arrow::before,.hero-bottom p::after{animation:none}.attention-step,.attention-step::before,.studio-preview .preview-orbit{transition:none}.journey-line::after{transition:none}}
+
 </style>
   
 </head>
@@ -122,17 +182,28 @@ html[data-motion="off"] .studio-preview *,html[data-motion="off"] .studio-previe
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#work">Selected work</a>
       <a href="#approach">Our thinking</a><a href="#studio">Design studio</a>
-      <a href="#motion">Motion lab</a>
+      <a href="#attention">Eye guidance</a><a href="#motion">Motion lab</a>
     </nav>
     <div class="header-actions"><button type="button" id="command-launch" class="command-launch" aria-label="Open quick navigation, Control or Command K">✳ <span class="command-label">QUICK NAV</span> <kbd>⌘ K</kbd></button>
       <a class="header-cta" href="#brief">Start a project <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span></button>
     </div>
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#attention">Eye guidance</a><a href="#studio">Design studio</a>
       <a href="#work">Selected work</a><a href="#approach">Our thinking</a><a href="#motion">Motion lab</a><a href="#brief">Start a project ↗</a>
     </nav>
     
   </header>
+
+
+  <aside class="journey-rail" aria-label="Page navigation"><span class="journey-text" id="journey-current" aria-hidden="true">01 / BEGIN</span><nav class="journey-nav" aria-label="Page sections"><i class="journey-line" id="journey-line" aria-hidden="true"></i>
+  <a href="#top" aria-label="Beginning" aria-current="location"><span>01 / BEGIN</span></a>
+  <a href="#work" aria-label="Selected work"><span>02 / WORK</span></a>
+  <a href="#attention" aria-label="Attention sequence"><span>03 / ATTENTION</span></a>
+  <a href="#studio" aria-label="Design studio"><span>04 / STUDIO</span></a>
+  <a href="#approach" aria-label="Our approach"><span>05 / THINKING</span></a>
+  <a href="#motion" aria-label="Motion lab"><span>06 / MOTION</span></a>
+  <a href="#brief" aria-label="Create a brief"><span>07 / CREATE</span></a>
+  </nav></aside>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
@@ -204,6 +275,21 @@ html[data-motion="off"] .studio-preview *,html[data-motion="off"] .studio-previe
       </div>
     </section>
 
+
+
+    <section class="attention" id="attention" aria-labelledby="attention-title">
+      <div class="section-frame">
+        <div class="section-eyebrow" data-reveal><span class="tiny-symbol">✳</span> 02 / ATTENTION BY DESIGN <span class="section-eyebrow-right">EVERY MOVEMENT HAS A JOB</span></div>
+        <div class="attention-intro"><h2 id="attention-title" data-reveal>Lead the<br><em>eyes.</em></h2><p data-reveal>Great motion doesn't demand attention everywhere. It takes you somewhere. Follow a three-part sequence to see how hierarchy becomes a journey.</p></div>
+        <div class="attention-steps" role="group" aria-label="Choose an attention step" data-reveal>
+          <button class="attention-step" type="button" data-attention-step="0" aria-pressed="true"><small>01 / NOTICE ↗</small><strong>Make it<br><em>matter.</em></strong><p>One commanding first impression earns attention through contrast.</p></button>
+          <button class="attention-step" type="button" data-attention-step="1" aria-pressed="false"><small>02 / UNDERSTAND ↗</small><strong>Give it<br><em>meaning.</em></strong><p>Supporting detail answers the next question instead of competing.</p></button>
+          <button class="attention-step" type="button" data-attention-step="2" aria-pressed="false"><small>03 / ACT ↗</small><strong>Show the<br><em>way.</em></strong><p>An obvious next action completes the visual narrative.</p></button>
+        </div>
+        <div class="attention-controls"><p id="attention-status" role="status">STEP 01 — Let one focal point lead the eye.</p><button class="attention-next" id="attention-next" type="button">SHOW THE NEXT STEP ↗</button></div>
+        <div class="attention-foot"><span>INTERACTIVE EXERCISE / CLICK ANY STAGE</span><span>BETTER HIERARCHY, NOT JUST MORE EFFECTS</span></div>
+      </div>
+    </section>
 
     <section class="studio" id="studio" aria-labelledby="studio-title">
       <div class="section-frame">
@@ -669,6 +755,69 @@ html[data-motion="off"] .studio-preview *,html[data-motion="off"] .studio-previe
       requestAnimationFrame(()=>{hero.style.setProperty('--pointer-x',x+'%');hero.style.setProperty('--pointer-y',y+'%');requested=false;});
     },{passive:true});
   }
+})();
+
+
+/* ATTENTION EDITION: one scroll rAF, click-driven narrative, progressive enhancement */
+(() => {
+'use strict';
+const root=document.documentElement;
+const prefersReduced=matchMedia('(prefers-reduced-motion: reduce)');
+const enabled=()=>!prefersReduced.matches&&root.dataset.motion!=='off';
+const nav=[...document.querySelectorAll('.journey-nav a')];
+const sections=[...document.querySelectorAll('main section[id]')];
+const current=document.getElementById('journey-current');
+const line=document.getElementById('journey-line');
+let pending=false;
+function update(){
+  pending=false;
+  let index=0;
+  const guide=innerHeight*.38;
+  for(let i=0;i<sections.length;i++){
+    if(sections[i].getBoundingClientRect().top <= guide) index=i;
+  }
+  const id=sections[index]?.id;
+  const navIndex=Math.max(0,nav.findIndex(a=>a.getAttribute('href')==='#'+id));
+  nav.forEach((a,i)=>i===navIndex?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));
+  if(current)current.textContent=nav[navIndex]?.querySelector('span')?.textContent||'';
+  if(line)line.style.setProperty('--journey-pct',navIndex/(nav.length-1)*100+'%');
+  sections.forEach(el=>{
+    const rect=el.getBoundingClientRect();
+    el.classList.toggle('section-in-view',rect.top<innerHeight*.8&&rect.bottom>innerHeight*.12);
+  });
+  const hero=document.getElementById('top');
+  if(hero){const h=hero.getBoundingClientRect();hero.style.setProperty('--hero-read',Math.min(100,Math.max(0,-h.top/h.height*100))+'%');}
+}
+function schedule(){if(pending)return;pending=true;requestAnimationFrame(update);}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);update();
+const cards=[...document.querySelectorAll('[data-attention-step]')],next=document.getElementById('attention-next'),status=document.getElementById('attention-status');
+const notes=['STEP 01 — Let one focal point lead the eye.','STEP 02 — Reveal context after curiosity forms.','STEP 03 — Make the next action unmistakable.'];
+let step=0;
+function show(index){
+  step=index;
+  cards.forEach((el,i)=>el.setAttribute('aria-pressed',String(i===step)));
+  if(status)status.textContent=notes[step];
+  if(next)next.textContent=step===2?'REPLAY THE SEQUENCE ↺':'SHOW THE NEXT STEP ↗';
+}
+cards.forEach((el,i)=>el.addEventListener('click',()=>show(i)));
+next?.addEventListener('click',()=>show((step+1)%3));
+const preview=document.getElementById('studio-preview'),orbit=preview?.querySelector('.preview-orbit');
+if(preview&&orbit&&matchMedia('(pointer:fine) and (hover:hover)').matches){
+  let frame=false,x=0,y=0;
+  preview.addEventListener('pointermove',event=>{
+    if(!enabled())return;
+    const rect=preview.getBoundingClientRect();
+    x=((event.clientX-rect.left)/rect.width-.5)*14;
+    y=((event.clientY-rect.top)/rect.height-.5)*14;
+    if(frame)return;
+    frame=true;
+    requestAnimationFrame(()=>{orbit.style.translate=x+'px '+y+'px';frame=false});
+  },{passive:true});
+  preview.addEventListener('pointerleave',()=>orbit.style.translate='');
+  document.querySelectorAll('[data-motion-mode]').forEach(btn=>btn.addEventListener('click',()=>{if(root.dataset.motion==='off')orbit.style.translate=''}));
+}
 })();
 
 </script>
