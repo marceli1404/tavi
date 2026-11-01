@@ -87,6 +87,7 @@ def propose(image,task,target,*,execute=False,allow_image_fallback=False,model='
                 'automatic_probability_qualified':metadata['automatic_probability_qualified'],
                 'field_evaluation':metadata.get('field_evaluation'),
                 'limits':metadata['limits']},
+            'model_evidence':dict(weights_sha256=metadata['weights_sha256'],feature_version=metadata['feature_version']),
             'proposal_id':proposal_id,'image_sha256':source_hash,'created_at':created_at,
             'image':info,'coordinate_space':'original submitted image pixels; host must map to current driver coordinates',
             'text_packet_bytes':packet_bytes,'hosted_calls':0,'image_bytes_sent':0,

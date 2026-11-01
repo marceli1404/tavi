@@ -40,6 +40,19 @@ class CompactTests(unittest.TestCase):
         self.assertLess(result['confidence']['percent'],100)
         self.review.assert_not_called(); self.vision.assert_not_called()
 
+    def test_proposal_supports_explicit_model_bound_feedback(self):
+        from tavi_target_feedback import record,summarize
+        result=self.call(auto_click=True)
+        metadata,_=load(DEFAULT)
+        self.assertEqual(result['model_evidence'],dict(weights_sha256=metadata['weights_sha256'],feature_version=metadata['feature_version']))
+        directory=self.root/'feedback'
+        record(directory,result,dict(proposal_id=result['proposal_id'],candidate_id=result['review_packet']['proposed']['id'],target_match='correct',action_outcome='unverified',actual_role='noninteractive',evidence='Synthetic image fixture text matched; no native control or action.'))
+        summary=summarize(directory)
+        self.assertEqual(summary['models'][0]['target_match_known'],1)
+        self.assertFalse(summary['automatic_probability_qualified'])
+        self.assertFalse(result['auto_click']['candidate_eligible'])
+        self.assertFalse(result['executed_actions'])
+
     def test_enabled_policy_withholds_unqualified_synthetic_probability(self):
         result=self.call(auto_click=True)
         self.assertFalse(result['auto_click']['candidate_eligible'])

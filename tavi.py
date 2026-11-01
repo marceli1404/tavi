@@ -230,6 +230,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=BASE / 'tavi.config.json')
     sub = parser.add_subparsers(dest='command', required=True)
+    target_feedback = sub.add_parser('target-feedback', help='Explicitly save a local operator target/outcome assessment; never capture, act or train')
+    target_feedback.add_argument('proposal', type=Path)
+    target_feedback.add_argument('observation', type=Path)
+    target_feedback.add_argument('--directory', type=Path, default=BASE/'data/target-feedback')
+    target_feedback_summary = sub.add_parser('target-feedback-summary', help='Read local operator observations; never qualify actions or change models')
+    target_feedback_summary.add_argument('directory', type=Path)
     coverage_review = sub.add_parser('coverage-review', help='Build an offline task/inventory review packet or validate a bound answer; never install or call a model')
     coverage_review.add_argument('request', type=Path)
     coverage_review.add_argument('--answer', type=Path, help='Validate a provided semantic review against the same request')
@@ -324,6 +330,14 @@ def main():
     cmd.add_argument('--record', action='store_true', help='Save prompt and decision locally for future evaluation')
     args = parser.parse_args()
     try:
+        if args.command == 'target-feedback':
+            from tavi_target_feedback import record, read_json
+            print(json.dumps(record(args.directory, read_json(args.proposal), read_json(args.observation)), indent=2))
+            return 0
+        if args.command == 'target-feedback-summary':
+            from tavi_target_feedback import summarize
+            print(json.dumps(summarize(args.directory), indent=2))
+            return 0
         if args.command == 'coverage-review':
             from tavi_coverage_review import packet, validate_review, read_json
             if str(args.request) == '-' and args.answer is not None and str(args.answer) == '-':
