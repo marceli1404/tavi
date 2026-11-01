@@ -186,3 +186,10 @@ See `Features-coverage-review.md` for the schema, examples and measured limits.
 ## Faster local preparation
 
 Local-only screenshot proposals use sampled pixel processing and fast lossless PNG encoding. The original30-case workload measures36.8% less preparation time than v0.16warm sessions, with unchanged recognition limits. See [the method and exclusions](Features-local-preparation.md).
+
+
+## Unified web-design and motion skill (optional)
+
+The [`tavi-web-design` skill](skills/tavi-web-design/SKILL.md) combines premium art direction, typography, responsive UX, purposeful animation and practical quality gates. Its [standalone animated showcase](skills/tavi-web-design/examples/showcase.html) demonstrates Canvas artwork, kinetic type, scroll interactions, a motion-off fallback, and a functional creative-brief interaction.
+
+To use it, copy `skills/tavi-web-design` into an installed agent skill directory, for example `~/.codex/skills/tavi-web-design`, then invoke `$tavi-web-design` with a web-design task. This is separate from `tavi-decision` routing; adding the skill does not update the trained model, automatically install anything, or launch hosted work.
