@@ -32,6 +32,11 @@ def route_custom(prompt, skills, models, model, requested_model=None, requested_
                   inventory=dict(models=len(models), skills=len(skills), catalog_scope='CLI-visible, not verified inference entitlement'))
     prediction = model.infer(prompt)
     result['prediction'] = {k:v for k,v in prediction.items() if k != 'skills'}
+    top_score = max(prediction['tier_scores'].values())
+    learned_tier_eligible = (prediction['tier'] != 'review' and
+                             prediction['vocabulary_coverage'] >= .15 and top_score >= .5)
+    withheld_reasons = []
+    role_lookup_performed = False
     by_name = {}
     for skill in skills:
         by_name.setdefault(skill['name'], []).append(skill)
@@ -73,9 +78,18 @@ def route_custom(prompt, skills, models, model, requested_model=None, requested_
         chosen = None
         source = 'learned-tier-policy-map'
         tier = prediction['tier']
-        if tier != 'review' and prediction['vocabulary_coverage'] >= .15 and max(prediction['tier_scores'].values()) >= .5:
+        if tier == 'review':
+            withheld_reasons.append('classifier_predicted_review')
+        if prediction['vocabulary_coverage'] < .15:
+            withheld_reasons.append('limited_vocabulary_coverage')
+        if top_score < .5:
+            withheld_reasons.append('low_workload_score')
+        if learned_tier_eligible:
+            role_lookup_performed = True
             role = {'speed': 'fast', 'quality': 'deep'}.get(preference, tier)
             chosen = next((m for m in (roles or DEFAULT_ROLES).get(role, []) if m in catalog and m not in excluded_models), None)
+            if chosen is None:
+                withheld_reasons.append('configured_role_model_unavailable')
             if role != tier:
                 source = 'explicit-preference-policy-map'
     if chosen:
@@ -87,7 +101,13 @@ def route_custom(prompt, skills, models, model, requested_model=None, requested_
                                score=max(prediction['tier_scores'].values()) if source == 'learned-tier-policy-map' else None)
         result['status'] = 'recommended'
     else:
-        result['warnings'].append('Task is ambiguous, outside known vocabulary, or no configured role model is available.')
+        messages = {
+            'classifier_predicted_review': 'The classifier selected review; this alone does not establish that the task lacks information.',
+            'limited_vocabulary_coverage': 'Too little of this task is covered by the model vocabulary.',
+            'low_workload_score': 'The highest workload score is below the routing threshold.',
+            'configured_role_model_unavailable': 'No configured model for the selected role is available after exclusions.',
+        }
+        result['warnings'].extend(messages[reason] for reason in withheld_reasons)
     for item in prediction['skills'][:8]:
         result['candidates'].append(item)
     for item in prediction['skills'][:3]:
@@ -118,5 +138,16 @@ def route_custom(prompt, skills, models, model, requested_model=None, requested_
                                required_skills=sorted(pinned_names), vocabulary_coverage=prediction['vocabulary_coverage'])
     if any(w.startswith('Required policy skill unavailable:') for w in result['warnings']):
         result['status'] = 'needs_review'
+        withheld_reasons.append('required_policy_skill_unavailable')
+    result['routing_evidence'] = dict(
+        predicted_tier=prediction['tier'], top_workload_score=top_score,
+        workload_score_threshold=.5, vocabulary_coverage=prediction['vocabulary_coverage'],
+        vocabulary_coverage_threshold=.15, learned_tier_eligible=learned_tier_eligible,
+        role_lookup_performed=role_lookup_performed, explicit_model_requested=bool(requested_model),
+        withheld_reasons=withheld_reasons,
+        quality_review_recommended=prediction.get('probabilities', {}).get('review_recommended', False),
+        classifier_review_establishes_task_ambiguity=False,
+        scores_establish_task_success_probability=False,
+        changes_routing=False)
     result['warnings'].append('Synthetic-policy model: scores are not calibrated real-world success probabilities. Model IDs are mapped from a learned workload tier, not benchmarked model performance.')
     return result

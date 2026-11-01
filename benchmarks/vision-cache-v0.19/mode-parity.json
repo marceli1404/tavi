@@ -1,0 +1,6 @@
+{
+  "mode_configurations": 6,
+  "cold_and_repeat_equal": true,
+  "plans_remain_uncached": true,
+  "hosted_callbacks_are_stubs": true
+}

@@ -2,11 +2,13 @@
 
 # A small model. A clearer start.
 
-Tavi v0.18 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.19 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
 Current target model: failed real-screen confidence validation. The95% policy remains configurable, but this model requires review and cannot qualify probability-based automatic actions. See [Features-v0.14.md](Features-v0.14.md) for measured local speed, recognition failures, coding outcomes and remaining gaps.
+
+Exact-input screenshot cache hits now skip image preparation. A small paired benchmark measured32.26ms to0.95ms for that cache path, excluding capture, actions and hosted inference. Routing explanations also distinguish classifier review from missing model availability. See [v0.19 changes and limits](Features-v0.19.md).
 
 ## Install
 
@@ -85,6 +87,7 @@ The accepted v4 clean model has 440817 parameters and 148 skill labels. It prese
 
 Calibration is partial and based on authored synthetic labels. Code-context tier check accuracy is 22/36 (61.11%); plain-text tier and code-context external scores remain raw. Skill scores are not calibrated probabilities. These outputs do not predict task success. INT8 experiments made saved weights smaller but were slower on the tested NumPy setup and changed six skill selections; FP32 remains the default.
 
+- [v0.19 cached observations and routing explanations](Features-v0.19.md)
 - [v0.18 indexed controls and context-quality advice](Features-v0.18.md)
 - [v0.10 hybrid screenshots](Features-v0.10.md)
 - [v0.9 code adapter and partial confidence](Features-v0.9.md)

@@ -1,0 +1,21 @@
+{
+  "old_sha256": "4d1d7ac11b0792892a9b0abd24862806abe8b659caac6f4507392efe50feb8d2",
+  "new_sha256": "79095ea3e3769f8c7072039458310558854df6207a0ca32a5739a29e391122e2",
+  "cases": [
+    {
+      "file": "clear-text.png",
+      "sha256": "a24576f7e3be8318bc53f6bdba76ae9819d263d1be351040e909e6a8a9ca8086"
+    },
+    {
+      "file": "duplicate-text.png",
+      "sha256": "dcaa1ab968461cdaee7a23a147cada348d2dd742967b65a00d3b5f63fe6ba602"
+    },
+    {
+      "file": "icon-only.png",
+      "sha256": "1a8ebf3e76a7c84b6ce5c16a0ee66c47c4d4225b33e8e6e054027a1d8eb7b0b0"
+    }
+  ],
+  "rounds_per_case": 20,
+  "order": "alternate old/new per case and round",
+  "scope": "Exact-input saved-image observation cache only; excludes capture, live-state verification, agent reasoning, clicks, hosted inference and interpreter startup. Same native Windows OCR callback initializes both separate caches (baseline source relocated away from bundled script); measured hits must not OCR or prepare. No concurrent training."
+}
