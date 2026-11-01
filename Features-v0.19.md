@@ -29,8 +29,8 @@ An existing output folder is preserved. Native OCR is Windows-only; timings vary
 
 Routes now include `routing_evidence` describing the predicted tier, vocabulary coverage, thresholds, model availability and reasons a plan was withheld. Warnings distinguish these causes. A classifier prediction of review alone does not establish that the user's task is ambiguous or missing information.
 
-This reporting-only change preserves chosen models, skills, routes, launch plans, thresholds and action gates. Scores remain authored-policy scores, not task-success probabilities. Rejected experimental models and private project data are excluded from this release. Claude support remains available; live Claude testing remains deferred by the owner.
+This reporting-only change preserves chosen models, skills, routes, launch plans, thresholds and action gates. Scores remain authored-policy scores, not task-success probabilities. Recent private research candidates and private project data are excluded from this release. Claude support remains available; live Claude testing remains deferred by the owner.
 
 ## Package validation
 
-262 public source tests pass. A fresh public-checkout benchmark replay preserved all60 paired warm outputs and measured30.72ms versus0.93ms; this repeat is the same small synthetic workload, not independent field evidence. The package uses an explicit file allowlist and per-file SHA256 manifest. Accepted router and target weights are unchanged.
+265 tests pass in the merged public checkout. A fresh public-checkout benchmark replay preserved all60 paired warm outputs and measured30.72ms versus0.93ms; this repeat is the same small synthetic workload, not independent field evidence. The package uses an explicit file allowlist and per-file SHA256 manifest. Accepted router and target weights are unchanged.

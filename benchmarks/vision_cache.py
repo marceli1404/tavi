@@ -9,7 +9,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def clean(r):return {k:v for k,v in r.items() if k not in ('elapsed_ms','cache_hit','hosted_request_this_call')}
 def run(output):
  oldpath=BASE/'benchmarks/vision-cache-v0.19/legacy-tavi-vision.py'
- assert sha(oldpath)=='4d1d7ac11b0792892a9b0abd24862806abe8b659caac6f4507392efe50feb8d2'
+ assert hashlib.sha256(oldpath.read_bytes().replace(b'\r\n',b'\n')).hexdigest()=='4d1d7ac11b0792892a9b0abd24862806abe8b659caac6f4507392efe50feb8d2'
  spec=importlib.util.spec_from_file_location('cache_baseline',oldpath);old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
  out=Path(output);out.mkdir(exist_ok=False)
  cases=[BASE/'benchmarks/vision-cache-v0.19'/name for name in ('clear-text.png','duplicate-text.png','icon-only.png')]
