@@ -1,0 +1,3 @@
+# Release manifests and historical evidence bind exact bytes.
+# Preserve those bytes on every platform, including frozen benchmark sources.
+* -text

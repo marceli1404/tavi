@@ -1,4 +1,5 @@
 [
+  ".gitattributes",
   ".gitignore",
   "CONTRIBUTING.md",
   "Features-control-compact.md",

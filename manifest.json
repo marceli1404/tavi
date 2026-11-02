@@ -1,4 +1,5 @@
 {
+  ".gitattributes": "d272f988b937f108407a6bde6a9a937e8ad252044918fc80737e8e5fc3c9a73b",
   ".gitignore": "693131c04f60d8cc9e4257105ad3e741c6577f25c5253f4f1547b4327b44655e",
   "CONTRIBUTING.md": "d4144a6b6258092a40184035f372a2a9bd114021aa0fbe776673a50e30056368",
   "Features-control-compact.md": "3c97e20fcd62e1db658fba03861a8d1cd6909e8c2f1c16cfaa2162ecb241a9b5",
@@ -164,7 +165,7 @@
   "models/tavi-v4-clean/tier-dataset.json": "a6e4ff4e9c3d8276e8ae373dc42e09f086ca471ce605f57256a464cbddcce896",
   "models/tavi-v4-clean/training-report.json": "74cc9eca0cbd074755d67076b338c007efa0857576c9ef30abf3b9ffc7f6a7b2",
   "models/tavi-v4-clean/weights.npz": "38407cc1f25bbb1cdeefd73dcb5c72cb4d97545bae8efb2bbd18edfc4652592e",
-  "release-files.json": "7937271d2f8ff50eac1868b6ec05643accd34170e37ea04719dc2b657e57bbfe",
+  "release-files.json": "dffc0cd88331a65db1b566c1fac9cf8152fdc5b4cb79082332d0b79812c64928",
   "requirements-vision.txt": "8cd89775a0a9ea5ec3acd7c122377805ba3057fc323c29b3b0970f1c504a57d5",
   "requirements.txt": "bb260e03cdea3a1ab25a889a9edc62ced108f38d1fc09ddc7a67c718b12e5958",
   "screen_ocr.ps1": "f8e3f5589ef99c5937a836fca94674ab6e4ddf40656db1e40f5d6c59e6fdfdfc",
