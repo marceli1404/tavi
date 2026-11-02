@@ -9,7 +9,7 @@ def clean(result):
  return result
 
 def main():
- out=Path('output/control-stream-speed-20261101');out.mkdir(exist_ok=False);query=[dict(task='Open the result',target='Go')];(out/'queries.json').write_text(json.dumps(query))
+ out=Path('output/control-stream-speed-20261101');out.mkdir(parents=True,exist_ok=False);query=[dict(task='Open the result',target='Go')];(out/'queries.json').write_text(json.dumps(query))
  started=time.perf_counter();process=subprocess.Popen([sys.executable,'tavi.py','--config',str(out/'missing-config.json'),'target-controls-stream'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',bufsize=1)
  trials=[]
  try:
