@@ -235,5 +235,10 @@
   "training/probability_cases.json",
   "training/probability_cases_v3.json",
   "training/probability_cases_v4_clean.json",
-  "training/screen-target-v1/dataset.json"
+  "training/screen-target-v1/dataset.json",
+  "tavi_control_stream.py",
+  "test_control_stream.py",
+  "benchmark_control_stream.py",
+  "Features-control-stream.md",
+  "Features-v0.21.md"
 ]

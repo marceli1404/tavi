@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.20 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.21 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -89,6 +89,7 @@ The accepted v4 clean model has 440817 parameters and 148 skill labels. It prese
 
 Calibration is partial and based on authored synthetic labels. Code-context tier check accuracy is 22/36 (61.11%); plain-text tier and code-context external scores remain raw. Skill scores are not calibrated probabilities. These outputs do not predict task success. INT8 experiments made saved weights smaller but were slower on the tested NumPy setup and changed six skill selections; FP32 remains the default.
 
+- [v0.21 persistent exact-control resolver](Features-v0.21.md)
 - [v0.20 explicit target-outcome feedback](Features-v0.20.md)
 - [v0.19 cached observations and routing explanations](Features-v0.19.md)
 - [v0.18 indexed controls and context-quality advice](Features-v0.18.md)

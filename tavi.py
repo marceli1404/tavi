@@ -250,6 +250,7 @@ def main():
     controls_batch.add_argument('snapshot', type=Path)
     controls_batch.add_argument('queries', type=Path)
     controls_batch.add_argument('--offline', action='store_true', help='Replay only; every proposal still requires a live host check')
+    sub.add_parser('target-controls-stream', help='Reuse local resolver startup; fresh control snapshot required per JSON-line request; never acts')
     sub.add_parser('propose-stream', help='Keep local OCR warm for JSON-lines screenshot requests; no hosted calls or clicks')
     proposal = sub.add_parser('propose', help='Local target percentage and compact Codex review packet; never clicks')
     proposal.add_argument('image', type=Path)
@@ -346,6 +347,10 @@ def main():
             result = validate_review(review_packet, read_json(args.answer)) if args.answer else review_packet
             print(json.dumps(result, indent=2, ensure_ascii=False))
             return 0
+        if args.command == 'target-controls-stream':
+            from tavi_control_stream import run
+            try: return run()
+            except KeyboardInterrupt: return 130
         if args.command == 'target-controls':
             from tavi_controls import resolve_file
             result = resolve_file(args.snapshot, args.task, args.target, role=args.role, context=args.context, offline=args.offline)
