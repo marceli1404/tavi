@@ -240,5 +240,14 @@
   "test_control_stream.py",
   "benchmark_control_stream.py",
   "Features-control-stream.md",
-  "Features-v0.21.md"
+  "Features-v0.21.md",
+  "tavi_control_compact.py",
+  "test_control_compact.py",
+  "benchmark_control_compact.py",
+  "Features-control-compact.md",
+  "Features-v0.22.md",
+  "benchmarks/control-compact-v0.22/measured-benchmark.py",
+  "benchmarks/control-compact-v0.22/measured-tavi-control-compact.py",
+  "benchmarks/control-compact-v0.22/measured-tavi-control-stream.py",
+  "benchmarks/control-compact-v0.22/report.json"
 ]

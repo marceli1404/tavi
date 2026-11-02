@@ -19,3 +19,7 @@ Only `id`, `snapshot`, `queries` fields are accepted; ID is optional, nonempty a
 Five targeted tests cover direct batch-result parity, null probability/no authority, stale/future/ambiguous/disabled controls, required observations, changed labels, rejected offline fields, malformed JSON, duplicate fields, size bounds and recovery. The development suite passes394tests. Public package checks are recorded in the release notes. Missing-config CLI succeeds in the benchmark.
 
 12 alternating paired synthetic requests measured one-shot CLI median158.881ms versus warm stream0.248ms; startup142.354ms separately. Unique/missing/ambiguous control outcomes match exactly except naturally elapsed age. The one-shot includes startup/file reads; stream requests include pipe serialization and parsing. Both receive supplied synthetic observations. This is not an independent UI or whole-agent speed test and excludes observation acquisition, live verification, agent reasoning, clicks, app response and hosted image inference. Raw source-hash-bound evidence: `output/control-stream-speed-20261101/report.json`. No production website speed claim is changed. Available in v0.21.
+
+## Optional compact batches (v0.22)
+
+Use `"compact": true` for multi-query response factoring. Every field remains recoverable; the default format is unchanged. See [the compact format](Features-control-compact.md).
