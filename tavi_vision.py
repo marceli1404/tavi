@@ -102,7 +102,11 @@ def _cached_result(entry, key, mode, max_edge, ttl, source_size):
     if not entry or not ttl:
         return None
     try:
-        if not 0 <= time.time()-entry.stat().st_mtime <= ttl:
+        # Compare integer timestamps from the same unit. Float conversions of
+        # Windows file times and wall time can differ by one ULP and make a
+        # newly written observation appear fractionally in the future.
+        modified_ns=entry.stat().st_mtime_ns
+        if not 0 <= time.time_ns()-modified_ns <= ttl*1_000_000_000:
             return None
         saved=json.loads(entry.read_text(encoding='utf-8'))
         if saved['key']!=key:

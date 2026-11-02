@@ -22,6 +22,20 @@ class EarlyVisionCacheTests(unittest.TestCase):
  def test_expired_and_future_cache_miss(self):
   self.call();entry=self.entry();os.utime(entry,(time.time()-400,time.time()-400));self.assertFalse(self.call()['cache_hit'])
   os.utime(entry,(time.time()+400,time.time()+400));self.assertFalse(self.call()['cache_hit']);self.assertEqual(self.ocr.call_count,3)
+ def test_integer_age_keeps_warm_hit_despite_float_clock_rounding(self):
+  first=self.call();entry=self.entry();modified_ns=entry.stat().st_mtime_ns
+  # The previous float expression rejects a genuine zero-age observation if
+  # the two timestamp conversions round in opposite directions.
+  rounded_before=entry.stat().st_mtime-0.0000002384185791015625
+  with patch.object(vision.time,'time',return_value=rounded_before),patch.object(vision.time,'time_ns',return_value=modified_ns),patch.object(vision,'prepare',side_effect=AssertionError('A zero-age observation must be reused')):
+   second=self.call()
+  self.assertTrue(second['cache_hit']);self.assertEqual(first['analysis'],second['analysis']);self.assertEqual(self.ocr.call_count,1)
+ def test_nanosecond_boundaries_preserve_strict_expiry_and_future_rejection(self):
+  first=self.call();entry=self.entry();saved=json.loads(entry.read_text());modified_ns=entry.stat().st_mtime_ns
+  for age_ns,expected in ((0,True),(300_000_000_000,True),(300_000_000_100,False),(-100,False)):
+   with self.subTest(age_ns=age_ns),patch.object(vision.time,'time_ns',return_value=modified_ns+age_ns):
+    cached=vision._cached_result(entry,saved['key'],'hybrid',1600,300,first['image']['original_bytes'])
+   self.assertEqual(cached is not None,expected)
  def test_disabled_cache_still_prepares(self):
   self.call()
   with patch.object(vision,'prepare',wraps=vision.prepare) as prepare:self.assertFalse(self.call(ttl=0)['cache_hit']);prepare.assert_called_once()

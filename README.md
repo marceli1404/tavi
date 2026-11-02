@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.22 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.23 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -11,6 +11,10 @@ Current target model: failed real-screen confidence validation. The95% policy re
 Exact-input screenshot cache hits now skip image preparation. A small paired benchmark measured32.26ms to0.95ms for that cache path, excluding capture, actions and hosted inference. Routing explanations also distinguish classifier review from missing model availability. See [v0.19 changes and limits](Features-v0.19.md).
 
 Explicit local target feedback is available in v0.20. Record target correctness separately from action outcomes, with duplicates, unknowns and conflicts visible. Recording stays off by default; it does not qualify clicks or train the model. See [the format and examples](Features-target-feedback.md).
+
+Optional inventory-bound route review can now select installed skills with
+unfamiliar names and distinguish direct host work from missing skills. Cache
+age checks also avoid timestamp rounding misses. See [v0.23 changes and limits](Features-v0.23.md).
 
 ## Install
 
@@ -189,6 +193,25 @@ to validate a response against the same task/inventory snapshot. `-` accepts
 JSON through stdin without recording a task file. This command makes no model
 or network request and grants no installation or execution permission.
 See `Features-coverage-review.md` for the schema, examples and measured limits.
+
+
+## Use coverage review in a route
+
+Add `--coverage-requirements REQUIREMENTS.json` to `route` to prepare review
+packets for the current eligible skill inventory. The file contains a JSON
+array of explicit operations. Review every returned packet, then supply the
+answer with `--coverage-answer ANSWER.json` on the same route request.
+
+The review can recommend installed skills, identify uncovered operations, or
+state that an operation can be handled directly without a skill. Changed tasks,
+descriptions, inventory or exclusions invalidate stale answers. Pending reviews
+and uncovered operations withhold the provider launch plan. Model selection,
+explicit skill choices and required policies remain in place.
+
+Available in v0.23. The calling agent supplies the operation list and checks
+that it covers the task. Review advice is not verified execution capability,
+calibrated confidence or installation permission.
+See `Features-route-coverage.md` for a complete round trip.
 
 
 ## Faster local preparation

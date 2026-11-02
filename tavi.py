@@ -325,12 +325,29 @@ def main():
     cmd.add_argument('--exclude-model', action='append', default=[])
     cmd.add_argument('--exclude-skill', action='append', default=[])
     cmd.add_argument('--skill', action='append', default=[], help='Explicit installed skill ID or unique name')
+    cmd.add_argument('--coverage-requirements', type=Path, help='JSON array of explicit operations; prepare inventory-bound review packets')
+    cmd.add_argument('--coverage-answer', type=Path, help='Apply a provided answer to the current task/inventory review; advisory only')
     cmd.add_argument('--plan', action='store_true', help='Show the provider launch plan without executing it')
     cmd.add_argument('--execute', action='store_true', help='Launch the recommended CLI task; Claude uses planning mode unless --interactive is specified')
     cmd.add_argument('--workspace', default='.')
     cmd.add_argument('--record', action='store_true', help='Save prompt and decision locally for future evaluation')
     args = parser.parse_args()
     try:
+        coverage_requirements = coverage_answer = None
+        if args.command == 'route':
+            if args.coverage_answer and not args.coverage_requirements:
+                raise ValueError('--coverage-answer requires --coverage-requirements')
+            if args.coverage_requirements:
+                if args.backend != 'tavi':
+                    raise ValueError('Inventory-bound route coverage requires the Tavi backend')
+                if str(args.coverage_requirements) == '-' and args.coverage_answer and str(args.coverage_answer) == '-':
+                    raise ValueError('Only one route coverage input can use stdin')
+                from tavi_route_coverage import read_input
+                coverage_requirements = read_input(args.coverage_requirements)
+                if not isinstance(coverage_requirements, list):
+                    raise ValueError('Coverage requirements must be a JSON array of explicit operations')
+                if args.coverage_answer:
+                    coverage_answer = read_input(args.coverage_answer)
         if args.command == 'target-feedback':
             from tavi_target_feedback import record, read_json
             print(json.dumps(record(args.directory, read_json(args.proposal), read_json(args.observation)), indent=2))
@@ -499,6 +516,10 @@ def main():
                 output = route_custom(args.prompt, skills, models, model, args.model, args.skill,
                                       roles=roles, policy=config.get('policy'), preference=args.preference,
                                       excluded_models=args.exclude_model, excluded_skills=args.exclude_skill)
+                if coverage_requirements is not None:
+                    from tavi_route_coverage import attach
+                    output = attach(output, args.prompt, coverage_requirements, skills,
+                                    answer=coverage_answer, excluded_skills=args.exclude_skill)
             if args.plan or args.execute:
                 output['launch_plan'] = launch_plan(output, args.prompt, args.workspace,provider,
                     interactive=args.interactive,claude_cli=config.get('claude_cli'))
