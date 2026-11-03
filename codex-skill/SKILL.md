@@ -28,6 +28,42 @@ For reproducible training/evaluation and known limits, read the project's README
 
 If the runtime, configured project path or weights are missing, disclose that Tavi did not run and continue using ordinary judgement. Do not report invented model outputs.
 
+## DOM/accessibility-first computer use
+
+For computer-use tasks, **prefer a fresh supported-host DOM/accessibility
+inventory** over screen OCR. The new `python tavi.py observe-stream` accepts
+one `tavi-control-snapshot-v1` and 1–16 exact queries per JSON line. Route
+`host_control` means a unique visible/enabled host-supplied identity was
+found; it is **not permission to click**. The trusted driver must re-resolve
+the live control and check authorization, execute within the user's task,
+then verify the result.
+
+If a requested supported control is absent, ask the host for a matching
+screenshot observation with
+`"image":{"path":"PATH","snapshot_id":"SAME_FRESH_SNAPSHOT_ID"}`.
+The lazy OCR worker runs only for truly missing button/link/tab/menuitem
+names, processing multiple misses in one image pass. Do **not** use OCR to
+bypass the host's `ambiguous_control`, `control_unavailable`,
+`stale_snapshot` or `future_snapshot` verdicts. With no screenshot,
+`needs_screenshot` requests new visual evidence without capturing it
+inside Tavi. Treat pixel evidence as text/geometry for review only, never
+an action authority or a true success probability.
+
+An existing trusted Playwright driver can call
+`tavi_browser_snapshot.capture_controls(page)` to obtain an
+approximate read-only DOM inventory; it intentionally does not launch a
+browser, click, read text-field values, or provide a complete accessibility
+tree. The owner must bind any screenshot to that same observation, and
+reobserve **after every action**. Use new observation IDs per request;
+the stream rejects recently reused IDs. Prefer `detail:"brief"` to reduce
+repeated diagnostic output; use `detail:"full"` when reviewing complete
+OCR evidence.
+
+This is a deterministic decision policy, not newly fine-tuned Tavi
+weights. Real browser/desktop end-to-end time and task success are not
+established by its synthetic local benchmarks. See
+`Features-computer-use-efficiency.md`.
+
 ## Screenshot assistance
 
 When a screenshot control has an explicit visible word, prefer `python tavi.py propose IMAGE --task TASK --target WORD` from the configured checkout. This runs the separate CPU target model and returns a compact review_packet with a target-match percentage, coordinates, nearby OCR words, alternatives, proposal ID and submitted-image hash. No image or hosted request is sent by default. Optional dependencies are in requirements-vision.txt. Prefer the computer-use driver's DOM/accessibility data when it already identifies the control.
