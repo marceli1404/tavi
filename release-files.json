@@ -230,6 +230,7 @@
   "test_features.py",
   "test_field_targets.py",
   "test_local_image_preparation.py",
+  "test_model_warm_adapters.py",
   "test_ocr_session.py",
   "test_outcomes_desktop.py",
   "test_predict_stream.py",
