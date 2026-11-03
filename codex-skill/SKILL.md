@@ -28,6 +28,42 @@ For reproducible training/evaluation and known limits, read the project's README
 
 If the runtime, configured project path or weights are missing, disclose that Tavi did not run and continue using ordinary judgement. Do not report invented model outputs.
 
+## DOM/accessibility-first computer use
+
+For computer-use tasks, **prefer a fresh supported-host DOM/accessibility
+inventory** over screen OCR. The new `python tavi.py observe-stream` accepts
+one `tavi-control-snapshot-v1` and 1–16 exact queries per JSON line. Route
+`host_control` means a unique visible/enabled host-supplied identity was
+found; it is **not permission to click**. The trusted driver must re-resolve
+the live control and check authorization, execute within the user's task,
+then verify the result.
+
+If a requested supported control is absent, ask the host for a matching
+screenshot observation with
+`"image":{"path":"PATH","snapshot_id":"SAME_FRESH_SNAPSHOT_ID"}`.
+The lazy OCR worker runs only for truly missing button/link/tab/menuitem
+names, processing multiple misses in one image pass. Do **not** use OCR to
+bypass the host's `ambiguous_control`, `control_unavailable`,
+`stale_snapshot` or `future_snapshot` verdicts. With no screenshot,
+`needs_screenshot` requests new visual evidence without capturing it
+inside Tavi. Treat pixel evidence as text/geometry for review only, never
+an action authority or a true success probability.
+
+An existing trusted Playwright driver can call
+`tavi_browser_snapshot.capture_controls(page)` to obtain an
+approximate read-only DOM inventory; it intentionally does not launch a
+browser, click, read text-field values, or provide a complete accessibility
+tree. The owner must bind any screenshot to that same observation, and
+reobserve **after every action**. Use new observation IDs per request;
+the stream rejects recently reused IDs. Prefer `detail:"brief"` to reduce
+repeated diagnostic output; use `detail:"full"` when reviewing complete
+OCR evidence.
+
+This is a deterministic decision policy, not newly fine-tuned Tavi
+weights. Real browser/desktop end-to-end time and task success are not
+established by its synthetic local benchmarks. See
+`Features-computer-use-efficiency.md`.
+
 ## Screenshot assistance
 
 When a screenshot control has an explicit visible word, prefer `python tavi.py propose IMAGE --task TASK --target WORD` from the configured checkout. This runs the separate CPU target model and returns a compact review_packet with a target-match percentage, coordinates, nearby OCR words, alternatives, proposal ID and submitted-image hash. No image or hosted request is sent by default. Optional dependencies are in requirements-vision.txt. Prefer the computer-use driver's DOM/accessibility data when it already identifies the control.
@@ -43,6 +79,16 @@ Use the driver's supported screenshot-to-file path without emitting an image whe
 ### Repeated computer use
 
 For a sequence of screenshot-target steps on Windows, prefer one `python tavi.py propose-stream` process with stdin kept open. After its ready response, send JSON lines with image, task, target and an optional request id; each image produces a fresh compact packet. Apply the automatic-button policy below when enabled; otherwise review each packet in this current chat, then verify the current UI and act within the user request. The stream cannot invoke hosted review/upload/clicks, and never reuses a proceed response. Reusing OCR avoids repeated startup; the local twelve-image check measured about61ms warm versus468ms one-shot, excluding this agent's reasoning and input-action time.
+
+When several independent visible words should be inspected on the
+**same still-current screenshot**, send one stream request using `image`
+and a `targets` list of 1–16 `{id,task,target}` objects instead of
+repeating per-target OCR requests. Tavi prepares the image, recognises it
+and loads the target model once, returning separate proposals from one
+image hash. This is observation batching **not sequential action
+batching**: after the host executes even one click, reobserve and verify
+the new current screen. The batch cannot authorize any click, and the
+existing failed real-screen target confidence gate is unchanged.
 
 Keep the process only for the active computer-use session. Close stdin or stop it at the end so its owned OCR worker exits. On timeout or a broken worker, discard the failed observation and start a new session only when needed. One-shot propose remains suitable for isolated images. The runtime withholds explicit noninteractive phrases such as Illustration only; this narrow rule does not make synthetic target percentages field-validated. See Features-v0.12.md for protocol and limits.
 
@@ -113,3 +159,23 @@ Use `python tavi.py target-controls-batch SNAPSHOT QUERIES` when the supported h
 Context-quality advice separately flags recorded tier/external check accuracy at or below 90%, or absent context evidence, even when a raw score is high. Review it as agent advice; it does not request user approval or change the learned route.
 
 For repeated lookups, `target-controls-stream` accepts a full fresh snapshot per request. For batches, opt in with `"compact": true`; reconstruct each result as `{**shared_proposal_fields, **proposal}` before interpreting it. Root authority flags still apply to every proposal. Use standard output for one query. See `Features-control-compact.md`; never execute a sequence from an old observation.
+
+For long computer-use sessions where the supported host can maintain a local
+subprocess, prefer `python tavi.py predict-stream` for repeated *offline*
+routing advice instead of repeatedly launching `predict`. Send one prompt per
+JSON line; `{"prompt":"...","detail":"brief"}` returns shorter advice with
+all tier scores, skill thresholds, review reasons and calibration status.
+A brief decision is **not** the same as a provider launch plan and must not
+be interpreted as a task-success probability or authority to click. Request
+`detail:"full"` for the complete probability diagnostics. Restart the
+stream after a model artifact update; the warm model deliberately does not
+hot-swap weights.
+
+When several exact supported-host controls must be resolved from one current
+observation, `target-controls-stream` also accepts `"compact":"matrix"`.
+Read its ordered `columns` and `rows` together with
+`shared_proposal_fields`, or use `expand_matrix` for complete v1 proposal
+objects. This mode is lossless; the trusted host must still recheck live
+identity, permissions and outcome. A fresh snapshot is required for every
+request, even when the worker stays open. See
+`Features-computer-use-efficiency.md` for the measured limits.

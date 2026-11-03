@@ -1,0 +1,33 @@
+name: Computer A/B host-evidence protocol
+
+on:
+  push:
+    paths:
+      - 'benchmarks/computer_agent_ab.py'
+      - 'test_computer_agent_ab.py'
+      - 'Features-computer-native-ab.md'
+      - '.github/workflows/computer-host-ab.yml'
+  pull_request:
+    paths:
+      - 'benchmarks/computer_agent_ab.py'
+      - 'test_computer_agent_ab.py'
+      - 'Features-computer-native-ab.md'
+      - '.github/workflows/computer-host-ab.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  matched-evidence-validator:
+    name: Validate matched tasks, failures and provider-token provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exercise the offline reporting protocol
+        run: python -m unittest -v test_computer_agent_ab
+      - name: Compile benchmark entrypoint
+        run: python -m py_compile benchmarks/computer_agent_ab.py

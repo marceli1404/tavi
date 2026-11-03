@@ -251,6 +251,8 @@ def main():
     controls_batch.add_argument('queries', type=Path)
     controls_batch.add_argument('--offline', action='store_true', help='Replay only; every proposal still requires a live host check')
     sub.add_parser('target-controls-stream', help='Reuse local resolver startup; fresh control snapshot required per JSON-line request; never acts')
+    observe_stream = sub.add_parser('observe-stream', help='DOM/accessibility first; OCR only on fresh, missing host controls; never captures or clicks')
+    observe_stream.add_argument('--metrics', action='store_true', help='Opt in to aggregate numeric-only request timings, route counts and UTF-8 bytes; no task content recorded')
     sub.add_parser('propose-stream', help='Keep local OCR warm for JSON-lines screenshot requests; no hosted calls or clicks')
     proposal = sub.add_parser('propose', help='Local target percentage and compact Codex review packet; never clicks')
     proposal.add_argument('image', type=Path)
@@ -299,6 +301,8 @@ def main():
     predict = sub.add_parser('predict', help='Run only Tavi weights; no Codex inventory, Laya, config or network')
     predict.add_argument('prompt')
     predict.add_argument('--model-dir', type=Path, default=None)
+    predict_stream = sub.add_parser('predict-stream', help='Keep the verified CPU model loaded for independent offline JSON-line predictions')
+    predict_stream.add_argument('--model-dir', type=Path, default=None)
     feedback = sub.add_parser('feedback', help='Save local labels/observations for a previously recorded decision')
     feedback.add_argument('decision_id')
     feedback.add_argument('--tier', choices=['fast', 'balanced', 'deep', 'review'], required=True)
@@ -368,6 +372,11 @@ def main():
             from tavi_control_stream import run
             try: return run()
             except KeyboardInterrupt: return 130
+        if args.command == 'observe-stream':
+            from tavi_observe_stream import run
+            from tavi_metrics import UsageMetrics
+            try: return run(metrics=UsageMetrics() if args.metrics else None)
+            except KeyboardInterrupt: return 130
         if args.command == 'target-controls':
             from tavi_controls import resolve_file
             result = resolve_file(args.snapshot, args.task, args.target, role=args.role, context=args.context, offline=args.offline)
@@ -424,6 +433,13 @@ def main():
                 result=desktop_switch(args.thread,args.model,args.effort,args.socket)
             print(json.dumps(result,indent=2))
             return 0 if result['status'] in ('connected','verified') else 1
+        if args.command == 'predict-stream':
+            from tavi_model import DecisionModel
+            from tavi_health import bundled_model
+            from tavi_predict_stream import run
+            model = DecisionModel.load(args.model_dir or bundled_model(BASE))
+            try: return run(model)
+            except KeyboardInterrupt: return 130
         if args.command == 'predict':
             if not args.prompt.strip() or len(args.prompt) > 16000:
                 raise ValueError('Task must contain 1–16000 characters')

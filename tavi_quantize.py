@@ -31,9 +31,8 @@ class QuantizedDecisionModel(DecisionModel):
         hidden = np.tanh(self.matmul(x, 'W')+a['b'])
         tier = softmax((self.matmul(hidden, 'Wt')+a['bt'])/self.metadata.get('temperature',1))
         skills = sigmoid(self.matmul(hidden, 'Ws')+a['bs'])
-        for extension in self.metadata.get('extensions', [self.metadata['extension']] if self.metadata.get('extension') else []):
+        for extension, ev in self._extension_vectorizers:
             key = extension.get('array_prefix','extension')
-            ev = Vectorizer(extension['vocabulary'],a[key+'_idf'])
             raw = sigmoid(self.matmul(ev.transform(texts),key+'_W')+a[key+'_b'])
             threshold = np.array(extension['thresholds'],dtype=np.float32)
             base = self.metadata['skill_threshold']

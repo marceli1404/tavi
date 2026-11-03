@@ -1,0 +1,2 @@
+# Optional Windows UI Automation provider; no browser, screenshot or click backend.
+uiautomation==2.0.29

@@ -1,0 +1,276 @@
+name: Computer-use wire checks
+
+on:
+  push:
+    paths:
+      - 'tavi_control_*.py'
+      - 'tavi_field_data.py'
+      - 'tavi_provider_usage.py'
+      - 'tavi_escalation_train.py'
+      - 'test_field_data.py'
+      - 'test_provider_usage.py'
+      - 'test_escalation_train.py'
+      - 'tavi_metrics.py'
+      - 'tavi_browser_eval.py'
+      - 'test_metrics.py'
+      - 'test_browser_eval.py'
+      - 'benchmarks/matched_browser_workflows.py'
+      - 'test_matched_browser_workflows.py'
+      - 'requirements-browser-eval.txt'
+      - 'benchmarks/context_index_efficiency.py'
+      - 'test_context_index_efficiency.py'
+      - 'tavi_windows_uia.py'
+      - 'tavi_native_stream.py'
+      - 'tavi_native_ab_report.py'
+      - 'test_native_windows_uia.py'
+      - 'test_native_ab_report.py'
+      - 'requirements-native-windows.txt'
+      - 'Features-computer-native-integration.md'
+      - 'tavi_observe_wire.py'
+      - 'test_observe_wire.py'
+      - 'benchmarks/observe_planner_tokens_benchmark.py'
+      - 'test_observe_planner_tokens_benchmark.py'
+      - 'requirements-token-bench.txt'
+      - 'tavi_native_uia.ps1'
+      - 'tavi_computer_native.py'
+      - 'tavi_computer_compare.py'
+      - 'test_computer_native.py'
+      - 'test_computer_compare.py'
+      - 'benchmarks/windows_native_smoke.py'
+      - 'tavi_observe.py'
+      - 'tavi_observe_stream.py'
+      - 'tavi_browser_snapshot.py'
+      - 'test_observe.py'
+      - 'test_browser_snapshot.py'
+      - 'benchmarks/dom_first_benchmark.py'
+      - 'tavi_compact.py'
+      - 'tavi_stream.py'
+      - 'tavi_target.py'
+      - 'test_screen_batch.py'
+      - 'benchmarks/screen_batch_benchmark.py'
+      - 'tavi_predict_stream.py'
+      - 'tavi.py'
+      - 'tavi_model.py'
+      - 'tavi_quantize.py'
+      - 'release-files.json'
+      - 'test_model_warm_adapters.py'
+      - 'test_control_*.py'
+      - 'test_predict_stream.py'
+      - 'benchmarks/control_matrix_benchmark.py'
+      - 'benchmarks/warm_prediction_benchmark.py'
+      - '.github/workflows/computer-use-wire.yml'
+  pull_request:
+    paths:
+      - 'tavi_control_*.py'
+      - 'tavi_field_data.py'
+      - 'tavi_provider_usage.py'
+      - 'tavi_escalation_train.py'
+      - 'test_field_data.py'
+      - 'test_provider_usage.py'
+      - 'test_escalation_train.py'
+      - 'tavi_metrics.py'
+      - 'tavi_browser_eval.py'
+      - 'test_metrics.py'
+      - 'test_browser_eval.py'
+      - 'benchmarks/matched_browser_workflows.py'
+      - 'test_matched_browser_workflows.py'
+      - 'requirements-browser-eval.txt'
+      - 'benchmarks/context_index_efficiency.py'
+      - 'test_context_index_efficiency.py'
+      - 'tavi_windows_uia.py'
+      - 'tavi_native_stream.py'
+      - 'tavi_native_ab_report.py'
+      - 'test_native_windows_uia.py'
+      - 'test_native_ab_report.py'
+      - 'requirements-native-windows.txt'
+      - 'Features-computer-native-integration.md'
+      - 'tavi_observe_wire.py'
+      - 'test_observe_wire.py'
+      - 'benchmarks/observe_planner_tokens_benchmark.py'
+      - 'test_observe_planner_tokens_benchmark.py'
+      - 'requirements-token-bench.txt'
+      - 'tavi_native_uia.ps1'
+      - 'tavi_computer_native.py'
+      - 'tavi_computer_compare.py'
+      - 'test_computer_native.py'
+      - 'test_computer_compare.py'
+      - 'benchmarks/windows_native_smoke.py'
+      - 'tavi_observe.py'
+      - 'tavi_observe_stream.py'
+      - 'tavi_browser_snapshot.py'
+      - 'test_observe.py'
+      - 'test_browser_snapshot.py'
+      - 'benchmarks/dom_first_benchmark.py'
+      - 'tavi_compact.py'
+      - 'tavi_stream.py'
+      - 'tavi_target.py'
+      - 'test_screen_batch.py'
+      - 'benchmarks/screen_batch_benchmark.py'
+      - 'tavi_predict_stream.py'
+      - 'tavi.py'
+      - 'tavi_model.py'
+      - 'tavi_quantize.py'
+      - 'release-files.json'
+      - 'test_model_warm_adapters.py'
+      - 'test_control_*.py'
+      - 'test_predict_stream.py'
+      - 'benchmarks/control_matrix_benchmark.py'
+      - 'benchmarks/warm_prediction_benchmark.py'
+      - '.github/workflows/computer-use-wire.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install model and optional screenshot test dependencies
+        run: python -m pip install -r requirements.txt -r requirements-vision.txt
+      - name: Run control-protocol regressions
+        run: python -m unittest -q test_control_matrix test_control_compact test_control_stream test_control_index
+      - name: Run warm prediction and model compatibility tests
+        run: python -m unittest -q test_predict_stream test_model_warm_adapters test_probability_quantization test_features test_coding_confidence
+      - name: Check control benchmark and round trip
+        run: python benchmarks/control_matrix_benchmark.py
+      - name: Measure warm prediction against cold CLI
+        run: python benchmarks/warm_prediction_benchmark.py
+      - name: Test shared screenshot/OCR batching
+        run: python -m unittest -q test_screen_batch test_ocr_session test_compact_lazy_preparation test_compact
+      - name: Benchmark shared screenshot/OCR preparation
+        run: python benchmarks/screen_batch_benchmark.py
+      - name: Test DOM-first routing, lazy OCR and browser observation
+        run: python -m unittest -q test_observe test_browser_snapshot
+      - name: Benchmark DOM-first selective OCR
+        run: python benchmarks/dom_first_benchmark.py
+      - name: Test privacy-safe metrics and local browser evaluation policy
+        run: python -m unittest -q test_metrics test_browser_eval
+      - name: Test consented evidence, actual provider usage and held-out advisory training
+        run: python -m unittest -q test_field_data test_provider_usage test_escalation_train
+      - name: Test matched browser comparison protocol
+        run: python -m unittest -q test_matched_browser_workflows
+      - name: Test compact planner wire and offline benchmark contracts
+        run: python -m unittest -q test_observe_wire test_observe_planner_tokens_benchmark
+      - name: Test safe context-index elision with per-query freshness
+        run: python -m unittest -q test_context_index_efficiency
+      - name: Profile indexed lookup overhead at 64, 512 and 2048 controls
+        run: PYTHONPATH=. python benchmarks/context_index_efficiency.py --iterations 35
+      - name: Test native Computer window scope, stale/replay safety and paired field evidence
+        run: python -m unittest -q test_native_windows_uia test_native_ab_report
+      - name: Verify read-only native Computer protocol and consented comparison rules
+        run: python -m unittest -q test_computer_native test_computer_compare
+      - name: Run complete offline test suite
+        run: python -m unittest -q
+      - name: Validate portable release includes new features
+        run: python bundle_tavi.py
+
+  local-browser-fixture:
+    name: Real Chromium, local generated fixture only
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned optional browser fixture dependency
+        run: python -m pip install -r requirements-browser-eval.txt
+      - name: Install real headless Chromium for local fixture
+        run: python -m playwright install --with-deps chromium
+      - name: Run verified local-browser interaction evaluation
+        run: python tavi_browser_eval.py --repeats 3
+
+  matched-browser-comparison:
+    name: Matched screenshot/Tesseract vs Tavi DOM (generated fixtures)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Tavi, Playwright and real offline OCR
+        run: |
+          python -m pip install -r requirements.txt -r requirements-browser-eval.txt pytesseract==0.3.13
+          sudo apt-get update -qq
+          sudo apt-get install -y tesseract-ocr
+          python -m playwright install --with-deps chromium
+      - name: Test benchmark comparability rules
+        run: python -m unittest -q test_matched_browser_workflows
+      - name: Compare real screenshot plus Tesseract vs Tavi DOM-first
+        run: PYTHONPATH=. python benchmarks/matched_browser_workflows.py --repeats 3 --output matched-browser-results.json
+      - name: Upload inspectable matched task observations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tavi-matched-browser-results
+          path: matched-browser-results.json
+          if-no-files-found: warn
+
+  planner-token-benchmark:
+    name: Actual offline BPE tokens versus full observation payload
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install only the optional tokenizer benchmark dependencies
+        run: python -m pip install -r requirements.txt -r requirements-token-bench.txt
+      - name: Validate synthetic benchmark logic
+        run: python -m unittest -q test_observe_planner_tokens_benchmark
+      - name: Measure cl100k and o200k tokens, wire bytes and projection CPU
+        run: PYTHONPATH=. python benchmarks/observe_planner_tokens_benchmark.py --iterations 60 --output tavi-planner-token-benchmark.json
+      - name: Upload reproducible per-case token counts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tavi-planner-token-benchmark
+          path: tavi-planner-token-benchmark.json
+          if-no-files-found: warn
+
+  native-windows-interface:
+    name: Windows UI Automation import and pure read-only protocol tests
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install optional Windows UIA provider
+        run: python -m pip install -r requirements-native-windows.txt
+      - name: Import actual UI Automation library on Windows
+        run: python -c "import uiautomation; from tavi_windows_uia import _RealUIA; _RealUIA()"
+      - name: Test single-window scope and read-only native workflow contracts
+        run: python -m unittest -q test_native_windows_uia test_native_ab_report
+
+  windows-native-smoke:
+    name: Real Windows UI Automation (generated fixture, read-only)
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate native Computer protocol safety without a GUI requirement
+        run: python -m unittest -q test_computer_native test_computer_compare
+      - name: Try real UI Automation on a generated local Tk button
+        shell: pwsh
+        run: |
+          python -m benchmarks.windows_native_smoke --repeats 5 | Out-File -Encoding utf8 native-uia-smoke.json
+          Get-Content native-uia-smoke.json
+      - name: Preserve measured vs not-measured native Windows evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tavi-windows-native-smoke
+          path: native-uia-smoke.json
+          if-no-files-found: warn

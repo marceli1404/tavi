@@ -27,13 +27,16 @@ def run(input_stream=None,output_stream=None):
   try:
    request=json.loads(line,object_pairs_hook=_object)
    if not isinstance(request,dict) or set(request)-{'id','snapshot','queries','compact'} or not {'snapshot','queries'}<=set(request):raise ValueError('Expected snapshot and queries; no offline, capture or action options')
-   if 'compact' in request and type(request['compact']) is not bool:raise ValueError('compact must be boolean')
+   if 'compact' in request and type(request['compact']) is not bool and request['compact'] != 'matrix':raise ValueError('compact must be boolean or matrix')
    if 'id' in request:
     ident=request['id']
     if not isinstance(ident,str) or not ident.strip() or len(ident)>80:raise ValueError('Invalid request ID')
     request_id=ident
    result=resolve_many(request['snapshot'],request['queries'])
-   if request.get('compact',False):
+   if request.get('compact') == 'matrix':
+    from tavi_control_matrix import matrix_batch
+    result=matrix_batch(result)
+   elif request.get('compact',False):
     from tavi_control_compact import compact_batch
     result=compact_batch(result)
    result.update(request_id=request_id,observation_reused=False)

@@ -53,6 +53,290 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Native Windows Computer integration (experimental)
+
+Tavi includes a **read-only Windows UI Automation helper** for authorised
+Computer hosts. It searches one approved application's accessibility controls
+for an exact target name and role, sends a compact, non-authoritative planner
+hint, and can perform a fresh **read-only** control recheck. A persistent
+JSON-lines worker avoids restarting the helper for each observation.
+The host still owns observation requirements, user permission, actual
+clicks and outcome verification. This repository **does not** install or
+connect itself to the ChatGPT Computer runtime.
+
+On an authorised Windows machine, optional native support is installed
+separately:
+
+```powershell
+py -m pip install -r requirements-native-windows.txt
+py -m tavi_native_stream --window-handle 123456
+```
+
+Replace the example handle with a window handle explicitly approved by the
+trusted Computer host; this is *not* a command for model-controlled window
+discovery. Windows version and locale can change accessible control roles
+(for example, "Favorites" may not be a tab). The helper refuses to authorise
+native actions even when a match is exact.
+
+[Native adapter, scope and safety contracts](Features-computer-native-integration.md)
+and [host-measured Computer-vs-Tavi evaluation protocol](Features-computer-native-ab.md)
+describe the two phases. The paired evaluator in
+`benchmarks/computer_agent_ab.py` requires **real host-reported** full-task
+outcomes, identical planner/executor/environment settings, and actual
+provider-reported tokens to make a token comparison. CI tests only the
+protocol and synthetic fixtures; **no end-to-end Windows Computer A/B speed
+or billed-token saving is claimed**.
+
+## Consented computer-use field evaluation and safe training
+
+Tavi can now compare full-task **host-verified** results, instead of
+assuming that shorter local processing means faster real user workflows.
+A separately authorized host can record only non-sensitive, explicitly
+consented observations and outcomes with `tavi_field_data.record(...)`.
+Family/task keys are HMAC-pseudonymised and raw page text, control labels,
+URLs, passwords, screenshots and prompts are **not** written to disk.
+
+```sh
+# Once baseline + optimized evidence has been explicitly collected:
+python tavi_field_data.py local-consented-evidence
+
+# With 80+ independently labelled tasks across 8+ separate site families:
+python tavi_escalation_train.py local-consented-evidence \
+  --candidate-output candidate-visual-review.json
+```
+
+Provider response usage can be measured without logging responses using
+`tavi_provider_usage.record(metrics,"openai_responses",response)` or
+`"openai_chat_completions"`. Missing usage and missing cache-token
+metadata are treated as **unknown**, not zero.
+
+The optional logistic classifier is an **unactivated research candidate**
+that only proposes *additional visual review* of otherwise exact host
+controls. It cannot click, skip mandatory OCR, bypass denied/ambiguous
+control findings or change the existing failed automatic-action safety
+qualification. **No genuine model retraining has been performed without
+consented real labelled data.**
+
+[Read the full consent, evaluation and training workflow](Features-consented-computer-use-training.md).
+
+## Token-first, then CPU efficiency improvements (3 November 2026)
+
+The observation stream accepts an **opt-in** `"wire":"planner"` field on
+each JSON-line request, returning a smaller **planner-only** presentation of
+the current host observation. The normal full response is still the default.
+The compact message retains query route/reason, exact candidate identity,
+snapshot digest and explicit denial of action authority. It cannot bypass
+fresh verification, permission checks, stale-screen checks or OCR review.
+
+[Real offline BPE benchmark](https://github.com/marceli1404/tavi/actions/runs/41680144415):
+across seven equally weighted synthetic cases, `cl100k_base` input JSON
+dropped from **15,490 to 2,328 tokens (84.97%)**; `o200k_base` from
+**15,801 to 2,330 (85.25%)**. This is *tokenizer-counted payload size*,
+**not** provider-reported billing or a full agent prompt. A 16-control
+example fell from **5,009 to 672 cl100k tokens**. Full evidence remains
+inside the trusted host.
+
+When a batch contains no context-filtered queries, Tavi also skips an
+otherwise unused context index. Synthetic index/lookup tests with 2,048
+controls dropped from **12.047 to 9.698 ms** (1.24×) on one runner.
+Importantly, snapshot validation and **per-query freshness checks remain
+unchanged**. No action automation was enabled.
+
+[Implementation, sample wire format, benchmarks and safety constraints](Features-planner-token-efficiency.md).
+
+## Matched real-browser observation comparison (3 November 2026)
+
+A **real Chromium fixture** now benchmarks the same four three-step
+workflows using either screenshot + real Tesseract OCR or Tavi's DOM-first
+router. Both approaches use the same pre-registered steps, fresh recheck
+before every action, host `page.mouse.click` and independent result
+verification.
+
+In the [verified Actions run](https://github.com/marceli1404/tavi/actions/runs/41667765684),
+both completed **12/12** trials (36 verified clicks per variant).
+Median three-step task times: **1,081.850 ms** for screenshot/OCR-first versus
+**40.110 ms** for Tavi DOM-first; the **median paired ratio was 26.618×**.
+The screenshot route performed 72 actual OCR passes; Tavi performed none.
+
+This demonstrates a real *observation pipeline* speed advantage **on
+simple local generated pages only**. These tasks contain no hosted model,
+natural-language planning, real external websites, user accounts or
+provider-token measurements. It is **not** a benchmark against an
+autonomous commercial computer-use agent. Source, reproducibility
+instructions and [raw task results](https://github.com/marceli1404/tavi/actions/runs/41667765684/artifacts/13244824797)
+are available in [the matched comparison methodology](Features-matched-browser-benchmark.md).
+
+```sh
+python -m pip install -r requirements.txt -r requirements-browser-eval.txt pytesseract==0.3.13
+python -m playwright install chromium
+# Install tesseract-ocr system binary too
+PYTHONPATH=. python benchmarks/matched_browser_workflows.py --repeats 3
+```
+
+## Measure and verify computer-use improvements
+
+Use optional numeric-only observability in the DOM-first stream:
+
+```sh
+python tavi.py observe-stream --metrics
+```
+
+Each successful response includes an in-memory aggregate of exact-control
+and OCR routes, UTF-8 wire bytes, and p50/p95 stage timings. No page text,
+prompts, screenshots, URLs or tokens are logged. Hosted model token counts
+are **unknown** until an authorized host explicitly passes its actual usage
+metadata to `tavi_metrics.UsageMetrics.provider_usage(...)`; missing is not
+reported as zero.
+
+Tavi also includes a **real Chromium local-fixture evaluation** for
+observation → fresh host recheck → allowed click → result verification,
+plus explicit blocking of ambiguous, disabled, missing or changed controls:
+
+```sh
+python -m pip install -r requirements-browser-eval.txt
+python -m playwright install chromium
+python tavi_browser_eval.py --repeats 3
+```
+
+This evaluation cannot accept user URLs or sessions; it only clicks its
+own generated `about:blank` fixture. It is **not** a full computer-use
+agent benchmark and does not allow clicks on user sites.
+See [computer-use observability](Features-computer-use-observability.md)
+for implementation details, privacy limits, and measured evidence.
+
+## DOM/accessibility-first computer use
+
+Tavi can now route fresh **host-provided browser controls** before requesting
+any screenshot/OCR work:
+
+```sh
+python tavi.py observe-stream
+```
+
+Send an independent JSON object per line:
+
+```json
+{
+  "id": "step-1",
+  "snapshot": {
+    "format": "tavi-control-snapshot-v1",
+    "snapshot_id": "fresh-host-observation-1",
+    "captured_at": "2026-11-03T10:00:00+00:00",
+    "source": "supported_browser_dom",
+    "viewport": [1280, 720],
+    "controls": [{
+      "id": "settings-button",
+      "label": "Settings",
+      "role": "button",
+      "context": "Toolbar",
+      "visible": true,
+      "enabled": true,
+      "bounds": [30, 40, 130, 42]
+    }]
+  },
+  "queries": [
+    {"id": "settings", "task": "Inspect Settings", "target": "Settings"},
+    {"id": "help", "task": "Inspect Help", "target": "Help"}
+  ]
+}
+```
+
+*The timestamp is only an example.* A real request **must** use a
+host-captured observation no older than five seconds, with a new
+`snapshot_id` for each request. The output routes Settings to
+`host_control` without reading a screenshot, and Help to
+`needs_screenshot`. When the trusted host has a same-observation screenshot
+for an unresolved target, supply
+`"image":{"path":"C:/screenshots/current.png","snapshot_id":"fresh-host-observation-1"}`.
+The stream then lazily starts the Windows OCR worker and processes **only**
+missing supported controls. Several missing targets share one OCR pass.
+Only `button`, `link`, `tab`, and `menuitem` names use this text-based
+fallback. Disabled, ambiguous, stale or future observations do not get
+overridden by OCR.
+
+An optional *read-only* Playwright adapter is available to the host:
+
+```python
+from tavi_browser_snapshot import capture_controls
+from tavi_observe import dispatch
+
+snapshot = capture_controls(page)  # page is the trusted host's live Playwright Page
+result = dispatch(snapshot, [
+    {"id": "settings", "task": "Inspect Settings",
+     "target": "Settings", "role": "button"}
+])
+```
+
+The adapter reads an approximate accessible name, role, visibility,
+enabled state, bounds and group context. It never clicks, starts a browser
+or reads user-entered form values. It is **not** a complete accessibility
+tree or a guarantee of the actual browser state. A host that uses the
+Playwright page remains responsible for a fresh control locator,
+authorization, execution and verification. Observations can never be
+replayed as a click sequence or used to bypass confirmation.
+
+This is a **deterministic escalation policy**, not newly trained model
+weights. The first benchmarks use synthetic DOM records and scripted OCR,
+not a real browser, real Windows OCR or end-to-end desktop tasks. See
+[computer-use efficiency](Features-computer-use-efficiency.md).
+
+## Batch screenshot proposals from one observation
+
+For several targets on the **same unchanged screenshot**, keep the local
+Windows OCR session warm and submit a single JSON-line batch through
+`python tavi.py propose-stream`:
+
+```json
+{"id":"screen-1","image":"C:/screenshots/current.png","targets":[{"id":"go","task":"Inspect the Go control","target":"Go"},{"id":"stop","task":"Inspect the Stop control","target":"Stop"}]}
+```
+
+Unlike a series of one-target requests, this prepares the screenshot and
+runs local OCR **once** for 1–16 independent target proposals. Their
+separate review packets, source hashes, review requirements and
+unqualified confidence scores are preserved. Invalid batches fail before
+OCR; a changed source image invalidates the entire batch. The return
+includes `format:"tavi-screenshot-target-batch-v1"`, `proposals`,
+`ocr_passes:1` and `image_preparations:1`. Batch mode never invokes
+hosted tools or enables automatic button actions, even when the owner's
+single-target auto-click setting is enabled.
+
+**Do not treat the proposals as a click sequence.** After any UI action,
+reobserve the live screen and recheck identity, geometry, permissions and
+the result with the supported host driver. See
+[computer-use efficiency](Features-computer-use-efficiency.md) for the
+paired eight-target local benchmark and its limits.
+
+## Reuse CPU predictions during long computer-use sessions
+
+The offline `predict-stream` mode loads a verified Tavi model once, then
+serves independent JSON-line predictions without reloading Python/NumPy and
+model weights each time:
+
+```sh
+python tavi.py predict-stream
+```
+
+Submit one JSON object per line on stdin. For example:
+
+```json
+{"id":"step-1","prompt":"Find the Settings button","detail":"brief"}
+```
+
+Full output matches `python tavi.py predict "Find the Settings button"`
+(with the same default eight skill suggestions). Optional `"detail":"brief"`
+returns a smaller advisory response with the tier distribution, skill scores,
+thresholds, vocabulary coverage, and **all review reasons** preserved; it
+defaults to the top three skills. `"top_k":0` through `8` is supported.
+Neither output authorizes actions or claims task-success probability.
+The model is not retrained; actual computer-use actions still require a
+supported host, current UI checks, and permission verification.
+
+`python benchmarks/warm_prediction_benchmark.py` compares real local cold
+CLI processes against warm predictions, checks exact full-output parity,
+and reports brief-format JSON-byte savings. It does not measure hosted token
+billing, model quality, or end-to-end computer-use speed.
+See [computer-use efficiency](Features-computer-use-efficiency.md).
+
 ## Exact host controls
 
 When the supported computer-use driver supplies current control identities, Tavi can resolve exact labels and roles without interpreting an image. For several lookups from one observation:
@@ -61,7 +345,9 @@ When the supported computer-use driver supplies current control identities, Tavi
 python tavi.py target-controls-batch snapshot.json queries.json --offline
 ```
 
-Offline mode is replay only. Fresh proposals still require the driver to verify the live control before acting. A lookup does not grant permission or predict success. In a preparation-only test of 12 queries across 1,000 supplied controls, batching reduced median lookup preparation from 42.19 ms to 5.07 ms. Capture, process startup, agent reasoning, clicks and app response are excluded. See [v0.18 results and examples](Features-v0.18.md).
+Offline mode is replay only. Fresh proposals still require the driver to verify the live control before acting. A lookup does not grant permission or predict success.
+
+For repeated host-control observations, the warm `target-controls-stream` also accepts an opt-in `"compact": "matrix"` format. It factors repeated proposal fields into a columnar representation, preserving all original checks and allowing exact reconstruction with `expand_matrix`. This reduces payload size for multi-query agent loops without changing confidence, permissions or model weights. See [computer-use efficiency](Features-computer-use-efficiency.md) for the benchmark and training plan. In a preparation-only test of 12 queries across 1,000 supplied controls, batching reduced median lookup preparation from 42.19 ms to 5.07 ms. Capture, process startup, agent reasoning, clicks and app response are excluded. See [v0.18 results and examples](Features-v0.18.md).
 
 ## Screenshots: local and hosted
 
