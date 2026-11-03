@@ -16,7 +16,7 @@ def event(mode, *, case_key='task-1', planner='same-model',
                   outcome='success' if success else 'failure',
                   host_verified=True,elapsed_ms=1200 if mode=='computer_only' else 800,
                   screenshots=3 if mode=='computer_only' else 1,
-                  input_tokens=950 if mode=='computer_only' else 490 if tokens else None,
+                  input_tokens=(950 if mode=='computer_only' else 490) if tokens else None,
                   output_tokens=120 if tokens else None,
                   provider_usage='provider_reported' if tokens else 'unavailable',
                   consent=True,sensitivity_reviewed=True,sensitive=False)
