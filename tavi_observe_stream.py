@@ -6,6 +6,7 @@ stream does not capture, click, use network APIs or execute model output.
 """
 import json
 import sys
+import time
 from collections import deque
 
 from tavi_observe import dispatch
@@ -23,7 +24,7 @@ def _object(pairs):
     return value
 
 
-def run(input_stream=None, output_stream=None, session_factory=OcrSession):
+def run(input_stream=None, output_stream=None, session_factory=OcrSession, metrics=None):
     input_stream = sys.stdin if input_stream is None else input_stream
     output_stream = sys.stdout if output_stream is None else output_stream
     for stream in (input_stream, output_stream):
@@ -75,11 +76,12 @@ def run(input_stream=None, output_stream=None, session_factory=OcrSession):
                                if isinstance(request['snapshot'],dict) else None)
                 if snapshot_id in recent_ids:
                     raise ValueError('Snapshot ID already processed; capture a new observation after the last request')
+                started = time.perf_counter()
                 packet = dispatch(request['snapshot'], request['queries'],
                                   image=request.get('image'),
                                   max_edge=request.get('max_edge',1600),
                                   detail=request.get('detail','brief'),
-                                  ocr_fn=local_ocr)
+                                  ocr_fn=local_ocr, metrics=metrics)
                 # Bound session memory while preventing accidental replay of
                 # a recently used observation (combine same-screen targets).
                 recent_order.append(snapshot_id)
@@ -90,6 +92,12 @@ def run(input_stream=None, output_stream=None, session_factory=OcrSession):
                               ocr_session_started=session is not None,
                               session_ocr_requests=session.requests if session is not None else 0,
                               observation_reused=False)
+                if metrics is not None:
+                    metrics.record_stage('stream_request', (time.perf_counter()-started)*1000)
+                    wire_bytes = len(json.dumps(packet, ensure_ascii=False,
+                                                allow_nan=False, separators=(',', ':')).encode('utf-8'))
+                    metrics.observe(packet, wire_bytes=wire_bytes)
+                    packet['telemetry'] = metrics.summary()
                 emit(packet)
             except (ValueError, TypeError, RuntimeError, OSError,
                     OverflowError, RecursionError) as error:
