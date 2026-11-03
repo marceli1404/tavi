@@ -175,6 +175,72 @@ No real-world full-agent speed multiplier is established. Reproduce with
 `python benchmarks/screen_batch_benchmark.py` and
 `python -m unittest -q test_screen_batch`.
 
+### DOM/accessibility-first decision policy and browser adapter (3 November 2026)
+
+`tavi_observe.py` now implements the following **deterministic host-input
+escalation policy**, not a newly trained neural policy:
+
+1. Validate the complete current `tavi-control-snapshot-v1` and its
+   1–16 requested control identities, then use `ControlIndex` for exact
+   role, visible/enabled geometry and optional group context.
+2. For every unique exact control, return `route:"host_control"` with
+   `requires_live_host_check:true` and **zero screenshot/OCR work**.
+3. If an exact button/link/tab/menuitem is truly **absent**, return
+   `needs_screenshot` when the host has supplied no paired image. If a
+   host-supplied image matches the snapshot ID, run a single local OCR pass
+   for **only those missing target names** and return `visual_review`.
+4. Preserve `host_review` when disabled/ambiguous; preserve
+   `reobserve` on stale/future snapshots. The visual fallback cannot
+   override any of these states.
+5. Every request carries `authorization_granted:false`,
+   `executed_actions:false`, and
+   `action_sequence_authorized:false`; screenshots and DOM are both
+   untrusted observations until the live host rechecks them.
+
+`python tavi.py observe-stream` is a new persistent JSON-lines service.
+Its Windows OCR process starts **lazily** (never on an all-DOM hit).
+Each successful request needs a fresh host observation ID; recently used
+IDs are rejected. OCR candidates use Tavi's existing field-unqualified
+target model and never imply autonomous action. No screenshots are
+captured by this service.
+
+For trusted browser drivers, `tavi_browser_snapshot.capture_controls(page)`
+takes a live Playwright-compatible Page and returns an approximate read-only
+DOM control inventory with host-side time and ID. It inspects roles,
+accessible-name hints (`aria-label`, `aria-labelledby`, associated labels,
+placeholder/title), visibility, enabled state, geometry, and group
+context. It **does not** launch a browser, navigate, read text-input values,
+capture a screen or click. Its names are not a complete browser
+accessibility tree; all DOM text is untrusted data. Host assertions about a
+paired screenshot are **claims**, not proof of same-time identity.
+
+A Linux/Python 3.12 GitHub Actions run at
+https://github.com/marceli1404/tavi/actions/runs/41623832214 passed
+**353 full offline tests**, including the new browser/DOM-first tests.
+With 12 paired synthetic local rounds, 16 targets per round, synthetic
+DOM inventory, and a scripted OCR callback:
+
+| Workload | Median measured local latency |
+| --- | ---: |
+| Always process screenshot for all 16 targets | 26.488 ms |
+| DOM-first, 12 exact and 4 OCR escalations | 21.936 ms |
+| DOM-first, all 16 exact and no screenshot read/OCR | 0.180 ms |
+
+The mixed-case ratio was **1.21×** and the all-exact ratio was **147.4×**
+on that run. A prior run showed 1.27× and ~151× respectively, which
+illustrates CI-runner variance. These comparisons measure **only local
+proposal handling**. They do not measure actual Playwright browser
+evaluation latency, native Windows OCR, UI capture, model calls, clicks,
+application rendering, real-world reliability or commercial token costs.
+The exact path is intentionally not a neural performance score.
+
+Run `python -m unittest -q test_observe test_browser_snapshot` and
+`python benchmarks/dom_first_benchmark.py` to reproduce the synthetic
+comparison. To establish practical gains, run a supported browser host
+against consented live workflows and measure completed-task success,
+real wall time, retries, token costs and the quality of accessible-name
+matching, holding the same task/authorization policy fixed.
+
 ## 3. What would make Tavi competitive
 
 The primary optimization target is **verified completed work per token,
