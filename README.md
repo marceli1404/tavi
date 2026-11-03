@@ -53,6 +53,38 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Consented computer-use field evaluation and safe training
+
+Tavi can now compare full-task **host-verified** results, instead of
+assuming that shorter local processing means faster real user workflows.
+A separately authorized host can record only non-sensitive, explicitly
+consented observations and outcomes with `tavi_field_data.record(...)`.
+Family/task keys are HMAC-pseudonymised and raw page text, control labels,
+URLs, passwords, screenshots and prompts are **not** written to disk.
+
+```sh
+# Once baseline + optimized evidence has been explicitly collected:
+python tavi_field_data.py local-consented-evidence
+
+# With 80+ independently labelled tasks across 8+ separate site families:
+python tavi_escalation_train.py local-consented-evidence \
+  --candidate-output candidate-visual-review.json
+```
+
+Provider response usage can be measured without logging responses using
+`tavi_provider_usage.record(metrics,"openai_responses",response)` or
+`"openai_chat_completions"`. Missing usage and missing cache-token
+metadata are treated as **unknown**, not zero.
+
+The optional logistic classifier is an **unactivated research candidate**
+that only proposes *additional visual review* of otherwise exact host
+controls. It cannot click, skip mandatory OCR, bypass denied/ambiguous
+control findings or change the existing failed automatic-action safety
+qualification. **No genuine model retraining has been performed without
+consented real labelled data.**
+
+[Read the full consent, evaluation and training workflow](Features-consented-computer-use-training.md).
+
 ## Measure and verify computer-use improvements
 
 Use optional numeric-only observability in the DOM-first stream:
