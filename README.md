@@ -53,6 +53,37 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Measure and verify computer-use improvements
+
+Use optional numeric-only observability in the DOM-first stream:
+
+```sh
+python tavi.py observe-stream --metrics
+```
+
+Each successful response includes an in-memory aggregate of exact-control
+and OCR routes, UTF-8 wire bytes, and p50/p95 stage timings. No page text,
+prompts, screenshots, URLs or tokens are logged. Hosted model token counts
+are **unknown** until an authorized host explicitly passes its actual usage
+metadata to `tavi_metrics.UsageMetrics.provider_usage(...)`; missing is not
+reported as zero.
+
+Tavi also includes a **real Chromium local-fixture evaluation** for
+observation → fresh host recheck → allowed click → result verification,
+plus explicit blocking of ambiguous, disabled, missing or changed controls:
+
+```sh
+python -m pip install -r requirements-browser-eval.txt
+python -m playwright install chromium
+python tavi_browser_eval.py --repeats 3
+```
+
+This evaluation cannot accept user URLs or sessions; it only clicks its
+own generated `about:blank` fixture. It is **not** a full computer-use
+agent benchmark and does not allow clicks on user sites.
+See [computer-use observability](Features-computer-use-observability.md)
+for implementation details, privacy limits, and measured evidence.
+
 ## DOM/accessibility-first computer use
 
 Tavi can now route fresh **host-provided browser controls** before requesting
