@@ -19,6 +19,13 @@ on:
       - 'requirements-browser-eval.txt'
       - 'benchmarks/context_index_efficiency.py'
       - 'test_context_index_efficiency.py'
+      - 'tavi_windows_uia.py'
+      - 'tavi_native_stream.py'
+      - 'tavi_native_ab_report.py'
+      - 'test_native_windows_uia.py'
+      - 'test_native_ab_report.py'
+      - 'requirements-native-windows.txt'
+      - 'Features-computer-native-integration.md'
       - 'tavi_observe_wire.py'
       - 'test_observe_wire.py'
       - 'benchmarks/observe_planner_tokens_benchmark.py'
@@ -64,6 +71,13 @@ on:
       - 'requirements-browser-eval.txt'
       - 'benchmarks/context_index_efficiency.py'
       - 'test_context_index_efficiency.py'
+      - 'tavi_windows_uia.py'
+      - 'tavi_native_stream.py'
+      - 'tavi_native_ab_report.py'
+      - 'test_native_windows_uia.py'
+      - 'test_native_ab_report.py'
+      - 'requirements-native-windows.txt'
+      - 'Features-computer-native-integration.md'
       - 'tavi_observe_wire.py'
       - 'test_observe_wire.py'
       - 'benchmarks/observe_planner_tokens_benchmark.py'
@@ -134,6 +148,8 @@ jobs:
         run: python -m unittest -q test_context_index_efficiency
       - name: Profile indexed lookup overhead at 64, 512 and 2048 controls
         run: PYTHONPATH=. python benchmarks/context_index_efficiency.py --iterations 35
+      - name: Test native Computer window scope, stale/replay safety and paired field evidence
+        run: python -m unittest -q test_native_windows_uia test_native_ab_report
       - name: Run complete offline test suite
         run: python -m unittest -q
       - name: Validate portable release includes new features
@@ -204,3 +220,19 @@ jobs:
           name: tavi-planner-token-benchmark
           path: tavi-planner-token-benchmark.json
           if-no-files-found: warn
+
+  native-windows-interface:
+    name: Windows UI Automation import and pure read-only protocol tests
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install optional Windows UIA provider
+        run: python -m pip install -r requirements-native-windows.txt
+      - name: Import actual UI Automation library on Windows
+        run: python -c "import uiautomation; from tavi_windows_uia import _RealUIA; _RealUIA()"
+      - name: Test single-window scope and read-only native workflow contracts
+        run: python -m unittest -q test_native_windows_uia test_native_ab_report
