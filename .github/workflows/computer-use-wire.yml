@@ -4,6 +4,11 @@ on:
   push:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_compact.py'
+      - 'tavi_stream.py'
+      - 'tavi_target.py'
+      - 'test_screen_batch.py'
+      - 'benchmarks/screen_batch_benchmark.py'
       - 'tavi_predict_stream.py'
       - 'tavi.py'
       - 'tavi_model.py'
@@ -18,6 +23,11 @@ on:
   pull_request:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_compact.py'
+      - 'tavi_stream.py'
+      - 'tavi_target.py'
+      - 'test_screen_batch.py'
+      - 'benchmarks/screen_batch_benchmark.py'
       - 'tavi_predict_stream.py'
       - 'tavi.py'
       - 'tavi_model.py'
@@ -52,6 +62,10 @@ jobs:
         run: python benchmarks/control_matrix_benchmark.py
       - name: Measure warm prediction against cold CLI
         run: python benchmarks/warm_prediction_benchmark.py
+      - name: Test shared screenshot/OCR batching
+        run: python -m unittest -q test_screen_batch test_ocr_session test_compact_lazy_preparation test_compact
+      - name: Benchmark shared screenshot/OCR preparation
+        run: python benchmarks/screen_batch_benchmark.py
       - name: Run complete offline test suite
         run: python -m unittest -q
       - name: Validate portable release includes new features
