@@ -85,6 +85,31 @@ consented real labelled data.**
 
 [Read the full consent, evaluation and training workflow](Features-consented-computer-use-training.md).
 
+## Token-first, then CPU efficiency improvements (3 November 2026)
+
+The observation stream accepts an **opt-in** `"wire":"planner"` field on
+each JSON-line request, returning a smaller **planner-only** presentation of
+the current host observation. The normal full response is still the default.
+The compact message retains query route/reason, exact candidate identity,
+snapshot digest and explicit denial of action authority. It cannot bypass
+fresh verification, permission checks, stale-screen checks or OCR review.
+
+[Real offline BPE benchmark](https://github.com/marceli1404/tavi/actions/runs/41680144415):
+across seven equally weighted synthetic cases, `cl100k_base` input JSON
+dropped from **15,490 to 2,328 tokens (84.97%)**; `o200k_base` from
+**15,801 to 2,330 (85.25%)**. This is *tokenizer-counted payload size*,
+**not** provider-reported billing or a full agent prompt. A 16-control
+example fell from **5,009 to 672 cl100k tokens**. Full evidence remains
+inside the trusted host.
+
+When a batch contains no context-filtered queries, Tavi also skips an
+otherwise unused context index. Synthetic index/lookup tests with 2,048
+controls dropped from **12.047 to 9.698 ms** (1.24×) on one runner.
+Importantly, snapshot validation and **per-query freshness checks remain
+unchanged**. No action automation was enabled.
+
+[Implementation, sample wire format, benchmarks and safety constraints](Features-planner-token-efficiency.md).
+
 ## Matched real-browser observation comparison (3 November 2026)
 
 A **real Chromium fixture** now benchmarks the same four three-step
