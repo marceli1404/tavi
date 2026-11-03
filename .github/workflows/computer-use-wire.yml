@@ -4,6 +4,12 @@ on:
   push:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_observe.py'
+      - 'tavi_observe_stream.py'
+      - 'tavi_browser_snapshot.py'
+      - 'test_observe.py'
+      - 'test_browser_snapshot.py'
+      - 'benchmarks/dom_first_benchmark.py'
       - 'tavi_compact.py'
       - 'tavi_stream.py'
       - 'tavi_target.py'
@@ -23,6 +29,12 @@ on:
   pull_request:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_observe.py'
+      - 'tavi_observe_stream.py'
+      - 'tavi_browser_snapshot.py'
+      - 'test_observe.py'
+      - 'test_browser_snapshot.py'
+      - 'benchmarks/dom_first_benchmark.py'
       - 'tavi_compact.py'
       - 'tavi_stream.py'
       - 'tavi_target.py'
@@ -66,6 +78,10 @@ jobs:
         run: python -m unittest -q test_screen_batch test_ocr_session test_compact_lazy_preparation test_compact
       - name: Benchmark shared screenshot/OCR preparation
         run: python benchmarks/screen_batch_benchmark.py
+      - name: Test DOM-first routing, lazy OCR and browser observation
+        run: python -m unittest -q test_observe test_browser_snapshot
+      - name: Benchmark DOM-first selective OCR
+        run: python benchmarks/dom_first_benchmark.py
       - name: Run complete offline test suite
         run: python -m unittest -q
       - name: Validate portable release includes new features
