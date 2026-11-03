@@ -136,6 +136,45 @@ python benchmarks/warm_prediction_benchmark.py
 python bundle_tavi.py
 ```
 
+### Batch screenshot targets from one frozen observation (3 November 2026)
+
+The warm Windows OCR stream now accepts a mutually exclusive `targets` list
+instead of `task`/`target` for a **single screenshot**, for example:
+
+```json
+{"id":"screen-1","image":"C:/screenshots/current.png","targets":[{"id":"go","task":"Inspect Go","target":"Go"},{"id":"stop","task":"Inspect Stop","target":"Stop"}]}
+```
+
+Requests are bounded to 1–16 independently identified targets. A batch
+uses **one** image read, preparation, OCR call and integrity-checked target
+weight load; the reviewed proposals share a captured image identity but
+have distinct proposal IDs and task bindings. The final screenshot hash
+check invalidates all proposed targets when the source file changes. No
+hosted review, permission, click or automated action sequence is enabled.
+A fresh live UI check is required **after each actual action**. Matching
+multiple controls from one observation is not permission to execute them
+in succession.
+
+GitHub Actions run
+https://github.com/marceli1404/tavi/actions/runs/41620174856
+passed **337 full offline tests** and measured 12 paired runs, each with
+eight exact target queries on one synthetic 1280×720 screenshot:
+
+| Local measured stage | One target at a time | One batch |
+| --- | ---: | ---: |
+| Image preparations | 96 | 12 |
+| Scripted OCR callback calls | 96 | 12 |
+| Median wall time for 8 targets | 246.135 ms | 36.034 ms |
+| Local stage speed ratio | | **6.83×** |
+
+The benchmark includes local image decode/prepare, scripted OCR callback,
+candidate scoring and proposal construction. It **excludes native Windows
+OCR time**, screenshot capture, tool and model network latency, agent
+reasoning, host clicks, application response and end-to-end task success.
+No real-world full-agent speed multiplier is established. Reproduce with
+`python benchmarks/screen_batch_benchmark.py` and
+`python -m unittest -q test_screen_batch`.
+
 ## 3. What would make Tavi competitive
 
 The primary optimization target is **verified completed work per token,
