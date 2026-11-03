@@ -1,0 +1,4204 @@
+{
+  "schema": "tavi-compact-preparation-local-v0.24",
+  "baseline_commit": "484b878541f2330a4ae477e81b65a5bfab6c4574",
+  "baseline_scope": "Original proposal function with common backward-compatible preparation helper; not full released app replay.",
+  "protocol_sha256": "809832f47b9c609c9610b00508ffd6ecc517d1e7a4818e8898040368f034022c",
+  "verification_sha256": "ee1274afe72d33c6d4a1272ead6b1438fc4a3729e4680c49febbdcef633226ca",
+  "paired_samples": 120,
+  "native_ocr_pairs": 6,
+  "fixtures": [
+    {
+      "name": "small",
+      "size": [
+        1200,
+        700
+      ]
+    },
+    {
+      "name": "resized",
+      "size": [
+        2400,
+        1400
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pairs": 20,
+      "median_ms": {
+        "baseline": {
+          "preparation": 23.5861,
+          "total": 31.81735
+        },
+        "updated": {
+          "preparation": 9.44375,
+          "total": 13.7375
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pairs": 20,
+      "median_ms": {
+        "baseline": {
+          "preparation": 23.2235,
+          "total": 31.19355
+        },
+        "updated": {
+          "preparation": 9.06785,
+          "total": 13.8365
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pairs": 20,
+      "median_ms": {
+        "baseline": {
+          "preparation": 23.2608,
+          "total": 37.88245
+        },
+        "updated": {
+          "preparation": 26.93945,
+          "total": 40.36095
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pairs": 20,
+      "median_ms": {
+        "baseline": {
+          "preparation": 93.43585,
+          "total": 110.5502
+        },
+        "updated": {
+          "preparation": 66.40295,
+          "total": 71.07915
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pairs": 20,
+      "median_ms": {
+        "baseline": {
+          "preparation": 96.0721,
+          "total": 113.53335
+        },
+        "updated": {
+          "preparation": 70.2998,
+          "total": 75.8521
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pairs": 20,
+      "median_ms": {
+        "baseline": {
+          "preparation": 98.98335,
+          "total": 130.7693
+        },
+        "updated": {
+          "preparation": 103.3292,
+          "total": 127.41935
+        }
+      }
+    }
+  ],
+  "limits": "Preparation and local proposal timings only, under concurrent CPU training. Excludes capture, real agent reasoning/review, network/hosted inference, live verification, actions and app response. No whole-agent speedup or field accuracy.",
+  "source_hashes": {
+    "tavi_compact.py": "03e08dca4395b3b04f2653151893bf749486234941f9a18cb28bbe628c3c928d",
+    "tavi_vision.py": "414146587f4a118113c4f6fe3e4372b219c7c98732e787082fa27de283b2142a",
+    "tavi_target.py": "17a4b7e1a74b834adbdedb0a7083dfb60fba92b4ffe11ca3d119951e32d0250b",
+    "tavi_actions.py": "70a3af863be31558775ea343868845f46d25a6484e53a74142bcf4159ae6c06d",
+    "screen_ocr.ps1": "f8e3f5589ef99c5937a836fca94674ab6e4ddf40656db1e40f5d6c59e6fdfdfc"
+  },
+  "samples": [
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 0,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 35247100,
+          "preparation_ns": 26750800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 26750800
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 12883000,
+          "preparation_ns": 8802400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8802400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 1,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 14252000,
+          "preparation_ns": 9823000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9823000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 33327200,
+          "preparation_ns": 25692700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25692700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 2,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30215400,
+          "preparation_ns": 23031900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23031900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 12716600,
+          "preparation_ns": 8698200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8698200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 3,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13895900,
+          "preparation_ns": 9852200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9852200
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 35794200,
+          "preparation_ns": 26626500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 26626500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 4,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 37315000,
+          "preparation_ns": 27349500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 27349500
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 15334900,
+          "preparation_ns": 11079700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 11079700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 5,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13782800,
+          "preparation_ns": 8890200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8890200
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 36040700,
+          "preparation_ns": 27227800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 27227800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 6,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 35161100,
+          "preparation_ns": 26704900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 26704900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 14501300,
+          "preparation_ns": 10011600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10011600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 7,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 16951500,
+          "preparation_ns": 12164100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 12164100
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 33095000,
+          "preparation_ns": 24931400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 24931400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 8,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 33892900,
+          "preparation_ns": 24443600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 24443600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 16222700,
+          "preparation_ns": 10901900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10901900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 9,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 15459400,
+          "preparation_ns": 9776200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9776200
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 29566600,
+          "preparation_ns": 22601800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22601800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 10,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 29266800,
+          "preparation_ns": 22490100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22490100
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 12880500,
+          "preparation_ns": 8353400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8353400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 11,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13052800,
+          "preparation_ns": 9285700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9285700
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 29548100,
+          "preparation_ns": 23005300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23005300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 12,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 28972100,
+          "preparation_ns": 22348800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22348800
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 12261000,
+          "preparation_ns": 8220900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8220900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 13,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 12553200,
+          "preparation_ns": 8596000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8596000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 29492600,
+          "preparation_ns": 22564000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22564000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 14,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30539700,
+          "preparation_ns": 22425400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22425400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 14376200,
+          "preparation_ns": 10150200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10150200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 15,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13692200,
+          "preparation_ns": 9601800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9601800
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 29726000,
+          "preparation_ns": 22384300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22384300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 16,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 29477600,
+          "preparation_ns": 22449600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22449600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 12840800,
+          "preparation_ns": 8347100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8347100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 17,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13043500,
+          "preparation_ns": 8791700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8791700
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 33341300,
+          "preparation_ns": 25062100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25062100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 18,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30043000,
+          "preparation_ns": 22927600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22927600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 14759900,
+          "preparation_ns": 10104200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10104200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "proposal_only",
+      "pair": 19,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 12910700,
+          "preparation_ns": 8763300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8763300
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 34066000,
+          "preparation_ns": 24140300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 24140300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 0,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 38320400,
+          "preparation_ns": 27389900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 27389900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 13786200,
+          "preparation_ns": 8073300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8073300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 1,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 15372800,
+          "preparation_ns": 9700600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9700600
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 31326800,
+          "preparation_ns": 22708000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22708000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 2,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 29595100,
+          "preparation_ns": 22418500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22418500
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 14172600,
+          "preparation_ns": 9742900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9742900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 3,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13786200,
+          "preparation_ns": 9125900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9125900
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 30707400,
+          "preparation_ns": 23244300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23244300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 4,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 33081600,
+          "preparation_ns": 26106800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 26106800
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 14698700,
+          "preparation_ns": 9920700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9920700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 5,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13214400,
+          "preparation_ns": 8737300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8737300
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 29446700,
+          "preparation_ns": 22239000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22239000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 6,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30941900,
+          "preparation_ns": 23471400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23471400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 16560100,
+          "preparation_ns": 9072200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9072200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 7,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13914600,
+          "preparation_ns": 9677800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9677800
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 31335100,
+          "preparation_ns": 22800400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22800400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 8,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30052000,
+          "preparation_ns": 22652800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22652800
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 13886800,
+          "preparation_ns": 9555300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9555300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 9,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 14306600,
+          "preparation_ns": 9885000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9885000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 33017800,
+          "preparation_ns": 23311700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23311700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 10,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30819100,
+          "preparation_ns": 22902900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22902900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 13533800,
+          "preparation_ns": 9035100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9035100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 11,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13346900,
+          "preparation_ns": 8642600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8642600
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 34063900,
+          "preparation_ns": 25863500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25863500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 12,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 30011900,
+          "preparation_ns": 22584900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22584900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 14463400,
+          "preparation_ns": 8950600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8950600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 13,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13086900,
+          "preparation_ns": 8662400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8662400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 34192500,
+          "preparation_ns": 25289800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25289800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 14,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 29906100,
+          "preparation_ns": 22655200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22655200
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 13581700,
+          "preparation_ns": 9010800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9010800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 15,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13567300,
+          "preparation_ns": 9063500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9063500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 31766600,
+          "preparation_ns": 23736000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23736000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 16,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 31529200,
+          "preparation_ns": 22893600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22893600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 12885900,
+          "preparation_ns": 8813900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8813900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 17,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 13000800,
+          "preparation_ns": 8696900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8696900
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 31060300,
+          "preparation_ns": 23497000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23497000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 18,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 31003800,
+          "preparation_ns": 23202700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23202700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 15506900,
+          "preparation_ns": 10943100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10943100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "text_review",
+      "pair": 19,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 16218400,
+          "preparation_ns": 11566500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 11566500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 37597800,
+          "preparation_ns": 27741500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 27741500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 0,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 45049700,
+          "preparation_ns": 25961700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25961700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 46277500,
+          "preparation_ns": 31497900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 14281900
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 17216000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 1,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 39017600,
+          "preparation_ns": 26551100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10574700
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 15976400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 39524100,
+          "preparation_ns": 25440400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25440400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 2,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 36437800,
+          "preparation_ns": 22130300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22130300
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 39986700,
+          "preparation_ns": 27114900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 11002400
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16112500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 3,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 37736000,
+          "preparation_ns": 24590900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8697300
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 15893600
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 37622400,
+          "preparation_ns": 23358700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23358700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 4,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 38933500,
+          "preparation_ns": 22267700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22267700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 43253900,
+          "preparation_ns": 29115500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10225800
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 18889700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 5,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 38854200,
+          "preparation_ns": 26121200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9749700
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16371500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 37311300,
+          "preparation_ns": 22940600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22940600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 6,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 36920000,
+          "preparation_ns": 23011700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23011700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 40329800,
+          "preparation_ns": 26354600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9885100
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16469500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 7,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 40392100,
+          "preparation_ns": 26445000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9989000
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16456000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 40569700,
+          "preparation_ns": 25208100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25208100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 8,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 37840100,
+          "preparation_ns": 23567200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23567200
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 46920900,
+          "preparation_ns": 32299200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 11637100
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 20662100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 9,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 43728200,
+          "preparation_ns": 31056100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10398300
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 20657800
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 39854400,
+          "preparation_ns": 25476600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 25476600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 10,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 37924800,
+          "preparation_ns": 24199600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 24199600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 43525400,
+          "preparation_ns": 30090700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 11624600
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 18466100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 11,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 43735900,
+          "preparation_ns": 30624500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10440100
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 20184400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 42973800,
+          "preparation_ns": 27656900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 27656900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 12,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 37739200,
+          "preparation_ns": 22939700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22939700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 39887800,
+          "preparation_ns": 25649000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9426000
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16223000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 13,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 40864400,
+          "preparation_ns": 27116000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9663000
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 17453000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 39145200,
+          "preparation_ns": 23312100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23312100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 14,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 39588500,
+          "preparation_ns": 22863800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22863800
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 41408600,
+          "preparation_ns": 27507700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 11586100
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 15921600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 15,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 38445500,
+          "preparation_ns": 26178900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9735500
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16443400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 37440400,
+          "preparation_ns": 22622600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22622600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 16,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 37153700,
+          "preparation_ns": 22940900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22940900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 38676300,
+          "preparation_ns": 24691200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 8714800
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 15976400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 17,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 44370500,
+          "preparation_ns": 30451600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9803000
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 20648600
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 38189800,
+          "preparation_ns": 24146300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 24146300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 18,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 37490000,
+          "preparation_ns": 23209500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 23209500
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 39618000,
+          "preparation_ns": 26764000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 10363300
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16400700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "small",
+      "path": "image_fallback",
+      "pair": 19,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 37405200,
+          "preparation_ns": 25182300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 9104300
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 16078000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 37495700,
+          "preparation_ns": 22924000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 22924000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 0,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 109304600,
+          "preparation_ns": 92490000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 92490000
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 69944600,
+          "preparation_ns": 65428400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65428400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 1,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 72524100,
+          "preparation_ns": 67153500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 67153500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 110267800,
+          "preparation_ns": 94019400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 94019400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 2,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 117655000,
+          "preparation_ns": 99895600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 99895600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 76307900,
+          "preparation_ns": 70364000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 70364000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 3,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 70658900,
+          "preparation_ns": 65741500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65741500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 110832600,
+          "preparation_ns": 93212200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 93212200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 4,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 108936400,
+          "preparation_ns": 93636900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 93636900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 73321300,
+          "preparation_ns": 68324100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 68324100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 5,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 71062400,
+          "preparation_ns": 66705000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66705000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 106385800,
+          "preparation_ns": 90532200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 90532200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 6,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 112234800,
+          "preparation_ns": 91505400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 91505400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 71095900,
+          "preparation_ns": 65866100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65866100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 7,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 73637100,
+          "preparation_ns": 66196400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66196400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 121429500,
+          "preparation_ns": 105373600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 105373600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 8,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 115166600,
+          "preparation_ns": 98737200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 98737200
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 70212200,
+          "preparation_ns": 66044200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66044200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 9,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 70694500,
+          "preparation_ns": 65033700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65033700
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 109507500,
+          "preparation_ns": 91783100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 91783100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 10,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 107513900,
+          "preparation_ns": 90947300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 90947300
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 71051500,
+          "preparation_ns": 66397900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66397900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 11,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 68577800,
+          "preparation_ns": 64101800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 64101800
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 113725700,
+          "preparation_ns": 98175300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 98175300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 12,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 123264100,
+          "preparation_ns": 103160300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 103160300
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 78660600,
+          "preparation_ns": 73278900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 73278900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 13,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 76562500,
+          "preparation_ns": 71186400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 71186400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 123605000,
+          "preparation_ns": 106798000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 106798000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 14,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 117637500,
+          "preparation_ns": 102231600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 102231600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 72557100,
+          "preparation_ns": 67163400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 67163400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 15,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 70782100,
+          "preparation_ns": 66345400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66345400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 107768000,
+          "preparation_ns": 93234800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 93234800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 16,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 109186700,
+          "preparation_ns": 92932200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 92932200
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 71044700,
+          "preparation_ns": 66408000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66408000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 17,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 68294100,
+          "preparation_ns": 63499500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 63499500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 108818900,
+          "preparation_ns": 92157200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 92157200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 18,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 108292000,
+          "preparation_ns": 91454400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 91454400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 72694800,
+          "preparation_ns": 67606400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 67606400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "proposal_only",
+      "pair": 19,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 75239700,
+          "preparation_ns": 70033100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 70033100
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 123639700,
+          "preparation_ns": 101251300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 101251300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 0,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 113931600,
+          "preparation_ns": 95513900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 95513900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 75681100,
+          "preparation_ns": 69984600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 69984600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 1,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 76879400,
+          "preparation_ns": 71615700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 71615700
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 111525100,
+          "preparation_ns": 95715800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 95715800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 2,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 113668400,
+          "preparation_ns": 97825600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 97825600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 79844300,
+          "preparation_ns": 74649800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 74649800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 3,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 71134800,
+          "preparation_ns": 65941800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65941800
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 109458000,
+          "preparation_ns": 90404800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 90404800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 4,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 115897100,
+          "preparation_ns": 98374000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 98374000
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 67255600,
+          "preparation_ns": 62502000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 62502000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 5,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 72153900,
+          "preparation_ns": 67380200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 67380200
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 115820300,
+          "preparation_ns": 96428400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 96428400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 6,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 117273200,
+          "preparation_ns": 101022400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 101022400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 74859700,
+          "preparation_ns": 68991300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 68991300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 7,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 71461200,
+          "preparation_ns": 65198800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65198800
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 109905100,
+          "preparation_ns": 92228100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 92228100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 8,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 104875500,
+          "preparation_ns": 89579600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 89579600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 78678300,
+          "preparation_ns": 73200700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 73200700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 9,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 76023100,
+          "preparation_ns": 70615000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 70615000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 117522400,
+          "preparation_ns": 97442300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 97442300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 10,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 110275500,
+          "preparation_ns": 94038600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 94038600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 75217700,
+          "preparation_ns": 69684400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 69684400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 11,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 80110000,
+          "preparation_ns": 74250700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 74250700
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 117072900,
+          "preparation_ns": 100023800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 100023800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 12,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 113398300,
+          "preparation_ns": 97952600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 97952600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 75005300,
+          "preparation_ns": 68605200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 68605200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 13,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 81125200,
+          "preparation_ns": 76139400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 76139400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 107718800,
+          "preparation_ns": 90170700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 90170700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 14,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 108106400,
+          "preparation_ns": 91938900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 91938900
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 76606800,
+          "preparation_ns": 71671900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 71671900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 15,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 77416000,
+          "preparation_ns": 72338400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 72338400
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 119195300,
+          "preparation_ns": 103266500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 103266500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 16,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 121341300,
+          "preparation_ns": 103299700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 103299700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 87066500,
+          "preparation_ns": 81439500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 81439500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 17,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 77170600,
+          "preparation_ns": 71646100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 71646100
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 108201300,
+          "preparation_ns": 92551600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 92551600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 18,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 104789800,
+          "preparation_ns": 89161600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 89161600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 68878800,
+          "preparation_ns": 63518800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 63518800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "text_review",
+      "pair": 19,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 75152700,
+          "preparation_ns": 69162200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 69162200
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 114969300,
+          "preparation_ns": 97443500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 97443500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 0,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 134915800,
+          "preparation_ns": 95071500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 95071500
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 124199700,
+          "preparation_ns": 102054800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 70437400
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 31617400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 1,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 125798600,
+          "preparation_ns": 102327600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 69228700
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 33098900
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 124610400,
+          "preparation_ns": 97701000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 97701000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 2,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 124614900,
+          "preparation_ns": 94292700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 94292700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 119526000,
+          "preparation_ns": 96098200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65846600
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 30251600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 3,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 117390000,
+          "preparation_ns": 94956700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 65601500
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 29355200
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 122914200,
+          "preparation_ns": 94778200,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 94778200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 4,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 135092400,
+          "preparation_ns": 103608700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 103608700
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 125920500,
+          "preparation_ns": 100533800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 69220100
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 31313700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 5,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 137172400,
+          "preparation_ns": 111014500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 75458500
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 35556000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 122038300,
+          "preparation_ns": 96424000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 96424000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 6,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 120729300,
+          "preparation_ns": 90383000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 90383000
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 126981300,
+          "preparation_ns": 104729800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 70402600
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 34327200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 7,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 142456700,
+          "preparation_ns": 110292600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 73521500
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 36771100
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 131583300,
+          "preparation_ns": 104184400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 104184400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 8,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 130708300,
+          "preparation_ns": 98285100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 98285100
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 130710900,
+          "preparation_ns": 105837500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 71680400
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 34157100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 9,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 134803700,
+          "preparation_ns": 110020100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 77581100
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 32439000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 132442400,
+          "preparation_ns": 101902900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 101902900
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 10,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 137649700,
+          "preparation_ns": 110008400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 110008400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 125611200,
+          "preparation_ns": 102793700,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 68713400
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 34080300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 11,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 117891500,
+          "preparation_ns": 94128100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 63703500
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 30424600
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 128141800,
+          "preparation_ns": 99681600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 99681600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 12,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 123337900,
+          "preparation_ns": 94969800,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 94969800
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 127921000,
+          "preparation_ns": 104232100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 72193700
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 32038400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 13,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 131453000,
+          "preparation_ns": 106094400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 71046400
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 35048000
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 128537100,
+          "preparation_ns": 98195600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 98195600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 14,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 138888400,
+          "preparation_ns": 105690400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 105690400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 126870000,
+          "preparation_ns": 103642400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 67890700
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 35751700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 15,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 133302400,
+          "preparation_ns": 107711500,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 75031000
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 32680500
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 134341500,
+          "preparation_ns": 106256300,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 106256300
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 16,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 137408300,
+          "preparation_ns": 104888600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 104888600
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 127857400,
+          "preparation_ns": 103016000,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 72522400
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 30493600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 17,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 129714500,
+          "preparation_ns": 104394600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 70814900
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 33579700
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 123786100,
+          "preparation_ns": 93768600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 93768600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 18,
+      "order": [
+        "baseline",
+        "updated"
+      ],
+      "timings": {
+        "baseline": {
+          "total_ns": 136168400,
+          "preparation_ns": 105431400,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 105431400
+            }
+          ]
+        },
+        "updated": {
+          "total_ns": 125144200,
+          "preparation_ns": 99388600,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 68744000
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 30644600
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fixture": "resized",
+      "path": "image_fallback",
+      "pair": 19,
+      "order": [
+        "updated",
+        "baseline"
+      ],
+      "timings": {
+        "updated": {
+          "total_ns": 130639600,
+          "preparation_ns": 100138100,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 66881200
+            },
+            {
+              "stage": "compact_fallback",
+              "ns": 33256900
+            }
+          ]
+        },
+        "baseline": {
+          "total_ns": 130830300,
+          "preparation_ns": 103427900,
+          "stages": [
+            {
+              "stage": "prepare",
+              "ns": 103427900
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "prior_attempts": [
+    {
+      "protocol_sha256": "4774cc98cb8054bd03e494fcae6d5fa9a0c87fe9a08b5e4c5750c77b80a7b110",
+      "report_sha256": "871f599cd1c840fafcab0300487278859e7be9b367f2a37562cc043398845bab",
+      "summary": [
+        {
+          "fixture": "small",
+          "path": "proposal_only",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 25.85395,
+              "total": 34.78545
+            },
+            "updated": {
+              "preparation": 14.08055,
+              "total": 28.73545
+            }
+          }
+        },
+        {
+          "fixture": "small",
+          "path": "text_review",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 23.98145,
+              "total": 32.58265
+            },
+            "updated": {
+              "preparation": 13.08595,
+              "total": 27.2384
+            }
+          }
+        },
+        {
+          "fixture": "small",
+          "path": "image_fallback",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 23.9991,
+              "total": 39.503
+            },
+            "updated": {
+              "preparation": 31.686,
+              "total": 54.0096
+            }
+          }
+        },
+        {
+          "fixture": "resized",
+          "path": "proposal_only",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 99.901,
+              "total": 117.78015
+            },
+            "updated": {
+              "preparation": 79.1342,
+              "total": 96.3256
+            }
+          }
+        },
+        {
+          "fixture": "resized",
+          "path": "text_review",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 99.02075,
+              "total": 116.083
+            },
+            "updated": {
+              "preparation": 76.81675,
+              "total": 94.8037
+            }
+          }
+        },
+        {
+          "fixture": "resized",
+          "path": "image_fallback",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 96.82075,
+              "total": 127.93025
+            },
+            "updated": {
+              "preparation": 115.31445,
+              "total": 151.66105
+            }
+          }
+        }
+      ]
+    },
+    {
+      "protocol_sha256": "b697fec28819e5e5bd13d06bfaaf0a7c1035d145c283564fcdf51111fa461d6e",
+      "report_sha256": "f62d56cfeaf4c751f7c913817710114ec00b7e5c6fb127871884a380e8244a96",
+      "summary": [
+        {
+          "fixture": "small",
+          "path": "proposal_only",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 25.1889,
+              "total": 33.3591
+            },
+            "updated": {
+              "preparation": 10.02965,
+              "total": 24.99465
+            }
+          }
+        },
+        {
+          "fixture": "small",
+          "path": "text_review",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 23.1113,
+              "total": 31.4391
+            },
+            "updated": {
+              "preparation": 9.41295,
+              "total": 24.7291
+            }
+          }
+        },
+        {
+          "fixture": "small",
+          "path": "image_fallback",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 24.55715,
+              "total": 40.109
+            },
+            "updated": {
+              "preparation": 31.00845,
+              "total": 55.77975
+            }
+          }
+        },
+        {
+          "fixture": "resized",
+          "path": "proposal_only",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 96.03435,
+              "total": 111.66975
+            },
+            "updated": {
+              "preparation": 68.7952,
+              "total": 87.29835
+            }
+          }
+        },
+        {
+          "fixture": "resized",
+          "path": "text_review",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 98.7225,
+              "total": 116.52905
+            },
+            "updated": {
+              "preparation": 71.15445,
+              "total": 90.97795
+            }
+          }
+        },
+        {
+          "fixture": "resized",
+          "path": "image_fallback",
+          "pairs": 20,
+          "median_ms": {
+            "baseline": {
+              "preparation": 95.10515,
+              "total": 123.8897
+            },
+            "updated": {
+              "preparation": 107.6562,
+              "total": 143.93905
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "selected_method": "Retained RGB pixels; all three attempts reported; no universal speed claim.",
+  "hosted_requests": 0,
+  "executed_actions": false
+}

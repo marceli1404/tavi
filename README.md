@@ -2,7 +2,7 @@
 
 # A small model. A clearer start.
 
-Tavi v0.23 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
+Tavi v0.24 is an open-source CPU model that recommends a workload tier, a Codex model and reasoning level, installed skills, and whether to look for another skill. An optional hybrid screenshot helper combines local Windows OCR with Codex vision.
 
 Tavi is a specialised classifier. Its role-to-model mapping is explicit policy, not a measured ranking of commercial models.
 
@@ -15,6 +15,10 @@ Explicit local target feedback is available in v0.20. Record target correctness 
 Optional inventory-bound route review can now select installed skills with
 unfamiliar names and distinguish direct host work from missing skills. Cache
 age checks also avoid timestamp rounding misses. See [v0.23 changes and limits](Features-v0.23.md).
+
+Screenshot proposals now reuse decoded pixels and compress an image only
+when fallback is needed. Local processing improved on two saved fixtures;
+fallback results were mixed. See [v0.24 measurements and limits](Features-v0.24.md).
 
 ## Install
 

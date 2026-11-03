@@ -18,9 +18,11 @@ SCHEMA = {'type':'object','additionalProperties':False,'properties':{
     'required':['summary','visible_text','target_candidates','uncertainties']}
 
 
-def prepare(path, destination, max_edge=1600, *, compression='compact', source_bytes=None):
-    if compression not in ('compact','fast'):
-        raise ValueError('Screenshot compression must be compact or fast')
+def prepare(path, destination, max_edge=1600, *, compression='compact', source_bytes=None, return_pixels=False):
+    if type(return_pixels) is not bool:
+        raise ValueError('return_pixels must be boolean')
+    if compression not in ('compact','fast','bitmap'):
+        raise ValueError('Screenshot compression must be compact, fast or bitmap')
     try:
         from PIL import Image, ImageOps
     except ImportError as error:
@@ -34,15 +36,23 @@ def prepare(path, destination, max_edge=1600, *, compression='compact', source_b
         image = ImageOps.exif_transpose(image).convert('RGB')
         original = image.size
         image.thumbnail((max_edge,max_edge), Image.Resampling.LANCZOS)
-        if compression=='compact':
+        if compression=='bitmap':
+            # Windows OCR can decode a lossless uncompressed local bitmap.
+            image.save(destination,format='BMP')
+        elif compression=='compact':
             image.save(destination, format='PNG', optimize=True)
         else:
             # Local OCR needs identical decoded pixels, not maximum compression.
             image.save(destination, format='PNG', optimize=False, compress_level=1)
         digest = hashlib.sha256(image.tobytes()).hexdigest()
-        return {'original_size':list(original),'prepared_size':list(image.size),
+        info={'original_size':list(original),'prepared_size':list(image.size),
                 'original_bytes':original_bytes,'prepared_bytes':destination.stat().st_size,
                 'pixels_sha256':digest}
+        if return_pixels:
+            # The caller owns this independent RGB image and must close it.
+            return info,image
+        image.close()
+        return info
 
 
 def local_ocr(image):

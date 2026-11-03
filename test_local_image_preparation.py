@@ -21,16 +21,27 @@ class LocalImagePreparationTests(unittest.TestCase):
             with Image.open(root/'compact.png') as first,Image.open(root/'fast.png') as second:
                 np.testing.assert_array_equal(np.asarray(first),np.asarray(second))
 
-    def test_image_upload_permission_keeps_compact_encoding(self):
+    def test_image_upload_permission_keeps_actual_upload_compact_and_pixels_identical(self):
         with tempfile.TemporaryDirectory() as folder:
-            source=Path(folder)/'source.png';Image.new('RGB',(640,480),'white').save(source)
-            ocr=lambda image:dict(status='available',words=[dict(text='Go',x=20,y=20,width=40,height=20)])
-            for fallback,expected in ((False,'fast'),(True,'compact')):
-                with patch('tavi_compact.prepare',wraps=prepare) as call:
-                    result=propose(source,'Press Go','Go',ocr_fn=ocr,allow_image_fallback=fallback)
-                self.assertEqual(call.call_args.kwargs['compression'],expected)
-                self.assertEqual(result['hosted_calls'],0)
-                self.assertFalse(result['auto_click']['candidate_eligible'])
+            root=Path(folder);source=root/'source.png';Image.new('RGB',(640,480),'white').save(source)
+            reference=prepare(source,root/'reference.png')
+            uploaded=[]
+            def vision(image,*args):
+                self.assertEqual(image.read_bytes()[:8],b'\x89PNG\r\n\x1a\n')
+                self.assertEqual(image.stat().st_size,reference['prepared_bytes'])
+                with Image.open(image) as actual,Image.open(root/'reference.png') as expected:
+                    self.assertEqual(actual.tobytes(),expected.tobytes())
+                uploaded.append(image.stat().st_size)
+                return dict(summary='Screen',visible_text=[],target_candidates=[],uncertainties=[])
+            empty_ocr=lambda image:dict(status='available',words=[])
+            for fallback,execute in ((False,False),(True,False),(False,True),(True,True)):
+                before=len(uploaded)
+                result=propose(source,'Press Go','Go',ocr_fn=empty_ocr,allow_image_fallback=fallback,execute=execute,vision_fn=vision)
+                expected_upload=fallback and execute
+                self.assertEqual(len(uploaded)-before,int(expected_upload))
+                self.assertEqual(result['image_bytes_sent'],reference['prepared_bytes'] if expected_upload else 0)
+                self.assertEqual(result['hosted_calls'],int(expected_upload))
+                self.assertFalse(result['executed_actions']);self.assertFalse(result['auto_click']['candidate_eligible'])
 
     def test_unknown_encoding_is_rejected_before_file_work(self):
         with self.assertRaisesRegex(ValueError,'compression'):
