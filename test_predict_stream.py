@@ -58,6 +58,46 @@ class WarmPredictTests(unittest.TestCase):
         self.assertEqual([x['prediction']['tier'] for x in events[1:]],
                          [events[1]['prediction']['tier']]*3)
 
+    def test_brief_retains_uncertainty_and_reduces_wire_size(self):
+        prompts = ['Say hello', 'Do it', 'Review a difficult concurrent algorithm']
+        requests = []
+        for i, prompt in enumerate(prompts):
+            requests.extend([{'id': str(i)+'-full', 'prompt': prompt},
+                             {'id': str(i)+'-brief', 'prompt': prompt, 'detail':'brief'}])
+        code, events = self.send(requests)
+        self.assertEqual(code, 0)
+        for i in range(len(prompts)):
+            full = events[2*i+1]['prediction']
+            brief = events[2*i+2]['prediction']
+            self.assertEqual(brief['tier'], full['tier'])
+            self.assertEqual(brief['tier_scores'], full['tier_scores'])
+            self.assertEqual(brief['skills'], full['skills'][:3])
+            for key in ('skill_threshold', 'external_score',
+                        'external_threshold', 'vocabulary_coverage'):
+                self.assertEqual(brief[key], full[key])
+            self.assertEqual(brief['quality']['review_recommended'],
+                             full['probabilities']['review_recommended'])
+            self.assertEqual(brief['quality']['review_reasons'],
+                             full['probabilities']['review_reasons'])
+            self.assertEqual(brief['quality']['status'],
+                             full['probabilities']['status'])
+            self.assertIs(brief['quality']['real_world_success_probability'], False)
+            encode = lambda obj: len(json.dumps(obj, ensure_ascii=False).encode('utf-8'))
+            self.assertLess(encode(events[2*i+2]), encode(events[2*i+1]))
+            self.assertFalse(events[2*i+2]['authorization_granted'])
+            self.assertFalse(events[2*i+2]['executed_actions'])
+
+    def test_brief_top_k_override_and_invalid_detail(self):
+        code, events = self.send([{'prompt':'Say hello', 'detail':'brief', 'top_k':8},
+                                  {'prompt':'Say hello', 'detail':'brief', 'top_k':0},
+                                  {'prompt':'Say hello', 'detail':'minimum'},
+                                  {'prompt':'Say hello'}])
+        self.assertEqual(code, 0)
+        self.assertEqual([len(events[1]['prediction']['skills']),
+                          len(events[2]['prediction']['skills'])], [8,0])
+        self.assertEqual(events[3]['status'], 'error')
+        self.assertEqual(events[4]['status'], 'predicted')
+
     def test_invalid_requests_do_not_poison_following_predictions(self):
         invalid = [
             {'prompt': ''}, {'prompt': 5}, {'prompt': 'Do it', 'execute': True},
