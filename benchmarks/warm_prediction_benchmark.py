@@ -12,6 +12,8 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from tavi_predict_stream import brief_prediction
 TAVI = ROOT/'tavi.py'
 PROMPTS = (
     'Fix a mobile navigation layout',
@@ -46,6 +48,7 @@ def main():
         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
         text=True, encoding='utf-8', cwd=ROOT)
     cold_times, warm_times = [], []
+    full_bytes, brief_bytes = [], []
     matched = True
     try:
         ready = json.loads(worker.stdout.readline())
@@ -79,6 +82,9 @@ def main():
             if streamed.get('status') != 'predicted':
                 raise RuntimeError(f'Stream prediction failed at case {index}')
             matched &= streamed['prediction'] == one_shot
+            full_bytes.append(len(json.dumps(streamed, separators=(',', ':')).encode('utf-8')))
+            brief = dict(streamed, prediction=brief_prediction(streamed['prediction']))
+            brief_bytes.append(len(json.dumps(brief, separators=(',', ':')).encode('utf-8')))
             cold_times.append(cold_ms); warm_times.append(warm_ms)
         worker.stdin.close()
         code = worker.wait(timeout=10)
@@ -101,7 +107,11 @@ def main():
         cold_median_ms=median(cold_times), warm_median_ms=median(warm_times),
         speedup_median_ratio=round(statistics.median(cold_times)/statistics.median(warm_times), 2),
         cold_min_ms=round(min(cold_times),3), warm_max_ms=round(max(warm_times),3),
-        predictions_equal=True, hosted_calls=0, model_tokens_measured=False,
+        predictions_equal=True, hosted_calls=0,
+        full_prediction_wire_bytes=sum(full_bytes),
+        brief_prediction_wire_bytes=sum(brief_bytes),
+        brief_wire_bytes_saved_pct=round(100*(1-sum(brief_bytes)/sum(full_bytes)), 2),
+        model_tokens_measured=False,
         end_to_end_computer_use_measured=False)
     print(json.dumps(report, indent=2))
 
