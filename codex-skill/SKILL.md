@@ -44,6 +44,16 @@ Use the driver's supported screenshot-to-file path without emitting an image whe
 
 For a sequence of screenshot-target steps on Windows, prefer one `python tavi.py propose-stream` process with stdin kept open. After its ready response, send JSON lines with image, task, target and an optional request id; each image produces a fresh compact packet. Apply the automatic-button policy below when enabled; otherwise review each packet in this current chat, then verify the current UI and act within the user request. The stream cannot invoke hosted review/upload/clicks, and never reuses a proceed response. Reusing OCR avoids repeated startup; the local twelve-image check measured about61ms warm versus468ms one-shot, excluding this agent's reasoning and input-action time.
 
+When several independent visible words should be inspected on the
+**same still-current screenshot**, send one stream request using `image`
+and a `targets` list of 1–16 `{id,task,target}` objects instead of
+repeating per-target OCR requests. Tavi prepares the image, recognises it
+and loads the target model once, returning separate proposals from one
+image hash. This is observation batching **not sequential action
+batching**: after the host executes even one click, reobserve and verify
+the new current screen. The batch cannot authorize any click, and the
+existing failed real-screen target confidence gate is unchanged.
+
 Keep the process only for the active computer-use session. Close stdin or stop it at the end so its owned OCR worker exits. On timeout or a broken worker, discard the failed observation and start a new session only when needed. One-shot propose remains suitable for isolated images. The runtime withholds explicit noninteractive phrases such as Illustration only; this narrow rule does not make synthetic target percentages field-validated. See Features-v0.12.md for protocol and limits.
 
 ### Automatic routine buttons at95% or higher
