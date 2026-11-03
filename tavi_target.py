@@ -100,8 +100,9 @@ def load(directory=DEFAULT):
         metadata['field_evaluation']=audit
     return metadata,arrays
 
-def score(items,directory=DEFAULT):
-    metadata,arrays=load(directory)
+def score_preloaded(items,artifact):
+    """Score independent OCR candidates with already integrity-checked weights."""
+    metadata,arrays=artifact
     for item in items:
         x=(np.array(item['features'])-arrays['mean'])/arrays['scale']
         logit=float(x@arrays['weight']+arrays['bias'].item())
@@ -111,3 +112,7 @@ def score(items,directory=DEFAULT):
         item['confidence_percent']=min(99.9,round(100*probability,1))
     items.sort(key=lambda item:-item['probability'])
     return items,metadata
+
+
+def score(items,directory=DEFAULT):
+    return score_preloaded(items,load(directory))
