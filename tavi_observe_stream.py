@@ -65,8 +65,10 @@ def run(input_stream=None, output_stream=None, session_factory=OcrSession, metri
                     parse_constant=lambda x: (_ for _ in ()).throw(ValueError('Non-finite JSON value')))
                 if not isinstance(request, dict) or not {'snapshot', 'queries'} <= set(request):
                     raise ValueError('Expected snapshot and queries')
-                if set(request) - {'id','snapshot','queries','image','detail','max_edge'}:
+                if set(request) - {'id','snapshot','queries','image','detail','max_edge','wire'}:
                     raise ValueError('Unsupported fields; no action or capture options')
+                if request.get('wire', 'full') not in ('full', 'planner') or type(request.get('wire', 'full')) is not str:
+                    raise ValueError('wire must be full or planner')
                 if 'id' in request:
                     request_id = request['id']
                     if not isinstance(request_id,str) or not request_id.strip() or len(request_id)>80:
@@ -92,13 +94,17 @@ def run(input_stream=None, output_stream=None, session_factory=OcrSession, metri
                               ocr_session_started=session is not None,
                               session_ocr_requests=session.requests if session is not None else 0,
                               observation_reused=False)
+                response = packet
+                if request.get('wire') == 'planner':
+                    from tavi_observe_wire import planner_packet
+                    response = planner_packet(packet)
                 if metrics is not None:
                     metrics.record_stage('stream_request', (time.perf_counter()-started)*1000)
-                    wire_bytes = len(json.dumps(packet, ensure_ascii=False,
+                    wire_bytes = len(json.dumps(response, ensure_ascii=False,
                                                 allow_nan=False, separators=(',', ':')).encode('utf-8'))
                     metrics.observe(packet, wire_bytes=wire_bytes)
-                    packet['telemetry'] = metrics.summary()
-                emit(packet)
+                    response['telemetry'] = metrics.summary()
+                emit(response)
             except (ValueError, TypeError, RuntimeError, OSError,
                     OverflowError, RecursionError) as error:
                 emit(dict(status='error', request_id=request_id, error=str(error),
