@@ -68,6 +68,25 @@ commercial-model tokens or whole-agent timings. Compare `full`,
 `compact`, and `matrix` against the same batch. Record the raw results from
 your actual host session before claiming a speedup.
 
+### First GitHub Actions result (3 November 2026)
+
+The Linux/Python 3.12 workflow at
+https://github.com/marceli1404/tavi/actions/runs/41616125275 passed all
+22 focused tests. Its 64-query synthetic JSON measurements were:
+
+| Format | UTF-8 bytes |
+| --- | ---: |
+| Full v1 | 48,436 |
+| Existing compact v1 | 24,279 |
+| New matrix v1 | 18,294 |
+
+Matrix output was **62.23% smaller than full** and **24.65% smaller than
+existing compact**. Local conversion medians were 0.62917 ms for compact
+and 0.67294 ms for matrix on that CI runner. Thus matrix conversion itself
+was slightly slower, not faster. Real LLM token counts and end-to-end
+computer-use latency are still unmeasured; JSON bytes are only a proxy.
+
+
 ## 3. What would make Tavi competitive
 
 The primary optimization target is **verified completed work per token,
