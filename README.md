@@ -53,6 +53,40 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Native Windows Computer integration (experimental)
+
+Tavi includes a **read-only Windows UI Automation helper** for authorised
+Computer hosts. It searches one approved application's accessibility controls
+for an exact target name and role, sends a compact, non-authoritative planner
+hint, and can perform a fresh **read-only** control recheck. A persistent
+JSON-lines worker avoids restarting the helper for each observation.
+The host still owns observation requirements, user permission, actual
+clicks and outcome verification. This repository **does not** install or
+connect itself to the ChatGPT Computer runtime.
+
+On an authorised Windows machine, optional native support is installed
+separately:
+
+```powershell
+py -m pip install -r requirements-native-windows.txt
+py -m tavi_native_stream --window-handle 123456
+```
+
+Replace the example handle with a window handle explicitly approved by the
+trusted Computer host; this is *not* a command for model-controlled window
+discovery. Windows version and locale can change accessible control roles
+(for example, "Favorites" may not be a tab). The helper refuses to authorise
+native actions even when a match is exact.
+
+[Native adapter, scope and safety contracts](Features-computer-native-integration.md)
+and [host-measured Computer-vs-Tavi evaluation protocol](Features-computer-native-ab.md)
+describe the two phases. The paired evaluator in
+`benchmarks/computer_agent_ab.py` requires **real host-reported** full-task
+outcomes, identical planner/executor/environment settings, and actual
+provider-reported tokens to make a token comparison. CI tests only the
+protocol and synthetic fixtures; **no end-to-end Windows Computer A/B speed
+or billed-token saving is claimed**.
+
 ## Consented computer-use field evaluation and safe training
 
 Tavi can now compare full-task **host-verified** results, instead of
