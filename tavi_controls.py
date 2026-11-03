@@ -39,13 +39,14 @@ def _query(task, target, role, context, offline):
 
 class ControlIndex:
     """Copied single-observation facts; queries never imply live control trust."""
-    __slots__ = ('_by_role','_by_context','_captured','_source','_snapshot_id','_snapshot_sha256')
+    __slots__ = ('_by_role','_by_context','_context_indexed','_captured','_source','_snapshot_id','_snapshot_sha256')
 
     @property
     def snapshot_sha256(self):
         return self._snapshot_sha256
 
-    def __init__(self, snapshot):
+    def __init__(self, snapshot, *, context_index=True):
+        if type(context_index) is not bool: raise ValueError('context_index must be boolean')
         if not isinstance(snapshot, dict) or snapshot.get('format') != FORMAT:
             raise ValueError('Unsupported control snapshot')
         _text(snapshot.get('snapshot_id'), 'snapshot ID', 200)
@@ -78,9 +79,11 @@ class ControlIndex:
             record = (ident, label, c['role'], (x,y,w,h), context, eligible)
             key = (normalized(label), c['role'])
             by_role.setdefault(key, []).append(record)
-            by_context.setdefault((*key,normalized(context)), []).append(record)
+            if context_index:
+                by_context.setdefault((*key,normalized(context)), []).append(record)
         self._by_role = MappingProxyType({k:tuple(v) for k,v in by_role.items()})
         self._by_context = MappingProxyType({k:tuple(v) for k,v in by_context.items()})
+        self._context_indexed = context_index
         self._captured = captured
         self._source = snapshot['source']; self._snapshot_id = snapshot['snapshot_id']
         self._snapshot_sha256 = hashlib.sha256(json.dumps(snapshot, sort_keys=True, ensure_ascii=False,
@@ -88,6 +91,8 @@ class ControlIndex:
 
     def resolve(self, task, target, *, role='button', context=None, offline=False, now=None):
         _query(task, target, role, context, offline)
+        if context is not None and not self._context_indexed:
+            raise ValueError('This prepared index cannot resolve context-scoped queries')
         # A prepared index does not reset freshness or skip future-clock checks.
         age = ((now or datetime.now(timezone.utc))-self._captured).total_seconds()
         key = (normalized(target), role)
@@ -198,7 +203,11 @@ def resolve_many(snapshot, queries, *, offline=False, now=None):
             if q['id'] in ids: raise ValueError('Duplicate query ID')
             ids.add(q['id'])
         _query(q['task'],q['target'],q.get('role','button'),q.get('context'),offline)
-    index = ControlIndex(snapshot)
+    # Skip the *unused* context index for unscoped batch lookups. Full
+    # snapshot validation and canonical SHA-256 binding remain unchanged.
+    index = ControlIndex(snapshot, context_index=any(q.get('context') is not None for q in queries))
+    # A single clock reading prevents per-query drift and reduces overhead.
+    if now is None: now = datetime.now(timezone.utc)
     proposals = []
     for q in queries:
         result = index.resolve(q['task'],q['target'],role=q.get('role','button'),context=q.get('context'),offline=offline,now=now)
