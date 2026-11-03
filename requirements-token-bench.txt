@@ -1,0 +1,2 @@
+# Optional benchmark-only BPE token counter. Never used for billed-token estimates.
+tiktoken==0.12.0
