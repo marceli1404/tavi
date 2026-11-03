@@ -106,11 +106,23 @@ PYTHONPATH=. python benchmarks/context_index_efficiency.py --iterations 35
 python -m unittest -q test_context_index_efficiency test_control_index
 ```
 
+[Verified CI run 41680828456](https://github.com/marceli1404/tavi/actions/runs/41680828456)
+passed **408 offline tests**, plus the real Chromium fixture and matched
+screenshot-vs-DOM evaluation.
+
+| Controls in snapshot | Full index median | Unscoped-only index median | Relative speed |
+|---:|---:|---:|---:|
+| 64 | 0.400 ms | 0.340 ms | 1.176× |
+| 512 | 2.899 ms | 2.377 ms | 1.220× |
+| 2,048 | 12.047 ms | 9.698 ms | 1.242× |
+
 The benchmark compares identical 16-query workloads against host
-inventories of 64, 512 and 2,048 synthetic controls. It compares the
-original full index against context-index elision using the same pinned
-observation time for **measurement only**, and verifies exact proposal
-identity and snapshot digest parity. Runtime remains per-query fresh.
+inventories of 64, 512 and 2,048 synthetic controls, across 35 iterations.
+It compares the original full index against context-index elision using
+the same pinned observation time for **measurement only**, and verifies
+exact proposal identity and snapshot digest parity. Runtime still checks
+freshness separately for every query. Timings exclude the browser, planner,
+hosted model, network and actions.
 
 ## 4. Next efficiency checks
 
