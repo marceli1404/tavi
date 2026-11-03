@@ -97,6 +97,9 @@ class ScreenshotBatchTests(unittest.TestCase):
         one['image']['prepared_size'][0]=999
         self.assertNotEqual(two['image']['prepared_size'][0],999)
         self.assertIsNot(one['review_packet'],two['review_packet'])
+        self.assertIsNot(one['confidence'],two['confidence'])
+        if isinstance(one['confidence']['field_evaluation'],dict):
+            self.assertIsNot(one['confidence']['field_evaluation'],two['confidence']['field_evaluation'])
 
     def test_stream_batch_mode_never_uses_auto_click_or_hosted_review(self):
         class Session:
