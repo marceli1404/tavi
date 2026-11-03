@@ -4,14 +4,22 @@ on:
   push:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_predict_stream.py'
+      - 'tavi.py'
       - 'test_control_*.py'
+      - 'test_predict_stream.py'
       - 'benchmarks/control_matrix_benchmark.py'
+      - 'benchmarks/warm_prediction_benchmark.py'
       - '.github/workflows/computer-use-wire.yml'
   pull_request:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_predict_stream.py'
+      - 'tavi.py'
       - 'test_control_*.py'
+      - 'test_predict_stream.py'
       - 'benchmarks/control_matrix_benchmark.py'
+      - 'benchmarks/warm_prediction_benchmark.py'
       - '.github/workflows/computer-use-wire.yml'
 
 permissions:
@@ -26,7 +34,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install model runtime
+        run: python -m pip install -r requirements.txt
       - name: Run control-protocol regressions
         run: python -m unittest -q test_control_matrix test_control_compact test_control_stream test_control_index
-      - name: Check benchmark and round trip
+      - name: Run warm prediction parity tests
+        run: python -m unittest -q test_predict_stream
+      - name: Check control benchmark and round trip
         run: python benchmarks/control_matrix_benchmark.py
+      - name: Measure warm prediction against cold CLI
+        run: python benchmarks/warm_prediction_benchmark.py
