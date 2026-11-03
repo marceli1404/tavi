@@ -23,3 +23,14 @@ Five targeted tests cover direct batch-result parity, null probability/no author
 ## Optional compact batches (v0.22)
 
 Use `"compact": true` for multi-query response factoring. Every field remains recoverable; the default format is unchanged. See [the compact format](Features-control-compact.md).
+
+
+## Columnar matrix mode (computer-use efficiency track)
+
+The stream additionally accepts `"compact": "matrix"` to return a lossless
+`tavi-control-matrix-v1` response with common proposal fields once, ordered
+`columns`, and per-query `rows`. Import `expand_matrix` from
+`tavi_control_matrix` to restore the original batch response. The default
+format and boolean `compact` mode are unchanged. Every request still supplies
+a new observation and every candidate still needs current host re-verification.
+See [Features-computer-use-efficiency.md](Features-computer-use-efficiency.md).
