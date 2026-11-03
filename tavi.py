@@ -251,7 +251,8 @@ def main():
     controls_batch.add_argument('queries', type=Path)
     controls_batch.add_argument('--offline', action='store_true', help='Replay only; every proposal still requires a live host check')
     sub.add_parser('target-controls-stream', help='Reuse local resolver startup; fresh control snapshot required per JSON-line request; never acts')
-    sub.add_parser('observe-stream', help='DOM/accessibility first; OCR only on fresh, missing host controls; never captures or clicks')
+    observe_stream = sub.add_parser('observe-stream', help='DOM/accessibility first; OCR only on fresh, missing host controls; never captures or clicks')
+    observe_stream.add_argument('--metrics', action='store_true', help='Opt in to aggregate numeric-only request timings, route counts and UTF-8 bytes; no task content recorded')
     sub.add_parser('propose-stream', help='Keep local OCR warm for JSON-lines screenshot requests; no hosted calls or clicks')
     proposal = sub.add_parser('propose', help='Local target percentage and compact Codex review packet; never clicks')
     proposal.add_argument('image', type=Path)
@@ -373,7 +374,8 @@ def main():
             except KeyboardInterrupt: return 130
         if args.command == 'observe-stream':
             from tavi_observe_stream import run
-            try: return run()
+            from tavi_metrics import UsageMetrics
+            try: return run(metrics=UsageMetrics() if args.metrics else None)
             except KeyboardInterrupt: return 130
         if args.command == 'target-controls':
             from tavi_controls import resolve_file
