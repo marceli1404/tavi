@@ -86,7 +86,9 @@ def run(*, repeats=5):
             native_uia_plus_tavi_median_ms=round(statistics.median(routed),3),
             native_uia_plus_tavi_times_ms=[round(value,3) for value in routed])
         return report
-    except (ImportError, OSError, RuntimeError, Exception) as exc:
+    except AssertionError:
+        raise
+    except Exception:
         # Never expose potentially sensitive native/UI exception detail.
         report['reason']='unsupported_interactive_environment_or_uia'
         report['status']='not_measured'
