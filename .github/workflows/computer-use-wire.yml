@@ -31,6 +31,12 @@ on:
       - 'benchmarks/observe_planner_tokens_benchmark.py'
       - 'test_observe_planner_tokens_benchmark.py'
       - 'requirements-token-bench.txt'
+      - 'tavi_native_uia.ps1'
+      - 'tavi_computer_native.py'
+      - 'tavi_computer_compare.py'
+      - 'test_computer_native.py'
+      - 'test_computer_compare.py'
+      - 'benchmarks/windows_native_smoke.py'
       - 'tavi_observe.py'
       - 'tavi_observe_stream.py'
       - 'tavi_browser_snapshot.py'
@@ -83,6 +89,12 @@ on:
       - 'benchmarks/observe_planner_tokens_benchmark.py'
       - 'test_observe_planner_tokens_benchmark.py'
       - 'requirements-token-bench.txt'
+      - 'tavi_native_uia.ps1'
+      - 'tavi_computer_native.py'
+      - 'tavi_computer_compare.py'
+      - 'test_computer_native.py'
+      - 'test_computer_compare.py'
+      - 'benchmarks/windows_native_smoke.py'
       - 'tavi_observe.py'
       - 'tavi_observe_stream.py'
       - 'tavi_browser_snapshot.py'
@@ -150,6 +162,8 @@ jobs:
         run: PYTHONPATH=. python benchmarks/context_index_efficiency.py --iterations 35
       - name: Test native Computer window scope, stale/replay safety and paired field evidence
         run: python -m unittest -q test_native_windows_uia test_native_ab_report
+      - name: Verify read-only native Computer protocol and consented comparison rules
+        run: python -m unittest -q test_computer_native test_computer_compare
       - name: Run complete offline test suite
         run: python -m unittest -q
       - name: Validate portable release includes new features
@@ -236,3 +250,27 @@ jobs:
         run: python -c "import uiautomation; from tavi_windows_uia import _RealUIA; _RealUIA()"
       - name: Test single-window scope and read-only native workflow contracts
         run: python -m unittest -q test_native_windows_uia test_native_ab_report
+
+  windows-native-smoke:
+    name: Real Windows UI Automation (generated fixture, read-only)
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate native Computer protocol safety without a GUI requirement
+        run: python -m unittest -q test_computer_native test_computer_compare
+      - name: Try real UI Automation on a generated local Tk button
+        shell: pwsh
+        run: |
+          python -m benchmarks.windows_native_smoke --repeats 5 | Out-File -Encoding utf8 native-uia-smoke.json
+          Get-Content native-uia-smoke.json
+      - name: Preserve measured vs not-measured native Windows evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tavi-windows-native-smoke
+          path: native-uia-smoke.json
+          if-no-files-found: warn
