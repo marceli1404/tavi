@@ -20,6 +20,27 @@ def _unique_object(pairs):
     return result
 
 
+def brief_prediction(prediction, top_k=3):
+    """Small advisory payload; retains uncertainty and never grants authority.
+
+    Unlike the full prediction this intentionally omits verbose calibration
+    diagnostics. Consumers needing that evidence must request detail='full'.
+    """
+    quality = prediction['probabilities']
+    return dict(tier=prediction['tier'], tier_scores=prediction['tier_scores'],
+                skills=prediction['skills'][:top_k],
+                skill_threshold=prediction['skill_threshold'],
+                external_score=prediction['external_score'],
+                external_threshold=prediction['external_threshold'],
+                vocabulary_coverage=prediction['vocabulary_coverage'],
+                quality=dict(status=quality['status'],
+                             calibration_context=quality['calibration_context'],
+                             review_recommended=quality['review_recommended'],
+                             review_reasons=quality['review_reasons'],
+                             affects_routing=False,
+                             real_world_success_probability=False))
+
+
 def run(model, input_stream=None, output_stream=None):
     """Serve independent prompt predictions; use the same infer path as CLI."""
     input_stream = sys.stdin if input_stream is None else input_stream
@@ -50,7 +71,7 @@ def run(model, input_stream=None, output_stream=None):
         try:
             request = json.loads(line, object_pairs_hook=_unique_object,
                                  parse_constant=lambda x: (_ for _ in ()).throw(ValueError('Non-finite JSON value')))
-            if not isinstance(request, dict) or set(request) - {'id', 'prompt', 'top_k'}:
+            if not isinstance(request, dict) or set(request) - {'id', 'prompt', 'top_k', 'detail'}:
                 raise ValueError('Expected prompt, optional ID and top_k only')
             if 'id' in request:
                 request_id = request['id']
@@ -60,11 +81,15 @@ def run(model, input_stream=None, output_stream=None):
             prompt = request.get('prompt')
             if not isinstance(prompt, str) or not prompt.strip() or len(prompt) > 16000:
                 raise ValueError('Prompt must contain 1–16000 characters')
-            top_k = request.get('top_k', 8)
+            detail = request.get('detail', 'full')
+            if detail not in ('full', 'brief') or type(detail) is not str:
+                raise ValueError('detail must be full or brief')
+            top_k = request.get('top_k', 3 if detail == 'brief' else 8)
             if type(top_k) is not int or not 0 <= top_k <= 8:
                 raise ValueError('top_k must be an integer in 0–8')
             prediction = model.infer(prompt)
-            prediction['skills'] = prediction['skills'][:top_k]
+            prediction = (brief_prediction(prediction, top_k) if detail == 'brief'
+                          else dict(prediction, skills=prediction['skills'][:top_k]))
             emit(dict(status='predicted', request_id=request_id,
                       format='tavi-predict-stream-v1',
                       model_artifact=model.metadata['weights_sha256'],
