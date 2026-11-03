@@ -57,7 +57,7 @@ def _brief_visual(proposal):
 
 
 def dispatch(snapshot, queries, *, image=None, ocr_fn=None, max_edge=1600,
-             detail='brief', now=None):
+             detail='brief', now=None, metrics=None):
     """Resolve current controls first; OCR only absent supported-host text.
 
     For ambiguous, disabled, stale or future controls we do NOT bypass the
@@ -75,7 +75,10 @@ def dispatch(snapshot, queries, *, image=None, ocr_fn=None, max_edge=1600,
 
     started = time.perf_counter()
     path = _validate_image(image, snapshot)
+    resolve_started = time.perf_counter()
     facts = resolve_many(snapshot, queries, now=now)
+    if metrics is not None:
+        metrics.record_stage('dom_resolve', (time.perf_counter()-resolve_started)*1000)
     routes = []
     fallback = []
     for index, (query, proposal) in enumerate(zip(queries, facts['proposals'])):
@@ -111,7 +114,10 @@ def dispatch(snapshot, queries, *, image=None, ocr_fn=None, max_edge=1600,
         targets = [{'id': str(index), 'task': q['task'], 'target': q['target']}
                    for index, q in fallback]
         # This calls OCR exactly once, even for multiple missing targets.
+        visual_started = time.perf_counter()
         visual_batch = propose_batch(path, targets, max_edge=max_edge, ocr_fn=ocr_fn)
+        if metrics is not None:
+            metrics.record_stage('visual_fallback', (time.perf_counter()-visual_started)*1000)
         if (visual_batch['image_preparations'] != 1
                 or visual_batch['ocr_passes'] != 1
                 or len(visual_batch['proposals']) != len(fallback)
