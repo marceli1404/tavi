@@ -61,7 +61,9 @@ When the supported computer-use driver supplies current control identities, Tavi
 python tavi.py target-controls-batch snapshot.json queries.json --offline
 ```
 
-Offline mode is replay only. Fresh proposals still require the driver to verify the live control before acting. A lookup does not grant permission or predict success. In a preparation-only test of 12 queries across 1,000 supplied controls, batching reduced median lookup preparation from 42.19 ms to 5.07 ms. Capture, process startup, agent reasoning, clicks and app response are excluded. See [v0.18 results and examples](Features-v0.18.md).
+Offline mode is replay only. Fresh proposals still require the driver to verify the live control before acting. A lookup does not grant permission or predict success.
+
+For repeated host-control observations, the warm `target-controls-stream` also accepts an opt-in `"compact": "matrix"` format. It factors repeated proposal fields into a columnar representation, preserving all original checks and allowing exact reconstruction with `expand_matrix`. This reduces payload size for multi-query agent loops without changing confidence, permissions or model weights. See [computer-use efficiency](Features-computer-use-efficiency.md) for the benchmark and training plan. In a preparation-only test of 12 queries across 1,000 supplied controls, batching reduced median lookup preparation from 42.19 ms to 5.07 ms. Capture, process startup, agent reasoning, clicks and app response are excluded. See [v0.18 results and examples](Features-v0.18.md).
 
 ## Screenshots: local and hosted
 
