@@ -4,6 +4,12 @@ on:
   push:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_field_data.py'
+      - 'tavi_provider_usage.py'
+      - 'tavi_escalation_train.py'
+      - 'test_field_data.py'
+      - 'test_provider_usage.py'
+      - 'test_escalation_train.py'
       - 'tavi_metrics.py'
       - 'tavi_browser_eval.py'
       - 'test_metrics.py'
@@ -34,6 +40,12 @@ on:
   pull_request:
     paths:
       - 'tavi_control_*.py'
+      - 'tavi_field_data.py'
+      - 'tavi_provider_usage.py'
+      - 'tavi_escalation_train.py'
+      - 'test_field_data.py'
+      - 'test_provider_usage.py'
+      - 'test_escalation_train.py'
       - 'tavi_metrics.py'
       - 'tavi_browser_eval.py'
       - 'test_metrics.py'
@@ -94,6 +106,8 @@ jobs:
         run: python benchmarks/dom_first_benchmark.py
       - name: Test privacy-safe metrics and local browser evaluation policy
         run: python -m unittest -q test_metrics test_browser_eval
+      - name: Test consented evidence, actual provider usage and held-out advisory training
+        run: python -m unittest -q test_field_data test_provider_usage test_escalation_train
       - name: Run complete offline test suite
         run: python -m unittest -q
       - name: Validate portable release includes new features
