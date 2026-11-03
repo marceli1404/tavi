@@ -63,9 +63,10 @@ class IndexedLookupTests(unittest.TestCase):
             with self.subTest(option=value),self.assertRaises(ValueError):
                 ControlIndex(original,context_index=value)
 
-    def test_identical_age_for_queries_in_same_batch(self):
+    def test_explicit_time_source_is_preserved_for_all_queries(self):
         state=snapshot(32)
-        result=resolve_many(state,queries(32))
+        fixed_now=datetime.now(timezone.utc)
+        result=resolve_many(state,queries(32),now=fixed_now)
         ages={entry['age_seconds'] for entry in result['proposals']}
         self.assertEqual(len(ages),1)
 
