@@ -53,6 +53,8 @@ class UsageMetrics:
         self._providers = Counter()
         self._provider_calls = 0
         self._provider_usage_missing = 0
+        self._provider_cache_missing = 0
+        self._provider_cache_reported = 0
 
     def record_stage(self, stage, elapsed_ms):
         if stage not in STAGES:
@@ -118,11 +120,10 @@ class UsageMetrics:
         else:
             _nonnegative(input_tokens,'input_tokens',integer=True)
             _nonnegative(output_tokens,'output_tokens',integer=True)
-            if cached_input_tokens is None:
-                cached_input_tokens=0
-            _nonnegative(cached_input_tokens,'cached_input_tokens',integer=True)
-            if cached_input_tokens>input_tokens:
-                raise ValueError('cached_input_tokens exceeds input_tokens')
+            if cached_input_tokens is not None:
+                _nonnegative(cached_input_tokens,'cached_input_tokens',integer=True)
+                if cached_input_tokens>input_tokens:
+                    raise ValueError('cached_input_tokens exceeds input_tokens')
         if elapsed_ms is not None:
             _nonnegative(elapsed_ms,'model latency')
         self._provider_calls += 1
@@ -131,7 +132,11 @@ class UsageMetrics:
         else:
             self._providers['input_tokens'] += input_tokens
             self._providers['output_tokens'] += output_tokens
-            self._providers['cached_input_tokens'] += cached_input_tokens
+            if cached_input_tokens is None:
+                self._provider_cache_missing += 1
+            else:
+                self._providers['cached_input_tokens'] += cached_input_tokens
+                self._provider_cache_reported += 1
             self._providers['metered_calls'] += 1
         if elapsed_ms is not None:
             self.record_stage('host_model', elapsed_ms)
@@ -163,7 +168,10 @@ class UsageMetrics:
                 'input': self._providers['input_tokens'] if self._providers['metered_calls'] else None,
                 'output': self._providers['output_tokens'] if self._providers['metered_calls'] else None,
                 'cached_input': (self._providers['cached_input_tokens']
-                                 if self._providers['metered_calls'] else None),
+                                 if self._provider_cache_reported and not self._provider_cache_missing else None),
+                'cached_input_status': ('unavailable' if not self._provider_cache_reported
+                                        else 'partial' if self._provider_cache_missing else 'reported'),
+                'cached_input_measured_calls': self._provider_cache_reported,
             },
             'actual_model_tokens_measured': self._providers['metered_calls'] > 0,
             'screenshot_bytes_recorded': 0,
