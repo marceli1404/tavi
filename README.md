@@ -53,6 +53,37 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Reuse CPU predictions during long computer-use sessions
+
+The offline `predict-stream` mode loads a verified Tavi model once, then
+serves independent JSON-line predictions without reloading Python/NumPy and
+model weights each time:
+
+```sh
+python tavi.py predict-stream
+```
+
+Submit one JSON object per line on stdin. For example:
+
+```json
+{"id":"step-1","prompt":"Find the Settings button","detail":"brief"}
+```
+
+Full output matches `python tavi.py predict "Find the Settings button"`
+(with the same default eight skill suggestions). Optional `"detail":"brief"`
+returns a smaller advisory response with the tier distribution, skill scores,
+thresholds, vocabulary coverage, and **all review reasons** preserved; it
+defaults to the top three skills. `"top_k":0` through `8` is supported.
+Neither output authorizes actions or claims task-success probability.
+The model is not retrained; actual computer-use actions still require a
+supported host, current UI checks, and permission verification.
+
+`python benchmarks/warm_prediction_benchmark.py` compares real local cold
+CLI processes against warm predictions, checks exact full-output parity,
+and reports brief-format JSON-byte savings. It does not measure hosted token
+billing, model quality, or end-to-end computer-use speed.
+See [computer-use efficiency](Features-computer-use-efficiency.md).
+
 ## Exact host controls
 
 When the supported computer-use driver supplies current control identities, Tavi can resolve exact labels and roles without interpreting an image. For several lookups from one observation:
