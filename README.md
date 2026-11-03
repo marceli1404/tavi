@@ -53,6 +53,82 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## DOM/accessibility-first computer use
+
+Tavi can now route fresh **host-provided browser controls** before requesting
+any screenshot/OCR work:
+
+```sh
+python tavi.py observe-stream
+```
+
+Send an independent JSON object per line:
+
+```json
+{
+  "id": "step-1",
+  "snapshot": {
+    "format": "tavi-control-snapshot-v1",
+    "snapshot_id": "fresh-host-observation-1",
+    "captured_at": "2026-11-03T10:00:00+00:00",
+    "source": "supported_browser_dom",
+    "viewport": [1280, 720],
+    "controls": [{
+      "id": "settings-button",
+      "label": "Settings",
+      "role": "button",
+      "context": "Toolbar",
+      "visible": true,
+      "enabled": true,
+      "bounds": [30, 40, 130, 42]
+    }]
+  },
+  "queries": [
+    {"id": "settings", "task": "Inspect Settings", "target": "Settings"},
+    {"id": "help", "task": "Inspect Help", "target": "Help"}
+  ]
+}
+```
+
+*The timestamp is only an example.* A real request **must** use a
+host-captured observation no older than five seconds, with a new
+`snapshot_id` for each request. The output routes Settings to
+`host_control` without reading a screenshot, and Help to
+`needs_screenshot`. When the trusted host has a same-observation screenshot
+for an unresolved target, supply
+`"image":{"path":"C:/screenshots/current.png","snapshot_id":"fresh-host-observation-1"}`.
+The stream then lazily starts the Windows OCR worker and processes **only**
+missing supported controls. Several missing targets share one OCR pass.
+Only `button`, `link`, `tab`, and `menuitem` names use this text-based
+fallback. Disabled, ambiguous, stale or future observations do not get
+overridden by OCR.
+
+An optional *read-only* Playwright adapter is available to the host:
+
+```python
+from tavi_browser_snapshot import capture_controls
+from tavi_observe import dispatch
+
+snapshot = capture_controls(page)  # page is the trusted host's live Playwright Page
+result = dispatch(snapshot, [
+    {"id": "settings", "task": "Inspect Settings",
+     "target": "Settings", "role": "button"}
+])
+```
+
+The adapter reads an approximate accessible name, role, visibility,
+enabled state, bounds and group context. It never clicks, starts a browser
+or reads user-entered form values. It is **not** a complete accessibility
+tree or a guarantee of the actual browser state. A host that uses the
+Playwright page remains responsible for a fresh control locator,
+authorization, execution and verification. Observations can never be
+replayed as a click sequence or used to bypass confirmation.
+
+This is a **deterministic escalation policy**, not newly trained model
+weights. The first benchmarks use synthetic DOM records and scripted OCR,
+not a real browser, real Windows OCR or end-to-end desktop tasks. See
+[computer-use efficiency](Features-computer-use-efficiency.md).
+
 ## Batch screenshot proposals from one observation
 
 For several targets on the **same unchanged screenshot**, keep the local
