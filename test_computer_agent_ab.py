@@ -76,7 +76,7 @@ class ComputerAgentABTests(unittest.TestCase):
         for changed in ('planner_id','executor_id','environment_id',
                         'task_family','task_source'):
             altered=row('computer_tavi')
-            altered[changed]='other' if changed not in ('task_family','task_source') else (
+            altered[changed]='different_identifier' if changed not in ('task_family','task_source') else (
                 'settings' if changed=='task_family' else 'consented_real_task')
             with self.subTest(changed=changed),self.assertRaisesRegex(ValueError,'changes'):
                 evaluate([row('computer'),altered])
