@@ -2,7 +2,7 @@
 import json
 import sys
 import time
-from tavi_compact import propose
+from tavi_compact import propose,propose_batch
 from tavi_ocr import OcrSession
 
 def run(input_stream=None,output_stream=None,session_factory=OcrSession,auto_click=False):
@@ -29,14 +29,24 @@ def run(input_stream=None,output_stream=None,session_factory=OcrSession,auto_cli
                 request_id=request.get('id')
                 if request_id is not None and (not isinstance(request_id,str) or len(request_id)>80):
                     raise ValueError('Request id must be a string of at most80 characters')
-                if set(request)-{'id','image','task','target','max_edge'}: raise ValueError('Unsupported request fields; stream is local-only')
-                if not all(isinstance(request.get(k),str) for k in ('image','task','target')):
-                    raise ValueError('image, task and target must be strings')
+                if set(request)-{'id','image','task','target','targets','max_edge'}:
+                    raise ValueError('Unsupported request fields; stream is local-only')
+                if not isinstance(request.get('image'),str):
+                    raise ValueError('image must be a string')
                 if 'max_edge' in request and type(request['max_edge']) is not int:
                     raise ValueError('max_edge must be an integer')
                 options=dict(max_edge=request.get('max_edge',1600),ocr_fn=session)
-                if auto_click: options['auto_click']=True
-                result=propose(request['image'],request['task'],request['target'],**options)
+                if 'targets' in request:
+                    if 'task' in request or 'target' in request:
+                        raise ValueError('Batch targets cannot mix with single-target fields')
+                    # Batch mode is observation-only even when the owner has
+                    # enabled trusted single-target auto-click evaluation.
+                    result=propose_batch(request['image'],request['targets'],**options)
+                else:
+                    if not all(isinstance(request.get(k),str) for k in ('task','target')):
+                        raise ValueError('task and target must be strings')
+                    if auto_click: options['auto_click']=True
+                    result=propose(request['image'],request['task'],request['target'],**options)
                 result.update(request_id=request_id,session_ocr_requests=session.requests,proposal_reused=False)
                 emit(result)
             except (OSError,ValueError,RuntimeError) as error:
