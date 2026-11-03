@@ -91,6 +91,20 @@ class DecisionModel:
         self.arrays = arrays
         self.vectorizer = Vectorizer(metadata['vocabulary'], arrays['idf'])
         self.calibration = None
+        # Prepare immutable feature transforms once for a warm model session.
+        tier = metadata.get('tier_adapter')
+        coding = metadata.get('coding_adapter')
+        document = metadata.get('coding_doc_adapter')
+        presence = metadata.get('skill_presence')
+        self._tier_vectorizer = Vectorizer(tier['vocabulary'], arrays['tier_adapter_idf']) if tier else None
+        self._coding_vectorizer = Vectorizer(coding['vocabulary'], arrays['coding_adapter_idf']) if coding else None
+        self._coding_doc_vectorizer = Vectorizer(document['vocabulary'], arrays['coding_doc_idf']) if document else None
+        self._presence_vectorizer = Vectorizer(presence['vocabulary'], arrays['skill_presence_idf']) if presence else None
+        extensions = metadata.get('extensions', [metadata['extension']] if metadata.get('extension') else [])
+        self._extension_vectorizers = tuple(
+            (extension, Vectorizer(extension['vocabulary'],
+             arrays[extension.get('array_prefix', 'extension')+'_idf']))
+            for extension in extensions)
 
     @classmethod
     def load(cls, directory):
@@ -145,7 +159,7 @@ class DecisionModel:
         tier = softmax((hidden @ a['Wt'] + a['bt']) / self.metadata.get('temperature', 1))
         adapter = self.metadata.get('tier_adapter')
         if adapter:
-            av = Vectorizer(adapter['vocabulary'], a['tier_adapter_idf'])
+            av = self._tier_vectorizer
             adjusted = softmax(np.log(np.maximum(tier, 1e-12))+av.transform(texts) @ a['tier_adapter_W']+a['tier_adapter_b'])
             apply=adjusted.max(axis=1)>=adapter.get('minimum_confidence',0)
             if adapter.get('preserve_base_recommendations'):
@@ -156,7 +170,7 @@ class DecisionModel:
             tier = np.where(apply[:,None],adjusted,tier)
         coding=self.metadata.get('coding_adapter')
         if coding:
-            cv=Vectorizer(coding['vocabulary'],a['coding_adapter_idf'])
+            cv = self._coding_vectorizer
             adjusted=softmax(np.log(np.maximum(tier,1e-12))+cv.transform(texts) @ a['coding_adapter_W']+a['coding_adapter_b'])
             apply=np.array([is_coding_spec(text) for text in texts])&(adjusted.max(1)>=coding['minimum_confidence'])
             # Preserve a previously routable specification if the new head abstains.
@@ -166,7 +180,7 @@ class DecisionModel:
         if document:
             indices=np.array([i for i,text in enumerate(texts) if is_coding_spec(text)],dtype=int)
             if len(indices):
-                dv=Vectorizer(document['vocabulary'],a['coding_doc_idf'])
+                dv = self._coding_doc_vectorizer
                 dx=dv.transform([coding_document(texts[i]) for i in indices])
                 dh=np.tanh(dx@a['coding_doc_W']+a['coding_doc_b'])
                 adjusted=softmax(dh@a['coding_doc_V']+a['coding_doc_c'])
@@ -180,10 +194,8 @@ class DecisionModel:
                     apply &= ~((adjusted.argmax(1)==3)&(tier[indices].argmax(1)!=3)&(tier[indices].max(1)>=.5))
                 tier[indices]=np.where(apply[:,None],adjusted,tier[indices])
         skills = sigmoid(hidden @ a['Ws'] + a['bs'])
-        extensions = self.metadata.get('extensions', [self.metadata['extension']] if self.metadata.get('extension') else [])
-        for extension in extensions:
+        for extension, ev in self._extension_vectorizers:
             key = extension.get('array_prefix', 'extension')
-            ev = Vectorizer(extension['vocabulary'], a[key+'_idf'])
             raw = sigmoid(ev.transform(texts) @ a[key+'_W'] + a[key+'_b'])
             threshold = np.array(extension['thresholds'],dtype='float32')
             base_threshold = self.metadata['skill_threshold']
@@ -194,7 +206,7 @@ class DecisionModel:
             skills = np.concatenate((skills,scaled),axis=1)
         presence=self.metadata.get('skill_presence')
         if presence:
-            pv=Vectorizer(presence['vocabulary'],a['skill_presence_idf'])
+            pv = self._presence_vectorizer
             needed=sigmoid(pv.transform(texts)@a['skill_presence_W']+a['skill_presence_b'])>=presence['threshold']
             skills=np.where(needed[:,None],skills,0.)
         external = sigmoid(hidden @ a['Wd'] + a['bd'])[:, 0]
