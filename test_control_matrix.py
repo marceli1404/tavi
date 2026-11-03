@@ -43,7 +43,7 @@ class ControlMatrixTests(unittest.TestCase):
         batch['proposals'][1].pop('query_id')
         matrix = matrix_batch(batch)
         self.assertEqual(expand_matrix(matrix), batch)
-        matrix['rows'][0][5]['bounds'][0] = 999  # candidate is not shared
+        matrix['rows'][1][5]['bounds'][0] = 999  # candidate is not shared
         self.assertEqual(batch['proposals'][0]['candidate'], None)
         self.assertEqual(batch['proposals'][1]['candidate']['bounds'][0], 10)
 
