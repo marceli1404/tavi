@@ -85,6 +85,35 @@ consented real labelled data.**
 
 [Read the full consent, evaluation and training workflow](Features-consented-computer-use-training.md).
 
+## Matched real-browser observation comparison (3 November 2026)
+
+A **real Chromium fixture** now benchmarks the same four three-step
+workflows using either screenshot + real Tesseract OCR or Tavi's DOM-first
+router. Both approaches use the same pre-registered steps, fresh recheck
+before every action, host `page.mouse.click` and independent result
+verification.
+
+In the [verified Actions run](https://github.com/marceli1404/tavi/actions/runs/41667765684),
+both completed **12/12** trials (36 verified clicks per variant).
+Median three-step task times: **1,081.850 ms** for screenshot/OCR-first versus
+**40.110 ms** for Tavi DOM-first; the **median paired ratio was 26.618×**.
+The screenshot route performed 72 actual OCR passes; Tavi performed none.
+
+This demonstrates a real *observation pipeline* speed advantage **on
+simple local generated pages only**. These tasks contain no hosted model,
+natural-language planning, real external websites, user accounts or
+provider-token measurements. It is **not** a benchmark against an
+autonomous commercial computer-use agent. Source, reproducibility
+instructions and [raw task results](https://github.com/marceli1404/tavi/actions/runs/41667765684/artifacts/13244824797)
+are available in [the matched comparison methodology](Features-matched-browser-benchmark.md).
+
+```sh
+python -m pip install -r requirements.txt -r requirements-browser-eval.txt pytesseract==0.3.13
+python -m playwright install chromium
+# Install tesseract-ocr system binary too
+PYTHONPATH=. python benchmarks/matched_browser_workflows.py --repeats 3
+```
+
 ## Measure and verify computer-use improvements
 
 Use optional numeric-only observability in the DOM-first stream:
