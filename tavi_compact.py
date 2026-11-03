@@ -146,3 +146,64 @@ def propose(image,task,target,*,execute=False,allow_image_fallback=False,model='
         return _propose_prepared(image,task,target,source_hash,info,pixels,ocr,started,directory,
             execute=execute,allow_image_fallback=allow_image_fallback,model=model,effort=effort,
             target_model=target_model,review_fn=review_fn,vision_fn=vision_fn,auto_click=auto_click)
+
+
+def propose_batch(image, queries, *, max_edge=1600, ocr_fn=None, target_model=DEFAULT):
+    """Resolve 1–16 targets from ONE screenshot/OCR observation, without actions.
+
+    All proposals are for the same unmodified image and are independent
+    review suggestions, not an action plan. No hosted execution, replay
+    cache, permission or automatic click is available on this batch path.
+    """
+    if not isinstance(queries,list) or not 1<=len(queries)<=16:
+        raise ValueError('Provide 1–16 screenshot target queries')
+    ids=set()
+    for q in queries:
+        if not isinstance(q,dict) or set(q)-{'id','task','target'} or not {'task','target'}<=set(q):
+            raise ValueError('Invalid screenshot target query')
+        if not isinstance(q['task'],str) or not q['task'].strip() or len(q['task'])>4000:
+            raise ValueError('Task must contain1–4000 characters')
+        if not isinstance(q['target'],str) or not q['target'].strip() or len(q['target'])>80:
+            raise ValueError('Target must contain1–80 characters')
+        if 'id' in q:
+            if not isinstance(q['id'],str) or not q['id'].strip() or len(q['id'])>80 or q['id'] in ids:
+                raise ValueError('Invalid or duplicate screenshot query ID')
+            ids.add(q['id'])
+    if type(max_edge) is not int or not 512<=max_edge<=2600:
+        raise ValueError('max-edge must be512–2600')
+
+    started=time.perf_counter()
+    image=Path(image).resolve(strict=True)
+    if image.stat().st_size>32*1024*1024:
+        raise ValueError('Screenshot exceeds32MB')
+    source_bytes=image.read_bytes()
+    if len(source_bytes)>32*1024*1024:
+        raise ValueError('Screenshot exceeds32MB')
+    source_hash=hashlib.sha256(source_bytes).hexdigest()
+    with tempfile.TemporaryDirectory(prefix='tavi-local-target-batch-') as folder,ExitStack() as resources:
+        directory=Path(folder);prepared=directory/'screen.png'
+        info,pixels=prepare(image,prepared,max_edge,compression='fast',
+                            source_bytes=source_bytes,return_pixels=True)
+        resources.callback(pixels.close)
+        ocr=(ocr_fn or local_ocr)(prepared)
+        artifact=load_target(target_model)  # one integrity-checked weight load
+        proposals=[]
+        for q in queries:
+            result=_propose_prepared(image,q['task'],q['target'],source_hash,
+                deepcopy(info),pixels,ocr,time.perf_counter(),directory,
+                target_model=target_model,artifact=artifact,verify_source=False,
+                auto_click=False)
+            if 'id' in q:
+                result['query_id']=q['id']
+            proposals.append(result)
+        # The single final check binds every proposal to the same captured
+        # bytes; a changed screenshot invalidates the ENTIRE batch.
+        if hashlib.sha256(image.read_bytes()).hexdigest()!=source_hash:
+            raise RuntimeError('Supplied screenshot changed during review; discard proposal batch')
+    return dict(format='tavi-screenshot-target-batch-v1',image_sha256=source_hash,
+                proposals=proposals,source_observation_shared=True,
+                image_preparations=1,ocr_passes=1,
+                hosted_calls=0,authorization_granted=False,executed_actions=False,
+                requires_live_host_check=True,
+                action_sequence_authorized=False,
+                elapsed_ms=round((time.perf_counter()-started)*1000,2))
