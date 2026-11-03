@@ -150,12 +150,15 @@ class StreamTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'screen.png'
             Image.new('RGB',(800,600),'white').save(path)
+            second=snapshot(snapshot_id='host-frame-B')
+            third=snapshot(snapshot_id='host-frame-C')
             lines=[
                 dict(id='dom',snapshot=state,queries=[q('Settings')]),
-                dict(id='ocr',snapshot=snapshot(),queries=[q('Missing')],
-                     image=dict(path=str(path),snapshot_id=state['snapshot_id'])),
-                dict(id='reuse',snapshot=snapshot(),queries=[q('Missing')],
-                     image=dict(path=str(path),snapshot_id=state['snapshot_id'])),
+                dict(id='ocr',snapshot=second,queries=[q('Missing')],
+                     image=dict(path=str(path),snapshot_id=second['snapshot_id'])),
+                dict(id='next',snapshot=third,queries=[q('Missing')],
+                     image=dict(path=str(path),snapshot_id=third['snapshot_id'])),
+                dict(id='replay',snapshot=second,queries=[q('Settings')]),
                 dict(id='invalid',snapshot=state,queries=[q('Settings')],execute=True)
             ]
             output=io.StringIO()
@@ -164,11 +167,12 @@ class StreamTests(unittest.TestCase):
         events=[json.loads(line) for line in output.getvalue().splitlines()]
         self.assertEqual(status,0)
         self.assertEqual([e['status'] for e in events],
-                         ['ready','routed','routed','routed','error'])
+                         ['ready','routed','routed','routed','error','error'])
         self.assertFalse(events[1]['ocr_session_started'])
         self.assertEqual(events[1]['session_ocr_requests'],0)
         self.assertTrue(events[2]['ocr_session_started'])
         self.assertEqual(events[3]['session_ocr_requests'],2)
+        self.assertIn('already processed',events[4]['error'])
         self.assertEqual(FakeSession.created,1)
         self.assertFalse(events[2]['executed_actions'])
 
