@@ -75,6 +75,12 @@ function Read-WindowControls {
         $element = $item.element
         $depth = [int]$item.depth
         $context = [string]$item.context
+        # Enqueue siblings before inspecting the current element: a password
+        # field or transient UIA failure must not hide unrelated siblings.
+        $sibling = $walker.GetNextSibling($element)
+        if ($null -ne $sibling) {
+            $queue.Enqueue(@{element=$sibling;depth=$depth;context=$context})
+        }
         try {
             $info = $element.Current
             # Do not inspect password controls or any descendants of them.
@@ -118,11 +124,6 @@ function Read-WindowControls {
                 if ($null -ne $child) {
                     $queue.Enqueue(@{element=$child;depth=$depth+1;context=$context})
                 }
-            }
-            # Keep all siblings, but never traverse the root's siblings.
-            $sibling = $walker.GetNextSibling($element)
-            if ($null -ne $sibling) {
-                $queue.Enqueue(@{element=$sibling;depth=$depth;context=[string]$item.context})
             }
         } catch [System.Windows.Automation.ElementNotAvailableException] {
             throw 'UI Automation tree changed; recapture required'
