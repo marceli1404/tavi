@@ -6,6 +6,7 @@ stream does not capture, click, use network APIs or execute model output.
 """
 import json
 import sys
+from collections import deque
 
 from tavi_observe import dispatch
 from tavi_ocr import OcrSession
@@ -35,6 +36,8 @@ def run(input_stream=None, output_stream=None, session_factory=OcrSession):
         output_stream.flush()
 
     session = None
+    recent_ids = set()
+    recent_order = deque()
 
     def local_ocr(image):
         nonlocal session
@@ -68,11 +71,21 @@ def run(input_stream=None, output_stream=None, session_factory=OcrSession):
                     if not isinstance(request_id,str) or not request_id.strip() or len(request_id)>80:
                         request_id = None
                         raise ValueError('Invalid request ID')
+                snapshot_id = (request['snapshot'].get('snapshot_id')
+                               if isinstance(request['snapshot'],dict) else None)
+                if snapshot_id in recent_ids:
+                    raise ValueError('Snapshot ID already processed; capture a new observation after the last request')
                 packet = dispatch(request['snapshot'], request['queries'],
                                   image=request.get('image'),
                                   max_edge=request.get('max_edge',1600),
                                   detail=request.get('detail','brief'),
                                   ocr_fn=local_ocr)
+                # Bound session memory while preventing accidental replay of
+                # a recently used observation (combine same-screen targets).
+                recent_order.append(snapshot_id)
+                recent_ids.add(snapshot_id)
+                if len(recent_order) > 1024:
+                    recent_ids.discard(recent_order.popleft())
                 packet.update(status='routed', request_id=request_id,
                               ocr_session_started=session is not None,
                               session_ocr_requests=session.requests if session is not None else 0,
