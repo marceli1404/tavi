@@ -130,7 +130,7 @@ jobs:
         run: python -m unittest -q test_matched_browser_workflows
       - name: Test compact planner wire and offline benchmark contracts
         run: python -m unittest -q test_observe_wire test_observe_planner_tokens_benchmark
-      - name: Test safe context-index elision and shared batch clock
+      - name: Test safe context-index elision with per-query freshness
         run: python -m unittest -q test_context_index_efficiency
       - name: Profile indexed lookup overhead at 64, 512 and 2048 controls
         run: PYTHONPATH=. python benchmarks/context_index_efficiency.py --iterations 35
