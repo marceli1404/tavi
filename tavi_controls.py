@@ -206,8 +206,8 @@ def resolve_many(snapshot, queries, *, offline=False, now=None):
     # Skip the *unused* context index for unscoped batch lookups. Full
     # snapshot validation and canonical SHA-256 binding remain unchanged.
     index = ControlIndex(snapshot, context_index=any(q.get('context') is not None for q in queries))
-    # A single clock reading prevents per-query drift and reduces overhead.
-    if now is None: now = datetime.now(timezone.utc)
+    # Preserve per-query freshness checks: each proposal must independently
+    # detect expiry even if a batch crosses the five-second staleness limit.
     proposals = []
     for q in queries:
         result = index.resolve(q['task'],q['target'],role=q.get('role','button'),context=q.get('context'),offline=offline,now=now)
