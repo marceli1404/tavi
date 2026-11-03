@@ -53,6 +53,32 @@ Copy `codex-skill` to your Codex skills directory as `tavi-decision`, and set th
 
 `--plan` does not run a hosted task. `route --execute` starts a separate read-only Codex CLI task using account usage. Switching the current desktop chat's model still requires a supported bridge, which remains unavailable.
 
+## Batch screenshot proposals from one observation
+
+For several targets on the **same unchanged screenshot**, keep the local
+Windows OCR session warm and submit a single JSON-line batch through
+`python tavi.py propose-stream`:
+
+```json
+{"id":"screen-1","image":"C:/screenshots/current.png","targets":[{"id":"go","task":"Inspect the Go control","target":"Go"},{"id":"stop","task":"Inspect the Stop control","target":"Stop"}]}
+```
+
+Unlike a series of one-target requests, this prepares the screenshot and
+runs local OCR **once** for 1–16 independent target proposals. Their
+separate review packets, source hashes, review requirements and
+unqualified confidence scores are preserved. Invalid batches fail before
+OCR; a changed source image invalidates the entire batch. The return
+includes `format:"tavi-screenshot-target-batch-v1"`, `proposals`,
+`ocr_passes:1` and `image_preparations:1`. Batch mode never invokes
+hosted tools or enables automatic button actions, even when the owner's
+single-target auto-click setting is enabled.
+
+**Do not treat the proposals as a click sequence.** After any UI action,
+reobserve the live screen and recheck identity, geometry, permissions and
+the result with the supported host driver. See
+[computer-use efficiency](Features-computer-use-efficiency.md) for the
+paired eight-target local benchmark and its limits.
+
 ## Reuse CPU predictions during long computer-use sessions
 
 The offline `predict-stream` mode loads a verified Tavi model once, then
