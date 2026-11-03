@@ -65,14 +65,18 @@ def _candidate(candidate):
 def _visual(visual):
     if not isinstance(visual, dict):
         raise ValueError('Missing visual review')
-    _no_authority(visual)
-    if visual.get('automatic_probability_qualified') is False:
-        pass  # brief review
-    elif (isinstance(visual.get('confidence'), dict)
-          and visual['confidence'].get('automatic_probability_qualified') is False):
-        pass  # full proposal
+    if 'review_packet' in visual:
+        # Full local OCR proposals have no standalone requires_live_host_check
+        # field; that mandatory condition is enforced on the enclosing route.
+        if (visual.get('executed_actions') is not False
+                or visual.get('hosted_calls') != 0
+                or not isinstance(visual.get('confidence'), dict)
+                or visual['confidence'].get('automatic_probability_qualified') is not False):
+            raise ValueError('Full visual evidence may not execute or qualify actions')
     else:
-        raise ValueError('Visual evidence must not qualify actions')
+        _no_authority(visual)
+        if visual.get('automatic_probability_qualified') is not False:
+            raise ValueError('Visual evidence must not qualify actions')
     packet = visual.get('review_packet') if 'review_packet' in visual else visual
     if not isinstance(packet, dict):
         raise ValueError('Invalid visual review packet')
