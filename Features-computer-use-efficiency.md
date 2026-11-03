@@ -1,4 +1,4 @@
-# Computer-use efficiency track — first implementation
+# Computer-use efficiency track — control matrix and warm routing
 
 Tavi v0.24 is a **CPU decision/routing model and proposal helper**, not a
 standalone graphical computer-use agent. It does not capture or operate a
@@ -86,6 +86,55 @@ and 0.67294 ms for matrix on that CI runner. Thus matrix conversion itself
 was slightly slower, not faster. Real LLM token counts and end-to-end
 computer-use latency are still unmeasured; JSON bytes are only a proxy.
 
+
+### Warm offline inference and brief decisions (3 November 2026)
+
+Use `python tavi.py predict-stream` to keep the checksummed CPU model and
+feature vectorizers loaded between independent requests. The JSON-line stream
+has strict request sizing and duplicate-field rejection and exposes no
+network, hosted model, UI input, or permission backend:
+
+```json
+{"id":"step-1","prompt":"Inspect the navigation settings","detail":"brief"}
+```
+
+The default `detail="full"` has the same prediction fields and default top
+eight skills as one-shot `predict`. `detail="brief"` defaults to three
+skills and **intentionally omits** verbose calibration diagnostics. It
+retains all tier scores, the ranking scores and thresholds, the vocabulary
+coverage and every `review_reasons` item, together with calibration status
+and an explicit false real-world-success-probability claim. Use full detail
+when inspecting the exact calibration evidence.
+
+A GitHub Actions Linux/Python 3.12 run at
+https://github.com/marceli1404/tavi/actions/runs/41618164875 passed
+**70 focused tests** (22 control and 48 model/compatibility), built a portable
+hash-checked archive with 268 source/model files, and measured 12 paired
+synthetic/offline prompts:
+
+| Measurement | Result |
+| --- | ---: |
+| One-shot CLI median, including Python and model load | 148.606 ms |
+| Warm request median, after startup | 1.142 ms |
+| Local median latency ratio | 130.12× |
+| Warm process startup, separate | 146.119 ms |
+| Full response JSON bytes across 12 prompts | 36,559 |
+| Brief response JSON bytes across 12 prompts | 11,982 |
+| Brief transport-byte reduction | 67.23% |
+
+These are **local process/transport figures**, not achieved speed on a
+desktop task or commercial model token counts. A single CI runner and
+sequential synthetic requests cannot establish a universal speedup; startup
+amortizes only after multiple requests. The standalone local model weights
+were not changed and no computer-control permission gate was lowered.
+The accepted model's prior real-screen failure remains relevant.
+
+To repeat the comparison:
+```sh
+python -m unittest -q test_predict_stream test_model_warm_adapters test_probability_quantization
+python benchmarks/warm_prediction_benchmark.py
+python bundle_tavi.py
+```
 
 ## 3. What would make Tavi competitive
 
