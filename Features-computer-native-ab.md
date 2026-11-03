@@ -46,6 +46,39 @@ Recommended host steps per interaction:
 tab on every Windows build. Run a read-only accessibility inspection on
 the actual authorised File Explorer window first.
 
+## Preferred integration path and Windows CI status
+
+**Preferred for Computer:** `tavi_native_stream.py` with
+`--window-handle <already-authorized HWND>`. Computer, not Tavi or the
+planner, must determine which window is permitted. This is a strict
+read-only, single-window process; `observe` returns only matching
+accessible controls, and a single-use `observation_id` supports
+`recheck`. The host must still independently validate immediately
+before any authorised click, and must verify the result afterward.
+
+The separate `tavi_computer_native.py` / `tavi_native_uia.ps1`
+foreground collector is an experimental alternative; it must not become
+the default Computer integration without a review of its foreground
+window scope and native identity/coordinate mapping.
+
+[Windows CI run 41686266689](https://github.com/marceli1404/tavi/actions/runs/41686266689)
+passed all protocol checks, including Windows-only dependency import,
+read-only native-adapter tests, the synthetic browser tests and the
+full offline suite (**451 tests** in that run). However, the generated
+Tk foreground-window smoke returned `"status":"not_measured"` with
+`"real_windows_uia_exercised":false` on the hosted Windows runner,
+because it had no usable interactive UI Automation environment. It
+therefore supplies **no genuine Windows click, File Explorer or full-task
+latency measurements**.
+
+No connected ChatGPT Computer action API is available in this integration
+test environment. The A/B reporters validate host-attested results but
+**do not call Computer, launch real application tasks, fabricate usage
+records or claim a completed Computer-only vs Computer+Tavi experiment.**
+A real test needs an explicitly approved interactive Windows Computer
+host, native-window and action access, matching planner settings and
+provider-reported usage from each trial.
+
 ## Matched whole-task evaluation
 
 Use \`benchmarks/computer_agent_ab.py\` to summarise **host-recorded**
