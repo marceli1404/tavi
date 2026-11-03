@@ -6,6 +6,31 @@ browser. The browser visits **only generated HTML on \`about:blank\`**. No real
 third-party websites, credentials, host sessions, purchases, messages, external
 network requests, generative planning models or cloud API calls are used.
 
+## Observed result (3 November 2026)
+
+**Verified:** [GitHub Actions run 41667765684](https://github.com/marceli1404/tavi/actions/runs/41667765684), [raw 24-trial JSON artifact](https://github.com/marceli1404/tavi/actions/runs/41667765684/artifacts/13244824797).
+
+| Outcome | Screenshot + genuine Tesseract | Tavi DOM-first |
+|---|---:|---:|
+| Completed 3-step trials | **12/12** | **12/12** |
+| Verified clicks | **36/36** | **36/36** |
+| Median task time | **1,081.850 ms** | **40.110 ms** |
+| p95 task time (nearest rank, n=12) | **1,276.410 ms** | **52.608 ms** |
+| Screenshots | 72 | 0 |
+| OCR passes | 72 | 0 |
+| DOM captures for target selection | 0 | 72 |
+
+**Median of the 12 paired per-trial latency ratios: 26.618×.** The median
+paired elapsed-time saving was **1,037.575 ms** per three-step fixture.
+
+Both approaches used the same predetermined target sequence, isolated
+Chromium contexts, host mouse execution and independent result verifier.
+This is **not** an autonomous AI-agent benchmark. No hosted model was called;
+token counts and model costs are **not measured**. Repeating the same four
+simple workflows three times yields only four unique task templates, not
+twelve independent website families. Avoid deploying this speed ratio as
+a general estimate.
+
 ## Pre-registered tasks
 
 Four three-step deterministic workflows:
