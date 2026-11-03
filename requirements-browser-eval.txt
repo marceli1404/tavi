@@ -1,0 +1,2 @@
+# Optional, isolated Chromium fixture benchmark; not needed for normal Tavi inference.
+playwright==1.55.0
