@@ -2,8 +2,8 @@
 # Windows PowerShell 5.1/.NET Framework; reads "capture" JSON lines, emits JSON.
 # No input injection, InvokePattern, clicks, keypresses, values, or screenshots.
 $ErrorActionPreference = 'Stop'
-[Console]::InputEncoding = New-Object System.Text.UTF8Encoding($false)
-[Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::InputEncoding = [System.Text.UTF8Encoding]::new($false)
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 Add-Type -AssemblyName UIAutomationClient
 Add-Type -AssemblyName UIAutomationTypes
 Add-Type -TypeDefinition @'
