@@ -10,6 +10,7 @@ Requires no Playwright import: it consumes Page.evaluate, so the owning
 driver can manage installation, login, session and security boundaries.
 """
 from datetime import datetime, timezone
+import time
 import uuid
 
 from tavi_controls import ControlIndex
@@ -98,12 +99,13 @@ _DOM_SCRIPT = r"""() => {
 }"""
 
 
-def capture_controls(page, *, snapshot_id=None):
+def capture_controls(page, *, snapshot_id=None, metrics=None):
     """Read one current page; returns a validated, host-time-stamped snapshot."""
     if snapshot_id is None:
         snapshot_id = uuid.uuid4().hex
     if not isinstance(snapshot_id, str) or not snapshot_id.strip() or len(snapshot_id)>200:
         raise ValueError('Invalid snapshot ID')
+    started = time.perf_counter()
     observed = page.evaluate(_DOM_SCRIPT)
     if (not isinstance(observed,dict)
             or set(observed) != {'viewport','controls'}):
@@ -119,4 +121,6 @@ def capture_controls(page, *, snapshot_id=None):
     # Fail closed on invalid page records, geometry, duplicates or oversized
     # inventories before other routing code relies on the snapshot.
     ControlIndex(data)
+    if metrics is not None:
+        metrics.record_stage('browser_dom_capture', (time.perf_counter()-started)*1000)
     return data
