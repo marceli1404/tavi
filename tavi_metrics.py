@@ -111,11 +111,10 @@ class UsageMetrics:
         No token counts should be supplied for local route-only requests.
         Provider name/model identifiers and prompts are intentionally omitted.
         """
-        self._provider_calls += 1
-        if input_tokens is None or output_tokens is None:
+        missing = input_tokens is None or output_tokens is None
+        if missing:
             if input_tokens is not None or output_tokens is not None or cached_input_tokens is not None:
                 raise ValueError('Token usage must be complete or unavailable')
-            self._provider_usage_missing += 1
         else:
             _nonnegative(input_tokens,'input_tokens',integer=True)
             _nonnegative(output_tokens,'output_tokens',integer=True)
@@ -124,6 +123,12 @@ class UsageMetrics:
             _nonnegative(cached_input_tokens,'cached_input_tokens',integer=True)
             if cached_input_tokens>input_tokens:
                 raise ValueError('cached_input_tokens exceeds input_tokens')
+        if elapsed_ms is not None:
+            _nonnegative(elapsed_ms,'model latency')
+        self._provider_calls += 1
+        if missing:
+            self._provider_usage_missing += 1
+        else:
             self._providers['input_tokens'] += input_tokens
             self._providers['output_tokens'] += output_tokens
             self._providers['cached_input_tokens'] += cached_input_tokens
