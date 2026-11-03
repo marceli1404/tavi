@@ -113,3 +113,23 @@ Use `python tavi.py target-controls-batch SNAPSHOT QUERIES` when the supported h
 Context-quality advice separately flags recorded tier/external check accuracy at or below 90%, or absent context evidence, even when a raw score is high. Review it as agent advice; it does not request user approval or change the learned route.
 
 For repeated lookups, `target-controls-stream` accepts a full fresh snapshot per request. For batches, opt in with `"compact": true`; reconstruct each result as `{**shared_proposal_fields, **proposal}` before interpreting it. Root authority flags still apply to every proposal. Use standard output for one query. See `Features-control-compact.md`; never execute a sequence from an old observation.
+
+For long computer-use sessions where the supported host can maintain a local
+subprocess, prefer `python tavi.py predict-stream` for repeated *offline*
+routing advice instead of repeatedly launching `predict`. Send one prompt per
+JSON line; `{"prompt":"...","detail":"brief"}` returns shorter advice with
+all tier scores, skill thresholds, review reasons and calibration status.
+A brief decision is **not** the same as a provider launch plan and must not
+be interpreted as a task-success probability or authority to click. Request
+`detail:"full"` for the complete probability diagnostics. Restart the
+stream after a model artifact update; the warm model deliberately does not
+hot-swap weights.
+
+When several exact supported-host controls must be resolved from one current
+observation, `target-controls-stream` also accepts `"compact":"matrix"`.
+Read its ordered `columns` and `rows` together with
+`shared_proposal_fields`, or use `expand_matrix` for complete v1 proposal
+objects. This mode is lossless; the trusted host must still recheck live
+identity, permissions and outcome. A fresh snapshot is required for every
+request, even when the worker stays open. See
+`Features-computer-use-efficiency.md` for the measured limits.
