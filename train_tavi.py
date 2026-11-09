@@ -18,6 +18,12 @@ def main():
     parser.add_argument('--config', type=Path, default=BASE/'tavi.config.json')
     parser.add_argument('--output', type=Path, default=BASE/'models/tavi-v1')
     parser.add_argument('--epochs', type=int, default=240)
+    parser.add_argument('--hidden-size', type=int, default=96, choices=[64, 96, 128, 192, 256, 384, 512],
+                        help='Core MLP hidden units; default 96 retains historical architecture')
+    parser.add_argument('--vocab-limit', type=int, default=4096, choices=[2048, 4096, 8192],
+                        help='Maximum TF-IDF vocabulary features; default 4096')
+    parser.add_argument('--seed', type=int, default=20261028,
+                        help='Deterministic initialisation seed')
     parser.add_argument('--dataset', type=Path, help='Reproduce training from a saved dataset.json instead of current inventory')
     parser.add_argument('--feedback', type=Path, help='Optional directory of explicitly operator-labelled feedback events')
     args = parser.parse_args()
@@ -58,10 +64,15 @@ def main():
     # Persist exact inputs so training can be audited and reconstructed.
     payload = json.dumps(rows, indent=2, ensure_ascii=False).encode('utf-8')
     (args.output/'dataset.json').write_bytes(payload)
-    model, losses = train(rows, skill_names, args.output, args.epochs)
+    model, losses = train(rows, skill_names, args.output, args.epochs,
+                          seed=args.seed, hidden_size=args.hidden_size,
+                          vocab_limit=args.vocab_limit)
     report = dict(dataset_sha256=hashlib.sha256(payload).hexdigest(), losses=losses,
                   training_rows=model.metadata['training_rows'], validation_rows=model.metadata['validation_rows'],
-                  parameters=model.metadata['parameters'], weights_sha256=model.metadata['weights_sha256'])
+                  parameters=model.metadata['parameters'], weights_sha256=model.metadata['weights_sha256'],
+                  capacity=model.metadata['capacity'],
+                  experimental_capacity=model.metadata['experimental_capacity'],
+                  selected_seed=args.seed)
     (args.output/'training-report.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
     print(json.dumps(report, indent=2))
 
