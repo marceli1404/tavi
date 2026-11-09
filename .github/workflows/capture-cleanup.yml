@@ -1,0 +1,33 @@
+name: Windows Codex capture helper cleanup safety
+on:
+  push:
+    paths:
+      - "scripts/fix-codex-yellow-border.ps1"
+      - "test_capture_cleanup_contract.py"
+      - ".github/workflows/capture-cleanup.yml"
+  pull_request:
+    paths:
+      - "scripts/fix-codex-yellow-border.ps1"
+      - "test_capture_cleanup_contract.py"
+      - ".github/workflows/capture-cleanup.yml"
+
+jobs:
+  verify-capture-cleanup:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse PowerShell script without executing it
+        shell: powershell
+        run: |
+          $tokens = $null
+          $parseErrors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile(
+            (Resolve-Path .\scripts\fix-codex-yellow-border.ps1).Path,
+            [ref] $tokens, [ref] $parseErrors)
+          if ($parseErrors.Count -gt 0) {
+            $parseErrors | Format-List | Out-String | Write-Error
+            exit 1
+          }
+      - name: Verify only read-only behavior in CI
+        shell: powershell
+        run: py -m unittest -q test_capture_cleanup_contract

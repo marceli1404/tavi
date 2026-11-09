@@ -1,0 +1,2 @@
+# Optional MCP server integration for Codex. Core Tavi requirements separately.
+mcp>=2.0,<3.0

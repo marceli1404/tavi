@@ -179,3 +179,9 @@ objects. This mode is lossless; the trusted host must still recheck live
 identity, permissions and outcome. A fresh snapshot is required for every
 request, even when the worker stays open. See
 `Features-computer-use-efficiency.md` for the measured limits.
+
+## Codex MCP bridge (optional, prefer when connected)
+
+If the local `tavi` MCP server is configured, prefer its **read-only** tools over starting redundant shell commands: call `tavi_status` to check configuration, then `tavi_route_task` for advisory model/skill routing. For computer-use tasks, use `tavi_match_controls` **only if** the trusted host has provided a genuine fresh `tavi-control-snapshot-v1` and matching queries. Do not invent or replay a snapshot. An exact match is a suggestion for host verification, never authorization to click.
+
+These MCP tools cannot capture the screen, suppress the Windows yellow capture border, click, type, change this chat's model or bypass a mandatory Computer screenshot/permission workflow. If the MCP bridge is unavailable, the existing CLI instructions remain the fallback. See `Features-codex-mcp.md`.
