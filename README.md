@@ -228,3 +228,7 @@ Local-only screenshot proposals use sampled pixel processing and fast lossless P
 The [`tavi-web-design` skill](skills/tavi-web-design/SKILL.md) combines premium art direction, typography, responsive UX, purposeful animation and practical quality gates. Its [standalone animated showcase](skills/tavi-web-design/examples/showcase.html) demonstrates Canvas artwork, kinetic type, scroll interactions, a motion-off fallback, and a functional creative-brief interaction.
 
 To use it, copy `skills/tavi-web-design` into an installed agent skill directory, for example `~/.codex/skills/tavi-web-design`, then invoke `$tavi-web-design` with a web-design task. This is separate from `tavi-decision` routing; adding the skill does not update the trained model, automatically install anything, or launch hosted work.
+
+## Experimental larger model capacity
+
+The accepted v4 model remains the default. The training CLI now supports a 256-hidden-unit / up-to-8192-feature **experimental** candidate, with real trainable weights, deterministic seed, new-output-directory protection, archived synthetic-data reproduction, acceptance comparisons and an explicit activation block. No quality improvement or deployment is claimed until the evaluation and real-task checks pass. See [capacity research, exact commands and validation limits](Features-capacity-research.md).
