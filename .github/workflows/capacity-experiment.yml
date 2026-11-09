@@ -1,0 +1,67 @@
+name: Tavi capacity experiment (256 units)
+
+on:
+  push:
+    branches:
+      - experiment/tavi-capacity-256-20261109
+    paths:
+      - tavi_model.py
+      - train_tavi.py
+      - tavi_health.py
+      - test_capacity_experiment.py
+      - compare_model_capacity.py
+      - .github/workflows/capacity-experiment.yml
+  workflow_dispatch:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest -q test_capacity_experiment
+      - run: python -m compileall -q tavi_model.py train_tavi.py compare_model_capacity.py
+
+  capacity-candidate:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: "2"
+      OMP_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements.txt
+      - name: Train one frozen 256-unit candidate from archived synthetic data
+        run: |
+          python train_tavi.py \
+            --dataset models/tavi-v4-clean/dataset.json \
+            --output output/capacity-256 \
+            --epochs 120 \
+            --hidden-size 256 \
+            --vocab-limit 8192 \
+            --seed 20261028
+      - name: Evaluate only after training is complete
+        run: python evaluate_tavi.py --model output/capacity-256
+      - name: Compare with accepted v4 model (advisory, no promotion)
+        continue-on-error: true
+        run: |
+          python compare_model_capacity.py \
+            --baseline models/tavi-v4-clean \
+            --candidate output/capacity-256 \
+            --output output/capacity-256/comparison.json
+      - name: Preserve candidate, train logs and non-regression report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tavi-capacity-256-research
+          path: output/capacity-256/
+          if-no-files-found: ignore
+          retention-days: 14
