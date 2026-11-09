@@ -39,6 +39,8 @@ def activate_candidate(config_path, expected_bytes, candidate, accepted_report):
         raise ValueError('Candidate did not pass evaluation; activation refused')
     from tavi_model import DecisionModel
     loaded = DecisionModel.load(candidate)
+    if loaded.metadata.get('experimental_capacity') is True:
+        raise ValueError('Capacity experiment cannot be activated by refresh; requires separately reviewed promotion')
     gate_path=Path(candidate)/'activation-gate.json'
     if gate_path.is_file():
         from tavi_probability import signature
