@@ -223,15 +223,25 @@ class DecisionModel:
         return result
 
 
-def train(rows, skill_names, directory, epochs=240, seed=20261028):
-    """Fit only training rows; validation selects thresholds/temperature, not weights."""
+def train(rows, skill_names, directory, epochs=240, seed=20261028, *,
+          hidden_size=96, vocab_limit=4096):
+    """Fit only training rows; validation selects thresholds/temperature, not weights.
+
+    Optional larger-capacity training is experimental and NEVER auto-activates.
+    The historical 96-unit/4096-feature defaults are preserved.
+    """
+    if type(hidden_size) is not int or hidden_size not in (64, 96, 128, 192, 256, 384, 512):
+        raise ValueError('Unsupported hidden_size; choose 64, 96, 128, 192, 256, 384, or 512')
+    if type(vocab_limit) is not int or vocab_limit not in (2048, 4096, 8192):
+        raise ValueError('Unsupported vocab_limit; choose 2048, 4096, or 8192')
+    if type(seed) is not int or seed < 0:
+        raise ValueError('Seed must be a non-negative integer')
     training = [r for r in rows if r['split'] == 'train']
     validation = [r for r in rows if r['split'] == 'validation']
-    vectorizer = Vectorizer.fit([r['prompt'] for r in training])
+    vectorizer = Vectorizer.fit([r['prompt'] for r in training], limit=vocab_limit)
     x = vectorizer.transform([r['prompt'] for r in training])
     rng = np.random.default_rng(seed)
     size, dimensions = x.shape
-    hidden_size = 96
     a = dict(W=rng.normal(0, .12, (dimensions, hidden_size)).astype('float32'),
              b=np.zeros(hidden_size, dtype='float32'),
              Wt=rng.normal(0, .1, (hidden_size, 4)).astype('float32'), bt=np.zeros(4, dtype='float32'),
@@ -278,9 +288,12 @@ def train(rows, skill_names, directory, epochs=240, seed=20261028):
             print(json.dumps(losses[-1]), flush=True)
     metadata = dict(format='tavi-neural-v1', skills=skill_names, vocabulary=vectorizer.vocabulary,
                     skill_threshold=.5, external_threshold=.5, temperature=1, seed=seed,
-                    architecture='TF-IDF words/bigrams/character-trigrams -> tanh96 -> tier4/skills/discovery',
+                    architecture=f'TF-IDF words/bigrams/character-trigrams -> tanh{hidden_size} -> tier4/skills/discovery',
                     training_rows=len(training), validation_rows=len(validation), epochs=epochs,
                     origin='Original synthetic policy examples plus weak skill-metadata positives; no real outcome labels')
+    metadata['capacity'] = dict(hidden_size=hidden_size, vocab_limit=vocab_limit,
+                                vocabulary_size=len(vectorizer.vocabulary))
+    metadata['experimental_capacity'] = bool(hidden_size != 96 or vocab_limit != 4096)
     a['idf'] = vectorizer.idf
     model = DecisionModel(metadata, a)
     if validation:
