@@ -103,6 +103,36 @@ class DecisionModel:
             arrays = {key: source[key] for key in source.files}
         if not all(np.isfinite(a).all() for a in arrays.values()):
             raise ValueError('Tavi weights contain invalid numeric values')
+        capacity = metadata.get('capacity')
+        if capacity is not None:
+            try:
+                width = capacity['hidden_size']
+                limit = capacity['vocab_limit']
+                vocab_size = capacity['vocabulary_size']
+                skill_count = len(metadata['skills'])
+                valid = (
+                    type(width) is int and width in (64, 96, 128, 192, 256, 384, 512)
+                    and type(limit) is int and limit in (2048, 4096, 8192)
+                    and type(vocab_size) is int and vocab_size == len(metadata['vocabulary'])
+                    and 0 < vocab_size <= limit
+                    and arrays['W'].shape == (vocab_size, width)
+                    and arrays['b'].shape == (width,)
+                    and arrays['Wt'].shape == (width, 4)
+                    and arrays['bt'].shape == (4,)
+                    and arrays['Ws'].shape == (width, skill_count)
+                    and arrays['bs'].shape == (skill_count,)
+                    and arrays['Wd'].shape == (width, 1)
+                    and arrays['bd'].shape == (1,)
+                    and arrays['idf'].shape == (vocab_size,)
+                    and metadata['experimental_capacity'] is (width != 96 or limit != 4096)
+                    and metadata['parameters'] == sum(
+                        item.size for key, item in arrays.items() if key != 'idf'
+                    )
+                )
+            except (KeyError, TypeError, ValueError):
+                valid = False
+            if not valid:
+                raise ValueError('Invalid experimental capacity model architecture')
         doc=metadata.get('coding_doc_adapter')
         if doc is not None:
             try:
