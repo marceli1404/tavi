@@ -514,3 +514,16 @@ Local-only screenshot proposals use sampled pixel processing and fast lossless P
 The [`tavi-web-design` skill](skills/tavi-web-design/SKILL.md) combines premium art direction, typography, responsive UX, purposeful animation and practical quality gates. Its [standalone animated showcase](skills/tavi-web-design/examples/showcase.html) demonstrates Canvas artwork, kinetic type, scroll interactions, a motion-off fallback, and a functional creative-brief interaction.
 
 To use it, copy `skills/tavi-web-design` into an installed agent skill directory, for example `~/.codex/skills/tavi-web-design`, then invoke `$tavi-web-design` with a web-design task. This is separate from `tavi-decision` routing; adding the skill does not update the trained model, automatically install anything, or launch hosted work.
+
+## Codex MCP tools (experimental)
+
+Tavi can now be called **directly from Codex** as a local, read-only MCP server, rather than only through a separately invoked Codex skill. It offers three tools: `tavi_status`, `tavi_route_task` and `tavi_match_controls`. The first two expose local configuration and model/skill recommendations; the third resolves **fresh host-supplied** accessibility/DOM controls into compact planner hints.
+
+```powershell
+py -m pip install -r requirements.txt -r requirements-mcp.txt
+# After configuring tavi.config.json, register with your ABSOLUTE paths:
+codex mcp add tavi -- C:\code\tavi\.venv\Scripts\python.exe C:\code\tavi\tavi_mcp.py
+codex mcp list
+```
+
+See [Codex MCP setup, Windows instructions and security boundaries](Features-codex-mcp.md). This is **not yet installed in the user's local Codex**. It never opens a screen capture, draws a border, clicks, types, or changes the active Codex model. The Windows yellow capture border belongs to Codex Computer Use's capture helper, which is separately tracked in [Codex issue #57101](https://github.com/openai/codex/issues/57101). The MCP bridge does not fix the Codex capture helper lifecycle.
