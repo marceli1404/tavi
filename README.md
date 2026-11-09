@@ -527,3 +527,26 @@ codex mcp list
 ```
 
 See [Codex MCP setup, Windows instructions and security boundaries](Features-codex-mcp.md). This is **not yet installed in the user's local Codex**. It never opens a screen capture, draws a border, clicks, types, or changes the active Codex model. The Windows yellow capture border belongs to Codex Computer Use's capture helper, which is separately tracked in [Codex issue #57101](https://github.com/openai/codex/issues/57101). The MCP bridge does not fix the Codex capture helper lifecycle.
+
+## Windows yellow capture border cleanup (opt-in workaround)
+
+Codex Windows Computer Use can leave a yellow/gold Windows Graphics Capture border after a task completes. An upstream reproducible ownership/cleanup gap is reported in [openai/codex#57101](https://github.com/openai/codex/issues/57101). **Tavi does not own Codex's native capture sessions**, so the proper permanent fix belongs in Codex's lifecycle handler.
+
+For immediate recovery, this branch includes a targeted PowerShell script. It only stops the exact \`codex-computer-use.exe\` helper after **you confirm every Computer Use task in every chat has finished**. The script never runs automatically.
+
+From the Tavi checkout:
+
+\`\`\`powershell
+# Read-only inspect: shows PID, parent, signature, and eligibility.
+.\scripts\fix-codex-yellow-border.ps1
+
+# When ALL Computer Use chats are idle, explicitly request cleanup.
+.\scripts\fix-codex-yellow-border.ps1 -Stop -NoActiveComputerUse
+# Confirm the PowerShell prompt. If multiple helpers are present, add -ProcessId PID.
+\`\`\`
+
+The script refuses to stop an unverified process, a missing/no-longer-matching PID, a changed executable/parent/start time, or multiple helpers without a selected PID. It checks the Windows Authenticode signature and expected app origin, and never touches \`codex-computer-use-swift.exe\`, ChatGPT itself, registry privacy settings, scheduled tasks, or unrelated processes.
+
+**Important:** A running helper is not proof that it is unused. Only the user/host can confirm the active Computer Use state. The script has no private access to Codex turn ownership, so it cannot offer safe unattended cleanup. Stopping a helper during active Computer Use can interrupt work. This is a targeted workaround, not an installed fix to Codex's lifecycle code, and it has not yet been live-tested on this user's Windows machine.
+
+Static safety tests: \`python -m unittest -q test_capture_cleanup_contract\`. Live process/signature checks and border disappearance require Windows-host verification.
